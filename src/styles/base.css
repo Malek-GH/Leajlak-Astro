@@ -228,7 +228,7 @@ a:hover #arrow {
 }
 
 .carousel {
-  @apply relative flex items-center justify-center overflow-hidden h-full w-full;
+  @apply relative flex items-center justify-center overflow-hidden h-[300px] w-full;
 }
 .carousel-item {
   @apply hidden text-center p-5;
