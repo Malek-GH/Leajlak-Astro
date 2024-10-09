@@ -228,7 +228,7 @@ a:hover #arrow {
 }
 
 .carousel {
-  @apply relative flex items-center justify-center overflow-hidden h-[350px] w-full;
+  @apply relative flex items-center justify-center overflow-hidden h-full w-full;
 }
 .carousel-item {
   @apply hidden text-center p-5;
@@ -239,12 +239,12 @@ a:hover #arrow {
 }
 
 .carousel-controls {
-  @apply absolute bottom-0 sm:bottom-auto w-full flex justify-between;
+  @apply absolute w-full flex  justify-between;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-  @apply text-3xl p-3 cursor-pointer hover:scale-110 duration-300;
+  @apply text-3xl md:text-5xl cursor-pointer hover:scale-110 duration-300;
 }
 
 /* Partners */

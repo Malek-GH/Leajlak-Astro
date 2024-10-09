@@ -24,6 +24,7 @@ export default {
         merchant_mobile: "url('/src/images/bg/restaurent-page-mobile.webp')",
         contact: "url('/src/images/bg/riyadh.webp')",
         contact_mobile: "url('/src/images/bg/riyadh-mobile.webp')",
+        digital_bg1: "url('/src/images/bg/digital-bg1.webp')",
       },
       colors: {
         primaryOrange: "rgba(236, 97, 49, 1)",

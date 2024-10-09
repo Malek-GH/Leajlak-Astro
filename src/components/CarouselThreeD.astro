@@ -1,10 +1,12 @@
 ---
+const { lang } = Astro.props;
 import { Image } from "astro:assets";
 import restaurant from "../images/carousel/restaurant.webp";
 import cafe from "../images/carousel/cafe.webp";
 import family from "../images/carousel/productive-family.webp";
 import onlineStores from "../images/carousel/online-stores.webp";
 import pharmacy from "../images/carousel/pharmacy.webp";
+const content = await import(`../data/${lang}.json`);
 ---
 
 <script>
@@ -17,7 +19,6 @@ import pharmacy from "../images/carousel/pharmacy.webp";
 
     const updateClasses = () => {
       items.forEach((item, index) => {
-        /*  console.log(`Current Index: ${currentIndex}`); */
         item.classList.remove("active", "left", "right", "behind");
         if (index === currentIndex) {
           item.classList.add("active");
@@ -28,7 +29,6 @@ import pharmacy from "../images/carousel/pharmacy.webp";
         } else {
           item.classList.add("behind");
         }
-        /*         console.log(`Index: ${index}, Class: ${item.className}`); */
       });
     };
 
@@ -63,25 +63,29 @@ import pharmacy from "../images/carousel/pharmacy.webp";
 </script>
 <div class="flex items-center justify-center h-96 relative">
   <div class="item first">
-    <h4 class="text-white text-xl absolute top-2 left-2">Café</h4>
+    <h4 class="text-white text-xl absolute top-2 left-2">{content.cafe}</h4>
     <Image src={cafe} alt="cafe" class="size-full" />
   </div>
   <div class="item left">
-    <h4 class="text-white text-xl absolute top-2 left-2">Restaurant</h4>
+    <h4 class="text-white text-xl absolute top-2 left-2">
+      {content.Restaurants}
+    </h4>
     <Image src={restaurant} alt="restaurant" class="size-full" />
   </div>
   <div class="item right">
     <h4 class="text-white text-xl absolute top-2 left-2">
-      Productive Families
+      {content.family}
     </h4>
-    <Image src={family} alt="cafe" class="size-full" />
+    <Image src={family} alt="family" class="size-full" />
   </div>
   <div class="item behind">
-    <h4 class="text-white text-xl absolute top-2 left-2">Online Stores</h4>
+    <h4 class="text-white text-xl absolute top-2 left-2">
+      {content.Online_Stores}
+    </h4>
     <Image src={onlineStores} alt="restaurant" class="size-full" />
   </div>
   <div class="item behind">
-    <h4 class="text-white text-xl absolute top-2 left-2">pharmacy</h4>
+    <h4 class="text-white text-xl absolute top-2 left-2">{content.pharmacy}</h4>
     <Image src={pharmacy} alt="cafe" class="size-full" />
   </div>
 </div>

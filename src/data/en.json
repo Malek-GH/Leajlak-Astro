@@ -19,5 +19,10 @@
   "PP": "Privacy Policy",
   "TOS": "Terms Of Service",
   "error": "error: 404",
-  "error_content": "This page doesn't exist"
+  "error_content": "This page doesn't exist",
+  "cafe": "café",
+  "Restaurants": "Restaurants",
+  "family": "Productive Families",
+  "Online_Stores": "Online Stores",
+  "pharmacy": "pharmacies"
 }

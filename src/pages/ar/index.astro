@@ -135,7 +135,7 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
             </p>
           </div>
           <div class="relative w-full md:w-[70%]">
-            <CarouselThreeD />
+            <CarouselThreeD lang="ar" />
           </div>
         </div>
         <div
@@ -155,7 +155,7 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
               autoplay
               muted
               loop
-              src="/لأجلك workflow-ar.mp4"
+              src="/leajlak workflow-ar.mp4"
               class="relative w-full h-full">
             </video>
           </div>
@@ -180,7 +180,7 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
           class="notshow relative flex flex-col lg:flex-row justify-center items-center duration-200 lg:gap-x-14"
           data-animation="animate-fade animate-duration-[1500ms]">
           <div
-            class="bg-[url('/src/images/bg/restaurent.webp')] bg-no-repeat bg-cover p-5 space-y-5 h-full text-white lg:text-black lg:bg-none lg:w-[50%] rounded-xl">
+            class="bg-merchant_mobile bg-no-repeat bg-cover p-5 space-y-5 h-full text-white lg:text-black lg:bg-none lg:w-[50%] rounded-xl">
             <div>
               <div class="text-primaryOrange text-lg font-medium uppercase">
                 لأجلك
@@ -243,10 +243,10 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
             />
           </div>
           <div
-            class="bg-[url('/src/images/bg/fleet-mobile.webp')] bg-no-repeat bg-cover p-5 space-y-5 h-full text-white lg:text-black lg:bg-none lg:w-[50%] rounded-xl">
+            class="bg-logistic_mobile bg-no-repeat bg-cover bg-center p-5 space-y-5 h-full text-white lg:text-black lg:bg-none lg:w-[50%] rounded-xl">
             <div>
               <div class="text-primaryOrange text-lg font-medium uppercase">
-                لأجلك لـ
+                لأجلك
               </div>
               <h2 class="text-white lg:text-black">الشركات اللوجستية</h2>
             </div>
@@ -305,7 +305,7 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
           <Image src={api} alt="حالة الطلب" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">تكامل واجهة برمجة التطبيقات</h4>
-            <p class="text-left lg:text-justify">
+            <p class="text-right lg:text-justify">
               يمكن لأجلك التكامل بسلاسة مع أي نقطة بيع سحابية وقنوات التجارة
               الإلكترونية، مما يوفر مزامنة في الوقت الحقيقي، ويقلل من الأخطاء،
               ويعزز الكفاءة التشغيلية. تشمل فوائد تكامل واجهة برمجة التطبيقات
@@ -319,7 +319,7 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
           <Image src={order_status} alt="حالة الطلب" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">حالة الطلب</h4>
-            <p class="text-left lg:text-justify">
+            <p class="text-right lg:text-justify">
               توفر التحديثات المتعلقة بحالة الطلب المعتمدة على API فوائد الرؤية
               في الوقت الحقيقي، وتحسين تجربة العملاء، وتبسيط العمليات، والتواصل
               الاستباقي، وتقديرات دقيقة للتسليم، وحل المشكلات بشكل فعال.
@@ -332,7 +332,7 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
           <Image src={LiveLocation} alt="الطلبات" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">الموقع المباشر للسائقين</h4>
-            <p class="text-left lg:text-justify">
+            <p class="text-right lg:text-justify">
               يوفر مزايا كبيرة من حيث تحسين تجربة العملاء، وتحسين عمليات
               التسليم، وزيادة الكفاءة، وضمان الإدارة الفعالة ومراقبة عمليات
               التسليم.
@@ -345,7 +345,7 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
           <Image src={Payment_methods} alt="طرق الدفع" class="w-16" />
           <div>
             <h4 class="text-xl font-medium">طرق الدفع</h4>
-            <p class="text-left lg:text-justify">
+            <p class="text-right lg:text-justify">
               من خلال معرفة طريقة الدفع للطلبات، يتم تبسيط عملية التسليم لركاب
               التوصيل. الدفع المسبق، الدفع عند الاستلام. الدفع بواسطة البطاقة
               عند التسليم (جهاز السحب).
@@ -358,7 +358,7 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
           <Image class="w-16" src={chat} alt="دردشة العملاء" loading="lazy" />
           <div>
             <h4 class="text-xl font-medium">دردشة العملاء</h4>
-            <p class="text-left lg:text-justify">
+            <p class="text-right lg:text-justify">
               يمكّن هذا الـ API التواصل بين العملاء وممثلي التوصيل، مما يوفر
               قناة مريحة لمعالجة الأسئلة والمخاوف وتقديم المعلومات حول الخدمات.
             </p>
@@ -370,7 +370,7 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
           <Image class="w-16" src={Payment} alt="طرق الدفع" loading="lazy" />
           <div>
             <h4 class="text-xl font-medium">إدارة عودة الطلبات</h4>
-            <p class="text-left lg:text-justify">
+            <p class="text-right lg:text-justify">
               يمكن أن تقلل عملية الإرجاع الفعالة من مخاطر الاحتيال، وتقلل من عدد
               المرتجعات وتحسن دقة المخزون.
             </p>
@@ -406,10 +406,9 @@ import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
       </div>
     </div>
   </section>
-  <section
-    class="bg-[url('../images/bg/digital-bg1.png')] bg-no-repeat bg-cover bg-fixed">
+  <section class="bg-digital_bg1 bg-no-repeat bg-cover bg-center bg-fixed">
     <div
-      class="container section-container flex flex-col justify-evenly items-center text-center">
+      class="container section-container flex flex-col items-center text-center space-y-20">
       <h2>استمع لعملائنا السعداء</h2>
       <!-- Carousel -->
       <div class="carousel">
