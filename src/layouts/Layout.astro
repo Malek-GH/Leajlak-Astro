@@ -10,10 +10,17 @@ interface Props {
 
 const { title } = Astro.props;
 const { lang = "en" } = Astro.props;
+
+function dir() {
+  if (lang === "ar") {
+    return "rtl";
+  }
+  return "ltr";
+}
 ---
 
 <!doctype html>
-<html lang={lang} class="scroll-smooth">
+<html lang={lang} class="scroll-smooth" dir=`${dir()}`>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />

@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+
+const logos = await Astro.glob("../images/companies logo/clients/*.webp");
+---
+
+<div class="relative flex w-full h-10 sm:h-24 group" id="slider-container">
+  {
+    logos.map((logo) => {
+      const src = logo.default.src.split("/").pop().split(".")[0];
+      const altText = `${src} logo`;
+
+      return (
+        <div class="slider absolute w-14 min-h-14 sm:min-h-[100px] sm:min-w-[100px] h-12 left-[max(calc(80px*46),100%)] sm:left-[max(calc(180px*46),100%)] sm:animate-loop-scroll animate-loop-scroll-mobile group-hover:animate-pause">
+          <Image
+            src={logo.default}
+            alt={altText}
+            loading="lazy"
+            class="w-full h-full"
+          />
+        </div>
+      );
+    })
+  }
+</div>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sliders = document.querySelectorAll(".slider");
+    const totalLogos = sliders.length;
+
+    sliders.forEach((slider, i) => {
+      slider.style.animationDelay = `calc(20s / ${totalLogos} * (${totalLogos} - (${i} + 1)) * -1)`;
+    });
+  });
+</script>

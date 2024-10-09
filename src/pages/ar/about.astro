@@ -2,134 +2,185 @@
 import Layout from "../../layouts/Layout.astro";
 import team_member from "../../images/profile-pic/team-member.png";
 import { Image } from "astro:assets";
-import PartnersCard from "../../components/PartnersCard.astro";
-import Mc from "../../images/companies logo/clients/McDonald's.png";
+import Partners from "../../components/Partners.astro";
+import Mc from "../../images/companies logo/clients/Mcdonald.png";
+import lorenzo from "../../images/companies logo/clients/Lorenzo.png";
+import alliwan from "../../images/companies logo/clients/Alliwan.png";
+import bk from "../../images/companies logo/clients/Burgerking.png";
+import jb from "../../images/companies logo/clients/Janburger.png";
+import farawalah from "../../images/companies logo/clients/Farawlah.png";
+import casapasta from "../../images/companies logo/clients/Casapasta.png";
 import TeamMember from "../../components/TeamMember.astro";
 import Typewriter from "../../components/Typewriter.astro";
+import TrustedIcons from "../../components/TrustedIcons.astro";
 ---
 
 <Layout title="معلومات عنا" lang="ar">
   <Typewriter />
-  <section class="bg-darkGray">
+  <section class="bg-darkGray" id="about-hero">
     <div
-      class="container section-container text-white flex items-center justify-center h-[500px]">
-      <div class="text-right md:text-center">
-        <h4 class="text-primaryOrange text-2xl md:text-4xl font-light">عنا</h4>
+      class="notshow container section-container hero text-white"
+      data-animation="animate-fade animate-duration-[1500ms]">
+      <div class="py-10 text-left md:text-center space-y-5">
+        <h4 class="text-primaryOrange text-2xl md:text-4xl font-light">عنّا</h4>
         <h1 class="text-4xl md:text-5xl md:leading-relaxed">
-          ربط التجار ومقدمي الخدمات اللوجستية <span
+          ربط التجار ومقدمي الخدمات اللوجستية <br class="hidden 2xl:block" />
+          <span
             class="typewrite text-primaryOrange"
             data-period="2000"
-            data-type='[ "بشكل سلس.", "بنعومة.", "بكفاءة.", "كما لم يحدث من قبل!" ]'>
+            data-type='[ "بسلاسة.", "بكفاءة.", "كما لم يحدث من قبل!" ]'>
           </span>
           <span class="border-r-2 animate-ping"></span>
         </h1>
       </div>
     </div>
   </section>
-  <section class="bg-white">
-    <div class="container section-container">
+  <section class="bg-white" id="about">
+    <div
+      class="notshow container section-container"
+      data-animation="animate-fade animate-duration-[1500ms]">
       <div
         class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
         <h4 class="text-3xl lg:w-1/2">
-          عن <span class="text-primaryOrange font-medium">لاجلك</span>
+          عن <span class="text-primaryOrange font-medium">لأجلك</span>
         </h4>
         <p class="lg:w-2/3">
-          لاجلك هي شركة تكنولوجيا مبتكرة تركز على ثورة في مجال اللوجستيات وإدارة
-          الطلبات. من خلال تقديم حل شامل وقابل للتخصيص، تقوم لاجلك بربط التجار
-          بشركات اللوجستيات الخارجية، مما يمكّن من نظام تسليم سلس وفعال.
+          نحنُ شريك تِقني رائد مُ كرّس لتعزيز تجربة التسليم الأخير للشركات التي
+          تُركز على رضا العٌ ملاء من خلال وسائل سهلة ومبسطة. بقيادة فريق محترف
+          للإجابة على تحديات السوق المتغيرة باستمرار، فإن فريقنا مستعد لمواجهة
+          التحديات وإدارة مخاطر العمليات بالمهارة والخبرة المناسبة التي يتوقعها
+          عملاؤنا. رضا العميل من أهم أولويات عملنا ولذلك نقدم قنوات اتصال مفتوحة
+          طوال مدة العقد. تماشياً مع التطورات التقنية، قمنا بتطوير منصة لوجستية
+          للمستخدم سهلة الاستخدام ،نستمع ونهتم لآراء واقتراحات عملائنا وشركائنا
+          وذلك لتحسين الخدمة المقدمة وفق احتياجاتهم، ولهذا السبب نسعى جاهدين
+          لتطوير خدماتنا وذلك لتقديم أفضل الحلول اللوجستية ، لضمان وصول كل عملية
+          تسليم إلى وجهة العميل بثقة وأمان وفي الوقت المحدد ، بدقة وكفاءة وبأحدث
+          الوسائل المستدامة .
         </p>
       </div>
     </div>
   </section>
-  <section>
-    <div class="container section-container lg:h-96">
+  <section id="mission">
+    <div
+      class="notshow container section-container lg:h-full"
+      data-animation="animate-fade animate-duration-[1500ms]">
       <div
         class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
         <h4 class="text-3xl lg:w-1/2">مهمتنا</h4>
         <div class="lg:w-2/3 space-y-2">
-          <p>تعزيز كفاءة العمليات التجارية.</p>
-
-          <p>توفير اتصال سلس بين التجار ومقدمي الخدمات اللوجستية.</p>
-
-          <p>تحسين رضا العملاء من خلال خدمات تسليم دقيقة وموثوقة.</p>
-
+          <p>توفير اتصال سلس بين التجار ومقدمي الخدمات اللوجستية</p>
           <p>
-            تعزيز التعاون داخل صناعة اللوجستيات لإنشاء شبكة تسليم قوية وفعالة.
+            تعزيز التعاون داخل صناعة اللوجستيات لإنشاء شبكة توصيل قوية وفعالة.
+          </p>
+          <p>هدفنا هو تحقيق رضا العملاء من خلال خدمات تسليم دقيقة وموثوقة.</p>
+          <p>
+            نربط هذه العناصر لنقدم حلاً شاملاً يوفر السعادة من خلال تقديم الحلول
+            اللوجستية السريعة والآمنة،
           </p>
         </div>
       </div>
     </div>
   </section>
-  <section class="bg-white">
-    <div class="container section-container lg:h-96">
+  <section class="bg-white" id="vision">
+    <div
+      class="notshow container section-container h-full"
+      data-animation="animate-fade animate-duration-[1500ms]">
       <div
         class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
         <h4 class="text-3xl lg:w-1/2">رؤيتنا</h4>
         <p class="lg:w-2/3">
-          يكمن ابتكار نظام إدارة الطلبات من لاجلك في قدرته على ثورة نظام التسليم
-          من خلال ربط التجار وشركات اللوجستيات الخارجية بسلاسة. من خلال تقديم حل
-          شامل لربط هذه الأطراف المعنية، تمكّن لاجلك الشركات من تحقيق خدمات
-          تسليم سريعة حسب الطلب، مما يعزز في النهاية كفاءة العمليات والتعاون
-          ورضا العملاء.
+          جعل التكنولوجيا تبتكر نظام إدارة الطلبات مع لأجلك في قدرته على ثورة
+          نظام التسليم من خلال ربط التجار وشركات اللوجستيات الخارجية بسلاسة. من
+          خلال توفير حلول خارج الصندوق. شاملة لربط هذه الأطراف المعنية، على أن
+          نصبح المزود الأول للخدمات اللوجستية في المنطقة من خلال تمييز أنفسنا
+          بخدمات عالية الجودة مقدمة لعملائنا، بناءً على تحدياتهم، مع التركيز على
+          التكنولوجيا وثقافة الفريق والتطوير المستمر. تمكّن لأجلك الشركات من
+          تحقيق خدمات تسليم سريعة حسب الطلب، مما يعزز في النهاية كفاءة العمليات
+          والتعاون ورضا العملاء.
         </p>
       </div>
     </div>
   </section>
   <section
-    class="bg-[url('../images/bg/team.png')] bg-no-repeat bg-cover bg-fixed h-full lg:h-[600px]">
-    <div class="container section-container grid items-center">
+    class="bg-[url('../images/bg/team.webp')] bg-no-repeat bg-cover bg-fixed"
+    id="values">
+    <div
+      class="notshow container section-container flex flex-col"
+      data-animation="animate-fade animate-duration-[1500ms]">
       <div
-        class="flex flex-col justify-between space-y-5 lg:space-y-0 lg:flex-row text-white">
+        class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row text-white">
         <h4 class="text-3xl lg:w-1/2">قيمنا الأساسية</h4>
         <div class="lg:w-2/3 space-y-5">
           <p class="text-white">
-            <span class="text-lg font-semibold">الابتكار:</span> نحن ملتزمون بالابتكار
-            المستمر، ونسعى دائمًا لإيجاد طرق جديدة لتحسين منصتنا وخدماتنا.
+            <span class="text-lg font-semibold">الالتزام بالجودة: </span> نحن نؤمن
+            بأن جودة الخدمة هي أساس نجاحنا. نسعى دائماً لضمان توصيل الطلبات بأعلى
+            معايير الجودة، من لحظة استلام الطلب حتى وصوله إلى العميل.
           </p>
           <p class="text-white">
-            <span class="text-lg font-semibold">النزاهة:</span> نعمل بنزاهة، ونضمن
-            الشفافية والصدق في جميع تعاملاتنا.
+            <span class="text-lg font-semibold">السرعة والكفاءة:</span> ندرك أهمية
+            الوقت بالنسبة لعملائنا. لذلك، نلتزم بتقديم خدمات توصيل سريعة وفعالة،
+            لضمان وصول الطلبات في الوقت المحدد.
           </p>
           <p class="text-white">
-            <span class="text-lg font-semibold">التركيز على العملاء:</span> عملاؤنا
-            هم في قلب كل ما نقوم به. نسعى لتجاوز توقعاتهم وتقديم قيمة متميزة.
+            <span class="text-lg font-semibold">الابتكار:</span> نبحث دائماً عن طرق
+            جديدة لتحسين خدماتنا. نستخدم أحدث التقنيات لتسهيل عملية التوصيل وتحسين
+            تجربة العملاء.
           </p>
           <p class="text-white">
-            <span class="text-lg font-semibold">التعاون:</span> نؤمن بقوة التعاون،
-            ونعمل بشكل وثيق مع عملائنا وشركائنا لتحقيق الأهداف المشتركة.
+            <span class="text-lg font-semibold">الشفافية:</span> نؤمن بأهمية التواصل
+            الواضح مع عملائنا وشركائنا. نقدم معلومات دقيقة حول حالة الطلبات ووقت
+            التوصيل، مما يعزز الثقة بيننا وبين عملائنا.
           </p>
           <p class="text-white">
-            <span class="text-lg font-semibold">التفوق:</span> نحن ملتزمون بالتفوق،
-            ونحافظ على أعلى المعايير في منتجاتنا وخدماتنا.
+            <span class="text-lg font-semibold">العمل الجماعي:</span> نحن فريق واحد
+            يعمل نحو هدف مشترك. نؤمن بأن التعاون والاحترام المتبادل بين أعضاء الفريق
+            هو مفتاح نجاحنا في تقديم خدمات متميزة.
+          </p>
+          <p class="text-white">
+            <span class="text-lg font-semibold">رضا العملاء:</span> نحن هنا لخدمة
+            عملائنا. نسعى جاهدين لتلبية احتياجاتهم وتوقعاتهم، ونعمل على تحسين خدماتنا
+            بناءً على ملاحظاتهم.
+          </p>
+          <p class="text-white">
+            <span class="text-lg font-semibold">المسؤولية الاجتماعية:</span> نؤمن
+            بأهمية رد الجميل للمجتمع. نشارك في مبادرات تهدف إلى دعم المجتمعات المحلية
+            وتعزيز الاستدامة.
           </p>
         </div>
       </div>
     </div>
   </section>
   <section class="bg-white">
-    <div class="container section-container space-y-10">
-      <h2 class="text-center">موثوق به من قبل الشركات الرائدة</h2>
+    <div class="container section-container space-y-24">
+      <h2
+        class="notshow text-center"
+        data-animation="animate-fade animate-duration-[1500ms]">
+        موثوق من قبل الشركات الرائدة
+      </h2>
       <div
-        class="flex flex-row flex-wrap items-center justify-center gap-5 pb-10">
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-      </div>
-      <div
-        class="bg-[url('/src/images/bg/watermark--wave-crop-orange.png')] bg-no-repeat bg-cover bg-lightGray flex flex-col md:flex-row items-center justify-between w-full h-auto space-y-5 md:space-y-0 md:h-48 rounded-lg shadow-xl py-5 px-5 md:px-24">
-        <h4
-          class="text-xl md:text-2xl font-semibold text-center md:text-left md:w-[75%]">
-          نحن دائمًا في بحث عن أفراد موهوبين للانضمام إلى فريقنا المتنامي.
-        </h4>
-        <a
-          href="/Ar/registration/employees"
-          class="inline-flex items-center justify-center px-5 py-3 md:text-xl text-white bg-primaryOrange rounded-lg hover:shadow-lg hover:-translate-y-1 duration-300">
-          انضم الآن
-        </a>
+        class="notshow flex flex-wrap items-center justify-center gap-x-5 gap-y-24"
+        data-animation="animate-fade animate-duration-[1500ms]">
+        <TrustedIcons imgSrc={Mc} alt="Mcdonald" />
+        <TrustedIcons imgSrc={farawalah} alt="farawalah" />
+        <TrustedIcons imgSrc={lorenzo} alt="lorenzo" />
+        <TrustedIcons imgSrc={alliwan} alt="alliwan" />
+        <TrustedIcons imgSrc={bk} alt="Burgerking" />
+        <TrustedIcons imgSrc={jb} alt="Janburger" />
+        <TrustedIcons imgSrc={casapasta} alt="Casapasta" />
+        <div
+          class="notshow bg-[url('/src/images/bg/watermark--wave-crop-orange.png')] bg-no-repeat bg-cover bg-lightGray flex flex-col md:flex-row items-center justify-between w-full h-auto space-y-5 md:space-y-0 md:h-48 rounded-lg shadow-xl py-5 px-5 md:px-24"
+          data-animation="animate-fade animate-duration-[1500ms]">
+          <h4
+            class="text-xl md:text-2xl font-semibold text-center md:text-left md:w-[75%]">
+            هدفنا الدائم هو جذب الموهوبين والمبدعين ليكونوا جزءًا من تطويرنا
+            المستمر.
+          </h4>
+          <a
+            href=`registration/employees`
+            class="inline-flex items-center justify-center px-5 py-3 md:text-xl text-white bg-primaryOrange rounded-lg hover:shadow-lg hover:-translate-y-1 duration-300">
+            انضم الآن
+          </a>
+        </div>
       </div>
     </div>
   </section>

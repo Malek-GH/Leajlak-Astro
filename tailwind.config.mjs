@@ -1,12 +1,29 @@
+import { transformer } from "astro/zod";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      animation: {
+        "loop-scroll": "loop-scroll 20s linear infinite",
+        "loop-scroll-mobile": "loop-scroll-mobile 20s linear infinite",
+      },
+      keyframes: {
+        "loop-scroll": {
+          to: { left: "-100px" },
+        },
+        "loop-scroll-mobile": {
+          to: { left: "-56px" },
+        },
+      },
       backgroundImage: {
-        logistic: "url('/src/images/bg/fleet-page.png')",
-        logistic_mobile: "url('/src/images/bg/fleet-page-mobile.png')",
-        merchant: "url('/src/images/bg/restaurent-page.png')",
+        logistic: "url('/src/images/bg/fleet-page.webp')",
+        logistic_mobile: "url('/src/images/bg/fleet-page-mobile.webp')",
+        merchant: "url('/src/images/bg/restaurent-page.webp')",
+        merchant_mobile: "url('/src/images/bg/restaurent-page-mobile.webp')",
+        contact: "url('/src/images/bg/riyadh.webp')",
+        contact_mobile: "url('/src/images/bg/riyadh-mobile.webp')",
       },
       colors: {
         primaryOrange: "rgba(236, 97, 49, 1)",

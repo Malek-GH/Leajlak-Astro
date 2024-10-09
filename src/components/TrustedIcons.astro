@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+const { imgSrc, alt } = Astro.props;
+---
+
+<div
+  class="w-full flex flex-row items-center justify-center flex-wrap flex-card_full gap-x-5 gap-y-10">
+  <div class="h-24 flex items-center justify-center">
+    <Image
+      src={imgSrc}
+      alt={alt}
+      loading="lazy"
+      class="w-24 h-full grayscale hover:grayscale-0 duration-200"
+    />
+  </div>
+</div>

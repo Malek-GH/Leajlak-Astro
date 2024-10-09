@@ -2,16 +2,25 @@
 import Layout from "../../layouts/Layout.astro";
 import team_member from "../../images/profile-pic/team-member.png";
 import { Image } from "astro:assets";
-import PartnersCard from "../../components/PartnersCard.astro";
-import Mc from "../../images/companies logo/clients/McDonald's.png";
+import Partners from "../../components/Partners.astro";
+import Mc from "../../images/companies logo/clients/Mcdonald.png";
+import lorenzo from "../../images/companies logo/clients/Lorenzo.png";
+import alliwan from "../../images/companies logo/clients/Alliwan.png";
+import bk from "../../images/companies logo/clients/Burgerking.png";
+import jb from "../../images/companies logo/clients/Janburger.png";
+import farawalah from "../../images/companies logo/clients/Farawlah.png";
+import casapasta from "../../images/companies logo/clients/Casapasta.png";
 import TeamMember from "../../components/TeamMember.astro";
 import Typewriter from "../../components/Typewriter.astro";
+import TrustedIcons from "../../components/TrustedIcons.astro";
 ---
 
 <Layout title="About Us" lang="en">
   <Typewriter />
   <section class="bg-darkGray" id="about-hero">
-    <div class="container section-container hero text-white">
+    <div
+      class="notshow container section-container hero text-white"
+      data-animation="animate-fade animate-duration-[1500ms]">
       <div class="py-10 text-left md:text-center space-y-5">
         <h4
           class="text-primaryOrange text-2xl md:text-4xl font-light tracking-xl">
@@ -32,7 +41,9 @@ import Typewriter from "../../components/Typewriter.astro";
     </div>
   </section>
   <section class="bg-white" id="about">
-    <div class="container section-container">
+    <div
+      class="notshow container section-container"
+      data-animation="animate-fade animate-duration-[1500ms]">
       <div
         class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
         <h4 class="text-3xl lg:w-1/2">
@@ -49,7 +60,9 @@ import Typewriter from "../../components/Typewriter.astro";
     </div>
   </section>
   <section id="mission">
-    <div class="container section-container lg:h-96">
+    <div
+      class="notshow container section-container lg:h-96"
+      data-animation="animate-fade animate-duration-[1500ms]">
       <div
         class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
         <h4 class="text-3xl lg:w-1/2">Our Mission</h4>
@@ -75,7 +88,9 @@ import Typewriter from "../../components/Typewriter.astro";
     </div>
   </section>
   <section class="bg-white" id="vision">
-    <div class="container section-container lg:h-96">
+    <div
+      class="notshow container section-container lg:h-96"
+      data-animation="animate-fade animate-duration-[1500ms]">
       <div
         class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row">
         <h4 class="text-3xl lg:w-1/2">Our Vision</h4>
@@ -92,8 +107,11 @@ import Typewriter from "../../components/Typewriter.astro";
     </div>
   </section>
   <section
-    class="bg-[url('../images/bg/team.png')] bg-no-repeat bg-cover bg-fixed h-full lg:h-[600px]">
-    <div class="container section-container flex items-center">
+    class="bg-[url('../images/bg/team.webp')] bg-no-repeat bg-cover bg-fixed"
+    id="values">
+    <div
+      class="notshow container section-container flex items-center"
+      data-animation="animate-fade animate-duration-[1500ms]">
       <div
         class="flex flex-col justify-center space-y-5 lg:space-y-0 lg:flex-row text-white">
         <h4 class="text-3xl lg:w-1/2">Our Core Values</h4>
@@ -161,30 +179,37 @@ import Typewriter from "../../components/Typewriter.astro";
     </div>
   </section> -->
   <section class="bg-white">
-    <div class="container section-container space-y-10">
-      <h2 class="text-center">Trusted by Leading Businesses</h2>
+    <div class="container section-container space-y-24">
+      <h2
+        class="notshow text-center"
+        data-animation="animate-fade animate-duration-[1500ms]">
+        Trusted by Leading Businesses
+      </h2>
       <div
-        class="flex flex-row flex-wrap items-center justify-center gap-5 pb-10">
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-        <PartnersCard img_src={Mc} alt="mc" />
-      </div>
-      <div
-        class="bg-[url('/src/images/bg/watermark--wave-crop-orange.png')] bg-no-repeat bg-cover bg-lightGray flex flex-col md:flex-row items-center justify-between w-full h-auto space-y-5 md:space-y-0 md:h-48 rounded-lg shadow-xl py-5 px-5 md:px-24">
-        <h4
-          class="text-xl md:text-2xl font-semibold text-center md:text-left md:w-[75%]">
-          We are always on the lookout for talented individuals to join our
-          growing team.
-        </h4>
-        <a
-          href="#"
-          class="inline-flex items-center justify-center px-5 py-3 md:text-xl text-white bg-primaryOrange rounded-lg hover:shadow-lg hover:-translate-y-1 duration-300">
-          Join now
-        </a>
+        class="notshow flex flex-wrap items-center justify-center gap-x-5 gap-y-24"
+        data-animation="animate-fade animate-duration-[1500ms]">
+        <TrustedIcons imgSrc={Mc} alt="Mcdonald" />
+        <TrustedIcons imgSrc={farawalah} alt="farawalah" />
+        <TrustedIcons imgSrc={lorenzo} alt="lorenzo" />
+        <TrustedIcons imgSrc={alliwan} alt="alliwan" />
+        <TrustedIcons imgSrc={bk} alt="Burgerking" />
+        <TrustedIcons imgSrc={jb} alt="Janburger" />
+        <TrustedIcons imgSrc={casapasta} alt="Casapasta" />
+        <div></div>
+        <div
+          class="notshow bg-[url('/src/images/bg/watermark--wave-crop-orange.png')] bg-no-repeat bg-cover bg-lightGray flex flex-col md:flex-row items-center justify-between w-full h-auto space-y-5 md:space-y-0 md:h-48 rounded-lg shadow-xl py-5 px-5 md:px-24"
+          data-animation="animate-fade animate-duration-[1500ms]">
+          <h4
+            class="text-xl md:text-2xl font-semibold text-center md:text-left md:w-[75%]">
+            We are always on the lookout for talented individuals to join our
+            growing team.
+          </h4>
+          <a
+            href=`registration/employees`
+            class="inline-flex items-center justify-center px-5 py-3 md:text-xl text-white bg-primaryOrange rounded-lg hover:shadow-lg hover:-translate-y-1 duration-300">
+            Join now
+          </a>
+        </div>
       </div>
     </div>
   </section>

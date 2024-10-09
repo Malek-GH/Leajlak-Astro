@@ -1,12 +1,8 @@
 ---
 import { Image } from "astro:assets";
 const { lang = "en" } = Astro.props;
-import logo_white from "../images/logo 2 white.png";
+import logo_white from "../images/logo 2 white.webp";
 const content = await import(`../data/${lang}.json`);
-let text_direction = "md:text-left";
-if (lang === "Ar") {
-  text_direction = "md:text-right";
-}
 ---
 
 <footer class="bg-[#101D26] text-white">
@@ -16,8 +12,8 @@ if (lang === "Ar") {
       class="flex flex-col items-center justify-between w-full space-y-10 pb-10 border-b-2 border-gray-400/20 md:flex-row">
       <!-- Company Information -->
       <div
-        class=`w-full flex flex-col items-center justify-center space-y-5 text-center ${text_direction} md:w-1/3 md:items-start md:justify-center`>
-        <Image src={logo_white} class="w-40" alt="logo" loading="eager" />
+        class="w-full flex flex-col items-center justify-center space-y-5 text-left md:w-1/3 md:items-start md:justify-center rtl:text-right">
+        <Image src={logo_white} class="w-40" alt="logo" loading="lazy" />
         <div class="leading-7 w-[80%]">
           {content.footer_headline}
         </div>

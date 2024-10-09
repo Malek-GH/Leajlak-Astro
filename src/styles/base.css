@@ -10,10 +10,6 @@
   }
 }
 
-html[lang="ar"] {
-  direction: rtl;
-}
-
 img,
 video {
   max-width: none !important;
@@ -38,7 +34,8 @@ section:not(
     #merchants-hero,
     #PL-hero,
     #register-hero,
-    #hero
+    #hero,
+    #values
   ) {
   @apply lg:min-h-screen flex;
 }
@@ -226,16 +223,8 @@ a:hover #arrow {
   @apply flex flex-row items-center;
 }
 
-.benfits-list-ar {
-  @apply flex flex-row items-center;
-}
-
 .benfits-list svg {
-  @apply w-7 h-7 mr-4 fill-white lg:fill-black;
-}
-
-.benfits-list-ar svg {
-  @apply w-7 h-7 ml-4 fill-white lg:fill-black;
+  @apply w-7 h-7 ltr:mr-4 rtl:ml-4 fill-white lg:fill-black;
 }
 
 .carousel {
@@ -258,45 +247,7 @@ a:hover #arrow {
   @apply text-3xl p-3 cursor-pointer hover:scale-110 duration-300;
 }
 
-/* Customers */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-500px);
-  }
-}
-.logo-track {
-  display: flex;
-  white-space: nowrap;
-  width: 100%;
-  column-gap: 100px;
-  animation: scroll 5s linear 0s infinite normal none;
-}
-.logo-track:hover {
-  animation-play-state: paused;
-}
-.logo-item {
-  @apply w-[100px] flex items-center flex-shrink-0 flex-grow-0 select-none;
-}
-.logo-item img {
-  @apply w-full block pointer-events-none;
-}
-
 /* Partners */
-
-#Partners {
-  @apply bg-white;
-}
-
-.partners-card {
-  @apply flex items-center justify-center h-[170px];
-}
-
-.partners-card img {
-  @apply w-[100px] h-auto  contrast-100 brightness-100 saturate-0 blur-0 hue-rotate-0 hover:filter-none duration-200;
-}
 
 .home-cta {
   background: rgb(236, 97, 49);
@@ -337,7 +288,7 @@ a:hover #arrow {
   @apply text-sm md:text-base;
 }
 #Solutions-cta {
-  background-image: url("../images/bg/digital-bg2.png");
+  background-image: url("../images/bg/digital-bg2.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -345,12 +296,6 @@ a:hover #arrow {
 
 .benefits-card {
   @apply flex flex-col items-center justify-center relative lg:flex-row;
-}
-
-#contact-hero {
-  background-image: url("../images/bg/riyadh.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .custom-shape-divider-bottom-1720992718 {
@@ -441,7 +386,7 @@ label {
 }
 
 .item {
-  @apply opacity-0 absolute transition-all ease-in-out duration-500 z-0 rounded-xl  w-full h-80 sm:w-72 sm:h-60 lg:w-80 lg:h-64 sm:shadow-2xl overflow-hidden;
+  @apply opacity-0 absolute transition-all ease-in-out duration-500 z-0 rounded-xl  w-full h-[300px] sm:w-72 sm:h-60 lg:w-80 lg:h-64 sm:shadow-2xl overflow-hidden;
 }
 .item.active {
   @apply opacity-100 sm:scale-125 translate-x-0 z-10;

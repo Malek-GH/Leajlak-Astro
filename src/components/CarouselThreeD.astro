@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import restaurant from "../images/carousel/restaurant.png";
-import cafe from "../images/carousel/cafe.png";
-import family from "../images/carousel/productive-family.png";
-import onlineStores from "../images/carousel/online-stores.png";
-import pharmacy from "../images/carousel/pharmacy.png";
+import restaurant from "../images/carousel/restaurant.webp";
+import cafe from "../images/carousel/cafe.webp";
+import family from "../images/carousel/productive-family.webp";
+import onlineStores from "../images/carousel/online-stores.webp";
+import pharmacy from "../images/carousel/pharmacy.webp";
 ---
 
 <script>
@@ -67,25 +67,22 @@ import pharmacy from "../images/carousel/pharmacy.png";
     <Image src={cafe} alt="cafe" class="size-full" />
   </div>
   <div class="item left">
-    <h4 class="text-white text-xl absolute bottom-2 left-2">Restaurant</h4>
+    <h4 class="text-white text-xl absolute top-2 left-2">Restaurant</h4>
     <Image src={restaurant} alt="restaurant" class="size-full" />
   </div>
   <div class="item right">
-    <h4 class="text-white text-xl absolute bottom-2 left-2">
+    <h4 class="text-white text-xl absolute top-2 left-2">
       Productive Families
     </h4>
     <Image src={family} alt="cafe" class="size-full" />
   </div>
   <div class="item behind">
-    <h4 class="text-white text-xl absolute bottom-2 left-2">Online Stores</h4>
+    <h4 class="text-white text-xl absolute top-2 left-2">Online Stores</h4>
     <Image src={onlineStores} alt="restaurant" class="size-full" />
   </div>
   <div class="item behind">
-    <h4 class="text-white text-xl absolute bottom-2 left-2">pharmacy</h4>
+    <h4 class="text-white text-xl absolute top-2 left-2">pharmacy</h4>
     <Image src={pharmacy} alt="cafe" class="size-full" />
-  </div>
-  <div class="item behind">
-    <Image src={restaurant} alt="restaurant" class="size-full" />
   </div>
 </div>
 <div

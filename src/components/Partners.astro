@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+const logos = await Astro.glob("../images/companies logo/*.webp");
+---
+
+
+  {logos.map((logo)=>{
+    return(<div
+  class="notshow flex items-center justify-center h-[170px] p-5 flex-card_team_sm sm:flex-card_full shadow-lg rounded group"
+  data-animation="animate-fade animate-duration-[2000ms]">
+      <Image
+    src={logo.default}
+    alt=""
+    loading="lazy"
+    class="w-28 h-auto contrast-100 brightness-100 saturate-0 blur-0 hue-rotate-0 group-hover:filter-none duration-200"
+  />
+</div>)
+
+  })}
+
