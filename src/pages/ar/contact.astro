@@ -7,52 +7,82 @@ import contact from "../../images/icons/lets-icons_message-light.png";
 ---
 
 <Layout title="اتصل بنا" lang="ar">
-  <section id="contact-hero">
-    <div class="container section-container">
+  <section
+    id="contact-hero"
+    class="bg-contact_mobile sm:bg-contact bg-cover bg-center bg-fixed bg-no-repeat">
+    <div
+      class="notshow container section-container hero"
+      data-animation="animate-fade animate-duration-[1500ms]">
       <div class="text-center py-32 space-y-3">
         <h3 class="text-primaryOrange text-2xl md:text-4xl font-light">
-          اتصل بنا
+          تواصل معنا
         </h3>
-        <h2 class="text-4xl md:text-5xl text-white">نحن متشوقون لسماع رأيك!</h2>
+        <h2 class="text-4xl md:text-5xl text-white">يسعدنا سماع رأيك!</h2>
       </div>
     </div>
   </section>
   <section>
-    <div class="container section-container">
+    <div class="container section-container flex flex-col justify-center">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-20 lg:gap-0">
         <!-- contacts -->
         <div
-          class="flex items-center flex-col text-center sm:flex-row gap-16 lg:flex-col lg:items-start sm:text-left lg:py-20">
+          class="notshow flex items-center flex-col text-center sm:flex-row gap-16 lg:flex-col lg:items-start sm:text-left lg:py-20"
+          data-animation="animate-fade-left animate-duration-[1500ms]">
           <div class="space-y-2">
-            <h4 class="text-4xl font-bold text-right">اتصل بنا</h4>
-            <p class="lg:w-[60%] text-right">
-              هل لديك أي أسئلة؟ سنكون سعداء بمساعدتك!
-            </p>
+            <h4 class="text-4xl font-bold">تواصل معنا</h4>
+            <p>أي أسئلة؟ يسعدنا مساعدتك!</p>
           </div>
           <div class="flex flex-col gap-7">
             <div
               class="flex flex-col text-center sm:flex-row sm:text-left items-center lg:justify-start sm:w-96 gap-y-2 gap-x-5 px-3 py-4 sm:px-7 sm:py-5 border border-black/20 rounded-lg hover:border-opacity-0 hover:translate-x-5 hover:bg-primaryOrange hover:shadow-md ease-in transition-all hover:fill-white hover:text-white duration-300 group">
-              <!-- Replace SVG with appropriate icon -->
-              <span class="text-sm sm:text-base"
-                >المرج، الرياض، المملكة العربية السعودية</span
-              >
+              <svg
+                class="size-5"
+                viewBox="0 0 470 407"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M244.562 3.594a15.779 15.779 0 0 0-19.406 0L.625 178.672l19.422 24.562L47.5 181.828V375.25a31.313 31.313 0 0 0 31.25 31.25h312.5a31.31 31.31 0 0 0 31.25-31.25V181.969l27.453 21.406 19.422-24.562L244.562 3.593ZM266.25 375.25h-62.5v-125h62.5v125Zm31.25 0v-125A31.247 31.247 0 0 0 266.25 219h-62.5a31.247 31.247 0 0 0-31.25 31.25v125H78.75V157.469L235 35.75l156.25 121.875V375.25H297.5Z"
+                ></path>
+              </svg>
+              <span class="text-sm sm:text-base">
+                المروج، الرياض، المملكة العربية السعودية
+              </span>
             </div>
             <div
               class="flex flex-col text-center sm:flex-row sm:text-left items-center lg:justify-start md:w-96 gap-y-2 gap-x-5 px-3 py-4 sm:px-7 sm:py-5 border border-black/20 rounded-lg hover:border-opacity-0 hover:translate-x-5 hover:bg-primaryOrange hover:shadow-md ease-in transition-all hover:fill-white hover:text-white duration-300 group">
-              <!-- Replace SVG with appropriate icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 384"
+                class="size-5">
+                <path
+                  d="m366.793 263.086-92.265-41.348a27.35 27.35 0 0 0-25.938 2.383 9.933 9.933 0 0 0-1.094.82l-48.222 41.016a3.671 3.671 0 0 1-3.282.117c-30.996-14.961-63.105-46.875-78.125-77.441a3.733 3.733 0 0 1 0-3.281l41.153-48.829c.296-.36.569-.739.82-1.132a27.35 27.35 0 0 0 2.188-25.918l-41.055-92.11A27.35 27.35 0 0 0 92.535.996 105.937 105.937 0 0 0 .406 106.25c0 152.93 124.415 277.344 277.344 277.344a105.958 105.958 0 0 0 105.254-92.129 27.342 27.342 0 0 0-16.211-28.379Zm-89.043 97.07c-140 0-253.906-113.906-253.906-253.906a82.48 82.48 0 0 1 71.621-82.031h.45a3.906 3.906 0 0 1 3.593 2.558l41.211 92.012a3.91 3.91 0 0 1 0 3.262l-41.23 48.945a9.849 9.849 0 0 0-.84 1.113 27.345 27.345 0 0 0-1.778 26.817c17.325 35.469 53.067 70.937 88.926 88.262a27.352 27.352 0 0 0 26.895-1.954c.371-.254.742-.527 1.093-.82l48.203-41.016a3.757 3.757 0 0 1 3.126-.195l92.285 41.348a3.908 3.908 0 0 1 2.363 3.906 82.503 82.503 0 0 1-82.012 71.699Z"
+                ></path>
+              </svg>
               <span class="text-sm sm:text-base">+966536767272</span>
             </div>
             <div
               class="flex flex-col text-center sm:flex-row sm:text-left items-center lg:justify-start md:w-96 gap-y-2 gap-x-5 px-3 py-4 sm:px-7 sm:py-5 border border-black/20 rounded-lg hover:border-opacity-0 hover:translate-x-5 hover:bg-primaryOrange hover:shadow-md ease-in transition-all stroke-black hover:stroke-white hover:text-white duration-300 group">
-              <!-- Replace SVG with appropriate icon -->
-              <span class="text-sm sm:text-base normal-case"
-                >Info@لاجلك.com</span
-              >
+              <svg
+                class="size-5"
+                viewBox="0 0 358 274"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M304 12H54.0002C30.9883 12 12.3335 30.6548 12.3335 53.6667V220.333C12.3335 243.345 30.9883 262 54.0002 262H304C327.012 262 345.667 243.345 345.667 220.333V53.6667C345.667 30.6548 327.012 12 304 12Z"
+                  stroke-width="24"></path>
+                <path
+                  d="M12.3335 74.5L160.375 148.521C166.158 151.411 172.535 152.915 179 152.915C185.465 152.915 191.842 151.411 197.625 148.521L345.667 74.5"
+                  stroke-width="24"></path>
+              </svg>
+              <span class="text-sm sm:text-base normal-case">
+                Info@leajlak.com
+              </span>
             </div>
           </div>
         </div>
         <!-- form -->
-        <div class="lg:py-20">
+        <div
+          class="notshow lg:py-20"
+          data-animation="animate-fade-right animate-duration-[1500ms]">
           <form class="space-y-6">
             <div class="grid md:grid-cols-2 gap-6">
               <div class="relative z-0 w-full mb-5 group">
@@ -156,7 +186,7 @@ import contact from "../../images/icons/lets-icons_message-light.png";
       </div>
     </div>
   </section>
-  <section class="bg-white">
+  <section class="bg-white" id="map">
     <div id="map" class="h-96 z-0"></div>
   </section>
   <script src="../../Script/map.js"></script>
