@@ -4,8 +4,8 @@ const { lang = "en" } = Astro.props;
 import { Image } from "astro:assets";
 import logo_white from "../images/logo 2 white.webp";
 import logo_normal from "../images/logo 2.webp";
-import english from "../images/flag/uk.png";
-import arabic from "../images/flag/2027810-middle.png";
+import english from "../images/flag/uk.svg";
+import arabic from "../images/flag/KSA.svg";
 const content = await import(`../data/${lang}.json`);
 const handleRedirect = (lang: string) => {
   if (lang === "ar") {
@@ -19,7 +19,7 @@ const handleRedirect = (lang: string) => {
 <header id="header">
   <div
     class="notshow relative flex flex-row justify-between items-center max-w-7xl mx-auto px-6 lg:px-16 2xl:px-5 h-16 lg:justify-between"
-    data-animation="animate-fade animate-duration-[1500ms]">
+    data-animation="animate-fade animate-duration-[2000ms]">
     <a href=`/${lang}`>
       <Image
         loading="eager"
@@ -54,11 +54,10 @@ const handleRedirect = (lang: string) => {
       <div
         class="relative nav_item gap-2 items-center lg:justify-center cursor-pointer"
         id="dropdownHoverButton">
-        <div
-          class="inline-flex items-center gap-2 group-hover:text-primaryOrange">
-          <span class="">{content.solutions}</span>
+        <div class="inline-flex items-center gap-2">
+          <span>{content.solutions}</span>
           <svg
-            class=""
+            class="transition-transform duration-300"
             width="10"
             height="10"
             aria-hidden="true"
@@ -73,19 +72,17 @@ const handleRedirect = (lang: string) => {
               d="m1 1 4 4 4-4"></path>
           </svg>
         </div>
-        <div
-          id="dropdownHover"
-          class="max-h-0 ease-out duration-500 z-50 top-16 -left-1/2 overflow-hidden w-44 lg:opacity-0 lg:duration-300 lg:invisible lg:max-h-max lg:absolute lg:flex lg:bg-white lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:shadow">
+        <div id="dropdownHover" class="dropdown-menu">
           <ul
             class="text-sm text-gray-700 lg:px-4 lg:py-5 lg:space-y-4 space-y-2 mt-2 lg:mt-0">
-            <li class="lg:-translate-y-1/2 lg:opacity-0 duration-500">
+            <li class="lg:opacity-0">
               <a
                 href={`/${lang}/solutions/merchant-solutions`}
                 data-route={`/${lang}/solutions/merchant-solutions`}
                 aria-label="merchants">{content.for_merchants}</a
               >
             </li>
-            <li class="lg:-translate-y-1/2 lg:opacity-0 duration-500">
+            <li class="lg:opacity-0">
               <a
                 href={`/${lang}/solutions/logistic-solutions`}
                 data-route={`/${lang}/solutions/logistic-solutions`}
@@ -95,16 +92,171 @@ const handleRedirect = (lang: string) => {
           </ul>
         </div>
       </div>
+      <!-- Registration menu -->
       <div class="relative flex flex-col gap-5 lg:items-start lg:flex-row">
-        <a href={`/${lang}/register`} class="button">{content.register} </a>
-        <a
-          href="https://app.4ulogistic.com/login"
-          target="”_blank”"
-          class="button">{content.log_in}</a
-        >
+        <div class="w-full relative" id="registerMenuButton">
+          <button class="button">
+            {content.register}
+          </button>
+          <div class="register-menu" id="registerMenu">
+            <ul
+              class="grid sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-1 lg:grid-rows-1 text-black gap-5 pt-2 lg:gap-0 lg:p-2 w-full">
+              <li>
+                <div
+                  class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group">
+                  <a
+                    href={`/${lang}/registration/logistic-companies`}
+                    data-route={`/${lang}/registration/logistic-companies`}
+                    class="flex flex-row items-start justify-between gap-2">
+                    <div class="flex flex-col gap-1">
+                      <div
+                        class="text-sm group-hover:text-primaryOrange duration-200">
+                        {content.LC}
+                      </div>
+                      <span
+                        class="text-black/50 text-xsm group-hover:text-black/80 duration-200">
+                        {content.LCD}
+                      </span>
+                    </div>
+                    <div
+                      class="ltr:group-hover:-translate-x-1 rtl:group-hover:translate-x-1 duration-200 rtl:rotate-180">
+                      <svg
+                        class="size-5 stroke-black group-hover:stroke-primaryOrange duration-200"
+                        viewBox="-2.4 -2.4 28.8 28.8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        transform="rotate(45)"
+                        ><path
+                          d="M7 17 17 7m0 0H8m9 0v9"
+                          stroke=""
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      >
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group">
+                  <a
+                    href={`/${lang}/registration/merchants`}
+                    data-route={`/${lang}/registration/merchants`}
+                    class="flex flex-row items-start justify-between gap-2">
+                    <div class="flex flex-col gap-1">
+                      <div
+                        class="text-sm group-hover:text-primaryOrange duration-200">
+                        {content.Merchants}
+                      </div>
+                      <span
+                        class="text-black/50 text-xsm group-hover:text-black/80 duration-200">
+                        {content.MD}
+                      </span>
+                    </div>
+                    <div
+                      class="ltr:group-hover:-translate-x-1 rtl:group-hover:translate-x-1 duration-200 rtl:rotate-180">
+                      <svg
+                        class="size-5 stroke-black group-hover:stroke-primaryOrange duration-200"
+                        viewBox="-2.4 -2.4 28.8 28.8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        transform="rotate(45)"
+                        ><path
+                          d="M7 17 17 7m0 0H8m9 0v9"
+                          stroke=""
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      >
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group">
+                  <a
+                    href={`/${lang}/registration/drivers`}
+                    data-route={`/${lang}/registration/drivers`}
+                    class="flex flex-row items-start justify-between gap-2">
+                    <div class="flex flex-col gap-1">
+                      <div
+                        class="text-sm group-hover:text-primaryOrange duration-200">
+                        {content.drivers}
+                      </div>
+                      <span
+                        class="text-black/50 text-xsm group-hover:text-black/80 duration-200">
+                        {content.DD}
+                      </span>
+                    </div>
+                    <div
+                      class="ltr:group-hover:-translate-x-1 rtl:group-hover:translate-x-1 duration-200 rtl:rotate-180">
+                      <svg
+                        class="size-5 stroke-black group-hover:stroke-primaryOrange duration-200"
+                        viewBox="-2.4 -2.4 28.8 28.8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        transform="rotate(45)"
+                        ><path
+                          d="M7 17 17 7m0 0H8m9 0v9"
+                          stroke=""
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      >
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group">
+                  <a
+                    href={`/${lang}/registration/employees`}
+                    data-route={`/${lang}/registration/employees`}
+                    class="flex flex-row items-start justify-between gap-2">
+                    <div class="flex flex-col gap-1">
+                      <div
+                        class="text-sm group-hover:text-primaryOrange duration-200">
+                        {content.Employees}
+                      </div>
+                      <span
+                        class="text-black/50 text-xsm group-hover:text-black/80 duration-200">
+                        {content.ED}
+                      </span>
+                    </div>
+                    <div
+                      class="ltr:group-hover:-translate-x-1 rtl:group-hover:translate-x-1 duration-200 rtl:rotate-180">
+                      <svg
+                        class="size-5 stroke-black group-hover:stroke-primaryOrange duration-200"
+                        viewBox="-2.4 -2.4 28.8 28.8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        transform="rotate(45)"
+                        ><path
+                          d="M7 17 17 7m0 0H8m9 0v9"
+                          stroke=""
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      >
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <a
+        href="https://app.4ulogistic.com/login"
+        target="”_blank”"
+        class="button">{content.log_in}</a
+      >
+      <!-- Language dropdown -->
       <div
-        class="relative h-full flex flex-col items-start lg:flex-row lg:items-center"
+        class="relative flex flex-col items-start lg:flex-row lg:items-center"
         id="button-dropdown-menu">
         <button
           type="button"
@@ -117,7 +269,7 @@ const handleRedirect = (lang: string) => {
                     <Image
                       loading="eager"
                       src={english}
-                      class="h-5 w-5 lg:h-6 lg:w-6 rounded-full"
+                      class="size-6 lg:size-7 rounded-full pointer-events-none"
                       alt=""
                     />
                     <span>English</span>
@@ -129,7 +281,7 @@ const handleRedirect = (lang: string) => {
                     <Image
                       loading="eager"
                       src={arabic}
-                      class="h-5 w-5 lg:h-6 lg:w-6 rounded-full"
+                      class="size-6 lg:size-7 rounded-full pointer-events-none"
                       alt=""
                     />
                     <span>العربية</span>
@@ -139,15 +291,13 @@ const handleRedirect = (lang: string) => {
             }
           }
         </button>
-        <div
-          class="z-50 lg:absolute invisible opacity-0 lg:top-16 lg:-right-6 w-48 text-base list-none lg:bg-white rounded-lg lg:shadow duration-300"
-          id="language-dropdown-menu">
+        <div class="language-dropdown" id="language-dropdown-menu">
           <ul class="font-medium text-black py-5 lg:px-4 space-y-4" role="none">
             {
               () => {
                 if (lang === "en") {
                   return (
-                    <li class="lg:-translate-y-1/2 lg:opacity-0 lg:hover:text-primaryOrange lg:delay-75">
+                    <li class=" lg:opacity-0 lg:hover:text-primaryOrange lg:delay-75">
                       <a
                         href={`${handleRedirect("en")}`}
                         class="hover:text-primaryOrange inline-flex items-center"
@@ -156,7 +306,7 @@ const handleRedirect = (lang: string) => {
                         <Image
                           loading="eager"
                           src={arabic}
-                          class="h-5 w-5 lg:h-6 lg:w-6 rounded-full m-2"
+                          class="size-5 lg:size-6 rounded-full m-2 pointer-events-none"
                           alt=""
                         />
                         Arabic
@@ -170,7 +320,7 @@ const handleRedirect = (lang: string) => {
               () => {
                 if (lang === "ar") {
                   return (
-                    <li class="lg:-translate-y-1/2 lg:opacity-0 lg:hover:text-primaryOrange">
+                    <li class=" lg:opacity-0 lg:hover:text-primaryOrange">
                       <a
                         href={`${handleRedirect("ar")}`}
                         class="hover:text-primaryOrange inline-flex items-center"
@@ -178,7 +328,7 @@ const handleRedirect = (lang: string) => {
                         <Image
                           loading="eager"
                           src={english}
-                          class="h-5 w-5 lg:h-6 lg:w-6 rounded-full m-2"
+                          class="size-5 lg:size-6 rounded-full m-2 pointer-events-none"
                           alt=""
                         />
                         English

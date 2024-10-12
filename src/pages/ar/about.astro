@@ -20,7 +20,7 @@ import TrustedIcons from "../../components/TrustedIcons.astro";
   <section class="bg-darkGray" id="about-hero">
     <div
       class="notshow container section-container hero text-white"
-      data-animation="animate-fade animate-duration-[1500ms]">
+      data-animation="animate-fade animate-duration-[2000ms]">
       <div class="py-10 text-left md:text-center space-y-5">
         <h4 class="text-primaryOrange text-2xl md:text-4xl font-light">عنّا</h4>
         <h1 class="text-4xl md:text-5xl md:leading-relaxed">
@@ -168,16 +168,16 @@ import TrustedIcons from "../../components/TrustedIcons.astro";
         <TrustedIcons imgSrc={jb} alt="Janburger" />
         <TrustedIcons imgSrc={casapasta} alt="Casapasta" />
         <div
-          class="notshow bg-[url('/src/images/bg/watermark--wave-crop-orange.png')] bg-no-repeat bg-cover bg-lightGray flex flex-col md:flex-row items-center justify-between w-full h-auto space-y-5 md:space-y-0 md:h-48 rounded-lg shadow-xl py-5 px-5 md:px-24"
+          class="notshow home-cta bg-lightGray flex flex-col items-center justify-between w-full h-auto space-y-5 rounded-lg shadow-black/30 shadow-md p-5 md:space-y-0 md:h-48 md:px-24 md:flex-row"
           data-animation="animate-fade animate-duration-[1500ms]">
           <h4
-            class="text-xl md:text-2xl font-semibold text-center md:text-left md:w-[75%]">
+            class="text-white text-xl md:text-2xl font-semibold text-center md:text-left md:w-[75%]">
             هدفنا الدائم هو جذب الموهوبين والمبدعين ليكونوا جزءًا من تطويرنا
             المستمر.
           </h4>
           <a
             href=`registration/employees`
-            class="inline-flex items-center justify-center px-5 py-3 md:text-xl text-white bg-primaryOrange rounded-lg hover:shadow-lg hover:-translate-y-1 duration-300">
+            class="inline-flex items-center justify-center px-5 py-3 md:text-xl text-white border-2 rounded-lg hover:shadow-lg hover:-translate-y-1 duration-300">
             انضم الآن
           </a>
         </div>

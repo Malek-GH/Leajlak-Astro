@@ -15,16 +15,24 @@ const content = await import(`../data/${lang}.json`);
     const prevButton = document.getElementById("prev");
     const nextButton = document.getElementById("next");
     let currentIndex = 0;
-    let interval;
+    const intervalDuration = 5000;
+    let intervalId;
+
+    if (items.length === 0) {
+      console.warn('No items found with the class "item".');
+      return;
+    }
 
     const updateClasses = () => {
       items.forEach((item, index) => {
         item.classList.remove("active", "left", "right", "behind");
-        if (index === currentIndex) {
+        const position = (index - currentIndex + items.length) % items.length;
+
+        if (position === 0) {
           item.classList.add("active");
-        } else if (index === (currentIndex + 1) % items.length) {
+        } else if (position === 1) {
           item.classList.add("right");
-        } else if (index === (currentIndex - 1 + items.length) % items.length) {
+        } else if (position === items.length - 1) {
           item.classList.add("left");
         } else {
           item.classList.add("behind");
@@ -43,50 +51,78 @@ const content = await import(`../data/${lang}.json`);
     };
 
     const resetInterval = () => {
-      clearInterval(interval);
-      interval = setInterval(nextSlide, 5000);
+      clearInterval(intervalId);
+      intervalId = setInterval(nextSlide, intervalDuration);
     };
 
-    nextButton.addEventListener("click", () => {
-      nextSlide();
-      resetInterval();
-    });
+    if (nextButton) {
+      nextButton.addEventListener("click", () => {
+        nextSlide();
+        resetInterval();
+      });
+    } else {
+      console.warn('Next button not found with id "next".');
+    }
 
-    prevButton.addEventListener("click", () => {
-      prevSlide();
-      resetInterval();
-    });
+    if (prevButton) {
+      prevButton.addEventListener("click", () => {
+        prevSlide();
+        resetInterval();
+      });
+    } else {
+      console.warn('Previous button not found with id "prev".');
+    }
 
-    interval = setInterval(nextSlide, 5000);
     updateClasses();
+    intervalId = setInterval(nextSlide, intervalDuration);
   });
 </script>
+
 <div class="flex items-center justify-center h-96 relative">
   <div class="item first">
-    <h4 class="text-white text-xl absolute top-2 left-2">{content.cafe}</h4>
+    <h4 class="text-white text-xl font-medium absolute bottom-2 left-2">
+      {content.cafe}
+    </h4>
     <Image src={cafe} alt="cafe" class="size-full" />
   </div>
   <div class="item left">
-    <h4 class="text-white text-xl absolute top-2 left-2">
+    <h4 class="text-white text-xl font-medium absolute bottom-2 left-2">
       {content.Restaurants}
     </h4>
-    <Image src={restaurant} alt="restaurant" class="size-full" />
+    <Image
+      src={restaurant}
+      alt="restaurant"
+      class="size-full"
+      aria-label="restaurant"
+    />
   </div>
   <div class="item right">
-    <h4 class="text-white text-xl absolute top-2 left-2">
+    <h4 class="text-white text-xl font-medium absolute bottom-2 left-2">
       {content.family}
     </h4>
-    <Image src={family} alt="family" class="size-full" />
+    <Image src={family} alt="family" class="size-full" aria-label="family" />
   </div>
   <div class="item behind">
-    <h4 class="text-white text-xl absolute top-2 left-2">
+    <h4 class="text-white text-xl font-medium absolute bottom-2 left-2">
       {content.Online_Stores}
     </h4>
-    <Image src={onlineStores} alt="restaurant" class="size-full" />
+    <Image
+      src={onlineStores}
+      alt="onlinestores"
+      class="size-full"
+      aria-label="onlinestores"
+    />
   </div>
   <div class="item behind">
-    <h4 class="text-white text-xl absolute top-2 left-2">{content.pharmacy}</h4>
-    <Image src={pharmacy} alt="cafe" class="size-full" />
+    <h4 class="text-white text-xl font-medium absolute bottom-2 left-2">
+      {content.pharmacy}
+    </h4>
+    <Image
+      src={pharmacy}
+      alt="pharmacy"
+      class="size-full"
+      aria-label="pharmacy"
+    />
   </div>
 </div>
 <div

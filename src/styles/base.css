@@ -4,9 +4,50 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    font-family: "Open Sans", sans-serif;
+    @apply bg-lightGray;
+    text-transform: capitalize;
+    overflow-x: hidden;
+  }
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    letter-spacing: -1;
+  }
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    @apply text-3xl md:text-4xl font-bold ltr:tracking-wide leading-10 text-darkGray;
+  }
+  h3 {
+    font-family: "Montserrat", sans-serif;
+    @apply font-medium text-primaryOrange text-2xl md:text-3xl;
+  }
+  h4 {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  p {
+    @apply text-black/70 leading-7 normal-case;
+  }
   @font-face {
     font-family: "Hanimation";
     src: url("/src/fonts/Hanimation_Arabic_Regular.otf") format("otf");
+  }
+}
+
+@layer components {
+  .button {
+    @apply relative border-2 border-primaryOrange text-primaryOrange rounded-md px-5 py-2  before:bg-primaryOrange hover:text-white hover:before:w-full before:duration-300 before:-z-10 before:content-[''] before:w-0 before:h-full before:absolute before:top-0 before:left-0  duration-300;
+  }
+  .dropdown-menu {
+    @apply max-h-0 ease-out duration-500 z-50 top-16 ltr:right-0 rtl:left-0 overflow-hidden w-44  lg:opacity-0 lg:duration-200 lg:invisible lg:max-h-max lg:absolute lg:flex lg:bg-white lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:shadow-lg;
+  }
+  .register-menu {
+    @apply w-full max-h-0 overflow-hidden ease-out duration-500 z-50 top-14 ltr:right-0 rtl:left-0 lg:w-72  lg:invisible lg:opacity-0 lg:duration-200 lg:max-h-max lg:absolute lg:flex lg:bg-white lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:shadow-lg;
+  }
+  .language-dropdown {
+    @apply invisible z-50 w-48  text-base list-none top-16 rounded-lg ltr:right-0 rtl:left-0 lg:absolute lg:opacity-0  lg:duration-200 lg:bg-white  lg:shadow-lg;
   }
 }
 
@@ -14,13 +55,6 @@ img,
 video {
   max-width: none !important;
   height: none !important;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-  @apply bg-lightGray;
-  text-transform: capitalize;
-  overflow-x: hidden;
 }
 
 section:not(
@@ -49,26 +83,6 @@ section:not(
 .cta {
   @apply h-[400px] flex items-center flex-col justify-evenly;
 }
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  letter-spacing: -1;
-}
-h2 {
-  font-family: "Montserrat", sans-serif;
-  @apply text-3xl md:text-4xl font-bold tracking-wide leading-10 text-darkGray;
-}
-h3 {
-  font-family: "Montserrat", sans-serif;
-  @apply font-medium text-primaryOrange text-2xl md:text-3xl;
-}
-h4 {
-  font-family: "Montserrat", sans-serif;
-}
-
-p {
-  @apply text-black/70 leading-7 normal-case;
-}
 
 .header-logo {
   @apply lg:w-32 w-24;
@@ -79,7 +93,7 @@ p {
 }
 
 header {
-  @apply fixed top-0 w-full z-50 py-2  bg-transparent;
+  @apply fixed top-0 w-full z-50 py-2 duration-200 ease-in bg-transparent;
 }
 
 header.scrolled {
@@ -115,10 +129,10 @@ header.scrolled div {
 }
 
 .nav_item {
-  @apply lg:relative pb-1 border-b-2 w-full lg:border-b-0 lg:pb-0 lg:w-auto lg:h-full lg:flex lg:items-center lg:justify-center;
+  @apply pb-1 border-b-2 w-full lg:relative lg:border-b-0 lg:pb-0 lg:w-auto lg:h-full lg:flex lg:items-center lg:justify-center;
 }
 
-.nav_item:hover,
+.nav_item div:hover,
 .nav_item a:hover,
 .nav_item a.active {
   @apply text-primaryOrange duration-300;
@@ -129,16 +143,20 @@ header.scrolled div {
   @apply lg:absolute bottom-[15px] left-1/2 bg-primaryOrange h-[5px] w-[5px] rounded-[50%] duration-300;
 }
 
+#language-dropdown-menu.active li {
+  @apply lg:opacity-100 ease-out duration-500;
+}
+
+#language-dropdown-menu.active {
+  @apply visible opacity-100;
+}
+
 #dropdownHoverButton.active #dropdownHover {
-  @apply flex max-h-52 ease-in duration-500 lg:visible lg:opacity-100 lg:duration-300;
+  @apply flex max-h-52 ease-in-out duration-500 lg:visible lg:opacity-100 lg:duration-500;
 }
 
 #dropdownHoverButton.active svg {
-  @apply rotate-180 transition-transform duration-300;
-}
-
-#dropdownHoverButton svg {
-  @apply rotate-0 transition-transform duration-300;
+  @apply rotate-180 transition-transform ease-in-out duration-500;
 }
 
 #dropdownHoverButton #dropdownHover a.active {
@@ -146,19 +164,19 @@ header.scrolled div {
 }
 
 #dropdownHoverButton.active #dropdownHover li {
-  @apply lg:translate-y-0 lg:opacity-100 ease-out duration-500;
+  @apply opacity-100 duration-500 ease-out;
 }
 
-#dropdownHoverButton.active #dropdownHover li:last-child {
-  @apply delay-200;
+#registerMenuButton #registerMenu.active {
+  @apply flex max-h-96 ease-in-out duration-700 lg:visible lg:opacity-100 lg:duration-500;
 }
 
-#language-dropdown-menu.active li {
-  @apply lg:translate-y-0 lg:opacity-100 ease-out duration-500;
+#registerMenuButton #registerMenu ul li {
+  @apply lg:opacity-0;
 }
 
-#language-dropdown-menu.active {
-  @apply visible opacity-100;
+#registerMenuButton #registerMenu.active ul li {
+  @apply lg:opacity-100 duration-700 ease-out;
 }
 
 .menu-toggle {
@@ -191,10 +209,6 @@ header.scrolled div {
 
 .burger-3.burger-active {
   @apply top-[10px] -rotate-45;
-}
-
-.button {
-  @apply relative border-2 border-primaryOrange text-primaryOrange rounded-md px-5 py-2  before:bg-primaryOrange hover:text-white hover:before:w-full before:duration-300 before:-z-10 before:content-[''] before:w-0 before:h-full before:absolute before:top-0 before:left-0  duration-300;
 }
 
 a:hover #arrow {
@@ -386,17 +400,22 @@ label {
 }
 
 .item {
-  @apply opacity-0 absolute transition-all ease-in-out duration-500 z-0 rounded-xl  w-full h-[300px] sm:w-72 sm:h-60 lg:w-80 lg:h-64 sm:shadow-2xl overflow-hidden;
+  @apply opacity-0 absolute transition duration-700 ease-out-expo z-0 rounded-xl w-full h-[300px] sm:w-72 sm:h-60 lg:w-80 lg:h-64 sm:shadow-2xl overflow-hidden;
+  will-change: opacity, transform;
 }
+
 .item.active {
   @apply opacity-100 sm:scale-125 translate-x-0 z-10;
 }
+
 .item.left {
-  @apply sm:left-1/4 opacity-40 sm:scale-100  sm:-translate-x-1/2;
+  @apply sm:left-1/4 opacity-50 sm:scale-100 sm:-translate-x-1/2;
 }
+
 .item.right {
-  @apply sm:right-1/4 opacity-40 sm:scale-100  sm:translate-x-1/2;
+  @apply sm:right-1/4 opacity-50 sm:scale-100 sm:translate-x-1/2;
 }
+
 .item.behind {
   @apply invisible;
 }

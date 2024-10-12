@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const ButtonMenuDropdown = document.getElementById("dropdownHoverButton");
   const dropdown = document.getElementById("language-dropdown-menu");
   const buttonDrop = document.getElementById("button-dropdown-menu");
+  const registerButton = document.getElementById("registerMenuButton");
+  const registerMenu = document.getElementById("registerMenu");
 
   function handleScroll() {
     if (window.scrollY > 0) {
@@ -54,20 +56,37 @@ document.addEventListener("DOMContentLoaded", function () {
     burger3.classList.toggle("burger-active");
   });
 
-  buttonDrop.addEventListener("mouseover", function () {
-    dropdown.classList.add("active");
+  buttonDrop.addEventListener("click", function (event) {
+    dropdown.classList.toggle("active");
   });
 
-  buttonDrop.addEventListener("mouseout", function () {
-    dropdown.classList.remove("active");
+  ButtonMenuDropdown.addEventListener("click", function (event) {
+    ButtonMenuDropdown.classList.toggle("active");
   });
 
-  ButtonMenuDropdown.addEventListener("mouseover", function () {
-    ButtonMenuDropdown.classList.add("active");
+  document.addEventListener("click", function (event) {
+    if (
+      !dropdown.contains(event.target) &&
+      !buttonDrop.contains(event.target)
+    ) {
+      dropdown.classList.remove("active");
+    }
+    if (!ButtonMenuDropdown.contains(event.target)) {
+      ButtonMenuDropdown.classList.remove("active");
+    }
   });
 
-  ButtonMenuDropdown.addEventListener("mouseout", function () {
-    ButtonMenuDropdown.classList.remove("active");
+  registerButton.addEventListener("click", function (event) {
+    registerMenu.classList.toggle("active");
+  });
+
+  document.addEventListener("click", function (event) {
+    if (
+      !registerMenu.contains(event.target) &&
+      !registerButton.contains(event.target)
+    ) {
+      registerMenu.classList.remove("active");
+    }
   });
 
   handleScroll();

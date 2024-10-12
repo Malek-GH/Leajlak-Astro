@@ -5,12 +5,12 @@ const { imgSrc, alt } = Astro.props;
 
 <div
   class="w-full flex flex-row items-center justify-center flex-wrap flex-card_full gap-x-5 gap-y-10">
-  <div class="h-24 flex items-center justify-center">
+  <div class="flex items-center justify-center h-24 w-28">
     <Image
       src={imgSrc}
       alt={alt}
       loading="lazy"
-      class="w-24 h-full grayscale hover:grayscale-0 duration-200"
+      class="w-full h-full object-contain grayscale hover:grayscale-0 duration-200"
     />
   </div>
 </div>

@@ -2,37 +2,42 @@
 import Layout from "../../../layouts/Layout.astro";
 ---
 
-<Layout title="التسجيل | موظفين" lang="ar"
-  ><section
-    class="bg-[url('../images/bg/joinus-mobile.png')] lg:bg-[url('../images/bg/joinus.png')] bg-no-repeat bg-cover">
-    <div class="container section-container flex items-center">
+<Layout title="التسجيل | موظفين" lang="ar">
+  <section
+    class="bg-joinUs_mobile lg:bg-joinUs bg-no-repeat bg-cover bg-center">
+    <div class="container section-container flex items-center justify-center">
       <div
-        class="flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-36 py-12">
-        <div class="py-14 text-right space-y-5 lg:w-1/2">
+        class="flex flex-col items-center justify-center gap-36 py-12 lg:flex-row">
+        <div
+          class="notshow flex flex-col gap-y-5 w-full sm:w-[500px] lg:w-1/2"
+          data-animation="animate-fade-left animate-duration-[2000ms]">
           <div>
-            <h3>نحن نوظف</h3>
+            <h3>نحن نبحث عن موظفين</h3>
             <h2 class="text-white text-3xl lg:text-4xl">انضم إلى فريقنا.</h2>
           </div>
           <p class="text-white">
-            انضم إلى فريقنا الديناميكي وساهم في تشكيل مستقبل إدارة التوصيل.
-            خبرتك وشغفك يمكن أن يحدث فرقاً معنا!
+            انضم إلى فريقنا الديناميكي وساعد في تشكيل مستقبل إدارة التوصيل.
+            خبرتك وشغفك يمكن أن يحدثا فرقًا معنا!
           </p>
           <div class="space-y-2 visible" id="availability-div">
-            <label for="availability" class="text-white">الوظائف المتاحة:</label
+            <label for="availability" class="text-white">المناصب المتاحة:</label
             >
             <select
               name="availability"
               id="availability"
               class="bg-white text-gray-900 text-sm rounded-lg border-0 outline-0 block w-full p-2.5"
               required>
-              <option value="exist" disabled selected>اختر وظيفة متاحة</option>
-              <option value="1">الوظيفة 1</option>
-              <option value="2">الوظيفة 2</option>
+              <option value="exist" disabled selected>اختر المنصب المتاح</option
+              >
+              <option value="1">المنصب 1</option>
+              <option value="2">المنصب 2</option>
             </select>
           </div>
         </div>
-        <div class="flex justify-center w-full lg:w-1/2 overflow-hidden">
-          <form action="" class="w-full duration-500" id="form">
+        <div
+          class="notshow w-full sm:w-[500px] lg:w-1/2 overflow-hidden"
+          data-animation="animate-fade-right animate-duration-[2000ms]">
+          <form action="" id="form">
             <div class="text-white space-y-6">
               <div class="space-y-2">
                 <label for="fullName">الاسم الكامل:</label>
@@ -57,7 +62,7 @@ import Layout from "../../../layouts/Layout.astro";
                 />
               </div>
               <div class="space-y-2">
-                <label for="message" class="">رسالتك:</label>
+                <label for="message">رسالتك:</label>
                 <textarea
                   id="message"
                   rows="4"
@@ -69,7 +74,7 @@ import Layout from "../../../layouts/Layout.astro";
               <div>
                 <label
                   class="block mb-2 text-sm font-medium text-white"
-                  for="file_input">تحميل سيرتك الذاتية (PDF)</label
+                  for="file_input">قم بتحميل سيرتك الذاتية (PDF)</label
                 >
                 <input
                   class="block w-full text-sm text-gray-500 border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"

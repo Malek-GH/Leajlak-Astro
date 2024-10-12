@@ -5,7 +5,7 @@
   "solutions": "solutions",
   "for_merchants": "For Merchants",
   "For_3PL_Companies": "For 3PL Companies",
-  "register": "register",
+  "register": "Register",
   "log_in": "log in",
   "footer_headline": "Effortlessly connecting merchants with logistics providers for seamless deliveries.",
   "Quick_Links": "Quick Links",
@@ -24,5 +24,9 @@
   "Restaurants": "Restaurants",
   "family": "Productive Families",
   "Online_Stores": "Online Stores",
-  "pharmacy": "pharmacies"
+  "pharmacy": "pharmacies",
+  "LCD": "Overcome operational hurdles, enhance efficiency.",
+  "MD": "Join our platform and unlock seamless delivery management.",
+  "DD": "Drive with Us, Earn More.",
+  "ED": "Become a part of our innovative team."
 }

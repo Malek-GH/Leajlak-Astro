@@ -5,9 +5,12 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      transitionTimingFunction: {
+        "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
+      },
       animation: {
-        "loop-scroll": "loop-scroll 20s linear infinite",
-        "loop-scroll-mobile": "loop-scroll-mobile 20s linear infinite",
+        "loop-scroll": "loop-scroll 25s linear infinite",
+        "loop-scroll-mobile": "loop-scroll-mobile 25s linear infinite",
       },
       keyframes: {
         "loop-scroll": {
@@ -25,6 +28,9 @@ export default {
         contact: "url('/src/images/bg/riyadh.webp')",
         contact_mobile: "url('/src/images/bg/riyadh-mobile.webp')",
         digital_bg1: "url('/src/images/bg/digital-bg1.webp')",
+        joinUs: "url('/src/images/bg/joinus.webp')",
+        joinUs_mobile: "url('/src/images/bg/joinus-mobile.webp')",
+        thirdPL: "url('/src/images/bg/3PL.webp')",
       },
       colors: {
         primaryOrange: "rgba(236, 97, 49, 1)",
@@ -33,6 +39,7 @@ export default {
         customYellow: "rgba(247, 182, 20, 1)",
       },
       fontSize: {
+        xsm: "12px",
         sm: "14px",
         base: "16px",
       },
