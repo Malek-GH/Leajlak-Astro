@@ -1,0 +1,83 @@
+---
+const { lang } = Astro.props;
+import { Image } from "astro:assets";
+import restaurant from "../images/carousel/restaurant.webp";
+import cafe from "../images/carousel/cafe.webp";
+import family from "../images/carousel/productive-family.webp";
+import onlineStores from "../images/carousel/online-stores.webp";
+import pharmacy from "../images/carousel/pharmacy.webp";
+const content = await import(`../data/${lang}.json`);
+---
+
+<div class="Bento-container">
+  <div
+    class="will-change-auto relative overflow-hidden rounded-md group after:bg-black after:absolute after:w-full after:h-full after:top-0 after:left-0 after:opacity-20 hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out after:duration-500 after:ease-in"
+  >
+    <span class="grid-item-text">
+      {content.Online_Stores}
+    </span>
+    <Image src={onlineStores} alt="Online Stores" class="" />
+  </div>
+  <div
+    class="will-change-auto relative overflow-hidden rounded-md group after:bg-black after:absolute after:w-full after:h-full after:top-0 after:left-0 after:opacity-20 hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out after:duration-500 after:ease-in"
+  >
+    <span class="grid-item-text">
+      {content.family}
+    </span>
+    <Image src={family} alt="Productive Families" class="object-left" />
+  </div>
+  <div
+    class="will-change-auto relative overflow-hidden rounded-md group after:bg-black after:absolute after:w-full after:h-full after:top-0 after:left-0 after:opacity-20 hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out after:duration-500 after:ease-in"
+  >
+    <span class="grid-item-text">
+      {content.pharmacy}
+    </span>
+    <Image src={pharmacy} alt="Pharmacies" class="object-left" />
+  </div>
+  <div
+    class="will-change-auto relative overflow-hidden rounded-md group after:bg-black after:absolute after:w-full after:h-full after:top-0 after:left-0 after:opacity-20 hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out after:duration-500 after:ease-in"
+  >
+    <span class="grid-item-text">
+      {content.cafe}
+    </span>
+    <Image src={cafe} alt="Cafés" class="" />
+  </div>
+  <div
+    class="will-change-auto relative overflow-hidden rounded-md group after:bg-black after:absolute after:w-full after:h-full after:top-0 after:left-0 after:opacity-20 hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out after:duration-500 after:ease-in"
+  >
+    <span class="grid-item-text">
+      {content.Restaurants}
+    </span>
+    <Image src={restaurant} alt="restaurant" class="object-center" />
+  </div>
+</div>
+
+<style>
+  .Bento-container {
+    @apply grid max-h-[70rem] auto-cols-fr auto-rows-fr gap-3 md:h-full md:grid-cols-4 md:gap-5;
+  }
+  .grid-item-text {
+    @apply absolute left-1/2 top-1/2 z-10 -translate-x-1/2 translate-y-full text-center text-xl font-medium text-white opacity-0 duration-500 ease-in group-hover:-translate-y-1/2 group-hover:opacity-100 group-hover:duration-700 group-hover:ease-out md:text-2xl;
+  }
+  .Bento-container div img {
+    @apply -z-10 h-full w-full object-cover duration-500 ease-in;
+  }
+  .Bento-container div:hover img {
+    @apply scale-105 duration-700 ease-out;
+  }
+  .Bento-container div:nth-child(1) {
+    @apply col-span-2 md:col-span-2 md:h-72 lg:h-84;
+  }
+  .Bento-container div:nth-child(2) {
+    @apply md:col-span-1 lg:h-84;
+  }
+  .Bento-container div:nth-child(3) {
+    @apply md:col-span-1 lg:h-84;
+  }
+  .Bento-container div:nth-child(4) {
+    @apply col-span-2 md:col-span-1 lg:h-84;
+  }
+  .Bento-container div:nth-child(5) {
+    @apply col-span-2 md:col-span-3 md:h-72 lg:h-84;
+  }
+</style>

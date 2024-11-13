@@ -4,14 +4,17 @@ import Layout from "../../../layouts/Layout.astro";
 
 <Layout title="Registartion | Employees" lang="en">
   <section
-    class="bg-joinUs_mobile lg:bg-joinUs bg-no-repeat bg-cover bg-center">
+    class="bg-joinUs_mobile lg:bg-joinUs bg-no-repeat bg-cover bg-center pt-20"
+  >
     <div class="container section-container flex items-center justify-center">
       <div
-        class="flex flex-col items-center justify-center gap-36 py-12 lg:flex-row">
+        class="flex flex-col items-center justify-center gap-14 lg:gap-24 py-8 px-5 lg:flex-row backdrop-blur-sm outline outline-1 outline-white lg:px-10 rounded-2xl"
+      >
         <div
-          class="notshow flex flex-col gap-y-5 w-full sm:w-[500px] lg:w-1/2"
-          data-animation="animate-fade-right animate-duration-[2000ms]">
-          <div>
+          class="flex flex-col gap-y-4 w-full sm:w-[500px] lg:w-1/2"
+          data-animation="animate-fade-right animate-duration-[2000ms]"
+        >
+          <div class="space-y-1">
             <h3>we are hiring</h3>
             <h2 class="text-white text-3xl lg:text-4xl">Join our team.</h2>
           </div>
@@ -27,18 +30,17 @@ import Layout from "../../../layouts/Layout.astro";
               name="availability"
               id="availability"
               class="bg-white text-gray-900 text-sm rounded-lg border-0 outline-0 block w-full p-2.5"
-              required>
+              required
+            >
               <option value="exist" disabled selected
-                >Pick available position</option
+                >Chose available position</option
               >
               <option value="1">position 1</option>
               <option value="2">position 2</option>
             </select>
           </div>
         </div>
-        <div
-          class="notshow w-full sm:w-[500px] lg:w-1/2 overflow-hidden"
-          data-animation="animate-fade-left animate-duration-[2000ms]">
+        <div class="w-full sm:w-[500px] lg:w-1/2 overflow-hidden">
           <form action="" id="form">
             <div class="text-white space-y-6">
               <div class="space-y-2">
@@ -86,10 +88,7 @@ import Layout from "../../../layouts/Layout.astro";
                 />
               </div>
               <div class="pt-5">
-                <button
-                  type="submit"
-                  value="Submit"
-                  class="bg-primaryOrange py-3 px-5 rounded-lg hover:bg-primaryOrange/80 duration-300"
+                <button type="submit" value="Submit" class="button-regular"
                   >Submit</button
                 >
               </div>

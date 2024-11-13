@@ -2,10 +2,8 @@
 const { link, text } = Astro.props;
 ---
 
-<div>
-  <a
-    href={link}
-    class="inline-flex items-center justify-center px-5 py-3 font-medium text-base text-white bg-primaryOrange rounded-md hover:shadow-lg hover:bg-primaryOrange/80 duration-300">
+<a class="" href={link}>
+  <button class="button-regular">
     {text}
-  </a>
-</div>
+  </button>
+</a>

@@ -2,7 +2,6 @@
 import "../styles/base.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
   lang: string;
@@ -33,13 +32,15 @@ function dir() {
       crossorigin=""
     />
     <script src="../Script/scrollAnimation.js"></script>
+
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <!--  <ViewTransitions /> -->
   </head>
-  <body>
+  <body
+    class="font-OpenSans overflow-x-hidden bg-lightGray first-letter:uppercase"
+  >
     <Header lang={lang} />
-    <slot />
+    <slot class="z-50" />
     <Footer lang={lang} />
     <script src="../Script/script.js"></script>
   </body>

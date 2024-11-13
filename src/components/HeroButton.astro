@@ -1,0 +1,11 @@
+---
+const { href, text } = Astro.props;
+---
+
+<a href={href} class="btn">{text}</a>
+
+<style>
+  .btn {
+    @apply whitespace-nowrap rounded px-6 py-3 text-lg font-medium text-white ring-1 ring-white duration-300 ease-in-out will-change-transform hover:-translate-y-1;
+  }
+</style>

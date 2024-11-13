@@ -1,103 +1,100 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
-
-import one from "../../../images/icons/1.png";
-import two from "../../../images/icons/2.png";
-import three from "../../../images/icons/3.png";
-import four from "../../../images/icons/4.png";
-import google from "../../../images/icons/google play.png";
-import apple from "../../../images/icons/apple store.png";
+import app from "../../../images/bg/joinnow.webp";
 import { Image } from "astro:assets";
 ---
 
 <Layout title="Registration | Drivers" lang="en">
-  <section class="relative bg-darkGray" id="hero">
-    <div class="container section-container hero">
-      <div class="py-14 flex items-center justify-center">
-        <h2 class="text-white text-center text-3xl lg:text-5xl">
-          Become a driver.
-        </h2>
+  <section
+    class="hero bg-drviers_registration bg-cover bg-left-top bg-no-repeat flex items-center"
+  >
+    <div class="container section-container">
+      <div
+        class="fade flex flex-col gap-7 text-white text-left lg:w-[45%]"
+        data-animation="animate-fade animate-duration-[2000ms]"
+      >
+        <h1 class="text-3xl md:text-5xl">Drive with Leajlak.</h1>
+        <h4 class="text-base md:text-xl opacity-80">
+          Join us at Leajlak as a rider and be part of a dynamic team dedicated
+          to providing efficient delivery services.
+        </h4>
       </div>
-    </div>
-    <div class="custom-shape-divider-bottom-1720992718">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none">
-        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"
-        ></path>
-      </svg>
     </div>
   </section>
-  <section id="register">
+  <section>
     <div
-      class="container section-container flex flex-col items-center justify-center gap-28">
-      <h3 class="text-center text-3xl">How to register</h3>
-      <div class="flex flex-col lg:flex-row gap-y-10 gap-x-4">
-        <div
-          class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10">
-          <div class="w-full">
-            <h4 class="text-2xl">Step 1</h4>
-            <hr
-              class="border-black after:absolute after:w-3 after:h-3 after:rounded-full after:bg-black after:-right-[15px] after:top-[26px] after:hidden after:lg:block"
-            />
-            <p>
-              <span class="text-black font-medium">Download</span> the app from google
-              play or apple store
-            </p>
-          </div>
-          <Image src={one} alt="Download" />
-        </div>
-        <div
-          class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10">
-          <div class="w-full">
-            <h4 class="text-2xl">Step 2</h4>
-            <hr
-              class="border-black after:absolute after:w-3 after:h-3 after:rounded-full after:bg-black after:-right-[15px] after:top-[26px] after:hidden after:lg:block"
-            />
-            <p>
-              Fill out the necessary details and provide any required documents.
-            </p>
-          </div>
-          <Image src={two} alt="Download" />
-        </div>
-        <div
-          class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10">
-          <div class="w-full">
-            <h4 class="text-2xl">Step 3</h4>
-            <hr
-              class="border-black after:absolute after:w-3 after:h-3 after:rounded-full after:bg-black after:-right-[15px] after:top-[26px] after:hidden after:lg:block"
-            />
-            <p>Learn about our processes and get started quickly.</p>
-          </div>
-          <Image src={three} alt="Download" />
-        </div>
-        <div
-          class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10">
-          <div class="w-full">
-            <h4 class="text-2xl">Step 4</h4>
-            <hr
-              class="border-black after:absolute after:w-3 after:h-3 after:rounded-full after:bg-black after:-right-[15px] after:top-[26px] after:hidden after:lg:block"
-            />
-            <p>
-              Begin accepting delivery tasks and start earning extra income.
-            </p>
-          </div>
-          <Image src={four} alt="Download" />
-        </div>
+      class="container section-container flex items-center flex-col justify-center gap-y-10 lg:flex-row"
+    >
+      <div
+        class="lg:max-w-[432px] max-h-[745px] overflow-hidden"
+        data-animation="animate-fade-left animate-duration-[1500ms]"
+      >
+        <Image
+          src={app}
+          alt="app"
+          class="w-full h-full pointer-events-none"
+          loading="lazy"
+        />
       </div>
-      <div class="flex items-center gap-3">
-        <a
-          href="https://play.google.com/store/apps/details?id=com.leajlak.captainapp&hl=en_US"
-          target="”_blank”"
-          ><Image src={google} alt="google" class="w-36 md:w-60" /></a
-        >
-        <a
-          href="https://apps.apple.com/tr/app/leajlak/id6444185447"
-          target="”_blank”"
-          ><Image src={apple} alt="apple" class="w-36 md:w-60" /></a
-        >
+      <div class="flex flex-col justify-center gap-y-8 lg:w-1/2">
+        <div class="text-left space-y-4">
+          <h2 class="">How to get started</h2>
+          <p>
+            Earn more on the road with Leajlak - drive, deliver, and boost your
+            income!
+          </p>
+        </div>
+        <div>
+          <ol class="[counter-reset:my-sec-counter] space-y-8">
+            <li
+              class="relative flex flex-row gap-4 [counter-increment:my-sec-counter] before:content-[counter(my-sec-counter)] before:flex before:size-6 before:flex-shrink-0 before:bg-primaryOrange before:rounded-full before:text-white before:justify-center before:items-center before:font-medium before:text-sm"
+            >
+              <div class="flex flex-col space-y-2">
+                <h4 class="leading-none">Download</h4>
+                <p>
+                  Download Leajlak's app from <a
+                    href="https://play.google.com/store/apps/details?id=com.leajlak.captainapp&hl=en_US"
+                    target="”_blank”"
+                    class="underline underline-offset-2">google play</a
+                  > or <a
+                    href="https://apps.apple.com/tr/app/leajlak/id6444185447"
+                    target="”_blank”"
+                    class="underline underline-offset-2">apple store</a
+                  >
+                </p>
+              </div>
+            </li>
+            <li
+              class="relative flex flex-row gap-4 [counter-increment:my-sec-counter] before:content-[counter(my-sec-counter)] before:flex-shrink-0 before:flex before:size-6 before:bg-primaryOrange before:rounded-full before:text-white before:justify-center before:items-center before:font-medium before:text-sm"
+            >
+              <div class="flex flex-col space-y-2">
+                <h4 class="leading-none">Register</h4>
+                <p>
+                  Fill out the necessary details and provide any required
+                  documents.
+                </p>
+              </div>
+            </li>
+            <li
+              class="relative flex flex-row gap-4 [counter-increment:my-sec-counter] before:content-[counter(my-sec-counter)] before:flex-shrink-0 before:flex before:size-6 before:bg-primaryOrange before:rounded-full before:text-white before:justify-center before:items-center before:font-medium before:text-sm"
+            >
+              <div class="flex flex-col space-y-2">
+                <h4 class="leading-none">Learn</h4>
+                <p>Learn about our processes and get started quickly.</p>
+              </div>
+            </li>
+            <li
+              class="relative flex flex-row gap-4 [counter-increment:my-sec-counter] before:content-[counter(my-sec-counter)] before:flex-shrink-0 before:flex before:size-6 before:bg-primaryOrange before:rounded-full before:text-white before:justify-center before:items-center before:font-medium before:text-sm"
+            >
+              <div class="flex flex-col space-y-2">
+                <h4 class="leading-none">Begin</h4>
+                <p>
+                  Begin accepting delivery tasks and start earning extra income.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>

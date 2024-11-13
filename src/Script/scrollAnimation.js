@@ -1,4 +1,4 @@
-const sections = document.querySelectorAll(".notshow");
+const sections = document.querySelectorAll(".fade");
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -15,8 +15,8 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5,
-  }
+    threshold: 0.4,
+  },
 );
 
 sections.forEach((el) => {
