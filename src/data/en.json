@@ -28,5 +28,62 @@
   "LCD": "Overcome operational hurdles, enhance efficiency.",
   "MD": "Join our platform and unlock seamless delivery management.",
   "DD": "Drive with Us, Earn More.",
-  "ED": "Become a part of our innovative team."
+  "ED": "Become a part of our innovative team.",
+  "API": "API Integration",
+  "API_text": "Leajlak can seamlessly integrate with any Cloud POS and e-commerce channels, providing real-time synchronization, reducing errors, and enhancing operational efficiency. The benefits of API integration include streamlined order processing, improved delivery accuracy, and faster response times.",
+  "Order": "Order status",
+  "Order_text": "API-based order status updates provide benefits of real-time visibility, improved customer experience, streamlined operations, proactive communication, accurate delivery estimates, efficient problem resolution",
+  "DLL": "Drivers live location",
+  "DLL_text": "Offers significant advantages in terms of improving customer experience, optimizing delivery operations, enhancing efficiency, and ensuring effective management and monitoring of delivery processes.",
+  "Paymentm": "Payment Methods",
+  "Paymentm_text": "By knowing the payment method of the orders, the delivery process is simplified for the delivery riders. Prepaid, Cash On Delivery. Card payment upon delivery (Swiping Machine)",
+  "Customerchat": "Customer chat",
+  "Customerchat_text": "This API enables communication between customers and delivery representatives, offering a convenient channel for addressing questions, concerns, and providing information about services.",
+  "ORM": "order return management",
+  "ORM_text": "Effective returns process can reduce the risk of fraud, reducing the number of returns and improve inventory accuracy.",
+  "qualityTitle": "Quality",
+  "qualityDescription": "We believe that quality service is the foundation of our success. We always strive to ensure the highest quality delivery, from the moment the order is received until it reaches the customer.",
+
+  "speedTitle": "Speed",
+  "speedDescription": "We recognize the importance of time for our customers. Therefore, we are committed to providing fast and efficient delivery services, to ensure that orders arrive on time.",
+
+  "innovationTitle": "Innovation",
+  "innovationDescription": "We are always looking for new ways to improve our services. We use the latest technology to streamline the delivery process and improve the customer experience.",
+
+  "transparencyTitle": "Transparency",
+  "transparencyDescription": "We believe in clear communication with our customers and partners. We provide accurate information about the status of orders and delivery time, which enhances trust between us and our customers.",
+
+  "teamworkTitle": "Teamwork",
+  "teamworkDescription": "We are one team working towards a common goal. We believe that cooperation and mutual respect between team members is the key to our success in providing excellent services.",
+
+  "responsibilityTitle": "Responsibility",
+  "responsibilityDescription": "We believe in giving back to the community. We participate in initiatives that support local communities and promote sustainability.",
+
+  "customerSatisfactionTitle": "Customer Satisfaction",
+  "customerSatisfactionDescription": "We are here to serve our customers. We strive to meet their needs and expectations, and improve our services based on their feedback.",
+
+  "visit_us": "Visit us",
+  "address": "Hisham Ibn Abd Al Malek, Riyadh, Saudi Arabia",
+  "call_us": "Call us",
+  "phone_number": "+966 536767272",
+  "email_us": "Email us",
+  "email": "Info@leajlak.com",
+
+  "total_management_title": "Total Management",
+  "total_management_text": "Control and manage every aspect of your logistics needs.",
+
+  "real_time_tracking_title": "Real-time Tracking",
+  "real_time_tracking_text": "Real-time tracking for complete visibility and control over your logistics operations.",
+
+  "customer_support_title": "24/7 Customer Support",
+  "customer_support_text": "Quick and short response times, around the clock.",
+
+  "delivery_management_title": "Delivery Management System",
+  "delivery_management_text": "Streamline your operations for more efficient deliveries!",
+
+  "real_time_tracking_title2": "Real-time Tracking",
+  "real_time_tracking_text2": "Real-time order tracking and status updates.",
+
+  "customer_support_title2": "24/7 Customer Support",
+  "customer_support_text2": "Quick and short response times, around the clock."
 }

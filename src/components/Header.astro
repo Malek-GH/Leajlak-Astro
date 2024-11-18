@@ -53,10 +53,10 @@ const handleRedirect = (lang: string) => {
       </div>
       <!-- Dropdown menu -->
       <div
-        class="relative gap-2 flex flex-col lg:flex-row lg:items-center cursor-pointer lg:h-full items"
+        class="relative flex flex-col lg:flex-row lg:items-center cursor-pointer lg:h-full items"
         id="dropdownHoverButton"
       >
-        <div class="flex gap-2 items-center h-full">
+        <div class="flex gap-2 items-center lg:h-full">
           <span>{content.solutions}</span>
           <svg
             class="transition-transform duration-300"
@@ -115,7 +115,7 @@ const handleRedirect = (lang: string) => {
                   <a
                     href={`/${lang}/registration/logistic-companies`}
                     data-route={`/${lang}/registration/logistic-companies`}
-                    class="flex flex-row items-start justify-between gap-2"
+                    class="flex flex-row items-start justify-between gap-2 register_item"
                   >
                     <div class="flex flex-col gap-1">
                       <div
@@ -156,7 +156,7 @@ const handleRedirect = (lang: string) => {
                   <a
                     href={`/${lang}/registration/merchants`}
                     data-route={`/${lang}/registration/merchants`}
-                    class="flex flex-row items-start justify-between gap-2"
+                    class="flex flex-row items-start justify-between gap-2 register_item"
                   >
                     <div class="flex flex-col gap-1">
                       <div
@@ -197,7 +197,7 @@ const handleRedirect = (lang: string) => {
                   <a
                     href={`/${lang}/registration/drivers`}
                     data-route={`/${lang}/registration/drivers`}
-                    class="flex flex-row items-start justify-between gap-2"
+                    class="flex flex-row items-start justify-between gap-2 register_item"
                   >
                     <div class="flex flex-col gap-1">
                       <div
@@ -238,7 +238,7 @@ const handleRedirect = (lang: string) => {
                   <a
                     href={`/${lang}/registration/employees`}
                     data-route={`/${lang}/registration/employees`}
-                    class="flex flex-row items-start justify-between gap-2"
+                    class="flex flex-row items-start justify-between gap-2 register_item"
                   >
                     <div class="flex flex-col gap-1">
                       <div
@@ -298,7 +298,7 @@ const handleRedirect = (lang: string) => {
                     <Image
                       loading="eager"
                       src={english}
-                      class="size-6 lg:size-7 rounded-full pointer-events-none"
+                      class="size-6  rounded-full pointer-events-none"
                       alt=""
                     />
                     <span>English</span>
@@ -310,7 +310,7 @@ const handleRedirect = (lang: string) => {
                     <Image
                       loading="eager"
                       src={arabic}
-                      class="size-6 lg:size-7 rounded-full pointer-events-none"
+                      class="size-6  rounded-full pointer-events-none"
                       alt=""
                     />
                     <span>العربية</span>
@@ -336,7 +336,7 @@ const handleRedirect = (lang: string) => {
                         <Image
                           loading="eager"
                           src={arabic}
-                          class="size-5 lg:size-6 rounded-full m-2 pointer-events-none"
+                          class="size-6 rounded-full m-2 pointer-events-none"
                           alt=""
                         />
                         Arabic
@@ -359,7 +359,7 @@ const handleRedirect = (lang: string) => {
                         <Image
                           loading="eager"
                           src={english}
-                          class="size-5 lg:size-6 rounded-full m-2 pointer-events-none"
+                          class="size-6 rounded-full m-2 pointer-events-none"
                           alt=""
                         />
                         English

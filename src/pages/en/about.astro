@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import team_member from "../../images/profile-pic/team-member.png";
 import { Image } from "astro:assets";
 import about from "../../images/bg/about.webp";
 import Mc from "../../images/companies logo/clients/Mcdonald.webp";
@@ -10,7 +9,6 @@ import bk from "../../images/companies logo/clients/Burgerking.webp";
 import jb from "../../images/companies logo/clients/Janburger.webp";
 import farawalah from "../../images/companies logo/clients/Farawlah.webp";
 import casapasta from "../../images/companies logo/clients/Casapasta.webp";
-import TeamMember from "../../components/TeamMember.astro";
 import Typewriter from "../../components/Typewriter.astro";
 import TrustedIcons from "../../components/TrustedIcons.astro";
 import Values from "../../components/values.astro";
@@ -19,12 +17,12 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
 
 <Layout title="About Us" lang="en">
   <section
-    class="bg-team_mobile sm:bg-team bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center"
+    class="bg-about_mobile xs:bg-about_med 3xl:bg-about_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center relative after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-l from-black/55 from-0% to-black/80 to-85% after:size-full after:absolute after:z-0"
     id="about-hero"
   >
     <Typewriter />
     <div
-      class="fade container section-container text-white"
+      class="fade container section-container text-white z-10"
       data-animation="animate-fade animate-duration-[2000ms]"
     >
       <div class="text-left space-y-5 lg:w-3/4">
@@ -47,10 +45,13 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
     </div>
   </section>
   <section class="bg-white" id="about">
-    <div class="container section-container space-y-20 lg:space-y-32">
+    <div
+      class="fade container section-container space-y-20 lg:space-y-32"
+      data-animation="animate-fade animate-duration-[1000ms]"
+    >
       <div
         class="flex flex-col items-center lg:flex-row gap-16"
-        data-animation="animate-fade animate-duration-[1500ms]"
+        data-animation="animate-fade animate-duration-[1000ms]"
       >
         <div class="max-w-full flex-1 flex flex-col gap-y-4">
           <h2 class="">About Leajlak</h2>
@@ -74,8 +75,8 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
         class="flex flex-col items-center justify-center gap-y-20 lg:items-start lg:gap-y-0 lg:gap-x-16 lg:flex-row"
       >
         <div
-          class="lg:w-1/2 flex flex-col gap-4"
-          data-animation="animate-fade-up animate-duration-[1500ms]"
+          class="fade lg:w-1/2 flex flex-col gap-4"
+          data-animation="animate-fade-up animate-duration-[1000ms]"
         >
           <h2 class="bg-primaryOrange text-white text-center py-2">
             Our vision
@@ -91,8 +92,8 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
           </p>
         </div>
         <div
-          class="w-full lg:w-1/2 flex flex-col gap-4"
-          data-animation="animate-fade-up animate-duration-[1500ms]"
+          class="fade w-full lg:w-1/2 flex flex-col gap-4"
+          data-animation="animate-fade-up animate-duration-[1000ms]"
         >
           <h2 class="bg-primaryOrange text-white text-center py-2">
             Our mission
@@ -110,15 +111,15 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
             >
               <p class="ms-7">
                 Provide seamless connectivity between merchants and logistics
-                providers
+                providers.
               </p>
             </li>
             <li
               class="before:bg-tick relative before:absolute before:left-0 before:top-0 before:size-6 before:content-['']"
             >
               <p class="ms-7">
-                Provide seamless connectivity between merchants and logistics
-                providers
+                Improve customer satisfaction through precise and reliable
+                delivery services.
               </p>
             </li>
             <li
@@ -137,20 +138,20 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
   <section>
     <div class="container section-container space-y-20">
       <h2 class="text-center">Our values</h2>
-      <Values />
+      <Values lang="en" />
     </div>
   </section>
   <section class="bg-white">
     <div class="container section-container space-y-24">
       <h2
-        class="text-center"
-        data-animation="animate-fade animate-duration-[1500ms]"
+        class="fade text-center"
+        data-animation="animate-fade animate-duration-[1000ms]"
       >
         Trusted by Leading Businesses
       </h2>
       <div
-        class="flex flex-wrap items-center justify-center gap-x-5 gap-y-28"
-        data-animation="animate-fade animate-duration-[1500ms]"
+        class="fade flex flex-wrap items-center justify-center gap-x-5 gap-y-28"
+        data-animation="animate-fade animate-duration-[1000ms]"
       >
         <TrustedIcons imgSrc={Mc} alt="Mcdonald" />
         <TrustedIcons imgSrc={farawalah} alt="farawalah" />
@@ -162,7 +163,7 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
       </div>
       <div
         class="fade relative bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% flex flex-col items-center justify-center gap-14 w-full rounded-lg px-10 shadow-black/30 shadow-lg sm:px-24 py-24 md:min-h-[450px] overflow-hidden z-10 after:content-[''] after:absolute after:h-full after:w-full after:bg-digital_bg1 after:opacity-90 after:bg-cover after:bg-no-repeat after:bg-center after:-z-10"
-        data-animation="animate-fade-up animate-duration-[1500ms]"
+        data-animation="animate-fade-up animate-duration-[1000ms]"
       >
         <h1 class="text-white text-center text-2xl sm:text-4xl">
           Be a part of our talented team.

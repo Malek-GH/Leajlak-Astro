@@ -10,6 +10,7 @@ let required_input = "";
     (required_input = "") && (required = false);
   }
 }
+const { lang } = Astro.props;
 ---
 
 <div>
@@ -32,6 +33,13 @@ let required_input = "";
     </label>
   </div>
   <p class="error-message font-normal text-red-700 mt-1 hidden">
-    This field must not be empty
+    {
+      () => {
+        if (lang === "ar") {
+          return "يجب ألا يكون هذا الحقل فارغاً.";
+        }
+        return "This field must not be empty.";
+      }
+    }
   </p>
 </div>

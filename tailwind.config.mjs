@@ -5,6 +5,7 @@ export default {
     extend: {
       screens: {
         "3xl": "1600px",
+        xs: "480px",
       },
       transitionTimingFunction: {
         "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
@@ -27,23 +28,50 @@ export default {
         },
       },
       backgroundImage: {
-        logistic: "url('/src/images/bg/fleet-page.webp')",
-        logistic_mobile: "url('/src/images/bg/fleet-page-mobile.webp')",
-        merchant: "url('/src/images/bg/restaurent-page.webp')",
-        merchant_mobile: "url('/src/images/bg/restaurent-page-mobile.webp')",
-        merchant2: "url('/src/images/bg/merchant-bg.webp')",
-        merchant2_mobile: "url('/src/images/bg/merchant-mobile-bg.webp')",
-        contact: "url('/src/images/bg/riyadh.webp')",
-        contact_mobile: "url('/src/images/bg/riyadh-mobile.webp')",
+        logistic_solution_lg: "url('/src/images/bg/logistic_solution_lg.webp')",
+        logistic_solution_med:
+          "url('/src/images/bg/logistic_solution_med.webp')",
+        logistic_solution_mobile:
+          "url('/src/images/bg/logistic_solution_mobile.webp')",
+        merchant_solution_lg: "url('/src/images/bg/merchant_solution_lg.webp')",
+        merchant_solution_med:
+          "url('/src/images/bg/merchant_solution_md.webp')",
+        merchant_solution_mobile:
+          "url('/src/images/bg/merchant_solution_mobile.webp')",
+        contact_lg: "url('/src/images/bg/contact-lg.webp')",
+        contact_med: "url('/src/images/bg/contact-med.webp')",
+        contact_mobile: "url('/src/images/bg/contact-mobile.webp')",
         digital_bg1: "url('/src/images/bg/digital-bg1.webp')",
         digital_bg2: "url('/src/images/bg/digital-bg2.webp')",
         digital_bg3: "url('/src/images/bg/digital-bg3.webp')",
         joinUs: "url('/src/images/bg/joinus.webp')",
         joinUs_mobile: "url('/src/images/bg/joinus-mobile.webp')",
-        thirdPL: "url('/src/images/bg/3PL.webp')",
-        team: "url('/src/images/bg/team.webp')",
-        team_mobile: "url('/src/images/bg/team-mobile.webp')",
-        drviers_registration: "url('/src/images/bg/drivers_registration.webp')",
+        register_logistic_med:
+          "url('/src/images/bg/register_logistic_med.webp')",
+        register_logistic_lg: "url('/src/images/bg/register_logistic_lg.webp')",
+        register_merchants_med:
+          "url('/src/images/bg/register_merchants_med.webp')",
+        register_merchants_lg:
+          "url('/src/images/bg/register_merchants_lg.webp')",
+
+        drivers_registration_lg_en:
+          "url('/src/images/bg/drivers registration/drivers_registration_lg-en.webp)",
+        drivers_registration_md_en:
+          "url('/src/images/bg/drivers registration/drivers_registration_md-en.webp')",
+        drivers_registration_mobile_en:
+          "url('/src/images/bg/drivers registration/drivers_registration_mobile-en.webp')",
+
+        drivers_registration_lg_ar:
+          "url('/src/images/bg/drivers registration/drivers_registration_lg-ar.webp)",
+        drivers_registration_md_ar:
+          "url('/src/images/bg/drivers registration/drivers_registration_md-ar.webp')",
+        drivers_registration_mobile_ar:
+          "url('/src/images/bg/drivers registration/drivers_registration_mobile-ar.webp')",
+
+        about_lg: "url('/src/images/bg/about-lg.webp')",
+        about_med: "url('/src/images/bg/about-md.webp')",
+        about_mobile: "url('/src/images/bg/about-mobile.webp')",
+
         tick: "url('/src/images/icons/check-circle.svg')",
         caret: "url('/src/images/icons/caret.svg')",
       },

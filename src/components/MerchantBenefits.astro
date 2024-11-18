@@ -1,4 +1,9 @@
-<div class="card">
+---
+const { lang = "en" } = Astro.props;
+const content = await import(`../data/${lang}.json`);
+---
+
+<div class="card fade" data-animation="animate-fade animate-duration-[1000ms]">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -10,11 +15,11 @@
     ></path></svg
   >
   <div>
-    <h4 class="">Delivery Management System</h4>
-    <p class="">Streamline your operations for more efficient deliveries!</p>
+    <h4>{content.delivery_management_title}</h4>
+    <p>{content.delivery_management_text}</p>
   </div>
 </div>
-<div class="card">
+<div class="card fade" data-animation="animate-fade animate-duration-[1000ms]">
   <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000"
     ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
       id="SVGRepo_tracerCarrier"
@@ -29,11 +34,11 @@
     ></svg
   >
   <div>
-    <h4 class="">real-time tracking</h4>
-    <p>real-time order tracking and status updates.</p>
+    <h4>{content.real_time_tracking_title2}</h4>
+    <p>{content.real_time_tracking_text2}</p>
   </div>
 </div>
-<div class="card">
+<div class="card fade" data-animation="animate-fade animate-duration-[1000ms]">
   <svg
     viewBox="0 0 1024 1024"
     class="icon"
@@ -47,8 +52,8 @@
     ></path></svg
   >
   <div>
-    <h4>24/7 Customer support</h4>
-    <p>Quick and short response times, around the clock.</p>
+    <h4>{content.customer_support_title2}</h4>
+    <p>{content.customer_support_text2}</p>
   </div>
 </div>
 
@@ -65,7 +70,7 @@
   }
 
   .card svg {
-    @apply w-18 z-10 fill-black;
+    @apply z-10 w-18 fill-black;
   }
 
   .card h4 {

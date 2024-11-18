@@ -6,91 +6,80 @@ import LiveLocation from "../images/icons/benefits/integration/live location.svg
 import Payment_methods from "../images/icons/benefits/integration/payment method.svg";
 import chat from "../images/icons/benefits/integration/chat.svg";
 import order_return from "../images/icons/benefits/integration/order-return.svg";
+const { lang } = Astro.props;
+const content = await import(`../data/${lang}.json`);
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
   <div
-    class="FeatureCard"
-    data-animation="animate-fade animate-duration-[1500ms]"
+    class="fade FeatureCard"
+    data-animation="animate-fade animate-duration-[1000ms]"
   >
     <Image src={api} alt="Api" />
     <div>
-      <h4 class="text-xl font-medium">API Integration</h4>
-      <p class="text-left">
-        Leajlak can seamlessly integrate with any Cloud POS and e-commerce
-        channels, providing real-time synchronization, reducing errors, and
-        enhancing operational efficiency. The benefits of API integration
-        include streamlined order processing, improved delivery accuracy, and
-        faster response times.
+      <h4 class="text-xl font-medium">{content.API}</h4>
+      <p class="">
+        {content.API_text}
       </p>
     </div>
   </div>
   <div
-    class="FeatureCard"
-    data-animation="animate-fade animate-duration-[1500ms]"
+    class="fade FeatureCard"
+    data-animation="animate-fade animate-duration-[1000ms]"
   >
     <Image src={order_status} alt="order_status" />
     <div>
-      <h4 class="text-xl font-medium">Order status</h4>
-      <p class="text-left">
-        API-based order status updates provide benefits of real-time visibility,
-        improved customer experience, streamlined operations, proactive
-        communication, accurate delivery estimates, efficient problem resolution
+      <h4 class="text-xl font-medium">{content.Order}</h4>
+      <p>
+        {content.Order_text}
       </p>
     </div>
   </div>
   <div
-    class="FeatureCard"
-    data-animation="animate-fade animate-duration-[1500ms]"
+    class="fade FeatureCard"
+    data-animation="animate-fade animate-duration-[1000ms]"
   >
     <Image src={LiveLocation} alt="LiveLocation" />
     <div>
-      <h4 class="text-xl font-medium">Drivers live location</h4>
-      <p class="text-left">
-        Offers significant advantages in terms of improving customer experience,
-        optimizing delivery operations, enhancing efficiency, and ensuring
-        effective management and monitoring of delivery processes.
+      <h4 class="text-xl font-medium">{content.DLL}</h4>
+      <p>
+        {content.DLL_text}
       </p>
     </div>
   </div>
   <div
-    class="FeatureCard"
-    data-animation="animate-fade animate-duration-[1500ms]"
+    class="fade FeatureCard"
+    data-animation="animate-fade animate-duration-[1000ms]"
   >
     <Image src={Payment_methods} alt="Payment_methods" />
     <div>
-      <h4 class="text-xl font-medium">Payment methods</h4>
-      <p class="text-left">
-        By knowing the payment method of the orders, the delivery process is
-        simplified for the delivery riders. Prepaid, Cash On Delivery. Card
-        payment upon delivery (Swiping Machine)
+      <h4 class="text-xl font-medium">{content.Paymentm}</h4>
+      <p>
+        {content.Paymentm_text}
       </p>
     </div>
   </div>
   <div
-    class="FeatureCard"
-    data-animation="animate-fade animate-duration-[1500ms]"
+    class="fade FeatureCard"
+    data-animation="animate-fade animate-duration-[1000ms]"
   >
     <Image src={chat} alt="chat" />
     <div>
-      <h4 class="text-xl font-medium">Customer chat</h4>
-      <p class="text-left">
-        This API enables communication between customers and delivery
-        representatives, offering a convenient channel for addressing questions,
-        concerns, and providing information about services.
+      <h4 class="text-xl font-medium">{content.Customerchat}</h4>
+      <p>
+        {content.Customerchat_text}
       </p>
     </div>
   </div>
   <div
-    class="FeatureCard"
-    data-animation="animate-fade animate-duration-[1500ms]"
+    class="fade FeatureCard"
+    data-animation="animate-fade animate-duration-[1000ms]"
   >
     <Image src={order_return} alt="order_return" />
     <div>
-      <h4 class="text-xl font-medium">order return management</h4>
-      <p class="text-left">
-        Effective returns process can reduce the risk of fraud, reducing the
-        number of returns and improve inventory accuracy.
+      <h4 class="text-xl font-medium">{content.ORM}</h4>
+      <p>
+        {content.ORM_text}
       </p>
     </div>
   </div>
@@ -99,10 +88,13 @@ import order_return from "../images/icons/benefits/integration/order-return.svg"
   .FeatureCard {
     @apply flex flex-col items-start justify-center gap-5 text-white md:flex-row;
   }
+  .FeatureCard div {
+    @apply space-y-1;
+  }
   .FeatureCard:hover h4 {
     @apply text-primaryOrange duration-300;
   }
   .FeatureCard img {
-    @apply size-16;
+    @apply size-14 pt-1;
   }
 </style>

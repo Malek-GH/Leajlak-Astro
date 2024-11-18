@@ -1,20 +1,16 @@
 ---
+import Location from "../../components/Location.astro";
 import QuickSupport from "../../components/QuickSupport.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<script src="../../Script/map.js"></script>
-<script
-  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin=""></script>
 <Layout title="Contact Us" lang="en">
   <section
     id="contact-hero"
-    class="bg-contact_mobile sm:bg-contact bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center"
+    class="bg-contact_mobile xs:bg-contact_med 3xl:bg-contact_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center relative after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-l from-black/50 from-0% to-black/80 to-[82%] after:size-full after:absolute after:z-0"
   >
     <div
-      class="fade container section-container"
+      class="fade container section-container z-10"
       data-animation="animate-fade animate-duration-[2000ms]"
     >
       <div class="space-y-5">
@@ -32,7 +28,7 @@ import Layout from "../../layouts/Layout.astro";
   <section class="flex flex-col lg:flex-row bg-white" id="contact">
     <div
       class="fade flex flex-col justify-center gap-20 w-full lg:w-1/2 px-6 py-10 lg:p-20"
-      data-animation="animate-fade-right animate-duration-[1500ms]"
+      data-animation="animate-fade-right animate-duration-[1000ms]"
     >
       <div class="space-y-1">
         <h3>Get in Touch</h3>
@@ -121,12 +117,7 @@ import Layout from "../../layouts/Layout.astro";
         <button type="submit" class="button-regular">Submit</button>
       </form>
     </div>
-    <div
-      id="map"
-      class="fade w-full h-96 lg:h-auto lg:w-1/2 z-0 relative"
-      data-animation="animate-fade animate-duration-[1500ms]"
-    >
-    </div>
+    <Location />
   </section>
   <section id="contact">
     <div
@@ -136,7 +127,7 @@ import Layout from "../../layouts/Layout.astro";
         <h3>Quick support</h3>
         <h2>Feel free to contact us by phone, email, or visit in person.</h2>
       </div>
-      <QuickSupport />
+      <QuickSupport lang="en" />
     </div>
   </section>
 </Layout>

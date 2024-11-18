@@ -1,9 +1,13 @@
 ---
-
+const { lang = "en" } = Astro.props;
+const content = await import(`../data/${lang}.json`);
 ---
 
 <div class="card-container">
-  <div class="value-card">
+  <div
+    class="value-card fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <div class="space-y-2">
       <svg
         version="1.2"
@@ -19,12 +23,8 @@
           d="M324.5 197.6c-1.6.9-21.1 19.7-43.2 41.7L241 279.5l-25.2-25.2c-13.9-13.8-26.7-25.8-28.5-26.7-12.2-6.1-25.8 7.5-19.7 19.7 2.2 4.4 62 64.4 66.6 66.8 4.7 2.4 8.9 2.4 13.6 0 5.5-2.9 94.8-92.7 96.7-97.3 2-4.8 1.9-7.4-.4-12.5-3.3-7.1-12.6-10.3-19.6-6.7z"
         ></path></svg
       >
-      <h4>quality</h4>
-      <p>
-        We believe that quality service is the foundation of our success. We
-        always strive to ensure the highest quality delivery, from the moment
-        the order is received until it reaches the customer.
-      </p>
+      <h4>{content.qualityTitle}</h4>
+      <p>{content.qualityDescription}</p>
     </div>
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
       ><path
@@ -38,7 +38,10 @@
       ></path></svg
     >
   </div>
-  <div class="value-card">
+  <div
+    class="value-card fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
       ><path
         d="M236.4 22C145.6 28.6 69.6 80.1 29 162.5 8.7 203.8-.2 244.4 1.3 289.9c1 30.5 5.8 54.6 16.3 81.9 15.1 39.2 42 75.8 75.4 102.8 10.7 8.6 29 21.6 30 21.2 2.3-.9 60.5-52.3 60.4-53.3-.2-1.4-25.5-31.3-26.6-31.4-.6-.1-22.8 18.7-34.3 29-2 1.8-2.2 1.6-10.5-5.7-34.6-30.3-57.7-72.4-66.1-119.9-3-17-3.2-48.1-.6-65 9.5-60.2 40.7-112.6 86.9-146.3 37.3-27.2 83.3-40.7 132.3-38.9 80.2 3 147 47.1 182.1 120.2 31.3 65.1 29.4 138.8-5.1 198.8-9.3 16.2-17.6 26.9-33.7 43.1l-15.7 15.9-6.3-5.5C363 417 355.9 411 355.2 411.1c-.4 0-6.7 7.1-14.1 15.6-9.4 11-13.1 16-12.5 16.9 1.1 1.4 59.2 51.8 60.4 52.2.4.2 5.9-3.3 12.2-7.8 61.3-43.9 97.1-100.6 107.3-170.1 2.3-15.1 3-44.1 1.6-59.5C499.3 143.7 420.7 51.1 314 27.6c-23.2-5.1-54.1-7.3-77.6-5.6z"
@@ -47,12 +50,8 @@
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>Speed</h4>
-      <p>
-        We recognize the importance of time for our customers. Therefore, we are
-        committed to providing fast and efficient delivery services, to ensure
-        that orders arrive on time.
-      </p>
+      <h4>{content.speedTitle}</h4>
+      <p>{content.speedDescription}</p>
     </div>
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
       ><path
@@ -62,7 +61,10 @@
       ></path></svg
     >
   </div>
-  <div class="value-card">
+  <div
+    class="value-card fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <svg
       version="1.2"
       xmlns="http://www.w3.org/2000/svg"
@@ -75,12 +77,8 @@
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>Innovation</h4>
-      <p>
-        We are always looking for new ways to improve our services. We use the
-        latest technology to streamline the delivery process and improve the
-        customer experience.
-      </p>
+      <h4>{content.innovationTitle}</h4>
+      <p>{content.innovationDescription}</p>
     </div>
     <svg
       version="1.2"
@@ -94,7 +92,10 @@
       ></path></svg
     >
   </div>
-  <div class="value-card">
+  <div
+    class="value-card fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 478"
       ><path
         d="M16 7.3C11.1 8.9 2.7 17.5 1.2 22.6c-1.8 6-1.8 384.8 0 390.8 1.6 5.5 9.9 13.8 15.4 15.4 3.2.9 36.2 1.2 139.6 1.2 153.2 0 141.3.6 149.1-8 2.4-2.6 4.9-6.6 5.5-8.8 1-3.3 1.9-40.2 1-40.2-.2 0-3.7 1.1-7.8 2.4l-7.5 2.4-.5 16.2c-.5 15.5-.6 16.3-2.9 18.1-2.3 1.8-6 1.9-137.3 1.9H20.9l-2.4-2.5-2.5-2.4V26.9l2.5-2.4 2.4-2.5h134.9c131.4 0 135 .1 137.3 1.9 2.4 1.9 2.4 2 2.9 30.1l.5 28.2 7.5 2.4c4.1 1.3 7.6 2.4 7.8 2.4.1 0 .2-13.6.2-30.1 0-20.4-.4-31.5-1.2-34.1-.6-2.2-3.1-6.2-5.5-8.8-7.8-8.6 4.2-8-149.7-7.9-96.2.1-137.1.4-139.6 1.2z"
@@ -106,12 +107,8 @@
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>Transparency</h4>
-      <p>
-        We believe in clear communication with our customers and partners. We
-        provide accurate information about the status of orders and delivery
-        time, which enhances trust between us and our customers.
-      </p>
+      <h4>{content.transparencyTitle}</h4>
+      <p>{content.transparencyDescription}</p>
     </div>
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 478"
       ><path
@@ -124,7 +121,10 @@
       ></path></svg
     >
   </div>
-  <div class="value-card">
+  <div
+    class="value-card fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <svg
       version="1.2"
       xmlns="http://www.w3.org/2000/svg"
@@ -140,12 +140,8 @@
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>Teamwork</h4>
-      <p>
-        We are one team working towards a common goal. We believe that
-        cooperation and mutual respect between team members is the key to our
-        success in providing excellent services.
-      </p>
+      <h4>{content.teamworkTitle}</h4>
+      <p>{content.teamworkDescription}</p>
     </div>
     <svg
       version="1.2"
@@ -162,7 +158,10 @@
       ></path></svg
     >
   </div>
-  <div class="value-card">
+  <div
+    class="value-card fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
       ><path
         d="M286.5-.5h10q2.9 2.1 5.5 5 3.6 7.4 7.5 14.5 10.9.8 21 5 7 8.2 1.5 17.5l-11 11q1.7 10.9 1 22-5.5 9.9-16.5 6.5-7.1-3.2-13.5-7.5-38.1 22.4-30-21-8.2-6.7-13-16-1.9-10.3 7.5-14.5 8.5-1.7 17-3 3.9-7.1 7.5-14.5 2.6-2.9 5.5-5zm-3 33.5q-6.9 2.2-14 3.5 14.3 9.7 8.5 26 13.5-10 27 0 .2-5.6-1.5-11 1-2.4 1.5-5 4-5.2 8.5-10-7.8-1.4-15-4.5-3.7-5.7-7-11.5-2.7 7.1-8 12.5zM138.5 36.5q17-.2 34 .5 8.1 3.1 9.5 11.5.3 9.5 1.5 19 3.4 1.8 7 3 7.8-7.5 16-14.5 7.3-3.2 14 1 12.9 11.9 23.5 25.5 1.5 6.9-2 13L228.5 109q2.4 3.5 3.5 7.5 12.2.9 24.5 2.5 5.7 3.7 6.5 10.5 1 14.5 0 29-1.4 8.6-9.5 11.5l-21 1q-1.6 4.2-4 8 8.9 7.9 15.5 17.5 1.3 6.2-1 12L220.5 231q-8 5-16 0-6.8-7-14-13.5-3.4 1.8-7 3-1 11.6-2.5 23-2.4 5.9-8.5 7.5-18.6 1.4-37-1-3.6-2.5-5.5-6.5-1.5-11.4-2.5-23-3.6-1.2-7-3-7.8 7.5-16 14.5-7.2 3.1-14-1-12.3-11.8-23.5-24.5-1.6-7.4 2-14L82.5 179q-2.4-3.5-3.5-7.5-12.2-.9-24.5-2.5-5.7-3.7-6.5-10.5-1-14.5 0-29 1.5-8.5 9.5-11.5l21-1q1.6-4.2 4-8-8.9-7.9-15.5-17.5-1.2-6.1 1-12L90.5 57q6.7-4.2 14-1 8.2 7 16 14.5 3.6-1.2 7-3 1-11.6 2.5-23 3.1-5.4 8.5-8zm5.5 38q-1.7 3.2-4.5 5.5l-16 7q-6.4 1.4-12-2-6.3-6.5-13-12.5-7.7 7-15 14.5 7.8 7.3 14.5 15.5 1 5.5 0 11-2.8 5.9-5 12-2.8 5.3-8.5 7.5-10.5.7-21 .5v21q10-.2 20 .5 5.3 1 8.5 5.5 2.4 7.2 6 14 1 5.5 0 11-6.7 8.2-14.5 15.5l14 14q1 1 2 0l12-12q5.1-3.1 11-2l13 5q5.7 2.2 8.5 7.5.7 11 .5 22h22q-.2-10.5.5-21 1-4 4.5-6.5 8.3-3.9 17-7 5.9-1.1 11 2 6.3 6.5 13 12.5 7.7-7 15-14.5-7.8-7.3-14.5-15.5-1-5.5 0-11 3.3-5.7 5-12 3-6 9.5-7.5 10-.7 20-.5v-21q-10.5.2-21-.5-4.6-1.6-7.5-5.5l-6-14q-1-5.5 0-11 6.7-8.2 14.5-15.5l-14-14q-1-1-2 0l-12 12q-7.2 4.3-15 1-9.3-3.1-16.5-9.5-2.2-11.8-1.5-24h-22q.2 11-.5 22zm9.5 63q7.2-.4 9 6.5-2 8-10 6-7.6-6.8 1-12.5z"
@@ -179,11 +178,8 @@
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>Responsibility</h4>
-      <p>
-        We believe in giving back to the community. We participate in
-        initiatives that support local communities and promote sustainability.
-      </p>
+      <h4>{content.responsibilityTitle}</h4>
+      <p>{content.responsibilityDescription}</p>
     </div>
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
       ><path
@@ -197,7 +193,10 @@
       ></path></svg
     >
   </div>
-  <div class="value-card">
+  <div
+    class="value-card fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <svg
       version="1.2"
       xmlns="http://www.w3.org/2000/svg"
@@ -210,11 +209,8 @@
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>Customer Satisfaction</h4>
-      <p>
-        We are here to serve our customers. We strive to meet their needs and
-        expectations, and improve our services based on their feedback.
-      </p>
+      <h4>{content.customerSatisfactionTitle}</h4>
+      <p>{content.customerSatisfactionDescription}</p>
     </div>
     <svg
       version="1.2"
@@ -250,6 +246,6 @@
     @apply w-12 fill-primaryOrange md:w-16;
   }
   .value-card svg:last-child {
-    @apply absolute -bottom-8 -right-[105px] -z-50 w-52 fill-primaryOrange/10 duration-200 ease-in md:w-64;
+    @apply absolute -bottom-8 -z-50 w-52 fill-primaryOrange/10 duration-200 ease-in md:w-64 ltr:-right-[105px] rtl:-left-[105px];
   }
 </style>

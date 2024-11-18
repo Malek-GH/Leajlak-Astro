@@ -17,7 +17,7 @@
   }
 
   h1 {
-    @apply text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl;
+    @apply text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl rtl:leading-tight;
   }
 
   h2 {
@@ -44,7 +44,7 @@
     @apply w-full whitespace-nowrap rounded-md bg-primaryOrange py-3 text-base font-medium text-white antialiased shadow-Button_shadow shadow-primaryOrange/30 duration-200 ease-linear hover:bg-primaryOrange/80 active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
   }
   .button {
-    @apply relative w-full whitespace-nowrap rounded-sm py-2 text-center text-primaryOrange ring-1 ring-primaryOrange transition-colors duration-300 ease-out hover:bg-primaryOrange hover:text-white hover:duration-300 hover:ease-in md:w-28;
+    @apply relative w-full whitespace-nowrap rounded-sm py-2 text-center text-primaryOrange antialiased ring-1 ring-primaryOrange transition-colors duration-300 ease-out hover:bg-primaryOrange hover:text-white hover:duration-300 hover:ease-in md:w-28;
   }
   .button-return {
     @apply w-full whitespace-nowrap rounded-md bg-gray-600 py-3 text-base font-medium text-white antialiased shadow-Button_shadow shadow-gray-400 duration-200 ease-linear hover:bg-gray-700 active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
@@ -176,6 +176,13 @@ header.scrolled .nav-list {
 #registerMenuButton #registerMenu.active ul li {
   @apply lg:opacity-100 lg:duration-700 lg:ease-out;
 }
+.register_item.active {
+  @apply text-primaryOrange opacity-100;
+}
+
+.register_item.active span {
+  @apply text-black;
+}
 
 .menu-toggle {
   @apply relative h-6 w-6 cursor-pointer bg-none;
@@ -210,11 +217,11 @@ header.scrolled .nav-list {
 }
 
 a:hover #arrow {
-  @apply translate-x-2 duration-300;
+  @apply duration-300 ltr:translate-x-2 rtl:-translate-x-2;
 }
 
 #arrow {
-  @apply translate-x-0 duration-300;
+  @apply ms-2 size-3 flex-shrink-0 translate-x-0 duration-300 rtl:rotate-180 rtl:pb-1;
 }
 
 #moreFeatures {

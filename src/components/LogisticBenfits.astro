@@ -1,11 +1,12 @@
 ---
-
+const { lang = "en" } = Astro.props;
+const content = await import(`../data/${lang}.json`);
 ---
 
-<div class="card">
+<div class="card fade" data-animation="animate-fade animate-duration-[1000ms]">
   <div>
-    <h4 class="">Total Management</h4>
-    <p class="">Control and manage every aspect of your logistics needs.</p>
+    <h4>{content.total_management_title}</h4>
+    <p>{content.total_management_text}</p>
   </div>
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297 297"
@@ -16,13 +17,10 @@
     ></path></svg
   >
 </div>
-<div class="card">
+<div class="card fade" data-animation="animate-fade animate-duration-[1000ms]">
   <div>
-    <h4 class="">real-time tracking</h4>
-    <p>
-      Real-time tracking for complete visibility and control over your logistics
-      operations.
-    </p>
+    <h4>{content.real_time_tracking_title}</h4>
+    <p>{content.real_time_tracking_text}</p>
   </div>
 
   <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000"
@@ -39,10 +37,10 @@
     ></svg
   >
 </div>
-<div class="card">
+<div class="card fade" data-animation="animate-fade animate-duration-[1000ms]">
   <div>
-    <h4>24/7 Customer support</h4>
-    <p>Quick and short response times, around the clock.</p>
+    <h4>{content.customer_support_title}</h4>
+    <p>{content.customer_support_text}</p>
   </div>
 
   <svg

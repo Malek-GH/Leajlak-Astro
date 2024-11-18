@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttonDrop = document.getElementById("button-dropdown-menu");
   const registerButton = document.getElementById("registerMenuButton");
   const registerMenu = document.getElementById("registerMenu");
+  const registerItems = document.querySelectorAll(".register_item");
 
   function handleScroll() {
     if (window.scrollY > 0) {
@@ -48,7 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const itemRoute = item.getAttribute("data-route");
       item.classList.toggle("active", currentRoute === itemRoute);
     });
-
+    registerItems.forEach((registerItem) => {
+      const itemRoute = registerItem.getAttribute("data-route");
+      registerItem.classList.toggle("active", currentRoute === itemRoute);
+    });
     const isSpecialRoute =
       currentRoute === routes.merchant || currentRoute === routes.logistic;
     toggleClasses(ButtonMenuDropdown, isSpecialRoute, classes);
@@ -69,6 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
       navItems.forEach((el) => el.classList.remove("active"));
       this.classList.add("active");
       navList.classList.remove("open");
+    });
+  });
+
+  registerItems.forEach((registerItem) => {
+    registerItem.addEventListener("click", () => {
+      registerItem.classList.add("active");
     });
   });
 
@@ -97,17 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
     ButtonMenuDropdown.classList.remove("active");
   });
 
-  registerButton.addEventListener("click", function (event) {
+  registerButton.addEventListener("mouseenter", function (event) {
     registerMenu.classList.toggle("active");
   });
-
-  document.addEventListener("click", function (event) {
-    if (
-      !registerMenu.contains(event.target) &&
-      !registerButton.contains(event.target)
-    ) {
-      registerMenu.classList.remove("active");
-    }
+  registerButton.addEventListener("mouseleave", function (event) {
+    registerMenu.classList.remove("active");
   });
 
   handleScroll();

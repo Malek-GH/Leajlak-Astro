@@ -10,6 +10,7 @@ let required_input = "";
     (required_input = "") && (required = false);
   }
 }
+const { lang } = Astro.props;
 ---
 
 <div>
@@ -35,6 +36,13 @@ let required_input = "";
     </label>
   </div>
   <p class="error-message font-normal text-red-700 mt-1 hidden">
-    Please enter a valid number.
+    {
+      () => {
+        if (lang === "ar") {
+          return "يُرجى إدخال رقم صحيح.";
+        }
+        return "please enter a valid number.";
+      }
+    }
   </p>
 </div>

@@ -7,7 +7,7 @@ const logos = await Astro.glob("../images/companies logo/*.webp");
   logos.map((logo) => {
     return (
       <div
-        class="flex items-center will-change-transform justify-center h-[170px] flex-card_team_sm sm:flex-card_full hover:shadow-card_shadow hover:shadow-black/40 duration-300 ease-in-out rounded group"
+        class="fade flex items-center will-change-transform justify-center h-[170px] flex-card_team_sm sm:flex-card_full hover:shadow-card_shadow hover:shadow-black/40 duration-300 ease-in-out rounded group"
         data-animation="animate-fade animate-duration-[2000ms]"
       >
         <Image

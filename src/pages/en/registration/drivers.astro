@@ -6,28 +6,28 @@ import { Image } from "astro:assets";
 
 <Layout title="Registration | Drivers" lang="en">
   <section
-    class="hero bg-drviers_registration bg-cover bg-left-top bg-no-repeat flex items-center"
+    class="hero relative bg-drivers_registration_mobile_en xs:bg-drivers_registration_md_en 3xl:bg-drivers_registration_lg_en bg-cover bg-center bg-no-repeat flex items-center after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-l from-black/40 from-0% to-black/70 to-80% after:size-full after:absolute after:z-0"
   >
-    <div class="container section-container">
+    <div class="container section-container z-10">
       <div
         class="fade flex flex-col gap-7 text-white text-left lg:w-[45%]"
-        data-animation="animate-fade animate-duration-[2000ms]"
+        data-animation="animate-fade animate-duration-[1500ms]"
       >
         <h1 class="text-3xl md:text-5xl">Drive with Leajlak.</h1>
-        <h4 class="text-base md:text-xl opacity-80">
+        <h4 class="text-base md:text-xl">
           Join us at Leajlak as a rider and be part of a dynamic team dedicated
           to providing efficient delivery services.
         </h4>
       </div>
     </div>
   </section>
-  <section>
+  <section class="bg-white">
     <div
-      class="container section-container flex items-center flex-col justify-center gap-y-10 lg:flex-row"
+      class="fade container section-container flex items-center flex-col justify-between lg:flex-row gap-y-10"
+      data-animation="animate-fade animate-duration-[1000ms]"
     >
       <div
-        class="lg:max-w-[432px] max-h-[745px] overflow-hidden"
-        data-animation="animate-fade-left animate-duration-[1500ms]"
+        class="lg:max-w-[432px] max-h-[745px] overflow-hidden order-2 lg:order-1"
       >
         <Image
           src={app}
@@ -36,8 +36,10 @@ import { Image } from "astro:assets";
           loading="lazy"
         />
       </div>
-      <div class="flex flex-col justify-center gap-y-8 lg:w-1/2">
-        <div class="text-left space-y-4">
+      <div
+        class="flex flex-col justify-center gap-y-10 lg:w-1/2 order-1 lg:order-2"
+      >
+        <div class="text-left space-y-2">
           <h2 class="">How to get started</h2>
           <p>
             Earn more on the road with Leajlak - drive, deliver, and boost your
@@ -60,7 +62,7 @@ import { Image } from "astro:assets";
                     href="https://apps.apple.com/tr/app/leajlak/id6444185447"
                     target="”_blank”"
                     class="underline underline-offset-2">apple store</a
-                  >
+                  >.
                 </p>
               </div>
             </li>

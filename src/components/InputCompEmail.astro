@@ -10,6 +10,7 @@ let required_input = "";
     (required_input = "") && (required = false);
   }
 }
+const { lang } = Astro.props;
 ---
 
 <div>
@@ -31,6 +32,13 @@ let required_input = "";
     </label>
   </div>
   <p class="error-message font-normal text-red-700 mt-1 hidden">
-    Please enter a valid email.
+    {
+      () => {
+        if (lang === "ar") {
+          return "يُرجى إدخال بريد إلكتروني صحيح.";
+        }
+        return "please enter a valid email.";
+      }
+    }
   </p>
 </div>

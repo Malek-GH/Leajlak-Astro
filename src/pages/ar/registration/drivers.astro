@@ -1,102 +1,94 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "../../../layouts/Layout.astro";
-import one from "../../../images/icons/1.png";
-import two from "../../../images/icons/2.png";
-import three from "../../../images/icons/3.png";
-import four from "../../../images/icons/4.png";
-import google from "../../../images/icons/google play.png";
-import apple from "../../../images/icons/apple store.png";
+import app from "../../../images/bg/joinnow.webp";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="التسجيل | المناديب" lang="ar">
-  <section class="relative bg-darkGray">
-    <div class="container section-container">
-      <div class="py-14 flex items-center justify-center">
-        <h2 class="text-white text-center text-3xl lg:text-5xl">كن مندوبًا.</h2>
-      </div>
-    </div>
-    <div class="custom-shape-divider-bottom-1720992718">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
+  <section
+    class="hero relative bg-drivers_registration_mobile_ar xs:bg-drivers_registration_md_ar 3xl:bg-drivers_registration_lg_ar bg-cover bg-center bg-no-repeat flex items-center after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-r from-black/40 from-0% to-black/70 to-80% after:size-full after:absolute after:z-0"
+  >
+    <div class="container section-container z-10">
+      <div
+        class="fade flex flex-col gap-7 text-white text-right lg:w-[45%]"
+        data-animation="animate-fade animate-duration-[1500ms]"
       >
-        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"
-        ></path>
-      </svg>
+        <h1 class="text-3xl md:text-5xl">قد مع لأجلك.</h1>
+        <h4 class="text-base md:text-xl">
+          انضم إلينا في لأجلك كسائق وكن جزءًا من فريق ديناميكي مكرس لتقديم خدمات
+          توصيل فعّالة.
+        </h4>
+      </div>
     </div>
   </section>
-  <section id="register">
+  <section class="bg-white">
     <div
-      class="container section-container flex flex-col items-center justify-center gap-28"
+      class="fade container section-container flex items-center flex-col justify-between lg:flex-row gap-y-10"
+      data-animation="animate-fade animate-duration-[1000ms]"
     >
-      <h3 class="text-center text-3xl">كيفية التسجيل</h3>
-      <div class="flex flex-col lg:flex-row gap-y-10 gap-x-4">
-        <div
-          class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10"
-        >
-          <div class="w-full">
-            <h4 class="text-2xl">الخطوة 1</h4>
-            <hr
-              class="border-black after:absolute after:w-3 after:h-3 after:rounded-full after:bg-black after:-right-[15px] after:top-[26px] after:hidden after:lg:block"
-            />
-            <p>
-              <span class="text-black font-medium">قم بتحميل</span> التطبيق من متجر
-              جوجل بلاي أو أبل ستور
-            </p>
-          </div>
-          <Image src={one} alt="تحميل" />
-        </div>
-        <div
-          class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10"
-        >
-          <div class="w-full">
-            <h4 class="text-2xl">الخطوة 2</h4>
-            <hr
-              class="border-black after:absolute after:w-3 after:h-3 after:rounded-full after:bg-black after:-right-[15px] after:top-[26px] after:hidden after:lg:block"
-            />
-            <p>قم بملء التفاصيل اللازمة وتقديم أي مستندات مطلوبة.</p>
-          </div>
-          <Image src={two} alt="ملء التفاصيل" />
-        </div>
-        <div
-          class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10"
-        >
-          <div class="w-full">
-            <h4 class="text-2xl">الخطوة 3</h4>
-            <hr
-              class="border-black after:absolute after:w-3 after:h-3 after:rounded-full after:bg-black after:-right-[15px] after:top-[26px] after:hidden after:lg:block"
-            />
-            <p>تعرف على عملياتنا وابدأ بسرعة.</p>
-          </div>
-          <Image src={three} alt="تعرف على العمليات" />
-        </div>
-        <div
-          class="lg:w-1/4 h-full relative flex flex-col sm:flex-row lg:flex-col items-center justify-between gap-10"
-        >
-          <div class="w-full">
-            <h4 class="text-2xl">الخطوة 4</h4>
-            <hr
-              class="border-black after:absolute after:w-3 after:h-3 after:rounded-full after:bg-black after:-right-[15px] after:top-[26px] after:hidden after:lg:block"
-            />
-            <p>ابدأ في قبول مهام التسليم وابدأ في كسب دخل إضافي.</p>
-          </div>
-          <Image src={four} alt="ابدأ في قبول المهام" />
-        </div>
+      <div
+        class="lg:max-w-[432px] max-h-[745px] overflow-hidden order-2 lg:order-1"
+      >
+        <Image
+          src={app}
+          alt="app"
+          class="w-full h-full pointer-events-none"
+          loading="lazy"
+        />
       </div>
-      <div class="flex items-center gap-3">
-        <a
-          href="https://play.google.com/store/apps/details?id=com.leajlak.captainapp&hl=en_US"
-          target="”_blank”"
-          ><Image src={google} alt="google" class="w-36 md:w-60" /></a
-        >
-        <a
-          href="https://apps.apple.com/tr/app/leajlak/id6444185447"
-          target="”_blank”"
-          ><Image src={apple} alt="apple" class="w-36 md:w-60" /></a
-        >
+      <div
+        class="flex flex-col justify-center gap-y-10 lg:w-1/2 order-1 lg:order-2"
+      >
+        <div class="text-right space-y-2">
+          <h2 class="">كيفية البدء</h2>
+          <p>اربح المزيد أثناء التنقل مع لأجلك - قد، سلّم، وزد دخلك!</p>
+        </div>
+        <div>
+          <ol class="[counter-reset:my-sec-counter] space-y-8">
+            <li
+              class="relative flex flex-row gap-4 [counter-increment:my-sec-counter] before:content-[counter(my-sec-counter)] before:flex before:size-6 before:flex-shrink-0 before:bg-primaryOrange before:rounded-full before:text-white before:justify-center before:items-center before:font-medium before:text-sm"
+            >
+              <div class="flex flex-col space-y-2">
+                <h4 class="leading-none">تحميل</h4>
+                <p>
+                  قم بتحميل تطبيق لأجلك من <a
+                    href="https://play.google.com/store/apps/details?id=com.leajlak.captainapp&hl=en_US"
+                    target="”_blank”"
+                    class="underline underline-offset-2">متجر جوجل</a
+                  > أو <a
+                    href="https://apps.apple.com/tr/app/leajlak/id6444185447"
+                    target="”_blank”"
+                    class="underline underline-offset-2">متجر آبل</a
+                  >.
+                </p>
+              </div>
+            </li>
+            <li
+              class="relative flex flex-row gap-4 [counter-increment:my-sec-counter] before:content-[counter(my-sec-counter)] before:flex-shrink-0 before:flex before:size-6 before:bg-primaryOrange before:rounded-full before:text-white before:justify-center before:items-center before:font-medium before:text-sm"
+            >
+              <div class="flex flex-col space-y-2">
+                <h4 class="leading-none">تسجيل</h4>
+                <p>قم بتعبئة التفاصيل اللازمة وتقديم المستندات المطلوبة.</p>
+              </div>
+            </li>
+            <li
+              class="relative flex flex-row gap-4 [counter-increment:my-sec-counter] before:content-[counter(my-sec-counter)] before:flex-shrink-0 before:flex before:size-6 before:bg-primaryOrange before:rounded-full before:text-white before:justify-center before:items-center before:font-medium before:text-sm"
+            >
+              <div class="flex flex-col space-y-2">
+                <h4 class="leading-none">تعلم</h4>
+                <p>تعرف على عملياتنا وابدأ بسرعة.</p>
+              </div>
+            </li>
+            <li
+              class="relative flex flex-row gap-4 [counter-increment:my-sec-counter] before:content-[counter(my-sec-counter)] before:flex-shrink-0 before:flex before:size-6 before:bg-primaryOrange before:rounded-full before:text-white before:justify-center before:items-center before:font-medium before:text-sm"
+            >
+              <div class="flex flex-col space-y-2">
+                <h4 class="leading-none">ابدأ</h4>
+                <p>ابدأ في قبول مهام التوصيل وابدأ في كسب دخل إضافي.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>

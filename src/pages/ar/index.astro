@@ -2,543 +2,348 @@
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 /* Components */
-import Testimonial from "../../components/Testimonial.astro";
+import Testimonial from "../../components/TestimonialAr.astro";
 import Partners from "../../components/Partners.astro";
 import LogisicPartners from "../../components/LogisicPartners.astro";
 
 import Button from "../../components/Button.astro";
-import CarouselThreeD from "../../components/CarouselThreeD.astro";
+
 import InfiniteScroll from "../../components/InfiniteScroll.astro";
 /* Images */
-import mockup from "../../images/mockup.webp";
 import fleet from "../../images/bg/fleet.webp";
 import Restaurant from "../../images/bg/restaurent.webp";
 import app from "../../images/Appmockup.webp";
-import order_status from "../../images/icons/benefits/integration/order status.svg";
-import api from "../../images/icons/benefits/integration/api.svg";
-import LiveLocation from "../../images/icons/benefits/integration/live location.svg";
-import Payment_methods from "../../images/icons/benefits/integration/payment method.svg";
-import chat from "../../images/icons/benefits/integration/chat.svg";
-import Payment from "../../images/icons/benefits/integration/order-return.svg";
-import truck from "../../images/icons/path-truck 1.webp";
+import mockup from "../../images/mockup-ar.webp";
+
 import google from "../../images/icons/google play.png";
 import apple from "../../images/icons/apple store.png";
-import AOA from "../../components/SvgIcons/AOA.astro";
-import CDA from "../../components/SvgIcons/CDA.astro";
-import EDM from "../../components/SvgIcons/EDM.astro";
-import FMO from "../../components/SvgIcons/FMO.astro";
+import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
+import RealTT from "../../components/SvgIcons/RealTT.astro";
+import RiderMang from "../../components/SvgIcons/RiderMang.astro";
 import Integration from "../../components/SvgIcons/Integration.astro";
 import LogisticPartner from "../../components/SvgIcons/LogisticPartner.astro";
-import RealTT from "../../components/SvgIcons/RealTT.astro";
-import Recon from "../../components/SvgIcons/Recon.astro";
-import RiderMang from "../../components/SvgIcons/RiderMang.astro";
+import EDM from "../../components/SvgIcons/EDM.astro";
 import RTA from "../../components/SvgIcons/RTA.astro";
-import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
+import Recon from "../../components/SvgIcons/Recon.astro";
+import FMO from "../../components/SvgIcons/FMO.astro";
+import AOA from "../../components/SvgIcons/AOA.astro";
+import CDA from "../../components/SvgIcons/CDA.astro";
+
+import HeroButton from "../../components/HeroButton.astro";
+import CoreFeatures from "../../components/CoreFeatures.astro";
+import BentoGrid from "../../components/BentoGrid.astro";
 ---
 
 <Layout title="الصفحة الرئيسية" lang="ar">
-  <section class="relative h-screen">
+  <section class="relative bg-black/60 h-[700px] 3xl:h-[900px]">
     <video
       autoplay
+      playsinline
       muted
       loop
-      class="absolute right-0 bottom-0 h-full w-full object-cover"
+      class="absolute right-0 bottom-0 h-full w-full object-cover -z-10"
     >
       <source src="../../../delivery.mp4" type="video/mp4" />
     </video>
     <div
-      class="w-full h-full absolute inset-0 bg-gradient-to-t md:bg-gradient-to-br bg-black/80"
+      class="fade container section-container flex flex-col justify-end items-start h-full gap-y-4"
+      data-animation="animate-fade-up animate-duration-[2000ms]"
     >
-      <div
-        class="container section-container flex flex-col justify-center text-center h-full"
-      >
-        <div
-          class="notshow flex flex-col lg:items-center text-white"
-          data-animation="animate-fade animate-duration-[2000ms]"
-        >
-          <div class="space-y-3 mb-5">
-            <div class="text-2xl md:text-5xl">
-              نضمن لك الأمان و السرعة لتوصيل طلباتك
-            </div>
-            <h1 class="text-primaryOrange text-4xl md:text-7xl">
-              بأعلى معايير الجودة
-            </h1>
-          </div>
-          <div class="leading-7 mb-5 text-sm lg:text-base lg:w-[80%]">
-            نحن شريك تكنولوجي رائد مكرس لتعزيز تجربة التسليم في المرحلة الأخيرة
-            للشركات التي تركز على رضا العملاء. مهمتنا هي ضمان وصول كل عملية
-            تسليم إلى وجهتها بشكل موثوق، وفي الوقت المحدد، بدقة، وكفاءة، وبأكثر
-            الطرق استدامة ممكنة.
-          </div>
+      <div class="text-white space-y-3">
+        <div>
+          <h1>قم بتبسيط عمليات التوصيل،</h1>
+          <h1>وارتقِ بأعمالك.</h1>
         </div>
+        <p class="md:w-3/4">
+          نحن شريك تكنولوجي رائد مكرس لتحسين تجربة التوصيل في الميل الأخير
+          لأجلك، مما يعزز رضا العملاء للشركات.
+        </p>
       </div>
+      <HeroButton href="about" text="تعرف على المزيد" />
     </div>
   </section>
-  <div class="space-y-6 sm:space-y-12 w-full py-10 bg-white overflow-hidden">
-    <h4 class="text-2xl font-medium text-center">
-      العلامات التجارية المعززة من <span
-        class="text-primaryOrange font-semibold">لأجلك</span
-      >
-    </h4>
-    <InfiniteScroll />
-  </div>
-  <section id="Headline1" class="overflow-x-hidden flex">
+  <div class="bg-white overflow-hidden" id="InfiniteScroll">
     <div
-      class="notshow container section-container relative flex flex-col justify-center gap-10 lg:flex-row lg:items-center lg:justify-start"
-      data-animation="animate-fade animate-duration-[1500ms]"
+      class="fade space-y-6 sm:space-y-10 w-full py-10"
+      data-animation="animate-fade animate-duration-[1000ms]"
     >
-      <div class="flex flex-col justify-center space-y-8 lg:w-[50%] text-base">
-        <div class="space-y-3">
-          <div>
-            <h3>من نحن؟</h3>
-            <h2>نظام إدارة الطلبات.</h2>
-          </div>
-          <p>
-            نظام إدارة الطلبات المبتكر من لأجلك هو الحل الذي يربط بين التجار
-            وشركات اللوجستيات الخارجية لتقديم خدمات التسليم السريع والمجدولة بكل
-            سلاسة.
-          </p>
-          <p>
-            حلنا يسد الفجوة بين التجار وشركات اللوجستيات ويمكن أن يعزز الكفاءة
-            بشكل كبير، ويقلل التكاليف، ويحسن رضا العملاء.
-          </p>
+      <h4 class="text-center px-5">العلامات التجارية المدعومة من لأجلك</h4>
+      <InfiniteScroll />
+    </div>
+  </div>
+  <section
+    class="fade overflow-hidden"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
+    <div
+      class="container section-container flex flex-col lg:flex-row items-center sm:gap-y-20"
+    >
+      <div class="space-y-4 lg:w-1/2 lg:py-24">
+        <div class="space-y-1">
+          <h3>من نحن؟</h3>
+          <h2>نظام إدارة التوصيل، لتلبية جميع احتياجاتك.</h2>
         </div>
-        <div>
-          <Button link="register" text="سجل الآن" />
-        </div>
+        <p>
+          نظام إدارة الطلبات المبتكر من لأجلك هو الحل المثالي لربط التجار وشركات
+          الخدمات اللوجستية الخارجية لتقديم خدمات توصيل سريعة ومجدولة عند الطلب.
+        </p>
+        <p>
+          حلنا يسد الفجوة بين التجار وشركات الخدمات اللوجستية ويمكنه بشكل كبير
+          تحسين الكفاءة، خفض التكاليف، وتعزيز رضا العملاء. سجل الآن
+        </p>
       </div>
-      <div
-        class="lg:absolute lg:left-0 hidden sm:flex sm:justify-center lg:justify-start lg:w-[50%]"
-      >
+      <div class="w-full h-auto lg:absolute -left-36 max-w-[700px]">
         <Image
           src={mockup}
-          class="w-[770px] lg:w-[870px]"
-          alt="mockup"
-          loading="lazy"
+          alt=""
+          class="hidden sm:block w-full h-auto drop-shadow-md"
         />
       </div>
     </div>
   </section>
   <section id="WhoWeServe" class="bg-white">
     <div
-      class="container section-container flex flex-col gap-20 overflow-hidden"
+      class="container section-container flex flex-col gap-24 overflow-hidden"
     >
-      <h3
-        class="notshow text-center"
-        data-animation="animate-fade animate-duration-[1500ms]"
+      <div
+        class="fade flex flex-col gap-12"
+        data-animation="animate-fade animate-duration-[1000ms]"
       >
-        من نخدم؟
-      </h3>
-      <div class="flex flex-col items-center gap-y-32">
-        <div
-          class="notshow flex flex-col items-center gap-10 md:flex-row w-full"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <div class="md:w-[30%] space-y-2 justify-self-start">
-            <h2>القطاعات المستهدفة</h2>
-            <p>
-              تستهدف خدماتنا قطاعات متعددة، من المطاعم والمقاهي إلى البقالة
-              الإلكترونية وأكثر من ذلك بكثير.
-            </p>
-          </div>
-          <div class="relative w-full md:w-[70%]">
-            <CarouselThreeD lang="ar" />
-          </div>
+        <h2>القطاعات المستهدفة</h2>
+        <BentoGrid lang="ar" />
+      </div>
+      <div
+        class="fade flex flex-col items-center justify-center gap-20 md:flex-row"
+        data-animation="animate-fade animate-duration-[1000ms]"
+      >
+        <div class="md:w-[70%] relative">
+          <video
+            autoplay
+            muted
+            loop
+            src="/leajlak workflow.mp4"
+            class="relative w-full h-full"
+          >
+          </video>
         </div>
-        <div
-          class="notshow flex flex-col items-center justify-center gap-20 md:flex-row"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <div class="md:w-[40%] space-y-2 md:order-2">
-            <div>
-              <h2>نظام خدماتنا البيئي</h2>
-            </div>
-            <p>
-              استكشف كيف تربط منصتنا بين هؤلاء اللاعبين الرئيسيين، وتعزز كل خطوة
-              من خطوات رحلة التسليم، وتدفع النجاح عبر سلسلة التوريد.
-            </p>
+        <div class="md:w-[30%] space-y-4">
+          <div class="space-y-2">
+            <h2>نظام خدماتنا المتكامل.</h2>
           </div>
-          <div class="md:w-[60%] relative">
-            <video
-              autoplay
-              muted
-              loop
-              src="/leajlak workflow-ar.mp4"
-              class="relative w-full h-full"
+          <p>
+            اكتشف كيف يربط منصتنا هذه العناصر الأساسية، مما يعزز كل خطوة في رحلة
+            التوصيل ويدفع النجاح عبر سلسلة التوريد.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="Benfits" class="bg-lightGray normal">
+    <div class="space-y-20 md:space-y-0">
+      <!-- Merchants -->
+      <div
+        class="fade relative grid grid-cols-1 md:grid-cols-2 justify-between items-center h-full"
+        data-animation="animate-fade animate-duration-[1000ms]"
+      >
+        <div
+          class="bg-merchant_mobile bg-cover bg-center bg-no-repeat space-y-4 md:bg-none h-full text-white p-5 lg:px-20 lg:py-10 md:text-black lg:bg-none w-full flex flex-col justify-center"
+        >
+          <div>
+            <h3>الحل</h3>
+            <h2 class="text-white md:text-black">للتجار</h2>
+          </div>
+          <p class="text-white md:text-black">
+            الحل المقدم من لأجلك يغيّر إدارة الطلبات بشكل جذري، مما يعالج
+            التحديات الحرجة التي يواجهها التجار ويفتح المجال لنظام توصيل سلس
+            وفعّال.
+          </p>
+          <ul class="flex flex-col py-2 space-y-5">
+            <TailoredDMS span="نظام إدارة مصمم خصيصًا" />
+            <RealTT span="تتبع في الوقت الفعلي" />
+            <RiderMang span="إدارة السائقين" />
+            <LogisticPartner span="شراكات لوجستية" />
+            <Integration span="قدرات التكامل" />
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a
+              href="solutions/merchant-solutions"
+              class="button-regular flex items-center justify-center"
             >
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="Benfits">
-    <div
-      class="container section-container flex flex-col justify-center items-center gap-20"
-    >
-      <div
-        class="notshow flex flex-col text-left md:text-center space-y-2 md:w-[60%]"
-        data-animation="animate-fade animate-duration-[1500ms]"
-      >
-        <h3>المزايا</h3>
-        <h2 class="text-lg md:text-2xl">
-          ربط التجار بشركات اللوجستيات من أجل نظام تسليم سلس
-        </h2>
-      </div>
-      <div class="space-y-32">
-        <!-- Merchants -->
-        <div
-          class="notshow relative flex flex-col lg:flex-row justify-center items-center duration-200 lg:gap-x-14"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <div
-            class="bg-merchant_mobile bg-no-repeat bg-cover p-5 space-y-5 h-full text-white lg:text-black lg:bg-none lg:w-[50%] rounded-xl"
-          >
-            <div>
-              <div class="text-primaryOrange text-lg font-medium uppercase">
-                لأجلك
-              </div>
-              <h2 class="text-white lg:text-black">التجار</h2>
-            </div>
-            <p class="text-white lg:text-black">
-              تحلّ حلول لأجلك مشاكل إدارة الطلبات، حيث تواجه التحديات الحيوية
-              التي يواجهها التجار وتفتح الأبواب أمام نظام تسليم سلس وفعال.
-            </p>
-            <ul class="flex flex-col py-2 space-y-5">
-              <TailoredDMS span="نظام إدارة مخصص" />
-              <RealTT span="تتبع في الوقت الفعلي" />
-              <RiderMang span="إدارة السائقين" />
-              <LogisticPartner span="شراكات لوجستية" />
-              <Integration span="قدرات متكاملة" />
-            </ul>
-            <div class="inline-flex gap-x-2">
-              <a
-                href="solutions/merchant-solutions"
-                class="inline-flex items-center justify-center text-base bg-primaryOrange px-4 py-3 rounded-md text-white"
+              تعرف على المزيد
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+                id="arrow"
               >
-                <svg
-                  class="w-3.5 h-3.5 ltr:ms-2 rtl:me-2 ltr:rotate-180"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 10"
-                  id="arrow"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 5h12m0 0L9 1m4 4L9 9"></path>
-                </svg>
-                تعرف على المزيد
-              </a>
-              <Button link="/register" text="سجل الآن" />
-            </div>
-          </div>
-          <div class="w-full lg:w-[60%] lg:h-full hidden lg:block">
-            <Image
-              src={Restaurant}
-              class="h-[550px] w-full rounded-xl"
-              alt="مطعم"
-              loading="lazy"
-            />
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+              </svg>
+            </a>
+            <Button link="registration/merchants" text="سجل الآن" />
           </div>
         </div>
-        <!-- 3PL -->
+        <div class="md:w-full md:h-full hidden md:block">
+          <Image
+            src={Restaurant}
+            class="md:w-full md:h-full"
+            alt="مطعم"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- 3PL -->
+      <div
+        class="fade relative grid grid-cols-1 md:grid-cols-2 justify-between items-center h-full"
+        data-animation="animate-fade animate-duration-[1000ms]"
+      >
+        <div class="md:w-full md:h-full hidden md:block">
+          <Image
+            src={fleet}
+            class="md:w-full md:h-full"
+            loading="lazy"
+            alt=""
+          />
+        </div>
         <div
-          class="notshow relative flex flex-col lg:flex-row justify-center items-center duration-200 lg:gap-x-14"
-          data-animation="animate-fade animate-duration-[1500ms]"
+          class="bg-logistic_mobile bg-cover bg-center bg-no-repeat space-y-4 md:bg-none h-full text-white p-5 lg:px-20 lg:py-10 md:text-black lg:bg-none w-full flex flex-col justify-center"
         >
-          <div class="w-full lg:w-[60%] lg:h-full hidden lg:block">
-            <Image
-              src={fleet}
-              class="h-[550px] w-full rounded-xl"
-              loading="lazy"
-              alt=""
-            />
+          <div>
+            <h3>الحل</h3>
+            <h2 class="text-white md:text-black">لشركات الخدمات اللوجستية</h2>
           </div>
-          <div
-            class="bg-logistic_mobile bg-no-repeat bg-cover bg-center p-5 space-y-5 h-full text-white lg:text-black lg:bg-none lg:w-[50%] rounded-xl"
-          >
-            <div>
-              <div class="text-primaryOrange text-lg font-medium uppercase">
-                لأجلك
-              </div>
-              <h2 class="text-white lg:text-black">الشركات اللوجستية</h2>
-            </div>
-            <p class="text-white lg:text-black">
-              تواجه شركات اللوجستيات تحديات لوجستية، وتقدم نظام إدارة الطلبات
-              الخاص بـ لأجلك حلاً شاملاً لتحسين الكفاءة التشغيلية وتبسيط عمليات
-              التسليم.
-            </p>
-            <ul class="flex flex-col py-2 space-y-5">
-              <EDM span="تحسين إدارة التسليم" />
-              <RTA span="تتبع وتخصيص السائقين" />
-              <Recon span="تبسيط التسوية" />
-              <FMO span="تحسين إدارة الأسطول" />
-              <AOA span="تعيينات الطلبات التلقائية" />
-              <CDA span="لوحة تحكم وتطبيق مركزي" />
-            </ul>
-            <div class="inline-flex gap-x-2">
-              <a
-                href="solutions/logistic-solutions"
-                class="inline-flex items-center justify-center text-base bg-primaryOrange px-4 py-3 rounded-md text-white"
+
+          <p class="text-white md:text-black">
+            من خلال معالجة التحديات اللوجستية، يوفر نظام إدارة الطلبات من لأجلك
+            حلاً شاملاً لتعزيز الكفاءة التشغيلية وتبسيط عمليات التوصيل.
+          </p>
+
+          <ul class="flex flex-col py-2 space-y-5">
+            <EDM span="إدارة توصيل محسّنة" />
+            <RTA span="تتبع وتخصيص السائقين" />
+            <Recon span="تسوية الحسابات المبسطة" />
+            <FMO span="تحسين إدارة الأسطول" />
+            <AOA span="تخصيص الطلبات تلقائيًا" />
+            <CDA span="لوحة تحكم وتطبيق مركزي" />
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <a
+              href="solutions/logistic-solutions"
+              class="button-regular flex items-center justify-center"
+            >
+              تعرف على المزيد
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+                id="arrow"
               >
-                <svg
-                  class="w-3.5 h-3.5 ltr:ms-2 ltr:rotate-180 rtl:me-2"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 10"
-                  id="arrow"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 5h12m0 0L9 1m4 4L9 9"></path>
-                </svg>
-                تعرف على المزيد
-              </a>
-              <Button link="/register" text="سجل الآن" />
-            </div>
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+              </svg>
+            </a>
+            <Button link="registration/logistic-companies" text="سجل الآن" />
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section id="Integration" class="bg-white">
-    <div
-      class="container section-container flex flex-col items-center justify-center space-y-20"
-    >
-      <div
-        class="notshow text-center space-y-1"
-        data-animation="animate-fade animate-duration-[1500ms]"
-      >
-        <h2>الميزات الأساسية</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-20">
-        <div
-          class="notshow flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-300"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <Image src={api} alt="حالة الطلب" class="w-16" />
-          <div>
-            <h4 class="text-xl font-medium">تكامل واجهة برمجة التطبيقات</h4>
-            <p class="text-right lg:text-justify">
-              يمكن لأجلك التكامل بسلاسة مع أي نقطة بيع سحابية وقنوات التجارة
-              الإلكترونية، مما يوفر مزامنة في الوقت الحقيقي، ويقلل من الأخطاء،
-              ويعزز الكفاءة التشغيلية. تشمل فوائد تكامل واجهة برمجة التطبيقات
-              تبسيط معالجة الطلبات، وتحسين دقة التسليم، وزيادة سرعة الاستجابة.
-            </p>
-          </div>
-        </div>
-        <div
-          class="notshow flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-300"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <Image src={order_status} alt="حالة الطلب" class="w-16" />
-          <div>
-            <h4 class="text-xl font-medium">حالة الطلب</h4>
-            <p class="text-right lg:text-justify">
-              توفر التحديثات المتعلقة بحالة الطلب المعتمدة على API فوائد الرؤية
-              في الوقت الحقيقي، وتحسين تجربة العملاء، وتبسيط العمليات، والتواصل
-              الاستباقي، وتقديرات دقيقة للتسليم، وحل المشكلات بشكل فعال.
-            </p>
-          </div>
-        </div>
-        <div
-          class="notshow flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <Image src={LiveLocation} alt="الطلبات" class="w-16" />
-          <div>
-            <h4 class="text-xl font-medium">الموقع المباشر للسائقين</h4>
-            <p class="text-right lg:text-justify">
-              يوفر مزايا كبيرة من حيث تحسين تجربة العملاء، وتحسين عمليات
-              التسليم، وزيادة الكفاءة، وضمان الإدارة الفعالة ومراقبة عمليات
-              التسليم.
-            </p>
-          </div>
-        </div>
-        <div
-          class="notshow flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <Image src={Payment_methods} alt="طرق الدفع" class="w-16" />
-          <div>
-            <h4 class="text-xl font-medium">طرق الدفع</h4>
-            <p class="text-right lg:text-justify">
-              من خلال معرفة طريقة الدفع للطلبات، يتم تبسيط عملية التسليم لركاب
-              التوصيل. الدفع المسبق، الدفع عند الاستلام. الدفع بواسطة البطاقة
-              عند التسليم (جهاز السحب).
-            </p>
-          </div>
-        </div>
-        <div
-          class="notshow flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <Image class="w-16" src={chat} alt="دردشة العملاء" loading="lazy" />
-          <div>
-            <h4 class="text-xl font-medium">دردشة العملاء</h4>
-            <p class="text-right lg:text-justify">
-              يمكّن هذا الـ API التواصل بين العملاء وممثلي التوصيل، مما يوفر
-              قناة مريحة لمعالجة الأسئلة والمخاوف وتقديم المعلومات حول الخدمات.
-            </p>
-          </div>
-        </div>
-        <div
-          class="notshow flex flex-col md:flex-row gap-5 items-start justify-center hover:text-primaryOrange duration-200"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <Image class="w-16" src={Payment} alt="طرق الدفع" loading="lazy" />
-          <div>
-            <h4 class="text-xl font-medium">إدارة عودة الطلبات</h4>
-            <p class="text-right lg:text-justify">
-              يمكن أن تقلل عملية الإرجاع الفعالة من مخاطر الاحتيال، وتقلل من عدد
-              المرتجعات وتحسن دقة المخزون.
-            </p>
-          </div>
-        </div>
-      </div>
+  <section id="Integration" class="bg-darkGray">
+    <div class="container section-container space-y-20">
+      <h2 class="md:text-center text-white">الميزات الأساسية</h2>
+      <CoreFeatures lang="ar" />
     </div>
   </section>
-  <section class="home-cta">
+  <section>
     <div
-      class="flex flex-col items-center justify-center py-20 px-6 sm:px-16 gap-y-20 lg:flex-row lg:gap-x-20 lg:gap-y-0"
+      class="fade container section-container space-y-10 overflow-hidden h-full"
+      data-animation="animate-fade animate-duration-[1000ms]"
     >
-      <div
-        class="notshow lg:w-[50%] hidden sm:block"
-        data-animation="animate-fade-left animate-duration-[1500ms]"
-      >
-        <Image
-          src={truck}
-          alt="شاحنة"
-          class="w-full h-full pointer-events-none"
-          loading="lazy"
-        />
+      <div class="space-y-1 text-center">
+        <h3>آراء العملاء</h3>
+        <h2>استمع إلى آراء عملائنا السعداء.</h2>
       </div>
-      <div
-        class="notshow flex flex-col items-start justify-center gap-y-10 lg:w-1/2"
-        data-animation="animate-fade-right animate-duration-[1500ms]"
-      >
-        <h4 class="text-2xl md:text-4xl font-bold text-start w-full text-white">
-          اكتشف لماذا تختار الشركات منصتنا لتحقيق النجاح
-        </h4>
-        <a
-          href="about"
-          class="inline-flex items-center justify-center text-xl px-3 py-3 lg:px-5 lg:py-4 text-white rounded-md border border-white hover:-translate-y-1 duration-300"
-        >
-          اكتشف المزيد
-        </a>
-      </div>
-    </div>
-  </section>
-  <section class="bg-digital_bg1 bg-no-repeat bg-cover bg-center bg-fixed">
-    <div
-      class="container section-container flex flex-col justify-evenly items-center text-center gap-10"
-    >
-      <h4 class="text-2xl lg:text-4xl font-semibold">استمع لعملائنا السعداء</h4>
-      <!-- Carousel -->
-      <div class="carousel">
-        <Testimonial
-          active="active"
-          quote="مرحبًا، هذه تجربة لمكون الشهادات"
-          name="مالك"
-          position="مطور"
-          img_src="/src/images/profile-pic/unsplash_C8Ta0gwPbQg.png"
-          img_alt="اختبار"
-        />
-        <Testimonial
-          active=""
-          quote="eazeazezae"
-          name="ezaeaz"
-          position="مطور"
-          img_src="/src/images/profile-pic/unsplash_C8Ta0gwPbQg.png"
-          img_alt="اختبار"
-        />
-        <div class="carousel-controls">
-          <div class="carousel-control-prev">❮</div>
-          <div class="carousel-control-next">❯</div>
-        </div>
-      </div>
-      <!-- Customers -->
+      <Testimonial />
     </div>
   </section>
   <section id="Partners" class="bg-white">
-    <div
-      class="container section-container flex flex-col justify-center items-center text-center space-y-20"
-    >
+    <div class="container section-container space-y-20 text-center">
       <div
-        class="notshow space-y-2"
-        data-animation="animate-fade animate-duration-[1500ms]"
+        class="fade space-y-1"
+        data-animation="animate-fade animate-duration-[1000ms]"
       >
-        <h3>شركاء النجاح</h3>
-        <h2>تمكين النجاح مع شركائنا الموثوقين.</h2>
+        <h3>شركاؤنا</h3>
+        <h2>تعزيز النجاح مع شركائنا الموثوقين.</h2>
       </div>
-      <!-- الشركاء المتكاملون -->
+      <!-- Integrated Partners -->
       <div class="space-y-10">
-        <h4 class="text-3xl font-medium">الشركاء المتكاملون</h4>
+        <h4
+          class="fade"
+          data-animation="animate-fade animate-duration-[1000ms]"
+        >
+          الشركاء المتكاملون
+        </h4>
         <div
-          class="w-full flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-5 pb-10 border-b-2"
+          class="flex flex-row flex-wrap items-center justify-center w-full gap-y-10 gap-x-5 pb-10 border-b-2"
         >
           <Partners />
         </div>
       </div>
-      <!-- الشركاء اللوجستيون -->
+      <!-- Logistic Partners -->
       <div class="space-y-10 w-full flex flex-col items-center">
-        <h4
-          class="notshow text-3xl font-medium"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          الشركاء اللوجستيون
+        <h4 class="" data-animation="animate-fade animate-duration-[1000ms]">
+          شركاء الخدمات اللوجستية
         </h4>
         <div
-          class="w-full flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-5"
+          class="flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-5 w-full"
         >
           <LogisicPartners />
         </div>
       </div>
-      <!-- العملاء -->
     </div>
   </section>
-  <section>
+  <section class="bg-lightGray">
     <div class="container section-container flex items-center justify-center">
       <div
-        class="notshow md:w-1/2 space-y-12"
-        data-animation="animate-fade-left animate-duration-[1500ms]"
+        class="fade md:w-1/2 space-y-12"
+        data-animation="animate-fade-left animate-duration-[1000ms]"
       >
-        <div class="space-y-2">
+        <div class="space-y-1">
           <h2 class="text-3xl lg:text-5xl">
             قم بتحميل تطبيق <span class="text-primaryOrange">لأجلك</span> وانضم إلينا
             كسائق
           </h2>
           <p>
-            هل تبحث عن كسب دخل إضافي مع جدول مرن؟ انضم إلينا في "لأجلك" كراكب
-            وكن جزءًا من فريق ديناميكي يكرّس جهوده لتقديم خدمات التوصيل الفعالة.
+            هل تبحث عن دخل إضافي بجدول زمني مرن؟ انضم إلى فريق لأجلك كسائق وكن
+            جزءًا من فريق ديناميكي مخصص لتقديم خدمات توصيل فعالة.
           </p>
         </div>
         <div class="flex items-center gap-3">
           <a
-            href="https://play.google.com/store/apps/details?id=com.لأجلك.captainapp&hl=en_US"
-            target="_blank"
+            href="https://play.google.com/store/apps/details?id=com.leajlak.captainapp&hl=en_US"
+            target="”_blank”"
+            ><Image src={google} alt="google" class="w-40" /></a
           >
-            <Image src={google} alt="جوجل" class="w-40" />
-          </a>
           <a
-            href="https://apps.apple.com/tr/app/لأجلك/id6444185447"
-            target="_blank"
+            href="https://apps.apple.com/tr/app/leajlak/id6444185447"
+            target="”_blank”"><Image src={apple} alt="apple" class="w-40" /></a
           >
-            <Image src={apple} alt="أبل" class="w-40" />
-          </a>
         </div>
       </div>
       <div
-        class="notshow w-1/2 hidden md:block"
-        data-animation="animate-fade-right animate-duration-[1500ms]"
+        class="fade w-1/2 hidden md:block"
+        data-animation="animate-fade-right animate-duration-[1000ms]"
       >
         <Image
           src={app}

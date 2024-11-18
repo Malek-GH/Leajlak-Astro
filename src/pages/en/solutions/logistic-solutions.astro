@@ -11,16 +11,16 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
 
 <Layout title="Solutions | 3PL" lang="en">
   <section
-    class="bg-logistic_mobile sm:bg-logistic bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center"
+    class="bg-logistic_solution_mobile xs:bg-logistic_solution_med 3xl:bg-logistic_solution_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center relative after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-l from-black/40 from-0% to-black/80 to-80% after:size-full after:absolute after:z-0"
     id="PL-hero"
   >
     <div
-      class="fade container section-container"
+      class="fade container section-container z-10"
       data-animation="animate-fade animate-duration-[2000ms]"
     >
-      <div class="flex flex-col gap-7 text-white text-left lg:w-[55%]">
+      <div class="flex flex-col gap-7 text-white lg:w-[55%]">
         <h1 class="text-3xl md:text-5xl">Logistic Companies</h1>
-        <h4 class="text-base md:text-xl opacity-80">
+        <h4 class="text-base md:text-xl">
           Addressing the logistical challenges faced by companies, Leajlak’s
           Delivery Management System offers a comprehensive solution to enhance
           operational efficiency and streamline delivery processes.
@@ -32,7 +32,10 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
     <div
       class="container section-container flex flex-col items-center justify-center gap-20"
     >
-      <div class="flex flex-col items-center text-center gap-2">
+      <div
+        class="fade flex flex-col items-center text-center gap-2"
+        data-animation="animate-fade animate-duration-[1000ms]"
+      >
         <h2 class="text-primaryOrange">Our Solutions</h2>
         <p class="">
           A comprehensive solution to enhance operational efficiency.
@@ -42,8 +45,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
         class="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-x-20 gap-y-5"
       >
         <div
-          class="card-solution"
-          data-animation="animate-fade animate-duration-[1500ms]"
+          class="card-solution fade"
+          data-animation="animate-fade animate-duration-[1000ms]"
         >
           <svg
             version="1.2"
@@ -68,8 +71,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           </div>
         </div>
         <div
-          class="card-solution"
-          data-animation="animate-fade animate-duration-[1500ms]"
+          class="card-solution fade"
+          data-animation="animate-fade animate-duration-[1000ms]"
         >
           <svg
             version="1.2"
@@ -96,8 +99,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           </div>
         </div>
         <div
-          class="card-solution"
-          data-animation="animate-fade animate-duration-[1500ms]"
+          class="card-solution fade"
+          data-animation="animate-fade animate-duration-[1000ms]"
         >
           <svg
             version="1.2"
@@ -119,8 +122,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           </div>
         </div>
         <div
-          class="card-solution"
-          data-animation="animate-fade animate-duration-[1500ms]"
+          class="card-solution fade"
+          data-animation="animate-fade animate-duration-[1000ms]"
         >
           <svg
             version="1.2"
@@ -151,8 +154,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           </div>
         </div>
         <div
-          class="card-solution"
-          data-animation="animate-fade animate-duration-[1500ms]"
+          class="card-solution fade"
+          data-animation="animate-fade animate-duration-[1000ms]"
         >
           <svg
             version="1.2"
@@ -181,8 +184,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           </div>
         </div>
         <div
-          class="card-solution"
-          data-animation="animate-fade animate-duration-[1500ms]"
+          class="card-solution fade"
+          data-animation="animate-fade animate-duration-[1000ms]"
         >
           <svg
             class="stroke-primaryOrange"
@@ -213,8 +216,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
       class="container section-container flex-col items-center justify-center space-y-28"
     >
       <div
-        class="flex flex-col items-center text-center gap-4"
-        data-animation="animate-fade animate-duration-[1500ms]"
+        class="fade flex flex-col items-center text-center gap-4"
+        data-animation="animate-fade animate-duration-[1000ms]"
       >
         <div class="space-y-1">
           <h3>Benefits</h3>
@@ -223,8 +226,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
       </div>
       <div class="benefits-card group">
         <div
-          class="w-full md:h-[450px] md:w-[80%] relative lg:w-1/2"
-          data-animation="animate-fade-right animate-duration-[1500ms]"
+          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2"
+          data-animation="animate-fade-right animate-duration-[1000ms]"
         >
           <Image
             src={fleet}
@@ -234,8 +237,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           />
         </div>
         <div
-          class="relative h-full w-full p-5 py-3 bg-lightGray space-y-5 sm:py-10 md:px-20 md:w-[80%] lg:right-40 lg:h-80 lg:w-1/2"
-          data-animation="animate-fade-left animate-duration-[1500ms]"
+          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 sm:py-10 md:px-20 md:w-[80%] lg:right-40 lg:h-80 lg:w-1/2"
+          data-animation="animate-fade-left animate-duration-[1000ms]"
         >
           <h1
             class="text-7xl absolute right-0 -bottom-6 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping animate-once"
@@ -252,8 +255,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
       </div>
       <div class="benefits-card group">
         <div
-          class="w-full md:h-[450px] md:w-[80%] relative lg:w-1/2 lg:order-2"
-          data-animation="animate-fade-left animate-duration-[1500ms]"
+          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2 lg:order-2"
+          data-animation="animate-fade-left animate-duration-[1000ms]"
         >
           <Image
             src={fleet_cost}
@@ -263,9 +266,9 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           />
         </div>
         <div
-          class="relative h-full w-full p-5 py-3 bg-lightGray space-y-5 z-10 sm:py-10
+          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 z-10 sm:py-10
         md:px-20 md:w-[80%] lg:left-40 lg:h-80 lg:w-1/2 lg:order-1"
-          data-animation="animate-fade-right animate-duration-[1500ms]"
+          data-animation="animate-fade-right animate-duration-[1000ms]"
         >
           <h1
             class="text-7xl absolute left-0 -bottom-12 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping duration-500"
@@ -283,14 +286,14 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
       </div>
       <div class="benefits-card group">
         <div
-          class="w-full md:h-[450px] md:w-[80%] relative lg:w-1/2"
-          data-animation="animate-fade-right animate-duration-[1500ms]"
+          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2"
+          data-animation="animate-fade-right animate-duration-[1000ms]"
         >
           <Image src={data} alt="data" loading="eager" class="w-full h-full" />
         </div>
         <div
-          class="relative h-full w-full p-5 py-3 bg-lightGray space-y-5 sm:py-10 md:px-20 md:w-[80%] lg:right-40 lg:h-80 lg:w-1/2"
-          data-animation="animate-fade-left animate-duration-[1500ms]"
+          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 sm:py-10 md:px-20 md:w-[80%] lg:right-40 lg:h-80 lg:w-1/2"
+          data-animation="animate-fade-left animate-duration-[1000ms]"
         >
           <h1
             class="text-7xl absolute right-0 -bottom-12 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping duration-500"
@@ -308,8 +311,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
       </div>
       <div class="benefits-card group">
         <div
-          class="w-full md:h-[450px] md:w-[80%] relative lg:w-1/2 lg:order-2"
-          data-animation="animate-fade-left animate-duration-[1500ms]"
+          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2 lg:order-2"
+          data-animation="animate-fade-left animate-duration-[1000ms]"
         >
           <Image
             src={client}
@@ -319,8 +322,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           />
         </div>
         <div
-          class="relative h-full w-full p-5 py-3 bg-lightGray space-y-5 z-10 sm:py-10 md:px-20 md:w-[80%] lg:left-40 lg:h-80 lg:w-1/2 lg:order-1"
-          data-animation="animate-fade-right animate-duration-[1500ms]"
+          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 z-10 sm:py-10 md:px-20 md:w-[80%] lg:left-40 lg:h-80 lg:w-1/2 lg:order-1"
+          data-animation="animate-fade-right animate-duration-[1000ms]"
         >
           <h1
             class="text-7xl absolute left-0 -bottom-12 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping duration-500"
@@ -342,15 +345,15 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
       class="container section-container flex flex-col justify-center gap-24"
     >
       <h2
-        class="text-center"
-        data-animation="animate-fade animate-duration-[1500ms]"
+        class="fade text-center"
+        data-animation="animate-fade animate-duration-[1000ms]"
       >
         Don't Take Our Word For It
       </h2>
       <div class="flex flex-wrap items-center justify-between gap-5">
         <div
-          class="relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
-          data-animation="animate-fade animate-duration-[1500ms]"
+          class="fade relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
+          data-animation="animate-fade animate-duration-[1000ms]"
         >
           <div
             class="relative flex flex-col items-center justify-center text-center p-5 rounded bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-[250px] ease-out
@@ -399,8 +402,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           </figure>
         </div>
         <div
-          class="relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
-          data-animation="animate-fade animate-duration-[1500ms]"
+          class="fade relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
+          data-animation="animate-fade animate-duration-[1000ms]"
         >
           <div
             class="relative flex flex-col items-center justify-center text-center p-5 rounded bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-[250px] ease-out
@@ -449,8 +452,8 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           </figure>
         </div>
         <div
-          class="relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
-          data-animation="animate-fade animate-duration-[1500ms]"
+          class="fade relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
+          data-animation="animate-fade animate-duration-[1000ms]"
         >
           <div
             class="relative flex flex-col items-center justify-center text-center p-5 rounded bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-[250px] ease-out
@@ -501,7 +504,7 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
       </div>
       <div
         class="fade relative bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% flex flex-col items-center justify-center gap-14 w-full rounded-lg px-10 shadow-black/30 shadow-lg sm:px-24 py-24 md:min-h-[450px] overflow-hidden z-10 after:content-[''] after:absolute after:h-full after:w-full after:bg-digital_bg3 after:bg-cover after:opacity-90 after:bg-no-repeat after:bg-center after:-z-10"
-        data-animation="animate-fade-up animate-duration-[1500ms]"
+        data-animation="animate-fade-up animate-duration-[1000ms]"
       >
         <h1 class="text-white text-center text-2xl sm:text-4xl">
           Simplify your logistics, amplify your success.
