@@ -4,11 +4,36 @@ import QuickSupport from "../../components/QuickSupport.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
+<link
+  rel="preload"
+  href="/src/images/bg/contact-mobile.webp"
+  as="image"
+  media="(max-width: 479px)"
+/>
+<link
+  rel="preload"
+  href="/src/images/bg/contact-med.webp"
+  as="image"
+  media="(min-width: 480px) "
+/>
+<link
+  rel="preload"
+  href="/src/images/bg/contact-lg.webp"
+  as="image"
+  media="(min-width: 1600px)"
+/>
+
 <Layout title="Contact Us" lang="en">
   <section
     id="contact-hero"
-    class="bg-contact_mobile xs:bg-contact_med 3xl:bg-contact_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center relative after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-l from-black/50 from-0% to-black/80 to-[82%] after:size-full after:absolute after:z-0"
+    class="bg-contact_mobile xs:bg-contact_med 3xl:bg-contact_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center relative overflow-hidden"
   >
+    <!-- Overlay Div -->
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+    >
+    </div>
     <div
       class="fade container section-container z-10"
       data-animation="animate-fade animate-duration-[2000ms]"

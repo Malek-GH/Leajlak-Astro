@@ -10,9 +10,28 @@ import portrait from "../../../images/profile-pic/portrait.png";
 import ButtonOutline from "../../../components/ButtonOutline.astro";
 ---
 
+<link
+  rel="preload"
+  href="/src/images/bg/merchant_solution_mobile.webp"
+  as="image"
+  media="(max-width: 479px)"
+/>
+<link
+  rel="preload"
+  href="/src/images/bg/merchant_solution_md.webp"
+  as="image"
+  media="(min-width: 480px) "
+/>
+<link
+  rel="preload"
+  href="/src/images/bg/merchant_solution_lg.webp"
+  as="image"
+  media="(min-width: 1600px)"
+/>
+
 <Layout title="Solutions | Merchants" lang="en">
   <section
-    class="bg-merchant_solution_mobile xs:bg-merchant_solution_med 3xl:bg-merchant_solution_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center relative after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-l from-black/50 from-0% to-black/80 to-80% after:size-full after:absolute after:z-0"
+    class="bg-merchant_solution_mobile xs:bg-merchant_solution_med 3xl:bg-merchant_solution_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center relative"
     id="merchants-hero"
   >
     <div
@@ -27,6 +46,11 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           a seamless, efficient delivery ecosystem.
         </h4>
       </div>
+    </div>
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+    >
     </div>
   </section>
   <section class="">

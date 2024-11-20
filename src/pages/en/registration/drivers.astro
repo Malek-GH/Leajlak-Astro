@@ -4,9 +4,28 @@ import app from "../../../images/bg/joinnow.webp";
 import { Image } from "astro:assets";
 ---
 
+<link
+  rel="preload"
+  href="/src/images/bg/drivers registration/drivers_registration_mobile-en.webp"
+  as="image"
+  media="(max-width: 479px)"
+/>
+<link
+  rel="preload"
+  href="/src/images/bg/drivers registration/drivers_registration_md-en.webp"
+  as="image"
+  media="(min-width: 480px)"
+/>
+<link
+  rel="preload"
+  href="/src/images/bg/drivers registration/drivers_registration_lg-en.webp"
+  as="image"
+  media="(min-width: 1600px)"
+/>
+
 <Layout title="Registration | Drivers" lang="en">
   <section
-    class="hero relative bg-drivers_registration_mobile_en xs:bg-drivers_registration_md_en 3xl:bg-drivers_registration_lg_en bg-cover bg-center bg-no-repeat flex items-center after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-l from-black/40 from-0% to-black/70 to-80% after:size-full after:absolute after:z-0"
+    class="hero relative bg-drivers_registration_mobile_en xs:bg-drivers_registration_md_en 3xl:bg-drivers_registration_lg_en bg-cover bg-center bg-no-repeat flex items-center"
   >
     <div class="container section-container z-10">
       <div
@@ -19,6 +38,11 @@ import { Image } from "astro:assets";
           to providing efficient delivery services.
         </h4>
       </div>
+    </div>
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+    >
     </div>
   </section>
   <section class="bg-white">

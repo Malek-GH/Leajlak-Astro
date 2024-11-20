@@ -6,9 +6,22 @@ import LogisticBenfits from "../../../components/LogisticBenfits.astro";
 import Layout from "../../../layouts/Layout.astro";
 ---
 
+<link
+  rel="preload"
+  href="/src/images/bg/register_logistic_med.webp"
+  as="image"
+  media="(max-width: 1599px)"
+/>
+<link
+  rel="preload"
+  href="/src/images/bg/register_logistic_lg.webp"
+  as="image"
+  media="(min-width: 1600px)"
+/>
+
 <Layout title="Registartion | Logistic-Companies" lang="en">
   <section
-    class="relative bg-register_logistic_med 3xl:bg-register_logistic_lg bg-no-repeat bg-cover bg-center flex items-center justify-center hero after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-l from-black/50 from-0% to-black/80 to-80% after:size-full after:absolute after:z-0"
+    class="relative bg-register_logistic_med 3xl:bg-register_logistic_lg bg-no-repeat bg-cover bg-center flex items-center justify-center hero"
   >
     <div
       class="container section-container flex flex-col items-center lg:flex-row z-10 fade"
@@ -200,6 +213,11 @@ import Layout from "../../../layouts/Layout.astro";
           </div>
         </div>
       </div>
+    </div>
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+    >
     </div>
   </section>
   <div
