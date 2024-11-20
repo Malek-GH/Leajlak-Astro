@@ -28,6 +28,7 @@ export default {
         },
       },
       backgroundImage: {
+        hero: "url('/delivery_firstframe.webp')",
         logistic_solution_lg: "url('/images/bg/logistic_solution_lg.webp')",
         logistic_solution_med: "url('/images/bg/logistic_solution_med.webp')",
         logistic_solution_mobile:

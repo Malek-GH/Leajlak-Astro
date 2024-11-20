@@ -34,16 +34,30 @@ import CoreFeatures from "../../components/CoreFeatures.astro";
 import BentoGrid from "../../components/BentoGrid.astro";
 ---
 
+<link rel="preload" href="/delivery_firstframe.webp" as="image" />
+
+<script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="الصفحة الرئيسية" lang="ar">
-  <section class="relative bg-black/60 h-[700px] 3xl:h-[900px]">
+  <section class="relative h-[700px] 3xl:h-[900px]">
+    <div
+      id="videoplaceholder"
+      class="absolute bg-hero bg-cover bg-center bg-no-repeat size-full"
+    >
+    </div>
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+    >
+    </div>
     <video
       autoplay
       playsinline
       muted
       loop
-      class="absolute right-0 bottom-0 h-full w-full object-cover -z-10"
+      class="absolute size-full object-cover -z-10"
+      id="video"
     >
-      <source src="../../../delivery.mp4" type="video/mp4" />
+      <source src="/delivery.mp4" type="video/mp4" />
     </video>
     <div
       class="fade container section-container flex flex-col justify-end items-start h-full gap-y-4"

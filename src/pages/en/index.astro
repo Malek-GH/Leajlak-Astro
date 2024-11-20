@@ -34,12 +34,14 @@ import CoreFeatures from "../../components/CoreFeatures.astro";
 import BentoGrid from "../../components/BentoGrid.astro";
 ---
 
+<link rel="preload" href="/delivery_firstframe.webp" as="image" />
+
 <script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="Home" lang="en">
   <section class="relative h-[700px] 3xl:h-[900px]">
     <div
       id="videoplaceholder"
-      class="absolute bg-[url('/delivery_firstframe.webp')] bg-cover bg-center bg-no-repeat size-full"
+      class="absolute bg-hero bg-cover bg-center bg-no-repeat size-full"
     >
     </div>
     <div
@@ -52,7 +54,7 @@ import BentoGrid from "../../components/BentoGrid.astro";
       playsinline
       muted
       loop
-      class="hidden absolute right-0 bottom-0 h-full w-full object-cover -z-10"
+      class="absolute size-full object-cover -z-10"
       id="video"
     >
       <source src="/delivery.mp4" type="video/mp4" />

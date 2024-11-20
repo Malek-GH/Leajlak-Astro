@@ -7,9 +7,22 @@ import MerchantBenefits from "../../../components/MerchantBenefits.astro";
 import Layout from "../../../layouts/Layout.astro";
 ---
 
+<link
+  rel="preload"
+  href="/images/bg/register_merchants_med.webp"
+  as="image"
+  media="(max-width: 1599px)"
+/>
+<link
+  rel="preload"
+  href="/images/bg/register_merchants_lg.webp"
+  as="image"
+  media="(min-width: 1600px)"
+/>
+
 <Layout title="التسجيل | التجار" lang="ar">
   <section
-    class="relative bg-register_merchants_med 3xl:bg-register_merchants_lg bg-no-repeat bg-cover bg-left-top flex items-center justify-center hero after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-r from-black/50 from-0% to-black/70 to-80% after:size-full after:absolute after:z-0"
+    class="relative bg-register_merchants_med 3xl:bg-register_merchants_lg bg-no-repeat bg-cover bg-left-top flex items-center justify-center hero"
     id="hero"
   >
     <div
@@ -216,6 +229,11 @@ import Layout from "../../../layouts/Layout.astro";
           </div>
         </div>
       </div>
+    </div>
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+    >
     </div>
   </section>
   <div

@@ -11,9 +11,28 @@ import portrait from "../../../../public/images/profile-pic/portrait.png";
 import ButtonOutline from "../../../components/ButtonOutline.astro";
 ---
 
+<link
+  rel="preload"
+  href="/images/bg/logistic_solution_mobile.webp"
+  as="image"
+  media="(max-width: 479px)"
+/>
+<link
+  rel="preload"
+  href="/images/bg/logistic_solution_med.webp"
+  as="image"
+  media="(min-width: 480px) "
+/>
+<link
+  rel="preload"
+  href="/images/bg/logistic_solution_lg.webp"
+  as="image"
+  media="(min-width: 1600px)"
+/>
+
 <Layout title="حلول | الشركات اللوجستية" lang="ar">
   <section
-    class="bg-logistic_solution_mobile xs:bg-logistic_solution_med 3xl:bg-logistic_solution_lg bg-cover bg-center lg:bg-right bg-no-repeat bg-fixed hero flex items-center relative after:bg-black/70 after:xs:bg-transparent after:xs:bg-gradient-to-r from-black/40 from-0% to-black/80 to-80% after:size-full after:absolute after:z-0"
+    class="bg-logistic_solution_mobile xs:bg-logistic_solution_med 3xl:bg-logistic_solution_lg bg-cover bg-center lg:bg-right bg-no-repeat bg-fixed hero flex items-center relative"
     id="PL-hero"
   >
     <div
@@ -27,6 +46,11 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
           من لأجلك حلاً شاملاً لتعزيز الكفاءة التشغيلية وتبسيط عمليات التوصيل.
         </h4>
       </div>
+    </div>
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-r from-black/50 to-black/70 z-0"
+    >
     </div>
   </section>
   <section>
