@@ -10,13 +10,13 @@ import Button from "../../components/Button.astro";
 
 import InfiniteScroll from "../../components/InfiniteScroll.astro";
 /* Images */
-import fleet from "../../images/bg/fleet.webp";
-import Restaurant from "../../images/bg/restaurent.webp";
-import app from "../../images/Appmockup.webp";
-import mockup from "../../images/mockup.webp";
+import fleet from "../../../public/images/bg/fleet.webp";
+import Restaurant from "../../../public/images/bg/restaurent.webp";
+import app from "../../../public/images/Appmockup.webp";
+import mockup from "../../../public/images/mockup.webp";
+import google from "../../../public/images/icons/google play.png";
+import apple from "../../../public/images/icons/apple store.png";
 
-import google from "../../images/icons/google play.png";
-import apple from "../../images/icons/apple store.png";
 import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
 import RealTT from "../../components/SvgIcons/RealTT.astro";
 import RiderMang from "../../components/SvgIcons/RiderMang.astro";
@@ -34,16 +34,28 @@ import CoreFeatures from "../../components/CoreFeatures.astro";
 import BentoGrid from "../../components/BentoGrid.astro";
 ---
 
+<script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="Home" lang="en">
-  <section class="relative bg-black/60 h-[700px] 3xl:h-[900px]">
+  <section class="relative h-[700px] 3xl:h-[900px]">
+    <div
+      id="videoplaceholder"
+      class="absolute bg-[url('/delivery_firstframe.webp')] bg-cover bg-center bg-no-repeat size-full"
+    >
+    </div>
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+    >
+    </div>
     <video
       autoplay
       playsinline
       muted
       loop
-      class="absolute right-0 bottom-0 h-full w-full object-cover -z-10"
+      class="hidden absolute right-0 bottom-0 h-full w-full object-cover -z-10"
+      id="video"
     >
-      <source src="../../../delivery.mp4" type="video/mp4" />
+      <source src="/delivery.mp4" type="video/mp4" />
     </video>
     <div
       class="fade container section-container flex flex-col justify-end items-start h-full gap-y-4"

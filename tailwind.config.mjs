@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       screens: {
@@ -28,52 +28,47 @@ export default {
         },
       },
       backgroundImage: {
-        logistic_solution_lg: "url('/src/images/bg/logistic_solution_lg.webp')",
-        logistic_solution_med:
-          "url('/src/images/bg/logistic_solution_med.webp')",
+        logistic_solution_lg: "url('/images/bg/logistic_solution_lg.webp')",
+        logistic_solution_med: "url('/images/bg/logistic_solution_med.webp')",
         logistic_solution_mobile:
-          "url('/src/images/bg/logistic_solution_mobile.webp')",
-        merchant_solution_lg: "url('/src/images/bg/merchant_solution_lg.webp')",
-        merchant_solution_med:
-          "url('/src/images/bg/merchant_solution_md.webp')",
+          "url('/images/bg/logistic_solution_mobile.webp')",
+        merchant_solution_lg: "url('/images/bg/merchant_solution_lg.webp')",
+        merchant_solution_med: "url('/images/bg/merchant_solution_md.webp')",
         merchant_solution_mobile:
-          "url('/src/images/bg/merchant_solution_mobile.webp')",
-        contact_lg: "url('/src/images/bg/contact-lg.webp')",
-        contact_med: "url('/src/images/bg/contact-med.webp')",
-        contact_mobile: "url('/src/images/bg/contact-mobile.webp')",
-        digital_bg1: "url('/src/images/bg/digital-bg1.webp')",
-        digital_bg2: "url('/src/images/bg/digital-bg2.webp')",
-        digital_bg3: "url('/src/images/bg/digital-bg3.webp')",
-        joinUs: "url('/src/images/bg/joinus.webp')",
-        joinUs_mobile: "url('/src/images/bg/joinus-mobile.webp')",
-        register_logistic_med:
-          "url('/src/images/bg/register_logistic_med.webp')",
-        register_logistic_lg: "url('/src/images/bg/register_logistic_lg.webp')",
-        register_merchants_med:
-          "url('/src/images/bg/register_merchants_med.webp')",
-        register_merchants_lg:
-          "url('/src/images/bg/register_merchants_lg.webp')",
+          "url('/images/bg/merchant_solution_mobile.webp')",
+        contact_lg: "url('/images/bg/contact-lg.webp')",
+        contact_med: "url('/images/bg/contact-med.webp')",
+        contact_mobile: "url('/images/bg/contact-mobile.webp')",
+        digital_bg1: "url('/images/bg/digital-bg1.webp')",
+        digital_bg2: "url('/images/bg/digital-bg2.webp')",
+        digital_bg3: "url('/images/bg/digital-bg3.webp')",
+        joinUs: "url('/images/bg/joinus.webp')",
+        joinUs_mobile: "url('/images/bg/joinus-mobile.webp')",
+        register_logistic_med: "url('/images/bg/register_logistic_med.webp')",
+        register_logistic_lg: "url('/images/bg/register_logistic_lg.webp')",
+        register_merchants_med: "url('/images/bg/register_merchants_med.webp')",
+        register_merchants_lg: "url('/images/bg/register_merchants_lg.webp')",
 
         drivers_registration_lg_en:
-          "url('/src/images/bg/drivers registration/drivers_registration_lg-en.webp)",
+          "url('/images/bg/drivers registration/drivers_registration_lg-en.webp)",
         drivers_registration_md_en:
-          "url('/src/images/bg/drivers registration/drivers_registration_md-en.webp')",
+          "url('/images/bg/drivers registration/drivers_registration_md-en.webp')",
         drivers_registration_mobile_en:
-          "url('/src/images/bg/drivers registration/drivers_registration_mobile-en.webp')",
+          "url('/images/bg/drivers registration/drivers_registration_mobile-en.webp')",
 
         drivers_registration_lg_ar:
-          "url('/src/images/bg/drivers registration/drivers_registration_lg-ar.webp)",
+          "url('/images/bg/drivers registration/drivers_registration_lg-ar.webp)",
         drivers_registration_md_ar:
-          "url('/src/images/bg/drivers registration/drivers_registration_md-ar.webp')",
+          "url('/images/bg/drivers registration/drivers_registration_md-ar.webp')",
         drivers_registration_mobile_ar:
-          "url('/src/images/bg/drivers registration/drivers_registration_mobile-ar.webp')",
+          "url('/images/bg/drivers registration/drivers_registration_mobile-ar.webp')",
 
-        about_lg: "url('/src/images/bg/about-lg.webp')",
-        about_med: "url('/src/images/bg/about-md.webp')",
-        about_mobile: "url('/src/images/bg/about-mobile.webp')",
+        about_lg: "url('/images/bg/about-lg.webp')",
+        about_med: "url('/images/bg/about-md.webp')",
+        about_mobile: "url('/images/bg/about-mobile.webp')",
 
-        tick: "url('/src/images/icons/check-circle.svg')",
-        caret: "url('/src/images/icons/caret.svg')",
+        tick: "url('/images/icons/check-circle.svg')",
+        caret: "url('/images/icons/caret.svg')",
       },
       colors: {
         primaryOrange: "#EC6131",

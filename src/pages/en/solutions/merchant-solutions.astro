@@ -2,29 +2,31 @@
 import { Image } from "astro:assets";
 
 import Layout from "../../../layouts/Layout.astro";
-import cost from "../../../images/bg/cost_saving.webp";
-import experience from "../../../images/bg/customer experience.webp";
-import scalability from "../../../images/bg/charts.webp";
-import integration from "../../../images/bg/integration.webp";
-import portrait from "../../../images/profile-pic/portrait.png";
+
+import cost from "../../../../public/images/bg/cost_saving.webp";
+import experience from "../../../../public/images/bg/customer experience.webp";
+import scalability from "../../../../public/images/bg/charts.webp";
+import integration from "../../../../public/images/bg/integration.webp";
+import portrait from "../../../../public/images/profile-pic/portrait.png";
+
 import ButtonOutline from "../../../components/ButtonOutline.astro";
 ---
 
 <link
   rel="preload"
-  href="/src/images/bg/merchant_solution_mobile.webp"
+  href="/images/bg/merchant_solution_mobile.webp"
   as="image"
   media="(max-width: 479px)"
 />
 <link
   rel="preload"
-  href="/src/images/bg/merchant_solution_md.webp"
+  href="/images/bg/merchant_solution_md.webp"
   as="image"
   media="(min-width: 480px) "
 />
 <link
   rel="preload"
-  href="/src/images/bg/merchant_solution_lg.webp"
+  href="/images/bg/merchant_solution_lg.webp"
   as="image"
   media="(min-width: 1600px)"
 />

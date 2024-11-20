@@ -1,11 +1,11 @@
 ---
 const { lang } = Astro.props;
 import { Image } from "astro:assets";
-import restaurant from "../images/carousel/restaurant.webp";
-import cafe from "../images/carousel/cafe.webp";
-import family from "../images/carousel/productive-family.webp";
-import onlineStores from "../images/carousel/online-stores.webp";
-import pharmacy from "../images/carousel/pharmacy.webp";
+import restaurant from "../../public/images/carousel/restaurant.webp";
+import cafe from "../../public/images/carousel/cafe.webp";
+import family from "../../public/images/carousel/productive-family.webp";
+import onlineStores from "../../public/images/carousel/online-stores.webp";
+import pharmacy from "../../public/images/carousel/pharmacy.webp";
 const content = await import(`../data/${lang}.json`);
 ---
 
