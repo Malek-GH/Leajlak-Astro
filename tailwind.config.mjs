@@ -7,9 +7,6 @@ export default {
         "3xl": "1600px",
         xs: "480px",
       },
-      transitionTimingFunction: {
-        "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
-      },
       animation: {
         "loop-scroll": "loop-scroll 35s linear infinite",
         "loop-scroll-mobile": "loop-scroll-mobile 35s linear infinite",
@@ -73,7 +70,6 @@ export default {
       },
       colors: {
         primaryOrange: "#EC6131",
-        secondaryBlue: "#0D2035",
         lightGray: "#F6F6F6",
         customYellow: "#F7B614",
         darkGray: "#202020",
@@ -101,20 +97,13 @@ export default {
       },
       height: {
         84: "21rem",
-        100: "24.5rem",
         18: "4.5rem",
       },
-      lineHeight: { 1.5: 1.5, 1.4: 1.4, 1.3: 1.3, 1.2: 1.2 },
+      lineHeight: { 1.3: 1.3 },
       flex: {
         card_full: "0 1 calc(20% - 20px)",
-        card_md: "0 0 calc(50% - 20px)",
-        card_sm: "0 1 calc(100% - 20px)",
-        card_solution_xl: "0 1 calc(33.3333% - 20px)",
-        card_solution_md: "0 1 calc(50% - 40px)",
         card_xl: "0 1 calc(100% - 20px)",
         card_testimonial_xl: "0 1 calc(33.3333% - 20px)",
-        card_team_xl: "0 1 25%",
-        card_team_md: "0 1 50%",
         card_team_sm: "0 1 100%",
       },
       inset: {
