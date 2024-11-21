@@ -16,7 +16,15 @@ const content = await import(`../data/${lang}.json`);
     <span class="grid-item-text">
       {content.Online_Stores}
     </span>
-    <Image src={onlineStores} alt="Online Stores" class="" />
+    <Image
+      src={onlineStores}
+      alt="Online Stores"
+      class=""
+      loading="lazy"
+      decoding="async"
+      width="600"
+      height="400"
+    />
   </div>
   <div
     class="will-change-auto relative overflow-hidden rounded-md group after:bg-black after:absolute after:w-full after:h-full after:top-0 after:left-0 after:opacity-20 hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out after:duration-500 after:ease-in"
@@ -24,7 +32,15 @@ const content = await import(`../data/${lang}.json`);
     <span class="grid-item-text">
       {content.family}
     </span>
-    <Image src={family} alt="Productive Families" class="object-left" />
+    <Image
+      src={family}
+      alt="Productive Families"
+      class="object-left"
+      loading="lazy"
+      decoding="async"
+      width="504"
+      height="336"
+    />
   </div>
   <div
     class="will-change-auto relative overflow-hidden rounded-md group after:bg-black after:absolute after:w-full after:h-full after:top-0 after:left-0 after:opacity-20 hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out after:duration-500 after:ease-in"
@@ -32,7 +48,15 @@ const content = await import(`../data/${lang}.json`);
     <span class="grid-item-text">
       {content.pharmacy}
     </span>
-    <Image src={pharmacy} alt="Pharmacies" class="object-left" />
+    <Image
+      src={pharmacy}
+      alt="Pharmacies"
+      class="object-left"
+      loading="lazy"
+      decoding="async"
+      width="600"
+      height="400"
+    />
   </div>
   <div
     class="will-change-auto relative overflow-hidden rounded-md group after:bg-black after:absolute after:w-full after:h-full after:top-0 after:left-0 after:opacity-20 hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out after:duration-500 after:ease-in"
@@ -40,7 +64,15 @@ const content = await import(`../data/${lang}.json`);
     <span class="grid-item-text">
       {content.cafe}
     </span>
-    <Image src={cafe} alt="Cafés" class="" />
+    <Image
+      src={cafe}
+      alt="Cafés"
+      class=""
+      loading="lazy"
+      decoding="async"
+      width="600"
+      height="400"
+    />
   </div>
   <div
     class="will-change-auto relative overflow-hidden rounded-md group after:bg-black after:absolute after:w-full after:h-full after:top-0 after:left-0 after:opacity-20 hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out after:duration-500 after:ease-in"
@@ -48,7 +80,15 @@ const content = await import(`../data/${lang}.json`);
     <span class="grid-item-text">
       {content.Restaurants}
     </span>
-    <Image src={restaurant} alt="restaurant" class="object-center" />
+    <Image
+      src={restaurant}
+      alt="restaurant"
+      class="object-center"
+      width="800"
+      height="600"
+      loading="lazy"
+      decoding="async"
+    />
   </div>
 </div>
 

@@ -28,6 +28,9 @@ const handleRedirect = (lang: string) => {
         class="header-logo"
         src={logo_white}
         alt="logo"
+        width="400"
+        height="200"
+        decoding="async"
       />
       <Image
         loading="lazy"
@@ -308,7 +311,7 @@ const handleRedirect = (lang: string) => {
                 return (
                   <>
                     <Image
-                      loading="eager"
+                      loading="lazy"
                       src={arabic}
                       class="size-6  rounded-full pointer-events-none"
                       alt=""
@@ -357,7 +360,7 @@ const handleRedirect = (lang: string) => {
                         role="menuitem"
                       >
                         <Image
-                          loading="eager"
+                          loading="lazy"
                           src={english}
                           class="size-6 rounded-full m-2 pointer-events-none"
                           alt=""
