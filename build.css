@@ -3290,12 +3290,7 @@ video {
   --tw-animate-easing: cubic-bezier(0, 0, 0.2, 1);
   animation-timing-function: var(--tw-animate-easing);
 }
-.\[-\:\=\] {
-  -: =;
-}
-.\[a-zA-Z0-9\:\\\\-\\\\\._\$\] {
-  a-z-a--z0-9: \\-\\.$;
-}
+
 .\[astro\:action\] {
   astro: action;
 }

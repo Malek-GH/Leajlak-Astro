@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,js,jsx,ts,tsx,md,mdx,svelte,vue}"],
   theme: {
     extend: {
       screens: {
@@ -107,6 +107,7 @@ export default {
       },
       inset: {
         "2/5": "40%",
+        26: "6.5rem",
       },
     },
   },
