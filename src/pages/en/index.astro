@@ -10,10 +10,13 @@ import Button from "../../components/Button.astro";
 
 import InfiniteScroll from "../../components/InfiniteScroll.astro";
 /* Images */
+import mockup_sm from "../../../public/images/mockup/mockup_sm.webp";
 import fleet from "../../../public/images/bg/fleet.webp";
 import Restaurant from "../../../public/images/bg/restaurent.webp";
 import app from "../../../public/images/Appmockup.webp";
-import mockup from "../../../public/images/mockup.webp";
+
+import videoPlaceHolder_lg from "../../../public/delivery_firstframe_sm.webp";
+
 import google from "../../../public/images/icons/google play.png";
 import apple from "../../../public/images/icons/apple store.png";
 
@@ -34,19 +37,46 @@ import CoreFeatures from "../../components/CoreFeatures.astro";
 import BentoGrid from "../../components/BentoGrid.astro";
 ---
 
-<link rel="preload" href="/delivery_firstframe.webp" as="image" />
+<link
+  rel="preload"
+  href="/delivery_firstframe_sm.webp"
+  as="image"
+  media="(max-width: 479px)"
+/>
+<link
+  rel="preload"
+  href="/delivery_firstframe_md.webp"
+  as="image"
+  media="(min-width: 480px) "
+/>
+<link
+  rel="preload"
+  href="/delivery_firstframe_lg.webp"
+  as="image"
+  media="(min-width: 1600px)"
+/>
 
-<script src="/src/Script/videoLoadHundler.js"></script>
+<script src="/src/Script/videoLoadHundler.js" defer></script>
 <Layout title="Home" lang="en">
   <section class="relative h-[700px] 3xl:h-[900px]">
-    <div
-      id="videoplaceholder"
-      class="absolute bg-hero bg-cover bg-center bg-no-repeat size-full"
-    >
-    </div>
+    <picture id="videoplaceholder" class="">
+      <source
+        srcset="/delivery_firstframe_lg.webp"
+        media="(min-width: 1600px)"
+      />
+      <source
+        srcset="/delivery_firstframe_md.webp"
+        media="(min-width: 480px)"
+      />
+      <Image
+        src={videoPlaceHolder_lg}
+        alt="videoplaceholder"
+        class="absolute size-full z-0 bottom-0 object-cover"
+      />
+    </picture>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+      class="absolute top-0 left-0 size-full bg-black/70 z-0"
     >
     </div>
     <video
@@ -88,38 +118,49 @@ import BentoGrid from "../../components/BentoGrid.astro";
   </div>
   <section class="overflow-hidden">
     <div
-      class="fade container section-container flex flex-col lg:flex-row items-center sm:gap-y-20"
+      class="fade container section-container grid justify-items-center lg:grid-cols-2 items-center sm:gap-y-20 relative"
       data-animation="animate-fade animate-duration-[1000ms]"
     >
-      <div class="space-y-4 lg:w-1/2 lg:py-24">
+      <div class="space-y-4">
         <div>
           <h3>Who are we?</h3>
           <h2>A delivery management system, for all your needs.</h2>
         </div>
         <p>
           Leajlak's innovative Order Management System is the answer to
-          connecting merchants and thirdparty logistics companies for seamless
-          ondemand express & scheduled delivery services.
+          connecting merchants and third-party logistics companies for seamless
+          on-demand express & scheduled delivery services.
         </p>
         <p>
           Our solution bridges the gap between merchants and logistic companies
           and can significantly enhance efficiency, reduce costs, and improve
-          customer satisfaction. Register now
+          customer satisfaction. Register now.
         </p>
       </div>
-      <div class="w-full h-auto lg:absolute -right-36 max-w-[700px]">
-        <Image
-          src={mockup}
-          alt=""
-          class="hidden sm:block w-full h-auto drop-shadow-md"
-          width="1081"
-          height="756"
-          loading="lazy"
-          decoding="async"
-        />
+
+      <div
+        class="hidden sm:block relative lg:translate-x-20 lg:-right-5 sm:w-[600px] lg:w-[700px] 3xl:w-[900px]"
+      >
+        <picture>
+          <source
+            srcset="/images/mockup/mockup_lg.webp"
+            media="(min-width: 1600px)"
+          />
+          <source
+            srcset="/images/mockup/mockup_md.webp"
+            media="(min-width: 1024px)"
+          />
+          <Image
+            src={mockup_sm}
+            alt="mockup"
+            class="w-full h-auto object-cover self-start"
+            loading="lazy"
+          />
+        </picture>
       </div>
     </div>
   </section>
+
   <section id="WhoWeServe" class="bg-white">
     <div
       class="container section-container flex flex-col gap-24 overflow-hidden"
