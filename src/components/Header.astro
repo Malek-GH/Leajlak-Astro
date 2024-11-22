@@ -383,3 +383,164 @@ const handleRedirect = (lang: string) => {
     </button>
   </div>
 </header>
+
+<style>
+  header {
+    @apply fixed top-0 z-50 w-full bg-transparent py-2 transition-colors duration-200 ease-in;
+  }
+
+  header.scrolled {
+    @apply bg-white shadow-md duration-500 ease-out;
+  }
+
+  header.scrolled .nav-list {
+    @apply text-black;
+  }
+
+  .nav-list {
+    @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col items-start justify-center space-y-5 px-12 py-20 font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-5 lg:space-y-0 lg:p-0;
+  }
+
+  .nav-list > div,
+  .nav-list a {
+    @apply opacity-0 lg:opacity-100;
+  }
+
+  .nav-list.open.nav-list > div,
+  .nav-list.open.nav-list a {
+    @apply opacity-100;
+  }
+
+  .nav-list.open {
+    @apply h-full translate-x-0 bg-white text-black opacity-100 transition-transform duration-300 ease-in lg:bg-transparent lg:text-white;
+  }
+
+  .nav_item {
+    @apply w-full border-b-2 pb-1 lg:relative lg:flex lg:h-full lg:w-auto lg:items-center lg:justify-center lg:border-b-0 lg:pb-0;
+  }
+
+  .items a,
+  .items > div {
+    @apply duration-300 ease-out;
+  }
+
+  .items > div:hover,
+  .items a:hover,
+  .items a.active,
+  .items button:hover span {
+    @apply text-primaryOrange duration-300 ease-in;
+  }
+
+  .nav-list > .nav_item > a.active::after {
+    @apply bottom-4 left-1/2 size-[5px] rounded-full bg-primaryOrange duration-300 content-[''] lg:absolute;
+  }
+
+  /* language-dropdown */
+
+  .language-dropdown {
+    @apply invisible top-12 z-50 w-48 list-none rounded-lg text-base will-change-auto lg:absolute lg:bg-white lg:opacity-0 lg:shadow-lg ltr:right-0 rtl:left-0;
+  }
+
+  #language-dropdown-menu.active {
+    @apply visible opacity-100 lg:transition-opacity lg:duration-500 lg:ease-out;
+  }
+
+  #language-dropdown-menu.active li {
+    @apply duration-700 ease-out lg:opacity-100;
+  }
+  /* solution-dropdown-menu */
+
+  .dropdown-menu {
+    @apply top-16 z-50 max-h-0 w-48 overflow-hidden will-change-auto lg:invisible lg:absolute lg:flex lg:max-h-max lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:bg-white lg:opacity-0 lg:shadow-lg lg:transition-opacity ltr:right-0 rtl:left-0;
+  }
+
+  #dropdownHoverButton.active #dropdownHover {
+    @apply flex max-h-52 duration-500 ease-out lg:visible lg:opacity-100;
+  }
+
+  #dropdownHoverButton.active svg {
+    @apply rotate-180 transition-transform duration-500 ease-in-out;
+  }
+
+  #dropdownHoverButton #dropdownHover a.active {
+    @apply text-primaryOrange;
+  }
+
+  #dropdownHoverButton.active #dropdownHover li {
+    @apply opacity-100 lg:duration-700 lg:ease-out;
+  }
+
+  /* register-menu */
+
+  .register-menu {
+    @apply top-14 z-50 max-h-0 w-full overflow-hidden will-change-auto lg:invisible lg:absolute lg:flex lg:max-h-max lg:w-72 lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:bg-white lg:opacity-0 lg:shadow-lg lg:transition-opacity lg:duration-200 ltr:right-0 rtl:left-0;
+  }
+
+  #registerMenuButton #registerMenu.active {
+    @apply flex max-h-96 duration-500 ease-out lg:visible lg:opacity-100 lg:transition-opacity lg:duration-500;
+  }
+
+  #registerMenuButton #registerMenu ul li {
+    @apply lg:opacity-0;
+  }
+
+  #registerMenuButton #registerMenu.active ul li {
+    @apply lg:opacity-100 lg:duration-700 lg:ease-out;
+  }
+  .register_item.active {
+    @apply text-primaryOrange opacity-100;
+  }
+
+  .register_item.active span {
+    @apply text-black;
+  }
+
+  .menu-toggle {
+    @apply relative h-6 w-6 cursor-pointer bg-none;
+  }
+
+  .menu-burger {
+    @apply absolute left-0 h-[2px] w-full bg-primaryOrange transition-all duration-300 ease-in;
+  }
+
+  .burger-1 {
+    @apply top-[2px];
+  }
+
+  .burger-2 {
+    @apply top-[10px];
+  }
+
+  .burger-3 {
+    @apply top-[18px];
+  }
+
+  .burger-1.burger-active {
+    @apply top-[10px] rotate-45;
+  }
+
+  .burger-2.burger-active {
+    @apply hidden;
+  }
+
+  .burger-3.burger-active {
+    @apply top-[10px] -rotate-45;
+  }
+  @media (max-width: 1024px) {
+    #nav-items a.active {
+      @apply bg-primaryOrange text-white;
+    }
+
+    #nav-items a.active::after {
+      display: none;
+    }
+  }
+
+  a:hover #arrow {
+    @apply duration-300 ltr:translate-x-2 rtl:-translate-x-2;
+  }
+
+  #arrow {
+    @apply ms-2 size-3 flex-shrink-0 translate-x-0 duration-300 rtl:rotate-180 rtl:pb-1;
+  }
+</style>
