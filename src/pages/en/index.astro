@@ -37,27 +37,9 @@ import CoreFeatures from "../../components/CoreFeatures.astro";
 import BentoGrid from "../../components/BentoGrid.astro";
 ---
 
-<link
-  rel="preload"
-  href="/delivery_firstframe_sm.webp"
-  as="image"
-  media="(max-width: 479px)"
-/>
-<link
-  rel="preload"
-  href="/delivery_firstframe_md.webp"
-  as="image"
-  media="(min-width: 480px) (max-width: 1599px)"
-/>
-<link
-  rel="preload"
-  href="/delivery_firstframe_lg.webp"
-  as="image"
-  media="(min-width: 1600px)"
-/>
 <script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="Home" lang="en">
-  <section class="relative h-screen sm:h-[700px] 3xl:h-[900px]">
+  <section class="relative h-screen">
     <picture id="videoplaceholder" class="">
       <source
         srcset="/delivery_firstframe_lg.webp"
@@ -90,7 +72,7 @@ import BentoGrid from "../../components/BentoGrid.astro";
       <source src="/delivery.mp4" type="video/mp4" />
     </video>
     <div
-      class="fade container section-container flex flex-col justify-end items-start h-full gap-y-4"
+      class="fade container section-container flex flex-col justify-center xs:justify-end items-start h-full gap-y-4"
       data-animation="animate-fade-up animate-duration-[2000ms]"
     >
       <div class="text-white space-y-2">
@@ -112,7 +94,7 @@ import BentoGrid from "../../components/BentoGrid.astro";
       class="fade space-y-6 sm:space-y-10 w-full py-10"
       data-animation="animate-fade animate-duration-[1000ms]"
     >
-      <h4 class="text-center px-5">Leajlak's empowered brands</h4>
+      <h2 class="text-center px-5 text-xl">Leajlak's empowered brands</h2>
       <InfiniteScroll />
     </div>
   </div>
