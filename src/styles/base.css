@@ -49,7 +49,6 @@
     @apply w-full whitespace-nowrap rounded-md bg-gray-600 py-3 text-base font-medium text-white antialiased shadow-Button_shadow shadow-gray-400 duration-200 ease-linear hover:bg-gray-700 active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
   }
 }
-
 .section-container {
   @apply relative mx-auto max-w-7xl px-6 py-24 lg:px-14 3xl:px-0;
 }
@@ -59,116 +58,22 @@
 .cta {
   @apply flex h-[400px] flex-col items-center justify-evenly;
 }
-
-.header-logo {
-  @apply w-24 lg:w-32;
-}
-
-.header-logo.scrolled {
-  @apply hidden;
-}
-
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
-#moreFeatures {
-  @apply bg-lightGray;
+.fade {
+  @apply opacity-0;
 }
 
 .benfits-list {
   @apply flex flex-row items-center;
 }
-
 .benfits-list svg {
-  @apply size-7 fill-white md:fill-black ltr:mr-4 rtl:ml-4;
-}
-
-.socials {
-  @apply h-5 w-5 fill-white hover:fill-white/80 md:h-6 md:w-6;
-}
-
-/* Solutions */
-.card-solution {
-  @apply flex flex-col items-start justify-start gap-y-9;
-}
-.card-solution svg {
-  @apply size-16 fill-primaryOrange;
-}
-
-.card-solution > div {
-  @apply space-y-1;
-}
-
-.card-solution:nth-child(2n) {
-  @apply md:pt-16;
-}
-
-.card-solution h4 {
-  @apply text-2xl ltr:text-left rtl:text-right;
-}
-.card-solution p {
-  @apply ltr:text-left rtl:text-right;
-}
-
-.benefits-card {
-  @apply relative flex flex-col items-center justify-center lg:flex-row;
-}
-
-#register div > img {
-  @apply h-36 w-40 lg:w-44;
-}
-
-input[type="file"]::file-selector-button {
-  @apply cursor-pointer border-0 bg-primaryOrange py-2 text-white;
-}
-
-/* Stepper */
-
-.form-elements {
-  @apply hidden;
-}
-
-.form-elements.active {
-  display: block;
-}
-.stepper.active > div {
-  @apply ring-2 ring-primaryOrange;
-}
-.stepper p {
-  @apply text-black/20;
-}
-.stepper.active p {
-  @apply font-semibold text-primaryOrange opacity-100;
-}
-.stepper .icon {
-  @apply text-2xl font-semibold text-black/10;
-}
-.stepper.active .icon {
-  @apply text-primaryOrange;
-}
-.stepper.done div {
-  @apply bg-primaryOrange;
-}
-.stepper.done .icon {
-  @apply hidden;
-}
-.stepper.done .tick {
-  @apply block;
+  @apply size-7 fill-white lg:fill-black ltr:mr-4 rtl:ml-4;
 }
 .error {
   @apply border-2 border-red-700 duration-300;
 }
-
 .correct {
   @apply border-2 border-green-600 duration-300;
 }
-
-.fourofour {
-  @apply bg-black;
-}
-
-.fade {
-  @apply opacity-0;
+.no-scroll {
+  @apply h-screen overflow-hidden;
 }

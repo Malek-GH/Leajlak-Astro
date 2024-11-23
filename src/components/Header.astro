@@ -119,6 +119,7 @@ const handleRedirect = (lang: string) => {
                     href={`/${lang}/registration/logistic-companies`}
                     data-route={`/${lang}/registration/logistic-companies`}
                     class="flex flex-row items-start justify-between gap-2 register_item"
+                    aria-label="logistic-companie-registration"
                   >
                     <div class="flex flex-col gap-1">
                       <div
@@ -160,6 +161,7 @@ const handleRedirect = (lang: string) => {
                     href={`/${lang}/registration/merchants`}
                     data-route={`/${lang}/registration/merchants`}
                     class="flex flex-row items-start justify-between gap-2 register_item"
+                    aria-label="merchants-registration"
                   >
                     <div class="flex flex-col gap-1">
                       <div
@@ -201,6 +203,7 @@ const handleRedirect = (lang: string) => {
                     href={`/${lang}/registration/drivers`}
                     data-route={`/${lang}/registration/drivers`}
                     class="flex flex-row items-start justify-between gap-2 register_item"
+                    aria-label="drivers-registration"
                   >
                     <div class="flex flex-col gap-1">
                       <div
@@ -242,6 +245,7 @@ const handleRedirect = (lang: string) => {
                     href={`/${lang}/registration/employees`}
                     data-route={`/${lang}/registration/employees`}
                     class="flex flex-row items-start justify-between gap-2 register_item"
+                    aria-label="employees-registration"
                   >
                     <div class="flex flex-col gap-1">
                       <div
@@ -383,12 +387,17 @@ const handleRedirect = (lang: string) => {
     </button>
   </div>
 </header>
-
 <style>
   header {
     @apply fixed top-0 z-50 w-full bg-transparent py-2 transition-colors duration-200 ease-in;
   }
+  .header-logo {
+    @apply w-24 lg:w-32;
+  }
 
+  .header-logo.scrolled {
+    @apply hidden;
+  }
   header.scrolled {
     @apply bg-white shadow-md duration-500 ease-out;
   }
@@ -534,13 +543,5 @@ const handleRedirect = (lang: string) => {
     #nav-items a.active::after {
       display: none;
     }
-  }
-
-  a:hover #arrow {
-    @apply duration-300 ltr:translate-x-2 rtl:-translate-x-2;
-  }
-
-  #arrow {
-    @apply ms-2 size-3 flex-shrink-0 translate-x-0 duration-300 rtl:rotate-180 rtl:pb-1;
   }
 </style>

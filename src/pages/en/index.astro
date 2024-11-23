@@ -57,7 +57,7 @@ import BentoGrid from "../../components/BentoGrid.astro";
 />
 <script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="Home" lang="en">
-  <section class="relative h-[700px] 3xl:h-[900px]">
+  <section class="relative h-screen sm:h-[700px] 3xl:h-[900px]">
     <picture id="videoplaceholder" class="">
       <source
         srcset="/delivery_firstframe_lg.webp"
@@ -160,7 +160,6 @@ import BentoGrid from "../../components/BentoGrid.astro";
       </div>
     </div>
   </section>
-
   <section id="WhoWeServe" class="bg-white">
     <div
       class="container section-container flex flex-col gap-24 overflow-hidden"
@@ -199,22 +198,23 @@ import BentoGrid from "../../components/BentoGrid.astro";
       </div>
     </div>
   </section>
-  <section id="Benfits" class="bg-lightGray normal">
-    <div class="space-y-20 md:space-y-0">
+  <section id="Benfits" class="bg-lightGray">
+    <div class="space-y-20 lg:space-y-0">
       <!-- Merchants -->
       <div
-        class="fade relative grid grid-cols-1 md:grid-cols-2 justify-between items-center h-full after:absolute after:size-full after:bg-black/70 after:z-0 after:md:hidden"
+        class="fade relative grid grid-cols-1 lg:grid-cols-2 justify-between items-center h-full"
         data-animation="animate-fade animate-duration-[1000ms]"
       >
+        <div class="absolute bg-black/70 size-full lg:hidden z-10"></div>
         <div
-          class="bg-merchant_solution_mobile bg-cover bg-center bg-no-repeat md:bg-none h-full relative text-white p-5 lg:px-20 lg:py-10 md:text-black lg:bg-none w-full flex flex-col justify-center"
+          class="bg-merchant_solution_mobile bg-cover bg-center bg-no-repeat xs:bg-merchant_solution_med h-full relative text-white p-5 lg:px-20 lg:py-10 lg:text-black lg:bg-none w-full flex flex-col justify-center"
         >
           <div class="space-y-4 z-10">
             <div class="">
               <h3>Solution</h3>
-              <h2 class="text-white md:text-black">for Merchants</h2>
+              <h2 class="text-white lg:text-black">for Merchants</h2>
             </div>
-            <p class="text-white md:text-black">
+            <p class="text-white lg:text-black">
               Leajlak's solution revolutionizes order management, addressing the
               critical challenges faced by merchants and unlocking the potential
               for a seamless, efficient delivery ecosystem.
@@ -229,7 +229,7 @@ import BentoGrid from "../../components/BentoGrid.astro";
             <div class="flex flex-col sm:flex-row gap-3">
               <a
                 href="solutions/merchant-solutions"
-                class="button-regular flex items-center justify-center"
+                class="button-regular flex items-center justify-center group"
               >
                 Learn more
                 <svg
@@ -237,7 +237,7 @@ import BentoGrid from "../../components/BentoGrid.astro";
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 14 10"
-                  id="arrow"
+                  class="ms-2 size-3 flex-shrink-0 translate-x-0 group-hover:translate-x-2 duration-300"
                 >
                   <path
                     stroke="currentColor"
@@ -251,10 +251,10 @@ import BentoGrid from "../../components/BentoGrid.astro";
             </div>
           </div>
         </div>
-        <div class="md:w-full md:h-full hidden md:block">
+        <div class="lg:w-full lg:h-full hidden lg:block">
           <Image
             src={Restaurant}
-            class="md:w-full md:h-full"
+            class="lg:w-full lg:h-full"
             alt="Restaurant"
             loading="lazy"
             width="1000"
@@ -265,13 +265,14 @@ import BentoGrid from "../../components/BentoGrid.astro";
       </div>
       <!-- 3PL -->
       <div
-        class="fade relative grid grid-cols-1 md:grid-cols-2 justify-between items-center h-full after:absolute after:size-full after:bg-black/60 after:z-0 after:md:hidden"
+        class="fade relative grid grid-cols-1 lg:grid-cols-2 justify-between items-center h-full"
         data-animation="animate-fade animate-duration-[1000ms]"
       >
-        <div class="md:w-full md:h-full hidden md:block">
+        <div class="absolute bg-black/70 size-full lg:hidden z-10"></div>
+        <div class="lg:w-full lg:h-full hidden lg:block">
           <Image
             src={fleet}
-            class="md:w-full md:h-full"
+            class="lg:w-full lg:h-full"
             loading="lazy"
             alt=""
             width="1000"
@@ -280,15 +281,15 @@ import BentoGrid from "../../components/BentoGrid.astro";
           />
         </div>
         <div
-          class="bg-logistic_solution_mobile bg-cover bg-center bg-no-repeat md:bg-none h-full text-white p-5 lg:px-20 lg:py-10 md:text-black lg:bg-none w-full flex flex-col justify-center"
+          class="bg-logistic_solution_mobile xs:bg-logistic_solution_med bg-cover bg-center bg-no-repeat lg:bg-none h-full text-white p-5 lg:px-20 lg:py-10 lg:text-black w-full flex flex-col justify-center"
         >
           <div class="space-y-4 z-10">
             <div>
               <h3>Solution</h3>
-              <h2 class="text-white md:text-black">for Logistic Companies</h2>
+              <h2 class="text-white lg:text-black">for Logistic Companies</h2>
             </div>
 
-            <p class="text-white md:text-black">
+            <p class="text-white lg:text-black">
               Addressing the logistical challenges faced by companies, Leajlak's
               Order Management System offers a comprehensive solution to enhance
               operational efficiency and streamline delivery processes.
@@ -305,7 +306,7 @@ import BentoGrid from "../../components/BentoGrid.astro";
             <div class="flex flex-col sm:flex-row gap-2">
               <a
                 href="solutions/logistic-solutions"
-                class="button-regular flex items-center justify-center"
+                class="button-regular flex items-center justify-center group"
               >
                 Learn more
                 <svg
@@ -313,7 +314,7 @@ import BentoGrid from "../../components/BentoGrid.astro";
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 14 10"
-                  id="arrow"
+                  class="ms-2 size-3 flex-shrink-0 translate-x-0 group-hover:translate-x-2 duration-300"
                 >
                   <path
                     stroke="currentColor"
