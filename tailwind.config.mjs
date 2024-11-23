@@ -8,8 +8,8 @@ export default {
         xs: "480px",
       },
       animation: {
-        "loop-scroll": "loop-scroll 35s linear infinite",
-        "loop-scroll-mobile": "loop-scroll-mobile 35s linear infinite",
+        "loop-scroll": "loop-scroll 20s linear infinite",
+        "loop-scroll-mobile": "loop-scroll-mobile 20s linear infinite",
         "animate-stepper": "animate-stepper 0.5s ease-out",
       },
       keyframes: {

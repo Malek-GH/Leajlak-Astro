@@ -11,19 +11,19 @@ const logos = await Astro.glob(
     const sliders = document.querySelectorAll(".slider");
     const totalLogos = sliders.length;
     sliders.forEach((slider, i) => {
-      slider.style.animationDelay = `calc(35s / ${totalLogos} * (${totalLogos} - (${i} + 1)) * -1)`;
+      slider.style.animationDelay = `calc(20s / ${totalLogos} * (${totalLogos} - (${i} + 1)) * -1)`;
     });
   });
 </script>
 
-<div class="relative w-full h-10 sm:h-20 group" id="slider-container">
+<div class="relative w-full h-10 xs:h-20 group" id="slider-container">
   {
     logos.map((logo) => {
       const src = logo.default.src.split("/").pop().split(".")[0];
       const altText = `${src} logo`;
 
       return (
-        <div class="slider absolute size-14 sm:size-20 left-[max(calc(80px*46),100%)] sm:left-[max(calc(200px*46),100%)] sm:animate-loop-scroll animate-loop-scroll-mobile group-hover:animate-pause object-contain">
+        <div class="slider absolute size-16 xs:size-24 left-[max(calc(130px*13),100%)] xs:left-[max(calc(300px*13),100%)] xs:animate-loop-scroll animate-loop-scroll-mobile group-hover:animate-pause object-contain">
           <Image
             src={logo.default}
             alt={altText}
