@@ -1,15 +1,13 @@
-export const plugins = [
-  require("tailwindcss"),
-  require("autoprefixer"),
-  ...(process.env.NODE_ENV === "production"
-    ? [
-        require("@fullhuman/postcss-purgecss")({
-          content: ["./src/**/*.{astro,html,js}"],
-          defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-        }),
-        require("cssnano")({
-          preset: "default",
-        }),
-      ]
-    : []),
-];
+import tailwindcss from "tailwindcss";
+import autoprefixer from "autoprefixer";
+import cssnano from "cssnano";
+
+export default {
+  plugins: [
+    tailwindcss,
+    autoprefixer,
+    cssnano({
+      preset: "default",
+    }),
+  ],
+};
