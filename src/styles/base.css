@@ -34,7 +34,7 @@
     @apply text-base font-normal tracking-widest text-primaryOrange md:text-xl;
   }
   p {
-    @apply font-normal leading-7 opacity-70;
+    @apply font-normal leading-7 opacity-65;
   }
 }
 
@@ -51,7 +51,7 @@
 }
 
 .section-container {
-  @apply relative mx-auto max-w-7xl px-6 py-24 lg:px-14 3xl:px-0;
+  @apply relative mx-auto max-w-7xl px-6 py-24 lg:px-10 3xl:px-0;
 }
 .hero {
   @apply h-[650px] 3xl:h-[800px];
@@ -224,12 +224,6 @@ header.scrolled .nav-list {
   @apply h-5 w-5 fill-white hover:fill-white/80 md:h-6 md:w-6;
 }
 
-.benfits-list {
-  @apply flex flex-row items-center;
-}
-.benfits-list svg {
-  @apply size-7 fill-white lg:fill-black ltr:mr-4 rtl:ml-4;
-}
 .error {
   @apply border-2 border-red-700 duration-300;
 }
@@ -266,7 +260,6 @@ header.scrolled .nav-list {
 .form-elements {
   @apply hidden;
 }
-
 .form-elements.active {
   display: block;
 }

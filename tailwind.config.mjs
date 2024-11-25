@@ -14,10 +14,10 @@ export default {
       },
       keyframes: {
         "loop-scroll": {
-          to: { left: "-100px" },
+          to: { left: "-112px" },
         },
         "loop-scroll-mobile": {
-          to: { left: "-56px" },
+          to: { left: "-80px" },
         },
         "animate-stepper": {
           from: { opacity: 0 },
@@ -95,6 +95,7 @@ export default {
         18: "4.5rem",
       },
       height: {
+        68: "17rem",
         84: "21rem",
         18: "4.5rem",
       },

@@ -11,7 +11,6 @@ import Button from "../../components/Button.astro";
 import InfiniteScroll from "../../components/InfiniteScroll.astro";
 /* Images */
 import mockup_sm from "../../../public/images/mockup/mockup_sm.webp";
-import fleet from "../../../public/images/bg/fleet.webp";
 import Restaurant from "../../../public/images/bg/restaurent.webp";
 import app from "../../../public/images/Appmockup.webp";
 
@@ -20,21 +19,10 @@ import videoPlaceHolder_sm from "../../../public/delivery_firstframe_sm.webp";
 import google from "../../../public/images/icons/google play.png";
 import apple from "../../../public/images/icons/apple store.png";
 
-import TailoredDMS from "../../components/SvgIcons/TailoredDMS.astro";
-import RealTT from "../../components/SvgIcons/RealTT.astro";
-import RiderMang from "../../components/SvgIcons/RiderMang.astro";
-import Integration from "../../components/SvgIcons/Integration.astro";
-import LogisticPartner from "../../components/SvgIcons/LogisticPartner.astro";
-import EDM from "../../components/SvgIcons/EDM.astro";
-import RTA from "../../components/SvgIcons/RTA.astro";
-import Recon from "../../components/SvgIcons/Recon.astro";
-import FMO from "../../components/SvgIcons/FMO.astro";
-import AOA from "../../components/SvgIcons/AOA.astro";
-import CDA from "../../components/SvgIcons/CDA.astro";
-
 import HeroButton from "../../components/HeroButton.astro";
 import CoreFeatures from "../../components/CoreFeatures.astro";
 import BentoGrid from "../../components/BentoGrid.astro";
+import Benefits from "../../components/Benefits.astro";
 ---
 
 <script src="/src/Script/videoLoadHundler.js"></script>
@@ -43,11 +31,7 @@ import BentoGrid from "../../components/BentoGrid.astro";
     <picture id="videoplaceholder" class="">
       <source
         srcset="/delivery_firstframe_lg.webp"
-        media="(min-width: 1600px)"
-      />
-      <source
-        srcset="/delivery_firstframe_md.webp"
-        media="(min-width: 480px) (max-width: 1599px)"
+        media="(min-width: 480px)"
       />
       <Image
         src={videoPlaceHolder_sm}
@@ -92,10 +76,10 @@ import BentoGrid from "../../components/BentoGrid.astro";
   </section>
   <div class="bg-white overflow-hidden" id="InfiniteScroll">
     <div
-      class="fade space-y-5 sm:space-y-10 w-full pt-10 pb-12"
+      class="fade space-y-5 xs:space-y-10 w-full py-10"
       data-animation="animate-fade animate-duration-[1000ms]"
     >
-      <h2 class="text-center px-5 text-xl">Leajlak's empowered brands</h2>
+      <h2 class="text-center px-5 text-2xl">Leajlak's empowered brands</h2>
       <InfiniteScroll />
     </div>
   </div>
@@ -148,26 +132,9 @@ import BentoGrid from "../../components/BentoGrid.astro";
       class="container section-container flex flex-col gap-24 overflow-hidden"
     >
       <div
-        class="fade flex flex-col gap-12"
-        data-animation="animate-fade animate-duration-[1000ms]"
-      >
-        <h2>Our target sectors</h2>
-        <BentoGrid lang="en" />
-      </div>
-      <div
         class="fade flex flex-col items-center justify-center gap-20 md:flex-row"
         data-animation="animate-fade animate-duration-[1000ms]"
       >
-        <div class="md:w-[30%] space-y-4">
-          <div class="space-y-2">
-            <h2>Our Service Ecosystem.</h2>
-          </div>
-          <p>
-            Explore how our platform connects these key players, enhancing every
-            step of the delivery journey and driving success across the supply
-            chain.
-          </p>
-        </div>
         <div class="md:w-[70%] relative">
           <video
             autoplay
@@ -177,144 +144,22 @@ import BentoGrid from "../../components/BentoGrid.astro";
             class="relative w-full h-full"
           >
           </video>
+        </div><div class="md:w-[30%] space-y-4">
+          <div class="space-y-2">
+            <h2>Our Service Ecosystem.</h2>
+          </div>
+          <p>
+            Explore how our platform connects these key players, enhancing every
+            step of the delivery journey and driving success across the supply
+            chain.
+          </p>
         </div>
       </div>
     </div>
   </section>
   <section id="Benfits" class="bg-lightGray">
-    <div class="space-y-20 lg:space-y-0">
-      <!-- Merchants -->
-      <div
-        class="fade relative grid grid-cols-1 lg:grid-cols-2 justify-between items-center h-full"
-        data-animation="animate-fade animate-duration-[1000ms]"
-      >
-        <div class="absolute bg-black/70 size-full lg:hidden z-10"></div>
-        <div
-          class="bg-merchant_solution_mobile bg-cover bg-center bg-no-repeat xs:bg-merchant_solution_med h-full relative text-white p-5 lg:px-20 lg:py-10 lg:text-black lg:bg-none w-full flex flex-col justify-center"
-        >
-          <div class="space-y-4 z-10">
-            <div class="">
-              <h3>Solution</h3>
-              <h2 class="text-white lg:text-black">for Merchants</h2>
-            </div>
-            <p class="text-white lg:text-black">
-              Leajlak's solution revolutionizes order management, addressing the
-              critical challenges faced by merchants and unlocking the potential
-              for a seamless, efficient delivery ecosystem.
-            </p>
-            <ul class="flex flex-col py-2 space-y-5">
-              <TailoredDMS span="Tailored DMS" />
-              <RealTT span="Real-Time Tracking" />
-              <RiderMang span="Rider Management" />
-              <LogisticPartner span="Logistics Partnerships" />
-              <Integration span="Integration Capabilities" />
-            </ul>
-            <div class="flex flex-col sm:flex-row gap-3">
-              <a
-                href="solutions/merchant-solutions"
-                class="button-regular flex items-center justify-center group"
-              >
-                Learn more
-                <svg
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 10"
-                  class="ms-2 size-3 flex-shrink-0 translate-x-0 group-hover:translate-x-2 duration-300"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 5h12m0 0L9 1m4 4L9 9"></path>
-                </svg>
-              </a>
-              <Button link="registration/merchants" text="Register Now" />
-            </div>
-          </div>
-        </div>
-        <div class="lg:w-full lg:h-full hidden lg:block">
-          <Image
-            src={Restaurant}
-            class="lg:w-full lg:h-full"
-            alt="Restaurant"
-            loading="lazy"
-            width="1000"
-            height="666"
-            decoding="async"
-          />
-        </div>
-      </div>
-      <!-- 3PL -->
-      <div
-        class="fade relative grid grid-cols-1 lg:grid-cols-2 justify-between items-center h-full"
-        data-animation="animate-fade animate-duration-[1000ms]"
-      >
-        <div class="absolute bg-black/70 size-full lg:hidden z-10"></div>
-        <div class="lg:w-full lg:h-full hidden lg:block">
-          <Image
-            src={fleet}
-            class="lg:w-full lg:h-full"
-            loading="lazy"
-            alt=""
-            width="1000"
-            height="665"
-            decoding="async"
-          />
-        </div>
-        <div
-          class="bg-logistic_solution_mobile xs:bg-logistic_solution_med bg-cover bg-center bg-no-repeat lg:bg-none h-full text-white p-5 lg:px-20 lg:py-10 lg:text-black w-full flex flex-col justify-center"
-        >
-          <div class="space-y-4 z-10">
-            <div>
-              <h3>Solution</h3>
-              <h2 class="text-white lg:text-black">for Logistic Companies</h2>
-            </div>
-
-            <p class="text-white lg:text-black">
-              Addressing the logistical challenges faced by companies, Leajlak's
-              Order Management System offers a comprehensive solution to enhance
-              operational efficiency and streamline delivery processes.
-            </p>
-
-            <ul class="flex flex-col py-2 space-y-5">
-              <EDM span="Enhanced Delivery Management" />
-              <RTA span="Rider Tracking and Allocation" />
-              <Recon span="Streamlined Reconciliation" />
-              <FMO span="Fleet Management Optimization" />
-              <AOA span="Automated Order Assignments" />
-              <CDA span="Centralized dashboard and app" />
-            </ul>
-            <div class="flex flex-col sm:flex-row gap-2">
-              <a
-                href="solutions/logistic-solutions"
-                class="button-regular flex items-center justify-center group"
-              >
-                Learn more
-                <svg
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 10"
-                  class="ms-2 size-3 flex-shrink-0 translate-x-0 group-hover:translate-x-2 duration-300"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 5h12m0 0L9 1m4 4L9 9"></path>
-                </svg>
-              </a>
-              <Button
-                link="registration/logistic-companies"
-                text="Register Now"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container section-container space-y-20">
+      <Benefits />
     </div>
   </section>
   <section id="Integration" class="bg-darkGray">

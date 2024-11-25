@@ -16,14 +16,14 @@ const logos = await Astro.glob(
   });
 </script>
 
-<div class="relative w-full h-10 xs:h-20 group" id="slider-container">
+<div class="relative w-full h-16 xs:h-24 group" id="slider-container">
   {
     logos.map((logo) => {
       const src = logo.default.src.split("/").pop().split(".")[0];
       const altText = `${src} logo`;
 
       return (
-        <picture class="slider absolute size-16 xs:size-24 left-[max(calc(130px*13),100%)] xs:left-[max(calc(300px*13),100%)] xs:animate-loop-scroll animate-loop-scroll-mobile group-hover:animate-pause object-contain">
+        <picture class="slider absolute size-20 xs:size-28 left-[max(calc(130px*13),100%)] xs:left-[max(calc(300px*13),100%)] xs:animate-loop-scroll animate-loop-scroll-mobile group-hover:animate-pause object-contain">
           <Image
             src={logo.default}
             alt={altText}
