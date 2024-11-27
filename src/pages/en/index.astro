@@ -6,12 +6,10 @@ import Testimonial from "../../components/TestimonialEn.astro";
 import Partners from "../../components/Partners.astro";
 import LogisicPartners from "../../components/LogisicPartners.astro";
 
-import Button from "../../components/Button.astro";
-
 import InfiniteScroll from "../../components/InfiniteScroll.astro";
 /* Images */
 import mockup_sm from "../../../public/images/mockup/mockup_sm.webp";
-import Restaurant from "../../../public/images/bg/restaurent.webp";
+
 import app from "../../../public/images/Appmockup.webp";
 
 import videoPlaceHolder_sm from "../../../public/delivery_firstframe_sm.webp";
@@ -21,7 +19,7 @@ import apple from "../../../public/images/icons/apple store.png";
 
 import HeroButton from "../../components/HeroButton.astro";
 import CoreFeatures from "../../components/CoreFeatures.astro";
-import BentoGrid from "../../components/BentoGrid.astro";
+
 import Benefits from "../../components/Benefits.astro";
 ---
 
@@ -79,7 +77,9 @@ import Benefits from "../../components/Benefits.astro";
       class="fade space-y-5 xs:space-y-10 w-full py-10"
       data-animation="animate-fade animate-duration-[1000ms]"
     >
-      <h2 class="text-center px-5 text-2xl">Leajlak's empowered brands</h2>
+      <h2 class="text-center px-5 text-xl xs:text-2xl">
+        Leajlak's empowered brands
+      </h2>
       <InfiniteScroll />
     </div>
   </div>
@@ -158,7 +158,7 @@ import Benefits from "../../components/Benefits.astro";
     </div>
   </section>
   <section id="Benfits" class="bg-lightGray">
-    <div class="container section-container space-y-20">
+    <div class="container section-container space-y-28">
       <Benefits />
     </div>
   </section>
@@ -221,9 +221,11 @@ import Benefits from "../../components/Benefits.astro";
     </div>
   </section>
   <section class="bg-lightGray">
-    <div class="container section-container flex items-center justify-center">
+    <div
+      class="container mx-auto max-w-7xl px-6 lg:px-10 3xl:px-0 flex items-center justify-between"
+    >
       <div
-        class="fade md:w-1/2 space-y-12"
+        class="fade md:w-1/2 space-y-12 py-24 md:py-0"
         data-animation="animate-fade-right animate-duration-[1000ms]"
       >
         <div class="space-y-1">
@@ -250,13 +252,13 @@ import Benefits from "../../components/Benefits.astro";
         </div>
       </div>
       <div
-        class="fade w-1/2 hidden md:block"
+        class="hidden md:block"
         data-animation="animate-fade-left animate-duration-[1000ms]"
       >
         <Image
           src={app}
           alt="app"
-          class="w-full h-full pointer-events-none"
+          class="max-w-[476px] h-auto pointer-events-none -translate-y-12"
           loading="lazy"
         />
       </div>

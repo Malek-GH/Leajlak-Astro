@@ -9,14 +9,14 @@ const logos = await Astro.glob(
   logos.map((logo) => {
     return (
       <div
-        class="fade will-change-transform flex items-center justify-center h-[170px] p-5 flex-card_team_sm sm:flex-card_full hover:shadow-card_shadow hover:shadow-black/40 duration-300 ease-in-out rounded group"
-        data-animation="animate-fade animate-duration-[2000ms]"
+        class="fade will-change-transform flex items-center justify-center h-40 p-5 flex-auto px-5  lg:flex-card_full hover:shadow-card_shadow hover:shadow-black/40 duration-500 ease-in-out rounded group"
+        data-animation="animate-fade animate-duration-[1000ms]"
       >
         <Image
           src={logo.default}
           alt=""
           loading="lazy"
-          class="w-28 h-auto grayscale group-hover:grayscale-0 duration-300 ease-in-out object-contain"
+          class="w-28 h-auto grayscale group-hover:grayscale-0 duration-500 ease-in-out object-contain"
         />
       </div>
     );

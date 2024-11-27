@@ -5,7 +5,7 @@ export default {
     extend: {
       screens: {
         "3xl": "1600px",
-        xs: "480px",
+        xs: "450px",
       },
       animation: {
         "loop-scroll": "loop-scroll 20s linear infinite",
@@ -98,13 +98,12 @@ export default {
         68: "17rem",
         84: "21rem",
         18: "4.5rem",
+        74: "300px",
       },
       lineHeight: { 1.3: 1.3 },
       flex: {
         card_full: "0 1 calc(20% - 20px)",
-        card_xl: "0 1 calc(100% - 20px)",
         card_testimonial_xl: "0 1 calc(33.3333% - 20px)",
-        card_team_sm: "0 1 100%",
       },
       inset: {
         "2/5": "40%",

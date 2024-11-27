@@ -1,0 +1,118 @@
+---
+const { lang } = Astro.props;
+import { Image } from "astro:assets";
+import restaurant from "../../public/images/carousel/restaurant-sm.webp";
+import cafe from "../../public/images/carousel/cafe-sm.webp";
+import family from "../../public/images/carousel/productive-family-sm.webp";
+import onlineStores from "../../public/images/carousel/online-stores-sm.webp";
+import pharmacy from "../../public/images/carousel/pharmacy-sm.webp";
+const content = await import(`../data/${lang}.json`);
+---
+
+<div class="Bento-container">
+  <div>
+    <span class="grid-item-text">
+      {content.Online_Stores}
+    </span>
+    <picture>
+      <source
+        media="(min-width: 1024px)"
+        srcset="/images/carousel/online-stores-lg.webp"
+      />
+      <Image src={onlineStores} alt="Online Stores" loading="lazy" />
+    </picture>
+  </div>
+  <div>
+    <span class="grid-item-text">
+      {content.family}
+    </span>
+    <picture>
+      <source
+        media="(min-width: 1024px)"
+        srcset="/images/carousel/productive-family-lg.webp"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="/images/carousel/productive-family-md.webp"
+      />
+      <Image src={family} alt="productive family" loading="lazy" />
+    </picture>
+  </div>
+  <div>
+    <span class="grid-item-text">
+      {content.pharmacy}
+    </span>
+    <picture>
+      <source
+        media="(min-width: 1024px)"
+        srcset="/images/carousel/pharmacy-lg.webp"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="/images/carousel/pharmacy-md.webp"
+      />
+      <Image src={pharmacy} alt="pharmacy" loading="lazy" />
+    </picture>
+  </div>
+  <div>
+    <span class="grid-item-text">
+      {content.cafe}
+    </span>
+    <picture>
+      <source
+        media="(min-width: 1024px)"
+        srcset="/images/carousel/cafe-lg.webp"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="/images/carousel/cafe-md.webp"
+      />
+      <Image src={cafe} alt="cafe" loading="lazy" />
+    </picture>
+  </div>
+  <div>
+    <span class="grid-item-text">
+      {content.Restaurants}
+    </span>
+    <picture>
+      <source
+        media="(min-width: 1024px)"
+        srcset="/images/carousel/restaurant-lg.webp"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="/images/carousel/restaurant-md.webp"
+      />
+      <Image src={restaurant} alt="restaurant" loading="lazy" />
+    </picture>
+  </div>
+</div>
+
+<style>
+  .Bento-container {
+    @apply grid auto-rows-fr grid-cols-2 gap-3 xs:grid-cols-3 lg:grid-cols-4;
+  }
+  .Bento-container div {
+    @apply relative overflow-hidden rounded-xl will-change-auto after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-black after:opacity-50 after:duration-500 after:ease-in hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out xs:h-56 md:h-64 lg:h-72;
+  }
+  .Bento-container div:hover .grid-item-text {
+    @apply -translate-y-1/2 duration-700 ease-out;
+  }
+  .grid-item-text {
+    @apply absolute bottom-2 left-2 z-10 text-left text-base font-medium text-white duration-500 ease-in sm:text-lg lg:text-xl;
+  }
+  .Bento-container div img {
+    @apply -z-10 size-full duration-500 ease-in;
+  }
+  .Bento-container div:hover img {
+    @apply scale-105 duration-700 ease-out;
+  }
+
+  .Bento-container div:nth-child(1) {
+    @apply col-span-1 xs:col-span-1 lg:col-span-2;
+  }
+
+  .Bento-container div:nth-child(5) {
+    @apply col-span-2 lg:col-span-3;
+  }
+</style>

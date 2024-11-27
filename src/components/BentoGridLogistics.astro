@@ -1,0 +1,51 @@
+---
+const { lang } = Astro.props;
+import { Image } from "astro:assets";
+import vans from "../../public/images/carousel/vans-sm.webp";
+import bike from "../../public/images/bg/drivers registration/drivers_registration_lg-en.webp";
+
+const content = await import(`../data/${lang}.json`);
+---
+
+<div class="Bento-container">
+  <div>
+    <span class="grid-item-text">Vans</span>
+    <picture>
+      <source
+        media="(min-width: 1024px)"
+        srcset="/images/carousel/vans-lg.webp"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="/images/carousel/vans-md.webp"
+      />
+      <source media="(min-width: 450px)" srcset="/images/carousel/vans.webp" />
+      <Image src={vans} alt="vans" class="object-cover" /></picture
+    >
+  </div>
+  <div>
+    <span class="grid-item-text">Bikes</span>
+    <picture> <Image src={bike} alt="vans" class="object-cover" /></picture>
+  </div>
+</div>
+
+<style>
+  .Bento-container {
+    @apply grid auto-rows-fr grid-cols-1 gap-3;
+  }
+  .Bento-container div {
+    @apply lg:h-74 relative overflow-hidden rounded-xl will-change-auto after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-black after:opacity-50 after:duration-500 after:ease-in hover:after:opacity-70 hover:after:duration-700 hover:after:ease-out xs:h-64 md:h-68;
+  }
+  .Bento-container div:hover .grid-item-text {
+    @apply -translate-y-1/2 duration-700 ease-out;
+  }
+  .grid-item-text {
+    @apply absolute bottom-2 left-2 z-10 text-left text-base font-medium text-white duration-500 ease-in sm:text-lg lg:text-xl;
+  }
+  .Bento-container div img {
+    @apply -z-10 size-full duration-500 ease-in;
+  }
+  .Bento-container div:hover img {
+    @apply scale-105 duration-700 ease-out;
+  }
+</style>
