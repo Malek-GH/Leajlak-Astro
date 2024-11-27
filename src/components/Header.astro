@@ -2,8 +2,8 @@
 const { lang = "en" } = Astro.props;
 
 import { Image } from "astro:assets";
-import logo_white from "../../public/images/logo 2 white.webp";
-import logo_normal from "../../public/images/logo 2.webp";
+import logo_white from "../../public/images/logo 2 white-sm.webp";
+import logo_normal from "../../public/images/logo 2-sm.webp";
 import english from "../../public/images/flag/uk.svg";
 import arabic from "../../public/images/flag/ksa.svg";
 const content = await import(`../data/${lang}.json`);
@@ -22,21 +22,29 @@ const handleRedirect = (lang: string) => {
     data-animation="animate-fade animate-duration-[2000ms]"
   >
     <a href=`/${lang}/`>
-      <Image
-        loading="eager"
-        id="logo-default"
-        class="header-logo"
-        src={logo_white}
-        alt="logo"
-        decoding="async"
-      />
-      <Image
-        loading="lazy"
-        id="logo-scrolled"
-        class="header-logo scrolled"
-        src={logo_normal}
-        alt="log"
-      />
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="/images/logo 2 white.webp"
+        />
+        <Image
+          loading="eager"
+          id="logo-default"
+          class="header-logo"
+          src={logo_white}
+          alt="logo"
+        />
+      </picture>
+      <picture>
+        <source media="(min-width: 1024px)" srcset="/images/logo 2-sm.webp" />
+        <Image
+          loading="lazy"
+          id="logo-scrolled"
+          class="header-logo scrolled"
+          src={logo_normal}
+          alt="log"
+        />
+      </picture>
     </a>
     <div class="nav-list">
       <div class="nav_item items">
