@@ -17,7 +17,7 @@ const content = await import(`../data/${lang}.json`);
   >
     <Image src={api} alt="Api" />
     <div>
-      <h4 class="text-xl font-medium">{content.API}</h4>
+      <h4 class="font-medium">{content.API}</h4>
       <p class="">
         {content.API_text}
       </p>
@@ -29,7 +29,7 @@ const content = await import(`../data/${lang}.json`);
   >
     <Image src={order_status} alt="order_status" />
     <div>
-      <h4 class="text-xl font-medium">{content.Order}</h4>
+      <h4 class="font-medium">{content.Order}</h4>
       <p>
         {content.Order_text}
       </p>
@@ -41,7 +41,7 @@ const content = await import(`../data/${lang}.json`);
   >
     <Image src={LiveLocation} alt="LiveLocation" />
     <div>
-      <h4 class="text-xl font-medium">{content.DLL}</h4>
+      <h4 class="font-medium">{content.DLL}</h4>
       <p>
         {content.DLL_text}
       </p>
@@ -53,7 +53,7 @@ const content = await import(`../data/${lang}.json`);
   >
     <Image src={Payment_methods} alt="Payment_methods" />
     <div>
-      <h4 class="text-xl font-medium">{content.Paymentm}</h4>
+      <h4 class="font-medium">{content.Paymentm}</h4>
       <p>
         {content.Paymentm_text}
       </p>
@@ -65,7 +65,7 @@ const content = await import(`../data/${lang}.json`);
   >
     <Image src={chat} alt="chat" />
     <div>
-      <h4 class="text-xl font-medium">{content.Customerchat}</h4>
+      <h4 class="font-medium">{content.Customerchat}</h4>
       <p>
         {content.Customerchat_text}
       </p>
@@ -77,7 +77,7 @@ const content = await import(`../data/${lang}.json`);
   >
     <Image src={order_return} alt="order_return" />
     <div>
-      <h4 class="text-xl font-medium">{content.ORM}</h4>
+      <h4 class="font-medium">{content.ORM}</h4>
       <p>
         {content.ORM_text}
       </p>
@@ -95,6 +95,6 @@ const content = await import(`../data/${lang}.json`);
     @apply text-primaryOrange duration-300;
   }
   .FeatureCard img {
-    @apply size-14 pt-1;
+    @apply size-16 flex-shrink-0 pt-1;
   }
 </style>
