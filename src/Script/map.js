@@ -1,7 +1,9 @@
 const isArabic = document.documentElement.lang === "ar";
 const popupText = isArabic ? "مكتب لأجلك" : "Leajlak's Office";
 
-var map = L.map("map").setView([24.7479868, 46.688836], 16);
+var map = L.map("map", {
+  scrollWheelZoom: false,
+}).setView([24.7479868, 46.688836], 16);
 var myIcon = L.icon({
   iconUrl: "/marker.webp",
   iconSize: [34, 50],
@@ -9,7 +11,7 @@ var myIcon = L.icon({
 });
 
 L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  maxZoom: 18,
+  maxZoom: 19,
   minZoom: 16,
 }).addTo(map);
 

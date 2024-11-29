@@ -93,8 +93,10 @@ export default {
       width: {
         84: "24rem",
         18: "4.5rem",
+        inherit: "inherit",
       },
       height: {
+        "99vh": "99vh",
         68: "17rem",
         84: "21rem",
         18: "4.5rem",

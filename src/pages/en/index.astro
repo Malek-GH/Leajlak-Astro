@@ -5,27 +5,21 @@ import Layout from "../../layouts/Layout.astro";
 import Testimonial from "../../components/TestimonialEn.astro";
 import Partners from "../../components/Partners.astro";
 import LogisicPartners from "../../components/LogisicPartners.astro";
-
 import InfiniteScroll from "../../components/InfiniteScroll.astro";
-/* Images */
-import mockup_sm from "../../../public/images/mockup/mockup_sm.webp";
-
-import app from "../../../public/images/Appmockup.webp";
-
-import videoPlaceHolder_sm from "../../../public/delivery_firstframe_sm.webp";
-
-import google from "../../../public/images/icons/google play.png";
-import apple from "../../../public/images/icons/apple store.png";
-
 import HeroButton from "../../components/HeroButton.astro";
 import CoreFeatures from "../../components/CoreFeatures.astro";
-
 import Benefits from "../../components/Benefits.astro";
+/* Images */
+import mockup_sm from "../../../public/images/mockup/mockup_sm.webp";
+import app from "../../../public/images/Appmockup.webp";
+import videoPlaceHolder_sm from "../../../public/delivery_firstframe_sm.webp";
+import google from "../../../public/images/icons/google play.png";
+import apple from "../../../public/images/icons/apple store.png";
 ---
 
 <script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="Home" lang="en">
-  <section class="relative h-screen">
+  <section class="relative h-99vh">
     <picture id="videoplaceholder" class="">
       <source
         srcset="/delivery_firstframe_lg.webp"
@@ -41,7 +35,7 @@ import Benefits from "../../components/Benefits.astro";
     </picture>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 z-0"
+      class="absolute top-0 left-0 size-full bg-black/65 z-0"
     >
     </div>
     <video
@@ -49,7 +43,7 @@ import Benefits from "../../components/Benefits.astro";
       playsinline
       muted
       loop
-      class="absolute size-full object-cover -z-10"
+      class="size-full object-cover -z-10 fixed"
       id="video"
     >
       <source src="/delivery.mp4" type="video/mp4" />
@@ -83,7 +77,7 @@ import Benefits from "../../components/Benefits.astro";
       <InfiniteScroll />
     </div>
   </div>
-  <section class="overflow-hidden">
+  <section class="overflow-hidden bg-lightGray">
     <div
       class="fade container section-container grid justify-items-center lg:grid-cols-2 items-center sm:gap-y-20 relative"
       data-animation="animate-fade animate-duration-[1000ms]"
@@ -128,23 +122,25 @@ import Benefits from "../../components/Benefits.astro";
     </div>
   </section>
   <section id="WhoWeServe" class="bg-white">
-    <div
-      class="container section-container flex flex-col gap-24 overflow-hidden"
-    >
+    <div class="container section-container overflow-hidden">
       <div
-        class="fade flex flex-col items-center justify-center gap-20 md:flex-row"
+        class="fade flex flex-col items-center justify-center gap-20 md:flex-row pb-5 sm:pb-0"
         data-animation="animate-fade animate-duration-[1000ms]"
       >
-        <div class="md:w-[70%] relative">
+        <div
+          class="w-full absolute sm:relative bottom-3 sm:bottom-0 md:w-2/3 order-2 md:order-1"
+        >
           <video
             autoplay
             muted
             loop
             src="/leajlak workflow.mp4"
-            class="relative w-full h-full"
+            class="w-full h-auto top-0"
           >
           </video>
-        </div><div class="md:w-[30%] space-y-4">
+        </div><div
+          class="md:w-2/6 mb-40 xs:mb-72 sm:mb-0 space-y-4 order-1 md:order-2"
+        >
           <div class="space-y-2">
             <h2>Our Service Ecosystem.</h2>
           </div>
@@ -168,7 +164,7 @@ import Benefits from "../../components/Benefits.astro";
       <CoreFeatures lang="en" />
     </div>
   </section>
-  <section>
+  <section class="bg-lightGray">
     <div
       class="fade container section-container space-y-10 overflow-hidden h-full"
       data-animation="animate-fade animate-duration-[1000ms]"
