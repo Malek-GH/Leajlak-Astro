@@ -36,6 +36,9 @@
   p {
     @apply font-normal leading-7 opacity-65;
   }
+  section {
+    @apply relative;
+  }
 }
 
 @layer components {
@@ -54,7 +57,7 @@
   @apply relative mx-auto max-w-7xl px-6 py-24 lg:px-10 3xl:px-0;
 }
 .hero {
-  @apply h-99vh xs:h-[650px] 3xl:h-[800px];
+  @apply h-screen xs:h-[650px] 3xl:h-[800px];
 }
 .cta {
   @apply flex h-[400px] flex-col items-center justify-evenly;
