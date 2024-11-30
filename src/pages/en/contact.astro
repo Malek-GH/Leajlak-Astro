@@ -1,36 +1,43 @@
 ---
+import Layout from "../../layouts/Layout.astro";
 import Location from "../../components/Location.astro";
 import QuickSupport from "../../components/QuickSupport.astro";
-import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import contact_bg from "../../../public/images/bg/contact-mobile.webp";
 ---
 
-<link
-  rel="preload"
-  href="/images/bg/contact-mobile.webp"
-  as="image"
-  media="(max-width: 479px)"
-/>
-<link
-  rel="preload"
-  href="/images/bg/contact-med.webp"
-  as="image"
-  media="(min-width: 480px) "
-/>
 <link
   rel="preload"
   href="/images/bg/contact-lg.webp"
   as="image"
   media="(min-width: 1600px)"
 />
+<link
+  rel="preload"
+  href="/images/bg/contact-med.webp"
+  as="image"
+  media="(min-width: 450px)"
+/>
 
 <Layout title="Contact Us" lang="en">
-  <section
-    id="contact-hero"
-    class="bg-contact_med 3xl:bg-contact_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center overflow-hidden"
-  >
+  <section id="contact-hero" class="hero overflow-hidden">
+    <picture>
+      <source media="(min-width: 1600px)" srcset="/images/bg/contact-lg.webp" />
+      <source
+        media="(min-width: 450px) "
+        srcset="/images/bg/contact-med.webp"
+      />
+      <Image
+        src={contact_bg}
+        alt="contact_bg"
+        class="fixed size-full z-0 bottom-0 object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </picture>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
     >
     </div>
     <div
@@ -51,7 +58,6 @@ import Layout from "../../layouts/Layout.astro";
       </div>
     </div>
   </section>
-
   <section class="flex flex-col lg:flex-row bg-white" id="contact">
     <div
       class="fade flex flex-col justify-center gap-20 w-full lg:w-1/2 px-6 py-10 lg:p-20"

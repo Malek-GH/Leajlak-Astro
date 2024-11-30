@@ -7,16 +7,10 @@ import fleet_cost from "../../../../public/images/bg/fleet-cost.webp";
 import data from "../../../../public/images/bg/data.webp";
 import client from "../../../../public/images/bg/client.webp";
 import portrait from "../../../../public/images/profile-pic/portrait.png";
-
+import logistic_bg from "../../../../public/images/bg/logistic_solution_mobile.webp";
 import ButtonOutline from "../../../components/ButtonOutline.astro";
 ---
 
-<link
-  rel="preload"
-  href="/images/bg/logistic_solution_mobile.webp"
-  as="image"
-  media="(max-width: 479px)"
-/>
 <link
   rel="preload"
   href="/images/bg/logistic_solution_med.webp"
@@ -31,13 +25,27 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
 />
 
 <Layout title="Solutions | 3PL" lang="en">
-  <section
-    class="bg-logistic_solution_mobile xs:bg-logistic_solution_med 3xl:bg-logistic_solution_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center"
-    id="PL-hero"
-  >
+  <section class="hero" id="PL-hero">
+    <picture>
+      <source
+        media="(min-width: 1600px)"
+        srcset="/images/bg/logistic_solution_lg.webp"
+      />
+      <source
+        srcset="/images/bg/logistic_solution_med.webp"
+        media="(min-width: 450px) "
+      />
+      <Image
+        src={logistic_bg}
+        alt="logisitc_solution_bg"
+        class="fixed size-full z-0 bottom-0 object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </picture>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
     >
     </div>
     <div
@@ -45,7 +53,7 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
       data-animation="animate-fade animate-duration-[1500ms]"
     >
       <div class="text-white lg:w-2/5">
-        <div class="fixed w-inherit top-1/3 3xl:top-1/2 space-y-7">
+        <div class="fixed w-inherit top-2/5 3xl:top-1/2 space-y-7">
           <h1 class="text-3xl md:text-5xl">Logistic Companies</h1>
           <h4 class="text-base md:text-xl opacity-90">
             Addressing the logistical challenges faced by companies, Leajlak’s
@@ -368,7 +376,7 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
       </div>
     </div>
   </section>
-  <section>
+  <section class="bg-lightGray">
     <div
       class="container section-container flex flex-col justify-center gap-24"
     >

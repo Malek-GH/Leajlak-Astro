@@ -1,10 +1,13 @@
 ---
+import Layout from "../../../layouts/Layout.astro";
+
+import { Image } from "astro:assets";
 import CheckBox from "../../../components/CheckBox.astro";
 import InputCompEmail from "../../../components/InputCompEmail.astro";
 import InputCompNumber from "../../../components/InputCompNumber.astro";
 import InputCompText from "../../../components/InputCompText.astro";
 import MerchantBenefits from "../../../components/MerchantBenefits.astro";
-import Layout from "../../../layouts/Layout.astro";
+import logistic_bg from "../../../../public/images/bg/register_merchants_mobile.webp";
 ---
 
 <link
@@ -21,10 +24,24 @@ import Layout from "../../../layouts/Layout.astro";
 />
 
 <Layout title="Registartion | Merchants" lang="en">
-  <section
-    class="bg-register_merchants_med 3xl:bg-register_merchants_lg bg-no-repeat bg-cover bg-left-top flex items-center justify-center hero"
-    id="hero"
-  >
+  <section class="flex items-center justify-center hero" id="hero">
+    <picture>
+      <source
+        media="(min-width: 1600px)"
+        srcset="/images/bg/register_merchants_lg.webp"
+      />
+      <source
+        srcset="/images/bg/register_merchants_med.webp"
+        media="(min-width: 450px) "
+      />
+      <Image
+        src={logistic_bg}
+        alt="register_merchants_bg"
+        class="absolute size-full z-0 bottom-0 object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </picture>
     <div
       class="container section-container flex flex-col items-center lg:flex-row z-10 fade"
       data-animation="animate-fade animate-duration-[1500ms]"
@@ -251,7 +268,7 @@ import Layout from "../../../layouts/Layout.astro";
     </div>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
     >
     </div>
   </section>

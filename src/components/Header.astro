@@ -321,7 +321,7 @@ const handleRedirect = (lang: string) => {
                 return (
                   <>
                     <Image
-                      loading="lazy"
+                      loading="eager"
                       src={arabic}
                       class="size-6  rounded-full pointer-events-none"
                       alt=""
@@ -342,12 +342,12 @@ const handleRedirect = (lang: string) => {
                     <li class=" lg:opacity-0 lg:hover:text-primaryOrange lg:delay-75">
                       <a
                         href={`${handleRedirect("en")}`}
-                        class="hover:text-primaryOrange inline-flex items-center"
+                        class="hover:text-primaryOrange inline-flex items-center font-semibold"
                         role="menuitem"
                         aria-label="arabic"
                       >
                         <Image
-                          loading="eager"
+                          loading="lazy"
                           src={arabic}
                           class="size-6 rounded-full m-2 pointer-events-none"
                           alt=""
@@ -366,7 +366,7 @@ const handleRedirect = (lang: string) => {
                     <li class=" lg:opacity-0 lg:hover:text-primaryOrange">
                       <a
                         href={`${handleRedirect("ar")}`}
-                        class="hover:text-primaryOrange inline-flex items-center"
+                        class="hover:text-primaryOrange inline-flex items-center font-semibold"
                         role="menuitem"
                       >
                         <Image

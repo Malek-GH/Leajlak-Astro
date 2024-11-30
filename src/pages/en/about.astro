@@ -9,8 +9,7 @@ import bk from "../../../public/images/companies logo/clients/Burgerking.webp";
 import hzbr from "../../../public/images/companies logo/clients/Hazbr.webp";
 import farawalah from "../../../public/images/companies logo/clients/Farawlah.webp";
 import casapasta from "../../../public/images/companies logo/clients/Casapasta.webp";
-
-import Typewriter from "../../components/Typewriter.astro";
+import about_mobile from "../../../public/images/bg/about-mobile.webp";
 import TrustedIcons from "../../components/TrustedIcons.astro";
 import Values from "../../components/values.astro";
 import ButtonOutline from "../../components/ButtonOutline.astro";
@@ -18,32 +17,33 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
 
 <link
   rel="preload"
-  href="/images/bg/about-mobile.webp"
+  href="/images/bg/about-lg.webp"
   as="image"
-  media="(max-width: 479px)"
+  media="(min-width: 1600px)"
 />
 <link
   rel="preload"
   href="/images/bg/about-md.webp"
   as="image"
-  media="(min-width: 480px)"
-/>
-<link
-  rel="preload"
-  href="/images/bg/about-lg.webp"
-  as="image"
-  media="(min-width: 1600px)"
+  media="(min-width: 450px)"
 />
 
 <Layout title="About Us" lang="en">
-  <section
-    class="bg-about_mobile xs:bg-about_med 3xl:bg-about_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center z-0"
-    id="about-hero"
-  >
-    <Typewriter />
+  <section class="hero z-0" id="about-hero">
+    <picture>
+      <source media="(min-width: 1600px)" srcset="/images/bg/about-lg.webp" />
+      <source srcset="/images/bg/about-md.webp" media="(min-width: 450px) " />
+      <Image
+        src={about_mobile}
+        alt="About-bg"
+        class="fixed size-full z-0 bottom-0 object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </picture>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
     >
     </div>
     <div
@@ -97,7 +97,7 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
       </div>
     </div>
   </section>
-  <section class="bg-darkGray normal">
+  <section class="bg-darkGray">
     <div class="container section-container text-white">
       <div
         class="flex flex-col items-center justify-center gap-y-20 lg:items-start lg:gap-y-0 lg:gap-x-16 lg:flex-row"
@@ -201,3 +201,4 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
     </div>
   </section>
 </Layout>
+<script src="/src/Script/typewriter.js"></script>

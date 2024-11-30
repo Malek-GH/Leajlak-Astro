@@ -8,16 +8,10 @@ import experience from "../../../../public/images/bg/customer experience.webp";
 import scalability from "../../../../public/images/bg/charts.webp";
 import integration from "../../../../public/images/bg/integration.webp";
 import portrait from "../../../../public/images/profile-pic/portrait.png";
-
+import merchant_bg from "../../../../public/images/bg/merchant_solution_mobile.webp";
 import ButtonOutline from "../../../components/ButtonOutline.astro";
 ---
 
-<link
-  rel="preload"
-  href="/images/bg/merchant_solution_mobile.webp"
-  as="image"
-  media="(max-width: 479px)"
-/>
 <link
   rel="preload"
   href="/images/bg/merchant_solution_md.webp"
@@ -32,13 +26,27 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
 />
 
 <Layout title="Solutions | Merchants" lang="en">
-  <section
-    class="bg-merchant_solution_mobile xs:bg-merchant_solution_med 3xl:bg-merchant_solution_lg bg-cover bg-center lg:bg-left bg-no-repeat bg-fixed hero flex items-center"
-    id="merchants-hero"
-  >
+  <section class="hero" id="merchants-hero">
+    <picture>
+      <source
+        media="(min-width: 1600px)"
+        srcset="/images/bg/merchant_solution_lg.webp"
+      />
+      <source
+        srcset="/images/bg/merchant_solution_md.webp"
+        media="(min-width: 450px) "
+      />
+      <Image
+        src={merchant_bg}
+        alt="merchant_solution_bg"
+        class="fixed size-full z-0 bottom-0 object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </picture>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 to-black/70 z-0"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
     >
     </div>
     <div
