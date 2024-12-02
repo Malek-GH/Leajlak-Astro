@@ -2,6 +2,7 @@ const isArabic = document.documentElement.lang === "ar";
 const popupText = isArabic ? "مكتب لأجلك" : "Leajlak's Office";
 
 var map = L.map("map", {
+  renderer: L.canvas(),
   scrollWheelZoom: false,
 }).setView([24.7479868, 46.688836], 16);
 var myIcon = L.icon({
@@ -19,6 +20,6 @@ L.marker([24.7479868, 46.688836], { icon: myIcon })
 
   .addTo(map)
   .bindPopup(
-    ` <a href="https://maps.app.goo.gl/fn9x9TY53S7p8ViM9" target="”_blank”"><p class='text-black text-sm font-OpenSans'>${popupText}</p></a>`,
+    ` <a href="https://maps.app.goo.gl/fn9x9TY53S7p8ViM9" target="”_blank”"><p class='text-black text-sm whitespace-nowrap font-OpenSans'>${popupText}</p></a>`,
   )
   .openPopup();

@@ -7,14 +7,14 @@ const logos = await Astro.glob("../../public/images/companies logo/*.webp");
   logos.map((logo) => {
     return (
       <div
-        class="fade flex items-center will-change-transform justify-center h-40 flex-auto px-5 lg:flex-card_full hover:shadow-card_shadow hover:shadow-black/40 duration-500 ease-in-out rounded group"
+        class="fade flex items-center will-change-transform justify-center h-40 flex-test flex-auto px-2 lg:flex-card_full hover:shadow-card_shadow hover:shadow-black/40 duration-500 ease-in-out rounded group"
         data-animation="animate-fade animate-duration-[1000ms]"
       >
         <Image
           src={logo.default}
           alt=""
           loading="lazy"
-          class="w-28 h-auto grayscale group-hover:grayscale-0 duration-500 ease-in-out object-contain"
+          class="w-24 sm:w-28 h-auto grayscale group-hover:grayscale-0 duration-500 ease-in-out object-contain"
         />
       </div>
     );

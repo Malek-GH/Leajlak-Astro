@@ -94,6 +94,7 @@ export default {
         84: "24rem",
         18: "4.5rem",
         inherit: "inherit",
+        15: "3.75rem",
       },
       height: {
         "99vh": "99vh",
@@ -101,7 +102,9 @@ export default {
         84: "21rem",
         18: "4.5rem",
         74: "300px",
+        15: "3.75rem",
       },
+
       lineHeight: { 1.3: 1.3 },
       flex: {
         card_full: "0 1 calc(20% - 20px)",

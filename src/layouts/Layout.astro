@@ -2,6 +2,7 @@
 import "../styles/base.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ChatBot from "../components/ChatBot.astro";
 interface Props {
   title: string;
   lang: string;
@@ -43,11 +44,13 @@ function dir() {
     </noscript>
   </head>
 
-  <body class="font-OpenSans overflow-x-hidden first-letter:uppercase">
+  <body class="relative font-OpenSans overflow-x-hidden first-letter:uppercase">
     <Header lang={lang} />
-    <slot class="z-50" />
+    <ChatBot />
+    <slot />
     <Footer lang={lang} />
     <script src="../Script/scrollAnimation.js"></script>
     <script src="../Script/script.js"></script>
+    <script src="../Script/ChatBot.js"></script>
   </body>
 </html>
