@@ -1,12 +1,12 @@
 <div
-  class="fixed right-0 bottom-0 size-24 z-50 xs:h-[620px] xs:w-[440px] flex flex-col items-end justify-end"
+  class="fixed right-0 bottom-0 size-32 z-50 xs:h-[620px] xs:w-[440px] flex flex-col items-end justify-end"
   id="Chatbot"
   aria-label="chatbot"
 >
   <!-- Chatbot Content -->
   <div
     id="Chatbot-content"
-    class="bg-lightGray xs:rounded-2xl xs:mx-5 absolute xs:relative w-full h-full xs:w-[400px] flex flex-col overflow-hidden"
+    class="bg-lightGray xs:rounded-2xl xs:mx-5 absolute xs:relative w-full h-full xs:w-[400px] flex flex-col overflow-hidden will-change-transform drop-shadow-md"
   >
     <div
       class="bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% p-4 flex items-center justify-between"
@@ -37,23 +37,43 @@
             <p class="chatText">How can I help you?</p>
           </div>
         </div>
+        <div id="ChatBot-message" class="flex flex-row gap-2 items-end w-full">
+          <div>
+            <img src="/icon.webp" alt="leajlak icon" class="shrink-0 w-5" />
+          </div>
+          <div
+            id="message"
+            class="bg-white rounded-t-lg rounded-br-lg drop-shadow-sm py-2 px-4"
+          >
+            <p class="chatText">Please select an option below.</p>
+          </div>
+        </div>
       </div>
       <div
         id="choices"
         class="flex flex-row gap-2 flex-wrap items-center justify-center"
       >
-        <button>Choice 1</button>
-        <button>Choice 2</button>
-        <button>Choice 3</button>
-        <button>Choice 4</button>
-        <button>Whatsapp business Account</button>
+        <button>option 1</button>
+        <button>option 2</button>
+        <button>option 3</button>
+        <button>option 4</button>
+        <a
+          aria-label="Chat on WhatsApp"
+          href="https://wa.me/966536767272"
+          class="rounded bg-white p-2 text-sm font-light ring-1 ring-green-600 drop-shadow duration-200 ease-in-out will-change-transform hover:scale-105"
+          ><img
+            src="/images/icons/whatsapp.png"
+            alt="Chat on WhatsApp"
+            class="w-full h-auto"
+          /></a
+        >
       </div>
       <div></div>
       <div id="user-message" class="flex justify-end">
         <div
           class="bg-primaryOrange rounded-t-lg rounded-bl-lg drop-shadow-sm py-2 px-4"
         >
-          <p class="chatText text-white">I have a question about Choice 1</p>
+          <p class="chatText text-white">I have a question about option 1</p>
         </div>
       </div>
       <div class="flex flex-col gap-2">
@@ -77,7 +97,7 @@
         <button>question 2</button>
         <button>question 3</button>
         <button>question 4</button>
-        <button>Another choice</button>
+        <button>Another option</button>
       </div>
       <div id="user-message" class="flex justify-end">
         <div
@@ -91,7 +111,7 @@
   <!-- Chatbot Icon -->
   <div
     id="Chatbot-icon"
-    class="mt-3 mb-5 mx-5 shrink-0 bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% size-11 xs:h-15 xs:w-15 rounded-full flex items-center justify-center group cursor-pointer"
+    class="mt-3 mb-5 mx-5 translate-y-0 transition-transform drop-shadow ease-in-out duration-300 will-change-transform shrink-0 bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% size-11 xs:h-15 xs:w-15 rounded-full flex items-center justify-center group cursor-pointer"
   >
     <img
       src="/Chatbot.svg"
@@ -109,7 +129,7 @@
     @apply scale-100 transform opacity-100 duration-300 ease-in;
   }
   .chatText {
-    @apply text-sm font-light leading-6 opacity-100;
+    @apply text-sm font-normal leading-6 opacity-100;
   }
   #choices button {
     @apply rounded bg-white p-2 text-sm font-light ring-1 ring-primaryOrange/90 drop-shadow duration-200 ease-in-out will-change-transform hover:scale-105;

@@ -10,27 +10,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   openButton.addEventListener("click", () => {
     content.classList.add("active");
-    container.classList.remove("size-24");
+    container.classList.remove("size-32");
     container.classList.add("size-full");
 
     if (isSmallScreen()) {
-      openButton.classList.add("invisible");
+      openButton.classList.add("translate-y-20");
     }
   });
 
   closeButton.addEventListener("click", () => {
     content.classList.remove("active");
     container.classList.remove("size-full");
-    container.classList.add("size-24");
+    container.classList.add("size-32");
 
     if (isSmallScreen()) {
-      openButton.classList.remove("invisible");
+      openButton.classList.remove("translate-y-20");
     }
   });
 
   window.addEventListener("resize", () => {
     if (!isSmallScreen()) {
-      openButton.classList.remove("invisible");
+      openButton.classList.remove("translate-y-20");
     }
   });
 });
