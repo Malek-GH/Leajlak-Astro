@@ -1,138 +1,138 @@
+---
+import { Image } from "astro:assets";
+import whatsapp from "../../public/images/icons/whatsapp.svg";
+---
+
 <div
-  class="fixed right-0 bottom-0 size-32 z-50 xs:h-[620px] xs:w-[440px] flex flex-col items-end justify-end"
+  class="fixed right-0 bottom-0 size-full z-50 xs:h-[640px] xs:w-[440px] flex flex-col items-end justify-end"
   id="Chatbot"
   aria-label="chatbot"
 >
   <!-- Chatbot Content -->
   <div
     id="Chatbot-content"
-    class="bg-lightGray xs:rounded-2xl xs:mx-5 absolute xs:relative w-full h-full xs:w-[400px] flex flex-col overflow-hidden will-change-transform drop-shadow-md"
+    class="bg-lightGray xs:rounded-2xl xs:mx-3 absolute xs:relative w-full h-full xs:w-[400px] flex active flex-col overflow-hidden will-change-transform drop-shadow-md"
   >
     <div
-      class="bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% p-4 flex items-center justify-between"
+      class="bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% p-4 flex items-center justify-between relative"
     >
-      <span class="text-white font-Montserrat font-semibold text-xl"
-        >Leajlak's Assistant</span
-      >
-      <img
-        src="/images/icons/close.svg"
-        alt="close"
-        class="cursor-pointer active:scale-90 duration-200"
+      <div class="flex flex-col w-full gap-4">
+        <div class="flex items-center gap-2 w-full">
+          <img src="/Frame4.png" alt="" class="size-7" />
+          <h6 class="text-white text-xl font-semibold font-Montserrat">
+            FAQ Assistant
+          </h6>
+        </div>
+      </div>
+      <button
         id="close"
-      />
+        class="hover:scale-110 duration-300 absolute right-4 top-5"
+      >
+        <img
+          src="/images/icons/close.svg"
+          alt="close"
+          class="pointer-events-none"
+        />
+      </button>
     </div>
     <!-- Inner Content -->
-    <div class="p-4 space-y-8 overflow-y-auto flex-1" id="ChatBot-innerContent">
-      <!-- Messages -->
-      <div class="flex flex-col gap-2">
-        <div id="ChatBot-message" class="flex flex-row gap-2 items-end w-full">
-          <div>
-            <img src="/icon.webp" alt="leajlak icon" class="shrink-0 w-5" />
-          </div>
-          <div
-            id="message"
-            class="bg-white rounded-t-lg rounded-br-lg drop-shadow-sm py-2 px-4"
-          >
-            <p class="chatText">Hello I am leajlak assistant chatbot,</p>
-            <p class="chatText">How can I help you?</p>
-          </div>
-        </div>
-        <div id="ChatBot-message" class="flex flex-row gap-2 items-end w-full">
-          <div>
-            <img src="/icon.webp" alt="leajlak icon" class="shrink-0 w-5" />
-          </div>
-          <div
-            id="message"
-            class="bg-white rounded-t-lg rounded-br-lg drop-shadow-sm py-2 px-4"
-          >
-            <p class="chatText">Please select an option below.</p>
-          </div>
-        </div>
-      </div>
+    <div class="ChatBot-innerContent" id="ChatBot-innerContent">
       <div
-        id="choices"
-        class="flex flex-row gap-2 flex-wrap items-center justify-center"
+        id="first-selection"
+        class="flex flex-col justify-between gap-px h-full"
       >
-        <button>option 1</button>
-        <button>option 2</button>
-        <button>option 3</button>
-        <button>option 4</button>
-        <a
-          aria-label="Chat on WhatsApp"
-          href="https://wa.me/966536767272"
-          class="rounded bg-white p-2 text-sm font-light ring-1 ring-green-600 drop-shadow duration-200 ease-in-out will-change-transform hover:scale-105"
-          ><img
-            src="/images/icons/whatsapp.png"
-            alt="Chat on WhatsApp"
-            class="w-full h-auto"
-          /></a
-        >
-      </div>
-      <div></div>
-      <div id="user-message" class="flex justify-end">
-        <div
-          class="bg-primaryOrange rounded-t-lg rounded-bl-lg drop-shadow-sm py-2 px-4"
-        >
-          <p class="chatText text-white">I have a question about option 1</p>
-        </div>
-      </div>
-      <div class="flex flex-col gap-2">
-        <div id="ChatBot-message" class="flex flex-row gap-2 items-end w-full">
-          <div>
-            <img src="/icon.webp" alt="leajlak icon" class="shrink-0 w-5" />
+        <div class="chat-section" id="chat">
+          <div class="chatbot-chat">
+            <div
+              id="ChatBot-message"
+              class="flex flex-row gap-2 items-end w-full"
+            >
+              <div>
+                <img
+                  src="/icon.webp"
+                  alt="leajlak icon"
+                  class="shrink-0 w-5 h-7"
+                />
+              </div>
+              <div
+                id="message"
+                class="bg-white rounded-t-lg rounded-br-lg shadow py-2 px-4"
+              >
+                <p class="chatText">Hello, how can we assist you today?</p>
+              </div>
+            </div>
+            <div
+              id="ChatBot-message"
+              class="flex flex-row gap-2 items-end w-full"
+            >
+              <div>
+                <img
+                  src="/icon.webp"
+                  alt="leajlak icon"
+                  class="shrink-0 w-5 h-7"
+                />
+              </div>
+              <div
+                id="message"
+                class="bg-white rounded-t-lg rounded-br-lg shadow py-2 px-4"
+              >
+                <p class="chatText">Please chose the following.</p>
+              </div>
+            </div>
           </div>
-          <div
-            id="message"
-            class="bg-white rounded-t-lg rounded-br-lg drop-shadow-sm py-2 px-4"
+        </div>
+        <div class="options-section">
+          <div class="flex flex-col gap-2" id="option-1">
+            <button>I am a merchant</button>
+            <button>I am a 3PL comapany</button>
+          </div>
+          <a
+            aria-label="Chat on WhatsApp"
+            href="https://wa.me/966536767272"
+            class=""
+            ><Image src={whatsapp} alt="Chat on WhatsApp" loading="eager" /></a
           >
-            <p class="chatText">Certainly what is your question ?</p>
-          </div>
-        </div>
-      </div>
-      <div
-        id="choices"
-        class="flex flex-row gap-2 flex-wrap items-center justify-center"
-      >
-        <button>question 1</button>
-        <button>question 2</button>
-        <button>question 3</button>
-        <button>question 4</button>
-        <button>Another option</button>
-      </div>
-      <div id="user-message" class="flex justify-end">
-        <div
-          class="bg-primaryOrange rounded-t-lg rounded-bl-lg drop-shadow-sm py-2 px-4"
-        >
-          <p class="chatText text-white">I have a question about question 1</p>
         </div>
       </div>
     </div>
   </div>
   <!-- Chatbot Icon -->
-  <div
+  <button
     id="Chatbot-icon"
-    class="mt-3 mb-5 mx-5 translate-y-0 transition-transform drop-shadow ease-in-out duration-300 will-change-transform shrink-0 bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% size-11 xs:h-15 xs:w-15 rounded-full flex items-center justify-center group cursor-pointer"
+    class="mt-2 mb-3 mx-3 translate-y-0 transition-transform drop-shadow ease-in-out duration-300 will-change-transform shrink-0 bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% size-11 xs:h-15 xs:w-15 rounded-full flex items-center justify-center group"
   >
     <img
       src="/Chatbot.svg"
       alt="chatbot"
       class="size-6 xs:size-auto group-hover:scale-110 group-hover:ease-in group-hover:duration-300 translate-y-0.5 duration-300 ease-out will-change-transform pointer-events-none"
     />
-  </div>
+  </button>
 </div>
 
 <style>
+  .ChatBot-innerContent {
+    @apply flex-1 p-4;
+  }
+  .chat-section {
+    @apply h-3/4 space-y-4 overflow-y-auto;
+  }
+  .chatbot-chat {
+    @apply space-y-2;
+  }
+  .options-section {
+    @apply flex h-1/4 flex-col gap-2;
+  }
+  .options-section button {
+    @apply rounded-sm py-2 font-medium ring-1 ring-black duration-200 hover:bg-black hover:text-white;
+  }
   #Chatbot-content {
-    @apply origin-bottom-right scale-0 transform opacity-0 transition-[opacity,transform] duration-200 ease-out;
+    @apply origin-bottom-right scale-0 transform opacity-0 transition-[opacity,transform] duration-300 ease-in-out;
   }
   #Chatbot-content.active {
-    @apply scale-100 transform opacity-100 duration-300 ease-in;
+    @apply scale-100 transform opacity-100;
   }
   .chatText {
-    @apply text-sm font-normal leading-6 opacity-100;
-  }
-  #choices button {
-    @apply rounded bg-white p-2 text-sm font-light ring-1 ring-primaryOrange/90 drop-shadow duration-200 ease-in-out will-change-transform hover:scale-105;
+    @apply font-normal leading-6 opacity-90;
   }
 </style>
 

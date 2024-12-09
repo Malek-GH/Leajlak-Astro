@@ -10,18 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   openButton.addEventListener("click", () => {
     content.classList.add("active");
-    container.classList.remove("size-32");
-    container.classList.add("size-full");
 
     if (isSmallScreen()) {
       openButton.classList.add("translate-y-20");
+      document.body.classList.toggle("no-scroll");
     }
   });
 
   closeButton.addEventListener("click", () => {
     content.classList.remove("active");
-    container.classList.remove("size-full");
-    container.classList.add("size-32");
 
     if (isSmallScreen()) {
       openButton.classList.remove("translate-y-20");
