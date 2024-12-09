@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isSmallScreen()) {
       openButton.classList.add("translate-y-20");
-      document.body.classList.toggle("no-scroll");
+      document.body.classList.add("no-scroll");
     }
   });
 
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isSmallScreen()) {
       openButton.classList.remove("translate-y-20");
+      document.body.classList.remove("no-scroll");
     }
   });
 
