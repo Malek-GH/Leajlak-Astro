@@ -4,14 +4,13 @@ import whatsapp from "../../public/images/icons/whatsapp.svg";
 ---
 
 <div
-  class="fixed right-0 bottom-0 size-full z-50 xs:h-[640px] xs:w-[440px] flex flex-col items-end justify-end"
+  class="fixed right-0 bottom-0 size-full z-40 xs:h-[640px] xs:w-[440px] 3xl:h-[800px] flex flex-col items-end justify-end"
   id="Chatbot"
   aria-label="chatbot"
 >
-  <!-- Chatbot Content -->
   <div
     id="Chatbot-content"
-    class="bg-lightGray xs:rounded-2xl xs:mx-3 absolute xs:relative w-full h-full xs:w-[400px] flex flex-col overflow-hidden will-change-transform drop-shadow-md"
+    class="bg-white xs:rounded-2xl xs:mx-3 absolute xs:relative w-full h-full xs:w-[400px] flex flex-col overflow-hidden will-change-transform drop-shadow-md"
   >
     <div
       class="bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% p-4 flex items-center justify-between relative"
@@ -35,71 +34,54 @@ import whatsapp from "../../public/images/icons/whatsapp.svg";
         />
       </button>
     </div>
-    <!-- Inner Content -->
-    <div class="ChatBot-innerContent" id="ChatBot-innerContent">
-      <div
-        id="first-selection"
-        class="flex flex-col justify-between gap-px h-full"
-      >
-        <div class="chat-section" id="chat">
-          <div class="chatbot-chat">
-            <div
-              id="ChatBot-message"
-              class="flex flex-row gap-2 items-end w-full"
-            >
-              <div>
-                <img
-                  src="/icon.webp"
-                  alt="leajlak icon"
-                  class="shrink-0 w-5 h-7"
-                />
-              </div>
-              <div
-                id="message"
-                class="bg-white rounded-t-lg rounded-br-lg shadow py-2 px-4"
-              >
-                <p class="chatText">Hello, how can we assist you today?</p>
-              </div>
+    <div class="ChatBot-innerContent">
+      <div class="chat-section max-h-full" id="chat">
+        <!-- Unified container with spacing between messages -->
+        <div class="chat-container space-y-4 p-4" id="chat-container">
+          <div class="flex flex-row gap-2 items-end w-full">
+            <div>
+              <img
+                src="/icon.webp"
+                alt="bot icon"
+                class="max-h-7 max-w-5 shrink-0"
+              />
             </div>
             <div
-              id="ChatBot-message"
-              class="flex flex-row gap-2 items-end w-full"
+              class="bg-lightGray rounded-t-lg rounded-br-lg drop-shadow-md py-2 px-4"
             >
-              <div>
-                <img
-                  src="/icon.webp"
-                  alt="leajlak icon"
-                  class="shrink-0 w-5 h-7"
-                />
-              </div>
-              <div
-                id="message"
-                class="bg-white rounded-t-lg rounded-br-lg shadow py-2 px-4"
-              >
-                <p class="chatText">Please chose the following.</p>
-              </div>
+              <p class="chatText">Hello, how can we assist you today?</p>
             </div>
           </div>
-        </div>
-        <div class="options-section">
-          <div class="flex flex-col gap-2" id="option-1">
-            <button>I am a merchant</button>
-            <button>I am a 3PL comapany</button>
+          <div class="flex flex-row gap-2 items-end w-full">
+            <div>
+              <img
+                src="/icon.webp"
+                alt="bot icon"
+                class="max-h-7 max-w-5 shrink-0"
+              />
+            </div>
+            <div
+              class="bg-lightGray rounded-t-lg rounded-br-lg drop-shadow-md py-2 px-4"
+            >
+              <p class="chatText">
+                Please choose one of the following options:
+              </p>
+            </div>
           </div>
-          <a
-            aria-label="Chat on WhatsApp"
-            href="https://wa.me/966536767272"
-            class=""
-            ><Image src={whatsapp} alt="Chat on WhatsApp" loading="eager" /></a
-          >
         </div>
       </div>
     </div>
+    <div class="options-section" id="options-section">
+      <!-- Dynamic options content goes here -->
+      <div id="options-content"></div>
+      <a aria-label="Chat on WhatsApp" href="https://wa.me/966536767272">
+        <img src="/images/icons/whatsapp.svg" alt="Chat on WhatsApp" />
+      </a>
+    </div>
   </div>
-  <!-- Chatbot Icon -->
   <button
     id="Chatbot-icon"
-    class="mt-2 mb-3 mx-3 translate-y-0 transition-transform drop-shadow ease-in-out duration-300 will-change-transform shrink-0 bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% size-11 xs:h-15 xs:w-15 rounded-full flex items-center justify-center group"
+    class="mt-2 mb-3 mx-3 translate-y-0 transition-transform drop-shadow ease-in-out duration-300 will-change-transform shrink-0 bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% size-11 xs:size-14 rounded-full flex items-center justify-center group"
   >
     <img
       src="/Chatbot.svg"
@@ -109,31 +91,401 @@ import whatsapp from "../../public/images/icons/whatsapp.svg";
   </button>
 </div>
 
-<style>
+<style is:global>
   .ChatBot-innerContent {
-    @apply flex-1 p-4;
-  }
-  .chat-section {
-    @apply h-3/4 space-y-4 overflow-y-auto;
-  }
-  .chatbot-chat {
-    @apply space-y-2;
+    @apply h-fit flex-1 overflow-y-auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
   }
   .options-section {
-    @apply flex h-1/4 flex-col gap-2;
+    @apply flex flex-col justify-end gap-4 overflow-hidden border-t border-black/10 p-4;
   }
-  .options-section button {
-    @apply rounded-sm py-2 font-medium ring-1 ring-black duration-200 hover:bg-black hover:text-white;
+  .chatText {
+    @apply text-sm font-normal leading-6 opacity-90;
   }
+
+  /* Wrapper div classes for different option sets */
+  .options-initial {
+    @apply flex flex-col gap-2;
+  }
+  .options-category {
+    @apply flex flex-row flex-wrap gap-2;
+  }
+  .options-question {
+    @apply flex flex-col items-start gap-2;
+  }
+
+  /* Button classes */
+  .option-btn-initial {
+    @apply rounded-sm py-2 text-center font-medium leading-1.5 ring-1 ring-black duration-300 ease-in-out hover:bg-black hover:text-white;
+  }
+  .option-btn {
+    @apply rounded-sm px-2 text-left text-sm font-medium leading-1.5 ring-1 ring-black duration-300 ease-in-out hover:bg-black hover:text-white;
+  }
+  .return-btn {
+    @apply w-full rounded-sm px-2 text-center font-medium text-primaryOrange ring-1 ring-primaryOrange duration-300 ease-in-out hover:bg-primaryOrange hover:text-white;
+  }
+
   #Chatbot-content {
     @apply origin-bottom-right scale-0 transform opacity-0 transition-[opacity,transform] duration-300 ease-in-out;
   }
   #Chatbot-content.active {
     @apply scale-100 transform opacity-100;
   }
-  .chatText {
-    @apply font-normal leading-6 opacity-90;
-  }
 </style>
 
-<script src="../Script/ChatBot.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const data = {
+      merchant: {
+        categories: [
+          "Account & Profile Management",
+          "Product Management",
+          "Order Management",
+          "Payments & Invoices",
+          "Shipping & Fulfillment",
+          "Customer Support",
+          "Notifications & Alerts",
+        ],
+        questions: {
+          "Account & Profile Management": [
+            { q: "How can I update my profile information?", a: "" },
+            { q: "How do I reset my password?", a: "" },
+            {
+              q: "How do I add or remove team members from my account?",
+              a: "",
+            },
+          ],
+          "Product Management": [
+            { q: "How can I add a new product to my store?", a: "" },
+            { q: "How do I edit or update product details?", a: "" },
+            { q: "Can I delete a product from my catalog?", a: "" },
+          ],
+          "Order Management": [
+            { q: "How do I view current orders?", a: "" },
+            { q: "How can I track a shipment?", a: "" },
+            { q: "How do I manage or cancel an order?", a: "" },
+          ],
+          "Payments & Invoices": [
+            { q: "How can I update my payment methods?", a: "" },
+            { q: "How do I view or download my invoices?", a: "" },
+            { q: "How do I request a refund?", a: "" },
+          ],
+          "Shipping & Fulfillment": [
+            { q: "How do I set up shipping preferences?", a: "" },
+            {
+              q: "What are the shipping options available for merchants?",
+              a: "",
+            },
+            { q: "How do I integrate my own shipping carriers?", a: "" },
+          ],
+          "Customer Support": [
+            { q: "How can I contact customer support?", a: "" },
+            { q: "Where can I find troubleshooting help?", a: "" },
+          ],
+          "Notifications & Alerts": [
+            {
+              q: "How do I set up email or SMS notifications for orders?",
+              a: "",
+            },
+            { q: "Can I control what type of alerts I receive?", a: "" },
+          ],
+        },
+      },
+      company: {
+        categories: [
+          "Warehouse & Inventory Management",
+          "Shipping & Logistics",
+          "Order Fulfillment",
+          "Client & Contract Management",
+          "Reports & Analytics",
+          "Account & Settings",
+          "Support & Help",
+        ],
+        questions: {
+          "Warehouse & Inventory Management": [
+            { q: "How can I manage inventory levels?", a: "" },
+            {
+              q: "How do I view the status of a specific inventory item?",
+              a: "",
+            },
+            { q: "Can I receive alerts for low stock levels?", a: "" },
+          ],
+          "Shipping & Logistics": [
+            { q: "How do I manage shipping for multiple merchants?", a: "" },
+            {
+              q: "What are the delivery options available for 3PL companies?",
+              a: "",
+            },
+            { q: "How do I track shipments in real-time?", a: "" },
+          ],
+          "Order Fulfillment": [
+            { q: "How do I process and fulfill orders from merchants?", a: "" },
+            {
+              q: "Can I view all open orders that need to be fulfilled?",
+              a: "",
+            },
+            { q: "How do I confirm that an order has been shipped?", a: "" },
+          ],
+          "Client & Contract Management": [
+            { q: "How do I manage merchant contracts?", a: "" },
+            {
+              q: "How can I view the performance data for each merchant I serve?",
+              a: "",
+            },
+            {
+              q: "How can I add or remove merchants from my client list?",
+              a: "",
+            },
+          ],
+          "Reports & Analytics": [
+            { q: "How do I access performance and shipping reports?", a: "" },
+            { q: "How can I generate an inventory or sales report?", a: "" },
+            { q: "Can I get a summary of delivery times or costs?", a: "" },
+          ],
+          "Account & Settings": [
+            { q: "How do I update my 3PL company profile?", a: "" },
+            {
+              q: "Can I set up multiple locations for different warehouses?",
+              a: "",
+            },
+            { q: "How do I update billing details?", a: "" },
+          ],
+          "Support & Help": [
+            { q: "How do I contact Leajlak support as a 3PL company?", a: "" },
+            {
+              q: "Where can I find troubleshooting guides or video tutorials?",
+              a: "",
+            },
+          ],
+        },
+      },
+    };
+
+    const chatContainer = document.getElementById("chat-container");
+    const optionsContent = document.getElementById("options-content");
+
+    let currentState = "initial";
+
+    const clearElement = (el) => {
+      while (el.firstChild) el.removeChild(el.firstChild);
+    };
+
+    const renderReturnButton = (returnHandler) => {
+      const btn = document.createElement("button");
+      btn.className = "return-btn";
+      btn.textContent = "Return";
+      btn.addEventListener("click", returnHandler);
+      return btn;
+    };
+
+    // UI Rendering Functions
+    const renderOptionSet = (items, clickHandler, containerClass, btnClass) => {
+      const wrapper = document.createElement("div");
+      wrapper.className = containerClass;
+
+      items.forEach((item) => {
+        const btn = document.createElement("button");
+        btn.className = btnClass;
+        btn.textContent = item;
+
+        btn.addEventListener("click", () => clickHandler(item, btn));
+        wrapper.appendChild(btn);
+      });
+
+      return wrapper;
+    };
+
+    const renderUserBubble = (text) => {
+      const bubble = document.createElement("div");
+      bubble.className = "flex flex-row-reverse gap-2 items-end w-full";
+      bubble.innerHTML = `
+        <div class="bg-primaryOrange text-white rounded-t-lg rounded-bl-lg drop-shadow-md py-2 px-4">
+          <p class="chatText">${text}</p>
+        </div>
+      `;
+      chatContainer.appendChild(bubble);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    };
+
+    const renderBotBubble = (text) => {
+      const bubble = document.createElement("div");
+      bubble.className = "flex flex-row gap-2 items-end w-full";
+      bubble.innerHTML = `
+        <div>
+          <img src="/icon.webp" alt="bot icon" class="max-h-7 max-w-5 shrink-0" />
+        </div>
+        <div class="bg-lightGray rounded-t-lg rounded-br-lg drop-shadow-md py-2 px-4">
+          <p class="chatText">${text}</p>
+        </div>
+      `;
+      chatContainer.appendChild(bubble);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    };
+
+    // Navigation Functions
+    const goToInitial = () => {
+      currentState = "initial";
+      handleInitial();
+    };
+
+    const goToMerchantChosen = () => {
+      currentState = "merchant-chosen";
+      handleMerchantChosen();
+    };
+
+    const goToCompanyChosen = () => {
+      currentState = "company-chosen";
+      handleCompanyChosen();
+    };
+
+    const goToMerchantCategoryChosen = (cat) => {
+      currentState = "merchant-category-chosen";
+      handleMerchantCategoryChosen(cat);
+    };
+
+    const goToCompanyCategoryChosen = (cat) => {
+      currentState = "company-category-chosen";
+      handleCompanyCategoryChosen(cat);
+    };
+
+    // Step Handlers
+    const handleInitial = () => {
+      clearElement(optionsContent);
+      const initialOptions = ["I am a merchant", "I am a 3PL company"];
+      const initialSet = renderOptionSet(
+        initialOptions,
+        (choice) => {
+          if (choice.includes("merchant")) {
+            goToMerchantChosen();
+          } else {
+            goToCompanyChosen();
+          }
+        },
+        "options-initial",
+        "option-btn-initial"
+      );
+      optionsContent.appendChild(initialSet);
+    };
+
+    const handleMerchantChosen = () => {
+      clearElement(optionsContent);
+      const categories = data.merchant.categories;
+      const categorySet = renderOptionSet(
+        categories,
+        (cat) => {
+          goToMerchantCategoryChosen(cat);
+        },
+        "options-category",
+        "option-btn"
+      );
+      // Append return button inside the same wrapper
+      categorySet.appendChild(renderReturnButton(() => goToInitial()));
+      optionsContent.appendChild(categorySet);
+    };
+
+    const handleMerchantCategoryChosen = (category) => {
+      clearElement(optionsContent);
+      const questions = data.merchant.questions[category]
+        ? data.merchant.questions[category].map((q) => q.q)
+        : [];
+      const questionSet = renderOptionSet(
+        questions,
+        (question, btn) => {
+          // We'll pass the button reference too
+          const answerObj = data.merchant.questions[category].find(
+            (q) => q.q === question
+          );
+          showQnA(question, answerObj.a);
+          btn.remove(); // Remove the clicked question button from the DOM
+        },
+        "options-question",
+        "option-btn"
+      );
+
+      // Append return button inside the same wrapper
+      questionSet.appendChild(renderReturnButton(() => goToMerchantChosen()));
+      optionsContent.appendChild(questionSet);
+    };
+
+    const handleCompanyChosen = () => {
+      clearElement(optionsContent);
+      const categories = data.company.categories;
+      const categorySet = renderOptionSet(
+        categories,
+        (cat) => {
+          goToCompanyCategoryChosen(cat);
+        },
+        "options-category",
+        "option-btn"
+      );
+      // Append return button inside the same wrapper
+      categorySet.appendChild(renderReturnButton(() => goToInitial()));
+      optionsContent.appendChild(categorySet);
+    };
+
+    const handleCompanyCategoryChosen = (category) => {
+      clearElement(optionsContent);
+      const questions = data.company.questions[category]
+        ? data.company.questions[category].map((q) => q.q)
+        : [];
+      const questionSet = renderOptionSet(
+        questions,
+        (question) => {
+          const answerObj = data.company.questions[category].find(
+            (q) => q.q === question
+          );
+          showQnA(question, answerObj.a);
+        },
+        "options-question",
+        "option-btn"
+      );
+      // Append return button inside the same wrapper
+      questionSet.appendChild(renderReturnButton(() => goToCompanyChosen()));
+      optionsContent.appendChild(questionSet);
+    };
+
+    // Show Q&A in the chat
+    const showQnA = (question, answer) => {
+      // User bubble (question)
+      renderUserBubble(question);
+      // Bot bubble (answer)
+      renderBotBubble(answer);
+    };
+
+    // Initialize with the initial state
+    handleInitial();
+
+    // Chatbot open/close logic
+    const content = document.getElementById("Chatbot-content");
+    const openButton = document.getElementById("Chatbot-icon");
+    const closeButton = document.getElementById("close");
+    const header = document.querySelector("header");
+
+    const isSmallScreen = () => window.innerWidth <= 450;
+
+    openButton.addEventListener("click", () => {
+      content.classList.add("active");
+      if (isSmallScreen()) {
+        openButton.classList.add("translate-y-20");
+        document.body.classList.add("no-scroll");
+        header.classList.add("hidden");
+      }
+    });
+
+    closeButton.addEventListener("click", () => {
+      content.classList.remove("active");
+      if (isSmallScreen()) {
+        openButton.classList.remove("translate-y-20");
+        document.body.classList.remove("no-scroll");
+        header.classList.remove("hidden");
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (!isSmallScreen()) {
+        openButton.classList.remove("translate-y-20");
+      }
+    });
+  });
+</script>

@@ -105,7 +105,7 @@ export default {
         15: "3.75rem",
       },
 
-      lineHeight: { 1.3: 1.3 },
+      lineHeight: { 1.3: 1.3, 1.5: 1.5 },
       flex: {
         card_full: "0 1 calc(20% - 20px)",
         card_testimonial_xl: "0 1 calc(33.3333% - 20px)",
