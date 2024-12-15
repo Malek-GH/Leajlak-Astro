@@ -11,6 +11,7 @@ export default {
         "loop-scroll": "loop-scroll 20s linear infinite",
         "loop-scroll-mobile": "loop-scroll-mobile 20s linear infinite",
         "animate-stepper": "animate-stepper 0.5s ease-out",
+        typing: "typing 1s steps(20)  alternate ",
       },
       keyframes: {
         "loop-scroll": {
@@ -22,6 +23,23 @@ export default {
         "animate-stepper": {
           from: { opacity: 0 },
           to: { opacity: 1 },
+        },
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden",
+          },
+          "100%": {
+            width: "100%",
+          },
+          blink: {
+            "50%": {
+              borderColor: "transparent",
+            },
+            "100%": {
+              borderColor: "white",
+            },
+          },
         },
       },
       backgroundImage: {
@@ -105,7 +123,7 @@ export default {
         15: "3.75rem",
       },
 
-      lineHeight: { 1.3: 1.3, 1.5: 1.5 },
+      lineHeight: { 1.3: 1.3 },
       flex: {
         card_full: "0 1 calc(20% - 20px)",
         card_testimonial_xl: "0 1 calc(33.3333% - 20px)",
