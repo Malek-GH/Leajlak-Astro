@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   function setActiveItem() {
+    const dropdown_button = document.querySelector("#dropdown-button");
     const currentRoute = window.location.pathname.replace(/\/$/, "");
     const lang = currentRoute.split("/")[1];
     const routes = {
@@ -41,8 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "lg:after:rounded-full",
       "lg:after:bg-primaryOrange",
       "lg:after:duration-300",
-      "lg:after:lg:absolute",
+      "lg:after:absolute",
       "text-primaryOrange",
+      "font-bold",
     ];
 
     navItems.forEach((item) => {
@@ -55,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     const isSpecialRoute =
       currentRoute === routes.merchant || currentRoute === routes.logistic;
-    toggleClasses(ButtonMenuDropdown, isSpecialRoute, classes);
+    toggleClasses(dropdown_button, isSpecialRoute, classes);
   }
 
   function toggleClasses(element, condition, classList) {

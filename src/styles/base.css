@@ -85,7 +85,7 @@ header.scrolled .nav-list {
 }
 
 .nav-list {
-  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col items-start justify-center space-y-5 px-12 py-20 font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-5 lg:space-y-0 lg:p-0;
+  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col items-start justify-center space-y-5 px-12 py-20 font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-7 lg:space-y-0 lg:p-0;
 }
 
 .nav-list > div,
@@ -108,7 +108,7 @@ header.scrolled .nav-list {
 
 .items a,
 .items > div {
-  @apply duration-300 ease-out;
+  @apply transition-colors duration-300 ease-out;
 }
 
 .items > div:hover,
@@ -116,6 +116,10 @@ header.scrolled .nav-list {
 .items a.active,
 .items button:hover span {
   @apply text-primaryOrange duration-300 ease-in;
+}
+
+.items a.active {
+  @apply font-bold;
 }
 
 .nav-list > .nav_item > a.active::after {
@@ -161,6 +165,14 @@ header.scrolled .nav-list {
 
 .register-menu {
   @apply top-16 z-50 max-h-0 w-full overflow-hidden will-change-auto lg:invisible lg:absolute lg:flex lg:max-h-max lg:w-72 lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:bg-white lg:opacity-0 lg:shadow-lg lg:transition-opacity lg:duration-200 ltr:right-0 rtl:left-0;
+}
+
+#registerMenuButton > button {
+  @apply relative w-full whitespace-nowrap rounded-sm py-2 text-center text-primaryOrange antialiased ring-1 ring-primaryOrange transition-colors duration-300 ease-out md:w-28;
+}
+
+#registerMenuButton:hover > button {
+  @apply bg-primaryOrange text-white duration-300 ease-in;
 }
 
 #registerMenuButton #registerMenu.active {

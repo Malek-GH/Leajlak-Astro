@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindcssAnimated from "tailwindcss-animated";
+
 export default {
+  plugins: [tailwindcssAnimated],
   content: ["./src/**/*.{astro,html,js}"],
   theme: {
     extend: {
@@ -31,14 +34,6 @@ export default {
           },
           "100%": {
             width: "100%",
-          },
-          blink: {
-            "50%": {
-              borderColor: "transparent",
-            },
-            "100%": {
-              borderColor: "white",
-            },
           },
         },
       },
@@ -134,5 +129,4 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animated")],
 };

@@ -65,7 +65,7 @@ const handleRedirect = (lang: string) => {
         class="relative cursor-pointer lg:h-full items"
         id="dropdownHoverButton"
       >
-        <div class="flex gap-2 items-center lg:h-full">
+        <div class="flex gap-2 items-center lg:h-full" id="dropdown-button">
           <span>{content.solutions}</span>
           <svg
             class="transition-transform duration-300"
@@ -111,7 +111,7 @@ const handleRedirect = (lang: string) => {
         class="relative flex flex-col w-full lg:w-auto lg:h-full lg:justify-center"
         id="registerMenuButton"
       >
-        <button class="button">
+        <button>
           {content.register}
         </button>
         <div class="register-menu" id="registerMenu">
