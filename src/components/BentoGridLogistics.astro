@@ -2,7 +2,6 @@
 const { lang } = Astro.props;
 import { Image } from "astro:assets";
 import vans from "../../public/images/carousel/vans-sm.webp";
-import bike from "../../public/images/bg/drivers_registration/drivers_registration_lg-en.webp";
 
 const content = await import(`../data/${lang}.json`);
 ---
@@ -25,7 +24,7 @@ const content = await import(`../data/${lang}.json`);
   </div>
   <div>
     <span class="grid-item-text">Bikes</span>
-    <picture> <Image src={bike} alt="vans" class="object-cover" /></picture>
+    <picture> <Image src={vans} alt="vans" class="object-cover" /></picture>
   </div>
 </div>
 
