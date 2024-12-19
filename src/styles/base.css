@@ -34,7 +34,7 @@
     @apply text-base font-normal tracking-widest text-primaryOrange md:text-xl;
   }
   p {
-    @apply font-normal leading-7 opacity-65;
+    @apply font-normal leading-7 opacity-75;
   }
   section {
     @apply relative;
@@ -67,7 +67,7 @@
 }
 
 header {
-  @apply fixed top-0 z-50 w-full bg-transparent py-2 transition-colors duration-200 ease-in;
+  @apply fixed top-0 z-50 w-full bg-transparent py-4 transition-colors duration-200 ease-in;
 }
 .header-logo {
   @apply w-24 lg:w-32;
@@ -85,7 +85,7 @@ header.scrolled .nav-list {
 }
 
 .nav-list {
-  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col items-start justify-center space-y-5 px-12 py-20 font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-7 lg:space-y-0 lg:p-0;
+  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col items-start justify-center space-y-5 px-12 py-20 text-base font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-7 lg:space-y-0 lg:p-0;
 }
 
 .nav-list > div,

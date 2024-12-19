@@ -16,7 +16,7 @@ const logos = await Astro.glob(
   });
 </script>
 
-<div class="relative w-full h-16 xs:h-24 group" id="slider-container">
+<div class="relative w-full h-20 xs:h-28 group" id="slider-container">
   {
     logos.map((logo) => {
       const src = logo.default.src.split("/").pop().split(".")[0];

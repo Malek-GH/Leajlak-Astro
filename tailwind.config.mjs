@@ -116,6 +116,7 @@ export default {
         18: "4.5rem",
         74: "300px",
         15: "3.75rem",
+        120: "540px",
       },
 
       lineHeight: { 1.3: 1.3 },
@@ -126,6 +127,7 @@ export default {
       inset: {
         "2/5": "40%",
         26: "6.5rem",
+        18: "76px",
       },
     },
   },
