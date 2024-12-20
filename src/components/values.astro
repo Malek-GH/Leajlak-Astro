@@ -232,11 +232,7 @@ const content = await import(`../data/${lang}.json`);
   }
 
   .value-card {
-    @apply relative z-0 flex flex-col items-start justify-center gap-4 overflow-hidden rounded-2xl bg-white p-10 text-black outline outline-1 outline-black/20;
-  }
-
-  .value-card:nth-child(6) div {
-    @apply pb-0 md:pb-12 lg:pb-6;
+    @apply relative z-0 flex flex-col items-start justify-start gap-4 overflow-hidden rounded-2xl bg-white p-10 text-black outline outline-1 outline-black/20;
   }
 
   .value-card:hover svg:last-child {
@@ -246,6 +242,6 @@ const content = await import(`../data/${lang}.json`);
     @apply w-12 fill-primaryOrange md:w-16;
   }
   .value-card svg:last-child {
-    @apply ltr:-right-26 rtl:-left-26 absolute -bottom-8 -z-50 w-52 fill-primaryOrange/10 duration-200 ease-in md:w-64;
+    @apply absolute -bottom-8 -z-50 w-52 fill-primaryOrange/5 duration-200 ease-in md:w-64 ltr:-right-26 rtl:-left-26;
   }
 </style>
