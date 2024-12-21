@@ -17,6 +17,19 @@ import google from "../../../public/images/icons/google play.png";
 import apple from "../../../public/images/icons/apple store.png";
 ---
 
+<link
+  rel="preload"
+  href="/delivery_firstframe_lg.webp"
+  as="image"
+  media="(min-width: 480px)"
+/>
+<link
+  rel="preload"
+  href="/delivery_firstframe_sm.webp"
+  as="image"
+  media="(max-width: 479px)"
+/>
+
 <script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="Home" lang="en">
   <section class="h-screen">
@@ -68,10 +81,10 @@ import apple from "../../../public/images/icons/apple store.png";
   </section>
   <div class="bg-white overflow-hidden" id="InfiniteScroll">
     <div
-      class="fade space-y-10 w-full py-10"
+      class="fade space-y-14 w-full py-10"
       data-animation="animate-fade animate-duration-[1000ms]"
     >
-      <h2 class="text-center px-5 text-xl xs:text-3xl">
+      <h2 class="text-center px-5 text-xl xs:text-2xl">
         Leajlak's empowered brands
       </h2>
       <InfiniteScroll />
