@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   @font-face {
     font-family: "Hanimation";
@@ -17,7 +21,7 @@
   }
 
   h1 {
-    @apply text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl rtl:leading-tight;
+    @apply text-4xl font-bold sm:text-5xl md:text-6xl rtl:leading-tight;
   }
 
   h2 {
@@ -25,7 +29,7 @@
   }
 
   h3 {
-    @apply text-2xl font-medium leading-none text-primaryOrange md:text-2xl;
+    @apply text-xl font-bold text-darkerOrange;
   }
 
   h4 {
@@ -35,7 +39,7 @@
     @apply text-base font-normal tracking-widest text-primaryOrange md:text-xl;
   }
   p {
-    @apply font-normal leading-6 opacity-70;
+    @apply text-base font-normal leading-7 opacity-70;
   }
   section {
     @apply relative;
@@ -44,13 +48,16 @@
 
 @layer components {
   .button-regular {
-    @apply w-full whitespace-nowrap rounded-md bg-primaryOrange py-3 text-base font-medium text-white antialiased shadow-Button_shadow shadow-primaryOrange/30 duration-200 ease-linear hover:bg-primaryOrange/80 active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
+    @apply w-full whitespace-nowrap rounded-xl bg-darkerOrange py-4 text-base font-bold text-white antialiased shadow-Button_shadow shadow-darkerOrange/30 duration-200 ease-linear hover:bg-primaryOrange active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
   }
   .button {
-    @apply relative w-full whitespace-nowrap rounded-sm py-2 text-center text-primaryOrange antialiased ring-1 ring-primaryOrange transition-colors duration-300 ease-out hover:bg-primaryOrange hover:text-white hover:duration-300 hover:ease-in md:w-28;
+    @apply relative w-full whitespace-nowrap rounded px-8 py-3 text-center font-bold text-primaryOrange antialiased ring-1 ring-primaryOrange transition-colors duration-300 ease-out hover:bg-primaryOrange hover:text-white hover:duration-300 hover:ease-in lg:w-fit;
+  }
+  header.scrolled .button {
+    @apply text-darkerOrange ring-darkerOrange hover:bg-darkerOrange hover:text-white;
   }
   .button-return {
-    @apply w-full whitespace-nowrap rounded-md bg-gray-600 py-3 text-base font-medium text-white antialiased shadow-Button_shadow shadow-gray-400 duration-200 ease-linear hover:bg-gray-700 active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
+    @apply w-full whitespace-nowrap rounded-md py-4 text-base font-bold text-darkerOrange antialiased ring-2 ring-darkerOrange duration-200 ease-linear active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
   }
 }
 
@@ -82,7 +89,7 @@ header.scrolled {
 }
 
 header.scrolled .nav-list {
-  @apply text-black;
+  @apply text-darkText;
 }
 
 .nav-list {
@@ -100,7 +107,7 @@ header.scrolled .nav-list {
 }
 
 .nav-list.open {
-  @apply h-full translate-x-0 bg-white text-black opacity-100 transition-transform duration-300 ease-in lg:bg-transparent lg:text-white;
+  @apply text-darkText h-full translate-x-0 bg-white opacity-100 transition-transform duration-300 ease-in lg:bg-transparent lg:text-white;
 }
 
 .nav_item {
@@ -108,15 +115,23 @@ header.scrolled .nav-list {
 }
 
 .items a,
-.items > div {
+.items > div,
+.items > button {
   @apply transition-colors duration-300 ease-out;
 }
 
 .items > div:hover,
 .items a:hover,
 .items a.active,
-.items button:hover span {
+.items button:hover {
   @apply text-primaryOrange duration-300 ease-in;
+}
+
+.nav-list.open .items a.active,
+.nav-list.open .items a:hover,
+.nav-list.open .items > div:hover,
+.nav-list.open .items button:hover {
+  @apply text-darkerOrange;
 }
 
 .items a.active {
@@ -127,27 +142,35 @@ header.scrolled .nav-list {
   @apply bottom-4 left-1/2 size-[5px] rounded-full bg-primaryOrange duration-300 content-[''] lg:absolute;
 }
 
+header.scrolled .items > div:hover,
+header.scrolled .items a:hover,
+header.scrolled .items a.active,
+header.scrolled .items button:hover {
+  @apply text-darkerOrange;
+}
+
+header.scrolled .nav-list > .nav_item > a.active::after {
+  @apply bg-darkerOrange;
+}
+
 /* language-dropdown */
 
-.language-dropdown {
-  @apply invisible top-16 z-50 w-48 list-none rounded-lg text-base will-change-auto lg:absolute lg:bg-white lg:opacity-0 lg:shadow-lg ltr:right-0 rtl:left-0;
+#language-dropdown-menu {
+  @apply max-h-0 origin-top-right overflow-hidden opacity-0 transition-[max-height] duration-200 ease-in lg:pointer-events-none lg:scale-90 lg:transform lg:transition-[opacity,transform];
 }
 
 #language-dropdown-menu.active {
-  @apply visible opacity-100 lg:transition-opacity lg:duration-500 lg:ease-out;
+  @apply max-h-52 opacity-100 duration-500 ease-out lg:pointer-events-auto lg:scale-100;
 }
 
-#language-dropdown-menu.active li {
-  @apply duration-700 ease-out lg:opacity-100;
-}
 /* solution-dropdown-menu */
 
-.dropdown-menu {
-  @apply top-16 z-50 max-h-0 w-48 overflow-hidden will-change-auto lg:invisible lg:absolute lg:flex lg:max-h-max lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:bg-white lg:opacity-0 lg:shadow-lg lg:transition-opacity ltr:right-0 rtl:left-0;
+#dropdownHover {
+  @apply max-h-0 transform overflow-hidden transition-[max-height] ease-in will-change-auto lg:pointer-events-none lg:max-h-max lg:origin-top-right lg:scale-90 lg:opacity-0 lg:transition-[opacity,transform] lg:duration-200;
 }
 
 #dropdownHoverButton.active #dropdownHover {
-  @apply flex max-h-52 duration-500 ease-out lg:visible lg:opacity-100;
+  @apply max-h-52 duration-500 ease-out lg:pointer-events-auto lg:scale-100 lg:opacity-100 lg:duration-500;
 }
 
 #dropdownHoverButton.active svg {
@@ -155,36 +178,33 @@ header.scrolled .nav-list {
 }
 
 #dropdownHoverButton #dropdownHover a.active {
-  @apply text-primaryOrange;
+  @apply text-darkerOrange;
 }
 
-#dropdownHoverButton.active #dropdownHover li {
-  @apply opacity-100 lg:duration-700 lg:ease-out;
+#dropdown-button.active {
+  @apply font-bold text-primaryOrange lg:after:absolute lg:after:bottom-4 lg:after:size-[5px] lg:after:rounded-full lg:after:bg-primaryOrange lg:after:duration-300 lg:after:ltr:left-2/5 lg:after:rtl:left-2/3;
+}
+
+header.scrolled #dropdown-button.active {
+  @apply font-bold text-darkerOrange lg:after:absolute lg:after:bottom-4 lg:after:size-[5px] lg:after:rounded-full lg:after:bg-darkerOrange lg:after:duration-300 lg:after:ltr:left-2/5 lg:after:rtl:left-2/3;
 }
 
 /* register-menu */
 
 .register-menu {
-  @apply top-16 z-50 max-h-0 w-full overflow-hidden will-change-auto lg:invisible lg:absolute lg:flex lg:max-h-max lg:w-72 lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:bg-white lg:opacity-0 lg:shadow-lg lg:transition-opacity lg:duration-200 ltr:right-0 rtl:left-0;
+  @apply right-0 z-50 max-h-0 w-full origin-top-right overflow-hidden transition-[max-height] ease-in will-change-auto lg:pointer-events-none lg:absolute lg:top-16 lg:flex lg:max-h-max lg:w-72 lg:scale-90 lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:bg-white lg:opacity-0 lg:shadow-lg lg:transition-[opacity,transform] lg:duration-200;
 }
 
 #registerMenuButton #registerMenu.active {
-  @apply flex max-h-96 duration-500 ease-out lg:visible lg:opacity-100 lg:transition-opacity lg:duration-500;
+  @apply flex max-h-96 duration-500 ease-out lg:pointer-events-auto lg:scale-100 lg:opacity-100;
 }
 
-#registerMenuButton #registerMenu ul li {
-  @apply lg:opacity-0;
-}
-
-#registerMenuButton #registerMenu.active ul li {
-  @apply lg:opacity-100 lg:duration-700 lg:ease-out;
-}
 .register_item.active {
   @apply text-primaryOrange opacity-100;
 }
 
 .register_item.active span {
-  @apply text-black;
+  @apply text-darkText;
 }
 
 .menu-toggle {
@@ -272,22 +292,22 @@ header.scrolled .nav-list {
   display: block;
 }
 .stepper.active > div {
-  @apply ring-2 ring-primaryOrange;
+  @apply ring-2 ring-darkerOrange;
 }
 .stepper p {
   @apply text-black/20;
 }
 .stepper.active p {
-  @apply font-semibold text-primaryOrange opacity-100;
+  @apply font-semibold text-darkerOrange opacity-100;
 }
 .stepper .icon {
   @apply text-2xl font-semibold text-black/10;
 }
 .stepper.active .icon {
-  @apply text-primaryOrange;
+  @apply text-darkerOrange;
 }
 .stepper.done div {
-  @apply bg-primaryOrange;
+  @apply bg-darkerOrange;
 }
 .stepper.done .icon {
   @apply hidden;

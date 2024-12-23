@@ -34,18 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       merchant: `/${lang}/solutions/merchant-solutions`,
       logistic: `/${lang}/solutions/logistic-solutions`,
     };
-    const classes = [
-      "lg:after:bottom-4",
-      "lg:after:ltr:left-2/5",
-      "lg:after:rtl:left-2/3",
-      "lg:after:size-[5px]",
-      "lg:after:rounded-full",
-      "lg:after:bg-primaryOrange",
-      "lg:after:duration-300",
-      "lg:after:absolute",
-      "text-primaryOrange",
-      "font-bold",
-    ];
+    const classes = "active";
 
     navItems.forEach((item) => {
       const itemRoute = item.getAttribute("data-route");
@@ -62,9 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleClasses(element, condition, classList) {
     if (condition) {
-      element.classList.add(...classList);
+      element.classList.add(classList);
     } else {
-      element.classList.remove(...classList);
+      element.classList.remove(classList);
     }
   }
 

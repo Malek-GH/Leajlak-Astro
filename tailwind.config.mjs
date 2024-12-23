@@ -81,10 +81,12 @@ export default {
         caret: "url('/images/icons/caret.svg')",
       },
       colors: {
-        primaryOrange: "#EC6131",
-        lightGray: "#F6F6F6",
+        primaryOrange: "#ED6132",
+        darkerOrange: "#CD4213",
+        lightGray: "#FAFAFA",
         customYellow: "#F7B614",
         darkGray: "#202020",
+        darkText: "#333333",
       },
       fontFamily: {
         Hanimation: ["Hanimation", "sans-serif"],
@@ -97,7 +99,7 @@ export default {
         base: "16px",
       },
       boxShadow: {
-        Button_shadow: "0px 24px 50px -12px",
+        Button_shadow: "0px 14px 50px -12px",
         card_shadow: "0px 10px 20px 0px",
       },
       letterSpacing: {
@@ -118,7 +120,6 @@ export default {
         15: "3.75rem",
         120: "540px",
       },
-
       lineHeight: { 1.3: 1.3 },
       flex: {
         card_full: "0 1 calc(20% - 20px)",
