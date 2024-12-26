@@ -83,7 +83,7 @@ export default {
       colors: {
         primaryOrange: "#ED6132",
         darkerOrange: "#CD4213",
-        lightGray: "#FAFAFA",
+        lightGray: "#F6F6F6",
         customYellow: "#F7B614",
         darkGray: "#202020",
         darkText: "#333333",

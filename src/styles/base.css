@@ -93,7 +93,7 @@ header.scrolled .nav-list {
 }
 
 .nav-list {
-  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col items-start justify-center space-y-5 px-12 py-20 text-base font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-7 lg:space-y-0 lg:p-0;
+  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col items-start justify-center space-y-7 px-12 py-20 text-base font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-7 lg:space-y-0 lg:p-0;
 }
 
 .nav-list > div,
@@ -107,7 +107,7 @@ header.scrolled .nav-list {
 }
 
 .nav-list.open {
-  @apply text-darkText h-full translate-x-0 bg-white opacity-100 transition-transform duration-300 ease-in lg:bg-transparent lg:text-white;
+  @apply h-full translate-x-0 bg-white text-darkText opacity-100 transition-transform duration-300 ease-in lg:bg-transparent lg:text-white;
 }
 
 .nav_item {
@@ -208,11 +208,15 @@ header.scrolled #dropdown-button.active {
 }
 
 .menu-toggle {
-  @apply relative h-6 w-6 cursor-pointer bg-none;
+  @apply relative h-6 w-7 bg-none;
 }
 
 .menu-burger {
-  @apply absolute left-0 h-[2px] w-full bg-primaryOrange transition-all duration-300 ease-in;
+  @apply absolute left-0 h-[3px] w-full bg-primaryOrange transition-all duration-300 ease-in;
+}
+
+header.scrolled .menu-burger {
+  @apply bg-darkerOrange;
 }
 
 .burger-1 {
