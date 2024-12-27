@@ -1,5 +1,6 @@
 ---
 import "../styles/base.css";
+import "../styles/chatbot.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ChatBot from "../components/ChatBot.astro";
@@ -25,12 +26,7 @@ function dir() {
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link
-      rel="stylesheet"
-      href="/src/styles/chatbot.css"
-      media="print"
-      onload="this.media='all'; this.onload=null;"
-    />
+
     <link rel="shortcut icon" href="/favicon.webp" type="image/webp" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
