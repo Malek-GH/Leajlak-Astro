@@ -120,6 +120,9 @@ export default {
         15: "3.75rem",
         120: "540px",
       },
+      transitionProperty: {
+        "max-height": "max-height",
+      },
       lineHeight: { 1.3: 1.3 },
       flex: {
         card_full: "0 1 calc(20% - 20px)",

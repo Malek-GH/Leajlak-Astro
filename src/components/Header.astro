@@ -61,9 +61,56 @@ const handleRedirect = (lang: string) => {
         >
       </div>
       <!-- Dropdown menu -->
-      <div class="relative lg:h-full items" id="dropdownHoverButton">
-        <div class="flex gap-2 items-center lg:h-full" id="dropdown-button">
-          <button>{content.solutions}</button>
+      <div
+        class="relative space-y-2 lg:space-y-0 lg:h-full items border-b-2 w-full lg:border-b-0 lg:w-auto"
+        id="dropdownHoverButton"
+      >
+        <div class="flex lg:h-full" id="dropdown-button">
+          <button class="flex gap-2 items-center lg:h-full"
+            >{content.solutions}
+            <svg
+              class="transition-transform duration-300"
+              width="10"
+              height="10"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"></path>
+            </svg></button
+          >
+        </div>
+        <div
+          id="dropdownHover"
+          class="pt-1 lg:absolute lg:w-48 lg:bg-white lg:p-4 lg:rounded-lg lg:right-0 lg:drop-shadow-lg"
+        >
+          <div class="flex flex-col gap-3 text-darkText">
+            <a
+              href={`/${lang}/solutions/merchant-solutions`}
+              data-route={`/${lang}/solutions/merchant-solutions`}
+              aria-label="merchants">{content.for_merchants}</a
+            >
+            <a
+              href={`/${lang}/solutions/logistic-solutions`}
+              data-route={`/${lang}/solutions/logistic-solutions`}
+              aria-label="logistics">{content.For_3PL_Companies}</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Registration menu -->
+      <div
+        class="relative gap-2 flex flex-col w-full lg:gap-0 lg:w-auto lg:h-full lg:justify-center items border-b-2 lg:border-b-0"
+        id="registerMenuButton"
+      >
+        <button class="flex items-center gap-2 lg:h-full" id="registerButton">
+          {content.register}
           <svg
             class="transition-transform duration-300"
             width="10"
@@ -80,37 +127,10 @@ const handleRedirect = (lang: string) => {
               stroke-width="2"
               d="m1 1 4 4 4-4"></path>
           </svg>
-        </div>
-        <div
-          id="dropdownHover"
-          class="pt-1 lg:absolute lg:w-48 lg:bg-white lg:p-4 lg:rounded-lg lg:right-0 lg:drop-shadow-lg"
-        >
-          <div class="flex flex-col gap-3 text-black">
-            <a
-              href={`/${lang}/solutions/merchant-solutions`}
-              data-route={`/${lang}/solutions/merchant-solutions`}
-              aria-label="merchants">{content.for_merchants}</a
-            >
-            <a
-              href={`/${lang}/solutions/logistic-solutions`}
-              data-route={`/${lang}/solutions/logistic-solutions`}
-              aria-label="logistics">{content.For_3PL_Companies}</a
-            >
-          </div>
-        </div>
-      </div>
-      <!-- Registration menu -->
-
-      <div
-        class="relative flex flex-col w-full lg:w-auto lg:h-full lg:justify-center"
-        id="registerMenuButton"
-      >
-        <button class="button">
-          {content.register}
         </button>
-        <div class="register-menu" id="registerMenu">
+        <div id="registerMenu">
           <ul
-            class="grid sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-1 lg:grid-rows-1 text-black gap-5 pt-2 lg:gap-0 lg:p-2 w-full"
+            class="grid sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-1 lg:grid-rows-1 text-darkText gap-5 pt-2 lg:gap-0 lg:p-2 w-full"
           >
             <li>
               <div
@@ -123,13 +143,13 @@ const handleRedirect = (lang: string) => {
                   aria-label="logistic-companie-registration"
                 >
                   <div class="flex flex-col gap-1">
-                    <div
-                      class="text-sm group-hover:text-primaryOrange duration-200"
+                    <h6
+                      class="text-sm group-hover:text-darkerOrange duration-200"
                     >
                       {content.LC}
-                    </div>
+                    </h6>
                     <span
-                      class="text-black/50 text-xsm group-hover:text-black/80 duration-200"
+                      class="text-darkText/50 text-xsm group-hover:text-darkText/80 duration-200"
                     >
                       {content.LCD}
                     </span>
@@ -165,13 +185,13 @@ const handleRedirect = (lang: string) => {
                   aria-label="merchants-registration"
                 >
                   <div class="flex flex-col gap-1">
-                    <div
-                      class="text-sm group-hover:text-primaryOrange duration-200"
+                    <h6
+                      class="text-sm group-hover:text-darkerOrange duration-200"
                     >
                       {content.Merchants}
-                    </div>
+                    </h6>
                     <span
-                      class="text-black/50 text-xsm group-hover:text-black/80 duration-200"
+                      class="text-darkText/50 text-xsm group-hover:text-darkText/80 duration-200"
                     >
                       {content.MD}
                     </span>
@@ -207,13 +227,13 @@ const handleRedirect = (lang: string) => {
                   aria-label="drivers-registration"
                 >
                   <div class="flex flex-col gap-1">
-                    <div
-                      class="text-sm group-hover:text-primaryOrange duration-200"
+                    <h6
+                      class="text-sm group-hover:text-darkerOrange duration-200"
                     >
                       {content.drivers}
-                    </div>
+                    </h6>
                     <span
-                      class="text-black/50 text-xsm group-hover:text-black/80 duration-200"
+                      class="text-darkText/50 text-xsm group-hover:text-darkText/80 duration-200"
                     >
                       {content.DD}
                     </span>
@@ -249,13 +269,13 @@ const handleRedirect = (lang: string) => {
                   aria-label="employees-registration"
                 >
                   <div class="flex flex-col gap-1">
-                    <div
-                      class="text-sm group-hover:text-primaryOrange duration-200"
+                    <h6
+                      class="text-sm group-hover:text-darkerOrange duration-200"
                     >
                       {content.Employees}
-                    </div>
+                    </h6>
                     <span
-                      class="text-black/50 text-xsm group-hover:text-black/80 duration-200"
+                      class="text-darkText/50 text-xsm group-hover:text-darkText/80 duration-200"
                     >
                       {content.ED}
                     </span>
@@ -287,12 +307,11 @@ const handleRedirect = (lang: string) => {
       <a
         href="https://app.4ulogistic.com/login"
         target="”_blank”"
-        class="button">{content.log_in}</a
+        class="button lg:hidden">{content.log_in}</a
       >
       <!-- Language dropdown -->
       <div
-        class="relative flex flex-col items-start lg:flex-row lg:items-center lg:h-full items"
-        id="button-dropdown-menu"
+        class="button-dropdown-menu relative flex flex-col items-start lg:hidden"
       >
         <button
           type="button"
@@ -329,10 +348,13 @@ const handleRedirect = (lang: string) => {
           }
         </button>
         <div
-          class="lg:absolute lg:top-16 lg:right-0 lg:bg-white lg:w-48 lg:rounded-lg lg:drop-shadow-lg"
+          class="language-dropdown-menu lg:absolute lg:top-16 lg:right-0 lg:bg-white lg:w-48 lg:rounded-lg lg:drop-shadow-lg"
           id="language-dropdown-menu"
         >
-          <ul class="font-medium text-black py-5 lg:px-4 space-y-4" role="none">
+          <ul
+            class="font-medium text-darkText py-5 lg:px-4 space-y-4"
+            role="none"
+          >
             {
               () => {
                 if (lang === "en") {
@@ -384,6 +406,110 @@ const handleRedirect = (lang: string) => {
         </div>
       </div>
     </div>
+
+    <div class="hidden lg:flex lg:items-center lg:gap-8 lg:h-full">
+      <a
+        href="https://app.4ulogistic.com/login"
+        target="”_blank”"
+        class="button">{content.log_in}</a
+      >
+      <!-- Language dropdown -->
+      <div
+        class="button-dropdown-menu lg:relative lg:flex lg:flex-row lg:items-center lg:h-full"
+      >
+        <button
+          type="button"
+          class="inline-flex items-center justify-center rounded-md cursor-pointer gap-2 hover:text-primaryOrange duration-300 ease-in text-white font-semibold"
+        >
+          {
+            () => {
+              if (lang === "en") {
+                return (
+                  <>
+                    <Image
+                      loading="eager"
+                      src={english}
+                      class="size-6  rounded-full pointer-events-none"
+                      alt=""
+                    />
+                    <span>English</span>
+                  </>
+                );
+              } else {
+                return (
+                  <>
+                    <Image
+                      loading="eager"
+                      src={arabic}
+                      class="size-6  rounded-full pointer-events-none"
+                      alt=""
+                    />
+                    <span>العربية</span>
+                  </>
+                );
+              }
+            }
+          }
+        </button>
+        <div
+          class="language-dropdown-menu lg:absolute lg:top-16 lg:right-0 lg:bg-white lg:w-48 lg:rounded-lg lg:drop-shadow-lg"
+        >
+          <ul
+            class="font-semibold text-darkText py-5 lg:px-4 space-y-4"
+            role="none"
+          >
+            {
+              () => {
+                if (lang === "en") {
+                  return (
+                    <li>
+                      <a
+                        href={`${handleRedirect("en")}`}
+                        class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center  "
+                        role="menuitem"
+                        aria-label="arabic"
+                      >
+                        <Image
+                          loading="lazy"
+                          src={arabic}
+                          class="size-6 rounded-full me-2 pointer-events-none"
+                          alt=""
+                        />
+                        Arabic
+                      </a>
+                    </li>
+                  );
+                }
+              }
+            }
+            {
+              () => {
+                if (lang === "ar") {
+                  return (
+                    <li>
+                      <a
+                        href={`${handleRedirect("ar")}`}
+                        class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center"
+                        role="menuitem"
+                      >
+                        <Image
+                          loading="lazy"
+                          src={english}
+                          class="size-6 rounded-full me-2 pointer-events-none"
+                          alt=""
+                        />
+                        English
+                      </a>
+                    </li>
+                  );
+                }
+              }
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <button class="menu-toggle block lg:hidden" name="burgerMenu">
       <div id="burger" class="menu-burger burger-1"></div>
       <div id="burger" class="menu-burger burger-2"></div>

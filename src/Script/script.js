@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const burger2 = document.querySelector(".burger-2");
   const burger3 = document.querySelector(".burger-3");
   const ButtonMenuDropdown = document.getElementById("dropdownHoverButton");
-  const dropdown = document.getElementById("language-dropdown-menu");
-  const buttonDrop = document.getElementById("button-dropdown-menu");
+  const dropdown = document.querySelectorAll(".language-dropdown-menu");
+  const buttonDrop = document.querySelectorAll(".button-dropdown-menu");
   const registerButton = document.getElementById("registerMenuButton");
   const registerMenu = document.getElementById("registerMenu");
   const registerItems = document.querySelectorAll(".register_item");
@@ -28,11 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   function setActiveItem() {
     const dropdown_button = document.querySelector("#dropdown-button");
+    const registerButton = document.querySelector("#registerButton");
     const currentRoute = window.location.pathname.replace(/\/$/, "");
     const lang = currentRoute.split("/")[1];
     const routes = {
-      merchant: `/${lang}/solutions/merchant-solutions`,
-      logistic: `/${lang}/solutions/logistic-solutions`,
+      solutions: {
+        merchant: `/${lang}/solutions/merchant-solutions`,
+        logistic: `/${lang}/solutions/logistic-solutions`,
+      },
+      register: {
+        merchant: `/${lang}/registration/merchants`,
+        logistic: `/${lang}/registration/logistic-companies`,
+        drivers: `/${lang}/registration/drivers`,
+        employees: `/${lang}/registration/employees`,
+      },
     };
     const classes = "active";
 
@@ -44,16 +53,37 @@ document.addEventListener("DOMContentLoaded", function () {
       const itemRoute = registerItem.getAttribute("data-route");
       registerItem.classList.toggle("active", currentRoute === itemRoute);
     });
-    const isSpecialRoute =
-      currentRoute === routes.merchant || currentRoute === routes.logistic;
-    toggleClasses(dropdown_button, isSpecialRoute, classes);
+    const solutionsRoutes = [
+      routes.solutions.merchant,
+      routes.solutions.logistic,
+    ];
+
+    const registrationRoutes = [
+      routes.register.merchant,
+      routes.register.logistic,
+      routes.register.drivers,
+      routes.register.employees,
+    ];
+
+    const isSolutionsRoute = solutionsRoutes.includes(currentRoute);
+    const isRegistrationRoute = registrationRoutes.includes(currentRoute);
+
+    if (dropdown_button) {
+      toggleClasses(dropdown_button, isSolutionsRoute, classes);
+    }
+
+    if (registerButton) {
+      toggleClasses(registerButton, isRegistrationRoute, classes);
+    }
   }
 
-  function toggleClasses(element, condition, classList) {
-    if (condition) {
-      element.classList.add(classList);
-    } else {
-      element.classList.remove(classList);
+  function toggleClasses(element, condition, className) {
+    if (element) {
+      if (condition) {
+        element.classList.add(className);
+      } else {
+        element.classList.remove(className);
+      }
     }
   }
 
@@ -84,11 +114,19 @@ document.addEventListener("DOMContentLoaded", function () {
     burger3.classList.toggle("burger-active");
   });
 
-  buttonDrop.addEventListener("mouseenter", function (event) {
-    dropdown.classList.add("active");
+  buttonDrop.forEach((button) => {
+    button.addEventListener("mouseenter", function (event) {
+      dropdown.forEach((drop) => {
+        drop.classList.add("active");
+      });
+    });
   });
-  buttonDrop.addEventListener("mouseleave", function (event) {
-    dropdown.classList.remove("active");
+  buttonDrop.forEach((button) => {
+    button.addEventListener("mouseleave", function (event) {
+      dropdown.forEach((drop) => {
+        drop.classList.remove("active");
+      });
+    });
   });
 
   ButtonMenuDropdown.addEventListener("mouseenter", function (event) {
@@ -99,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   registerButton.addEventListener("mouseenter", function (event) {
-    registerMenu.classList.toggle("active");
+    registerMenu.classList.add("active");
   });
   registerButton.addEventListener("mouseleave", function (event) {
     registerMenu.classList.remove("active");

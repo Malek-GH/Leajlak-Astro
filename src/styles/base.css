@@ -51,13 +51,13 @@
     @apply w-full whitespace-nowrap rounded-xl bg-darkerOrange py-4 text-base font-bold text-white antialiased shadow-Button_shadow shadow-darkerOrange/30 duration-200 ease-linear hover:bg-primaryOrange active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
   }
   .button {
-    @apply relative w-full whitespace-nowrap rounded px-8 py-3 text-center font-bold text-primaryOrange antialiased ring-1 ring-primaryOrange transition-colors duration-300 ease-out hover:bg-primaryOrange hover:text-white hover:duration-300 hover:ease-in lg:w-fit;
+    @apply relative w-full whitespace-nowrap rounded-lg px-8 py-3 text-center font-bold text-primaryOrange antialiased ring-1 ring-primaryOrange transition-colors duration-300 ease-out hover:bg-primaryOrange hover:text-white hover:duration-300 hover:ease-in lg:w-fit;
   }
   header.scrolled .button {
     @apply text-darkerOrange ring-darkerOrange hover:bg-darkerOrange hover:text-white;
   }
   .button-return {
-    @apply w-full whitespace-nowrap rounded-md py-4 text-base font-bold text-darkerOrange antialiased ring-2 ring-darkerOrange duration-200 ease-linear active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
+    @apply w-full whitespace-nowrap rounded-lg py-4 text-base font-bold text-darkerOrange antialiased ring-2 ring-darkerOrange duration-200 ease-linear active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
   }
 }
 
@@ -75,7 +75,7 @@
 }
 
 header {
-  @apply fixed top-0 z-50 w-full bg-transparent py-4 transition-colors duration-200 ease-in;
+  @apply fixed top-0 z-50 w-full rounded-b-lg bg-transparent py-4 transition-colors duration-200 ease-in;
 }
 .header-logo {
   @apply w-24 lg:w-32;
@@ -93,7 +93,7 @@ header.scrolled .nav-list {
 }
 
 .nav-list {
-  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col items-start justify-center space-y-7 px-12 py-20 text-base font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-7 lg:space-y-0 lg:p-0;
+  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col items-start justify-center space-y-7 px-12 py-16 text-base font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-8 lg:space-y-0 lg:p-0;
 }
 
 .nav-list > div,
@@ -154,19 +154,22 @@ header.scrolled .nav-list > .nav_item > a.active::after {
 }
 
 /* language-dropdown */
-
-#language-dropdown-menu {
-  @apply max-h-0 origin-top-right overflow-hidden opacity-0 transition-[max-height] duration-200 ease-in lg:pointer-events-none lg:scale-90 lg:transform lg:transition-[opacity,transform];
+.language-dropdown-menu {
+  @apply transition-max-height max-h-0 origin-top-right transform overflow-hidden opacity-0 duration-200 ease-in lg:pointer-events-none lg:max-h-max lg:scale-90 lg:transition-[opacity,transform];
 }
 
-#language-dropdown-menu.active {
+.language-dropdown-menu.active {
   @apply max-h-52 opacity-100 duration-500 ease-out lg:pointer-events-auto lg:scale-100;
+}
+
+header.scrolled .button-dropdown-menu button {
+  @apply text-darkText;
 }
 
 /* solution-dropdown-menu */
 
 #dropdownHover {
-  @apply max-h-0 transform overflow-hidden transition-[max-height] ease-in will-change-auto lg:pointer-events-none lg:max-h-max lg:origin-top-right lg:scale-90 lg:opacity-0 lg:transition-[opacity,transform] lg:duration-200;
+  @apply transition-max-height max-h-0 transform overflow-hidden ease-in will-change-auto lg:pointer-events-none lg:max-h-max lg:origin-top-right lg:scale-90 lg:opacity-0 lg:transition-[opacity,transform] lg:duration-200;
 }
 
 #dropdownHoverButton.active #dropdownHover {
@@ -191,20 +194,32 @@ header.scrolled #dropdown-button.active {
 
 /* register-menu */
 
-.register-menu {
-  @apply right-0 z-50 max-h-0 w-full origin-top-right overflow-hidden transition-[max-height] ease-in will-change-auto lg:pointer-events-none lg:absolute lg:top-16 lg:flex lg:max-h-max lg:w-72 lg:scale-90 lg:divide-y lg:divide-gray-100 lg:rounded-lg lg:bg-white lg:opacity-0 lg:shadow-lg lg:transition-[opacity,transform] lg:duration-200;
+#registerMenu {
+  @apply transition-max-height right-0 z-50 max-h-0 w-full origin-top-right overflow-hidden ease-in will-change-auto lg:pointer-events-none lg:absolute lg:top-16 lg:flex lg:max-h-max lg:w-72 lg:scale-90 lg:rounded-lg lg:bg-white lg:opacity-0 lg:shadow-lg lg:transition-[opacity,transform] lg:duration-200;
 }
 
-#registerMenuButton #registerMenu.active {
+#registerMenu.active {
   @apply flex max-h-96 duration-500 ease-out lg:pointer-events-auto lg:scale-100 lg:opacity-100;
 }
 
-.register_item.active {
-  @apply text-primaryOrange opacity-100;
+#registerButton:has(+ #registerMenu.active) svg {
+  @apply rotate-180 transition-transform duration-500 ease-in-out;
+}
+
+#registerButton.active {
+  @apply font-bold text-primaryOrange lg:after:absolute lg:after:bottom-4 lg:after:size-[5px] lg:after:rounded-full lg:after:bg-primaryOrange lg:after:duration-300 lg:after:ltr:left-2/5 lg:after:rtl:left-2/3;
+}
+
+header.scrolled #registerButton.active {
+  @apply font-bold text-darkerOrange lg:after:absolute lg:after:bottom-4 lg:after:size-[5px] lg:after:rounded-full lg:after:bg-darkerOrange lg:after:duration-300 lg:after:ltr:left-2/5 lg:after:rtl:left-2/3;
+}
+
+.register_item.active h6 {
+  @apply text-darkerOrange opacity-100;
 }
 
 .register_item.active span {
-  @apply text-darkText;
+  @apply text-darkText/80;
 }
 
 .menu-toggle {
