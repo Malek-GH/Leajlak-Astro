@@ -32,7 +32,7 @@ import apple from "../../../public/images/icons/apple store.png";
 
 <script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="Home" lang="en">
-  <section class="h-screen">
+  <section class="h-hero_mobile sm:h-hero_sm 3xl:h-hero_lg">
     <picture id="videoplaceholder" class="">
       <source
         srcset="/delivery_firstframe_lg.webp"
@@ -59,22 +59,28 @@ import apple from "../../../public/images/icons/apple store.png";
       class="size-full object-cover -z-10 fixed"
       id="video"
     >
-      <source src="/delivery.mp4" type="video/mp4" />
+      <source src="/delivery.mp4" type="video/mp4" media="(min-width: 480px)" />
+      <source
+        src="/delivery_mobile.mp4"
+        type="video/mp4"
+        media="(max-width: 479px)"
+      />
     </video>
     <div
       class="fade container section-container flex flex-col justify-end items-start h-full gap-y-10"
       data-animation="animate-fade-up animate-duration-[2000ms]"
     >
-      <div class="text-white space-y-3">
+      <div class="text-white space-y-4">
         <div class="">
           <h1>Streamline Your Deliveries,</h1>
           <h1>Elevate Your Business.</h1>
         </div>
-        <p class="md:w-[60%] opacity-75 text-lg">
-          We are a leading technology partner dedicated to enhancing the last
-          mile delivery experience for companies focused on customer
-          satisfaction.
-        </p>
+        <h6
+          class="text-lg font-medium md:text-xl opacity-80 lg:w-4/6 leading-relaxed"
+        >
+          We empower companies with technology that enhances the last-mile
+          delivery experience.
+        </h6>
       </div>
       <HeroButton href="about" text="Learn more" />
     </div>

@@ -119,6 +119,9 @@ export default {
         74: "300px",
         15: "3.75rem",
         120: "540px",
+        hero_sm: "650px",
+        hero_lg: "850px",
+        hero_mobile: "92vh",
       },
       transitionProperty: {
         "max-height": "max-height",

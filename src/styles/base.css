@@ -21,7 +21,7 @@
   }
 
   h1 {
-    @apply text-4xl font-bold sm:text-5xl md:text-6xl rtl:leading-tight;
+    @apply text-3xl font-extrabold sm:text-4xl lg:text-5xl rtl:leading-tight;
   }
 
   h2 {
@@ -65,7 +65,7 @@
   @apply relative mx-auto max-w-7xl px-6 py-24 lg:px-10 3xl:px-0;
 }
 .hero {
-  @apply h-[650px] 3xl:h-[800px];
+  @apply h-hero_sm 3xl:h-hero_lg;
 }
 .cta {
   @apply flex h-[400px] flex-col items-center justify-evenly;
@@ -75,7 +75,7 @@
 }
 
 header {
-  @apply fixed top-0 z-50 w-full rounded-b-lg bg-transparent py-4 transition-colors duration-200 ease-in;
+  @apply fixed top-0 z-50 w-full bg-transparent py-4 transition-colors duration-200 ease-in;
 }
 .header-logo {
   @apply w-24 lg:w-32;
@@ -155,7 +155,7 @@ header.scrolled .nav-list > .nav_item > a.active::after {
 
 /* language-dropdown */
 .language-dropdown-menu {
-  @apply transition-max-height max-h-0 origin-top-right transform overflow-hidden opacity-0 duration-200 ease-in lg:pointer-events-none lg:max-h-max lg:scale-90 lg:transition-[opacity,transform];
+  @apply max-h-0 origin-top-right transform overflow-hidden opacity-0 transition-max-height duration-200 ease-in lg:pointer-events-none lg:max-h-max lg:scale-90 lg:transition-[opacity,transform];
 }
 
 .language-dropdown-menu.active {
@@ -169,7 +169,7 @@ header.scrolled .button-dropdown-menu button {
 /* solution-dropdown-menu */
 
 #dropdownHover {
-  @apply transition-max-height max-h-0 transform overflow-hidden ease-in will-change-auto lg:pointer-events-none lg:max-h-max lg:origin-top-right lg:scale-90 lg:opacity-0 lg:transition-[opacity,transform] lg:duration-200;
+  @apply max-h-0 transform overflow-hidden transition-max-height ease-in will-change-auto lg:pointer-events-none lg:max-h-max lg:origin-top-right lg:scale-90 lg:opacity-0 lg:transition-[opacity,transform] lg:duration-200;
 }
 
 #dropdownHoverButton.active #dropdownHover {
@@ -195,7 +195,7 @@ header.scrolled #dropdown-button.active {
 /* register-menu */
 
 #registerMenu {
-  @apply transition-max-height right-0 z-50 max-h-0 w-full origin-top-right overflow-hidden ease-in will-change-auto lg:pointer-events-none lg:absolute lg:top-16 lg:flex lg:max-h-max lg:w-72 lg:scale-90 lg:rounded-lg lg:bg-white lg:opacity-0 lg:shadow-lg lg:transition-[opacity,transform] lg:duration-200;
+  @apply right-0 z-50 max-h-0 w-full origin-top-right overflow-hidden transition-max-height ease-in will-change-auto lg:pointer-events-none lg:absolute lg:top-16 lg:flex lg:max-h-max lg:w-72 lg:scale-90 lg:rounded-lg lg:bg-white lg:opacity-0 lg:drop-shadow-lg lg:transition-[opacity,transform] lg:duration-200;
 }
 
 #registerMenu.active {

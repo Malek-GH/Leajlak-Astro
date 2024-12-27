@@ -434,4 +434,10 @@ document.addEventListener("DOMContentLoaded", () => {
       openButton.classList.remove("translate-y-20");
     }
   });
+  window.addEventListener("load", () => {
+    if (openButton && content) {
+      openButton.classList.replace("hidden", "flex");
+      content.classList.replace("hidden", "flex");
+    }
+  });
 });
