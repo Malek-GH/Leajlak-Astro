@@ -4,18 +4,22 @@ const content = await import(`../data/${lang}.json`);
 ---
 
 <div class="card fade" data-animation="animate-fade animate-duration-[1000ms]">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    xml:space="preserve"
-    stroke="#000"
-    stroke-width="0"
-    ><path
-      d="M19 24H5v-2h2v-2H0V0h24v20h-7v2h2v2zM9 22h6v-2H9v2zm8-4h5V2H2v16h15zm-4-2h-2v-2.1c-.4-.1-.7-.2-1-.4L8.5 15l-1.4-1.4 1.5-1.5c-.2-.3-.3-.7-.4-1H6v-2h2.1c.1-.4.2-.7.4-1L7 6.6l1.4-1.4 1.5 1.5c.3-.2.7-.3 1-.4V4h2v2.1c.4.1.7.2 1 .4L15.4 5l1.4 1.4L15.4 8c.2.3.3.7.4 1H18v2h-2.1c-.1.4-.2.7-.4 1l1.5 1.5-1.4 1.4-1.6-1.5c-.3.2-.7.3-1 .4V16zm-1-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-    ></path></svg
-  >
+  <svg viewBox="0 0 32 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_7937_2)">
+      <path
+        d="M10.3428 7.67616L13.1722 10.5055M13.1722 10.5055C13.9223 9.75535 14.9393 9.3335 16.0002 9.3335M13.1722 10.5055C12.422 11.2556 12.0002 12.2726 12.0002 13.3335M12.0002 13.3335H8.00016M12.0002 13.3335C12.0002 14.3944 12.422 15.4114 13.1722 16.1615M13.1722 16.1615L10.3428 18.9908M13.1722 16.1615C13.9223 16.9116 14.9393 17.3335 16.0002 17.3335M16.0002 17.3335V21.3335M16.0002 17.3335C17.061 17.3335 18.078 16.9116 18.8282 16.1615M18.8282 16.1615L21.6575 18.9908M18.8282 16.1615C19.5783 15.4114 20.0002 14.3944 20.0002 13.3335M24.0002 13.3335H20.0002M20.0002 13.3335C20.0002 12.2726 19.5783 11.2556 18.8282 10.5055M21.6575 7.67616L18.8282 10.5055M18.8282 10.5055C18.078 9.75535 17.061 9.3335 16.0002 9.3335M16.0002 9.3335V5.3335M11 25.3335H21H21.3335H10.6668H11ZM4.3335 1.3335H27.6668C29.3237 1.3335 30.6668 2.67664 30.6668 4.3335V22.3335C30.6668 23.9904 29.3237 25.3335 27.6668 25.3335H4.3335C2.67664 25.3335 1.3335 23.9904 1.3335 22.3335V4.3335C1.3335 2.67664 2.67664 1.3335 4.3335 1.3335Z"
+        stroke="black"
+        stroke-width="2"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_7937_2">
+        <rect width="32" height="27" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </svg>
+
   <div>
-    <h4>{content.delivery_management_title}</h4>
+    <h5>{content.delivery_management_title}</h5>
     <p>{content.delivery_management_text}</p>
   </div>
 </div>
@@ -34,7 +38,7 @@ const content = await import(`../data/${lang}.json`);
     ></svg
   >
   <div>
-    <h4>{content.real_time_tracking_title2}</h4>
+    <h5>{content.real_time_tracking_title2}</h5>
     <p>{content.real_time_tracking_text2}</p>
   </div>
 </div>
@@ -52,14 +56,14 @@ const content = await import(`../data/${lang}.json`);
     ></path></svg
   >
   <div>
-    <h4>{content.customer_support_title2}</h4>
+    <h5>{content.customer_support_title2}</h5>
     <p>{content.customer_support_text2}</p>
   </div>
 </div>
 
 <style>
   .card {
-    @apply relative flex flex-col items-center justify-center gap-10 rounded-xl bg-white px-5 py-16 text-black shadow-card_shadow shadow-black/10 duration-300 ease-in will-change-transform;
+    @apply relative flex flex-col items-center justify-start gap-10 rounded-xl bg-white px-5 py-16 text-black shadow-card_shadow shadow-black/10 duration-300 ease-in will-change-transform;
   }
   .card:hover {
     @apply -translate-y-1 shadow-card_shadow shadow-black/40 duration-300 ease-out;
@@ -70,7 +74,7 @@ const content = await import(`../data/${lang}.json`);
   }
 
   .card svg {
-    @apply z-10 w-18 fill-black;
+    @apply z-10 w-12;
   }
 
   .card h4 {

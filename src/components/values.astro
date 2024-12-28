@@ -23,7 +23,7 @@ const content = await import(`../data/${lang}.json`);
           d="M324.5 197.6c-1.6.9-21.1 19.7-43.2 41.7L241 279.5l-25.2-25.2c-13.9-13.8-26.7-25.8-28.5-26.7-12.2-6.1-25.8 7.5-19.7 19.7 2.2 4.4 62 64.4 66.6 66.8 4.7 2.4 8.9 2.4 13.6 0 5.5-2.9 94.8-92.7 96.7-97.3 2-4.8 1.9-7.4-.4-12.5-3.3-7.1-12.6-10.3-19.6-6.7z"
         ></path></svg
       >
-      <h4>{content.qualityTitle}</h4>
+      <h5>{content.qualityTitle}</h5>
       <p>{content.qualityDescription}</p>
     </div>
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -50,7 +50,7 @@ const content = await import(`../data/${lang}.json`);
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>{content.speedTitle}</h4>
+      <h5>{content.speedTitle}</h5>
       <p>{content.speedDescription}</p>
     </div>
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -77,7 +77,7 @@ const content = await import(`../data/${lang}.json`);
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>{content.innovationTitle}</h4>
+      <h5>{content.innovationTitle}</h5>
       <p>{content.innovationDescription}</p>
     </div>
     <svg
@@ -107,7 +107,7 @@ const content = await import(`../data/${lang}.json`);
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>{content.transparencyTitle}</h4>
+      <h5>{content.transparencyTitle}</h5>
       <p>{content.transparencyDescription}</p>
     </div>
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 478"
@@ -140,7 +140,7 @@ const content = await import(`../data/${lang}.json`);
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>{content.teamworkTitle}</h4>
+      <h5>{content.teamworkTitle}</h5>
       <p>{content.teamworkDescription}</p>
     </div>
     <svg
@@ -178,7 +178,7 @@ const content = await import(`../data/${lang}.json`);
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>{content.responsibilityTitle}</h4>
+      <h5>{content.responsibilityTitle}</h5>
       <p>{content.responsibilityDescription}</p>
     </div>
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -209,7 +209,7 @@ const content = await import(`../data/${lang}.json`);
       ></path></svg
     >
     <div class="space-y-2">
-      <h4>{content.customerSatisfactionTitle}</h4>
+      <h5>{content.customerSatisfactionTitle}</h5>
       <p>{content.customerSatisfactionDescription}</p>
     </div>
     <svg
@@ -232,14 +232,14 @@ const content = await import(`../data/${lang}.json`);
   }
 
   .value-card {
-    @apply relative z-0 flex flex-col items-start justify-start gap-4 overflow-hidden rounded-2xl bg-white p-10 text-black outline outline-1 outline-black/20;
+    @apply relative z-0 flex flex-col items-start justify-start gap-4 overflow-hidden rounded-2xl bg-white p-5 text-darkText outline outline-1 outline-black/20;
   }
 
   .value-card:hover svg:last-child {
     @apply scale-105 transition-transform duration-300 ease-out;
   }
   .value-card svg:first-child {
-    @apply w-12 fill-primaryOrange md:w-16;
+    @apply w-12 fill-primaryOrange;
   }
   .value-card svg:last-child {
     @apply absolute -bottom-8 -z-50 w-52 fill-primaryOrange/5 duration-200 ease-in md:w-64 ltr:-right-26 rtl:-left-26;

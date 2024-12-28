@@ -29,17 +29,17 @@
   }
 
   h3 {
-    @apply text-xl font-bold text-darkerOrange;
+    @apply text-xl font-bold text-primaryOrange;
   }
 
   h4 {
     @apply text-xl font-bold md:text-2xl;
   }
   h5 {
-    @apply text-base font-normal tracking-widest text-primaryOrange md:text-xl;
+    @apply text-xl font-bold text-darkText;
   }
   p {
-    @apply text-base font-normal leading-7 opacity-70;
+    @apply text-base font-normal leading-7 opacity-80;
   }
   section {
     @apply relative;
@@ -74,9 +74,6 @@
   @apply opacity-0;
 }
 
-header {
-  @apply fixed top-0 z-50 w-full bg-transparent py-4 transition-colors duration-200 ease-in;
-}
 .header-logo {
   @apply w-24 lg:w-32;
 }
@@ -266,34 +263,20 @@ header.scrolled .menu-burger {
     display: none;
   }
 }
-
-.socials {
-  @apply h-5 w-5 fill-white hover:fill-white/80 md:h-6 md:w-6;
-}
-
-.error {
-  @apply border-2 border-red-700 duration-300;
-}
-.correct {
-  @apply border-2 border-green-600 duration-300;
-}
-.no-scroll {
-  @apply h-screen overflow-hidden;
-}
 .card-solution {
   @apply flex flex-col items-start justify-start gap-y-5;
 }
 .card-solution svg {
-  @apply size-16 fill-primaryOrange;
+  @apply size-10 fill-white stroke-white;
 }
 
 .card-solution > div {
   @apply space-y-2;
 }
 
-.card-solution:nth-child(2n) {
+/* .card-solution:nth-child(2n) {
   @apply md:pt-16;
-}
+} */
 
 .card-solution h4 {
   @apply text-2xl ltr:text-left rtl:text-right;
@@ -304,33 +287,7 @@ header.scrolled .menu-burger {
 .benefits-card {
   @apply relative flex flex-col items-center justify-center lg:flex-row;
 }
-.form-elements {
-  @apply hidden;
-}
-.form-elements.active {
-  display: block;
-}
-.stepper.active > div {
-  @apply ring-2 ring-darkerOrange;
-}
-.stepper p {
-  @apply text-black/20;
-}
-.stepper.active p {
-  @apply font-semibold text-darkerOrange opacity-100;
-}
-.stepper .icon {
-  @apply text-2xl font-semibold text-black/10;
-}
-.stepper.active .icon {
-  @apply text-darkerOrange;
-}
-.stepper.done div {
-  @apply bg-darkerOrange;
-}
-.stepper.done .icon {
-  @apply hidden;
-}
-.stepper.done .tick {
-  @apply block;
+
+.socials {
+  @apply h-5 w-5 fill-white hover:fill-white/80 md:h-6 md:w-6;
 }

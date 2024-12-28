@@ -32,7 +32,7 @@ const { lang } = Astro.props;
       {data_needed && <span class="text-red-700"> *</span>}
     </label>
   </div>
-  <p class="error-message font-normal text-red-700 mt-1 hidden">
+  <span class="error-message font-normal text-red-700 mt-1 hidden">
     {
       () => {
         if (lang === "ar") {
@@ -41,5 +41,5 @@ const { lang } = Astro.props;
         return "This field must not be empty.";
       }
     }
-  </p>
+  </span>
 </div>

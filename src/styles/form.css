@@ -1,0 +1,40 @@
+.error {
+  @apply border-2 border-red-700 duration-300;
+}
+.correct {
+  @apply border-2 border-green-600 duration-300;
+}
+.no-scroll {
+  @apply h-screen overflow-hidden;
+}
+
+.form-elements {
+  @apply hidden;
+}
+.form-elements.active {
+  display: block;
+}
+.stepper.active > div {
+  @apply ring-2 ring-darkerOrange;
+}
+.stepper p {
+  @apply text-black/20;
+}
+.stepper.active p {
+  @apply font-semibold text-darkerOrange opacity-100;
+}
+.stepper .icon {
+  @apply text-2xl font-semibold text-black/10;
+}
+.stepper.active .icon {
+  @apply text-darkerOrange;
+}
+.stepper.done div {
+  @apply bg-darkerOrange;
+}
+.stepper.done .icon {
+  @apply hidden;
+}
+.stepper.done .tick {
+  @apply block;
+}
