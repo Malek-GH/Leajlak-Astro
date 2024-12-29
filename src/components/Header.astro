@@ -463,6 +463,7 @@ const handleRedirect = (lang: string) => {
           <ul
             class="font-semibold text-darkText py-5 lg:px-4 space-y-4"
             role="none"
+            aria-describedby="language choices"
           >
             {
               () => {
@@ -473,7 +474,7 @@ const handleRedirect = (lang: string) => {
                         href={`${handleRedirect("en")}`}
                         class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center  "
                         role="menuitem"
-                        aria-label="arabic"
+                        aria-label="arabic Language choice"
                       >
                         <Image
                           loading="lazy"
@@ -497,7 +498,7 @@ const handleRedirect = (lang: string) => {
                         href={`${handleRedirect("ar")}`}
                         class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center"
                         role="menuitem"
-                        aria-labelledby="english"
+                        aria-label="english Language choice"
                       >
                         <Image
                           loading="lazy"
