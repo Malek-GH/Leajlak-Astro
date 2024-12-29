@@ -23,12 +23,7 @@ import apple from "../../../public/images/icons/apple store.png";
   as="image"
   media="(min-width: 480px)"
 />
-<link
-  rel="preload"
-  href="/delivery_firstframe_sm.webp"
-  as="image"
-  media="(max-width: 479px)"
-/>
+<link rel="preload" href="/delivery_firstframe_sm.webp" as="image" />
 
 <script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="Home" lang="en">
@@ -45,7 +40,7 @@ import apple from "../../../public/images/icons/apple store.png";
         src={videoPlaceHolder_sm}
         alt="videoplaceholder"
         class="absolute size-full z-0 bottom-0 object-cover"
-        loading="lazy"
+        loading="eager"
         decoding="sync"
       />
     </picture>

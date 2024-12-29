@@ -423,6 +423,7 @@ const handleRedirect = (lang: string) => {
         <button
           type="button"
           class="inline-flex items-center justify-center rounded-md cursor-pointer gap-2 hover:text-primaryOrange duration-300 ease-in text-white font-semibold"
+          aria-describedby="language button"
         >
           {
             () => {
@@ -433,8 +434,8 @@ const handleRedirect = (lang: string) => {
                       loading="eager"
                       src={english}
                       class="size-6  rounded-full pointer-events-none"
-                      aria-label="English"
-                      alt="UK"
+                      aria-label="English Language icon"
+                      alt="IMAGE-UK"
                     />
                     <span>English</span>
                   </>
@@ -446,8 +447,8 @@ const handleRedirect = (lang: string) => {
                       loading="eager"
                       src={arabic}
                       class="size-6  rounded-full pointer-events-none"
-                      alt="KSA"
-                      aria-label="العربية"
+                      alt="IMAGE-KSA"
+                      aria-label="ايقونة اللغة العربية"
                     />
                     <span>العربية</span>
                   </>
@@ -472,13 +473,13 @@ const handleRedirect = (lang: string) => {
                         href={`${handleRedirect("en")}`}
                         class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center  "
                         role="menuitem"
-                        aria-labelledby="arabic"
+                        aria-label="arabic"
                       >
                         <Image
                           loading="lazy"
                           src={arabic}
                           class="size-6 rounded-full me-2 pointer-events-none"
-                          alt="KSA"
+                          alt="IMAGE-KSA"
                         />
                         Arabic
                       </a>
@@ -502,7 +503,7 @@ const handleRedirect = (lang: string) => {
                           loading="lazy"
                           src={english}
                           class="size-6 rounded-full me-2 pointer-events-none"
-                          alt="UK"
+                          alt="IMAGE-UK"
                         />
                         English
                       </a>
