@@ -472,7 +472,7 @@ const handleRedirect = (lang: string) => {
                         href={`${handleRedirect("en")}`}
                         class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center  "
                         role="menuitem"
-                        aria-label="arabic"
+                        aria-labelledby="arabic"
                       >
                         <Image
                           loading="lazy"
@@ -496,7 +496,7 @@ const handleRedirect = (lang: string) => {
                         href={`${handleRedirect("ar")}`}
                         class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center"
                         role="menuitem"
-                        aria-label="english"
+                        aria-labelledby="english"
                       >
                         <Image
                           loading="lazy"
@@ -516,7 +516,11 @@ const handleRedirect = (lang: string) => {
       </div>
     </div>
 
-    <button class="menu-toggle block lg:hidden" name="burgerMenu">
+    <button
+      class="menu-toggle block lg:hidden"
+      name="burgerMenu"
+      aria-label="burgerMenu"
+    >
       <div id="burger" class="menu-burger burger-1"></div>
       <div id="burger" class="menu-burger burger-2"></div>
       <div id="burger" class="menu-burger burger-3"></div>
