@@ -3,13 +3,10 @@ import { Image } from "astro:assets";
 
 import Layout from "../../../layouts/Layout.astro";
 
-import cost from "../../../../public/images/bg/cost_saving.webp";
-import experience from "../../../../public/images/bg/customer experience.webp";
-import scalability from "../../../../public/images/bg/charts.webp";
-import integration from "../../../../public/images/bg/integration.webp";
 import portrait from "../../../../public/images/profile-pic/portrait.png";
 import merchant_bg from "../../../../public/images/bg/merchant_solution_mobile.webp";
 import ButtonOutline from "../../../components/ButtonOutline.astro";
+import BenefitsMerchants from "../../../components/BenefitsMerchants.astro";
 ---
 
 <link
@@ -261,137 +258,7 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
     </div>
   </section>
   <section id="merchant-benefits" class="bg-white">
-    <div
-      class="container section-container space-y-28 overflow-hidden text-darkText"
-    >
-      <div
-        class="fade flex flex-col items-center text-center gap-2"
-        data-animation="animate-fade animate-duration-[1500ms]"
-      >
-        <div>
-          <h2>Benefits for Merchants</h2>
-        </div>
-      </div>
-      <div class="benefits-card group">
-        <div
-          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <Image
-            src={cost}
-            alt="Cost Savings"
-            loading="lazy"
-            class="w-full h-full"
-          />
-        </div>
-        <div
-          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 sm:py-10 md:px-20 md:w-[80%] lg:right-40 lg:h-80 lg:w-1/2 flex flex-col justify-center"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <h1
-            class="text-7xl absolute right-0 -bottom-6 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping animate-once"
-          >
-            1
-          </h1>
-          <h5 class="text-xl md:text-3xl font-semibold">
-            Cut Costs, Boost Profits
-          </h5>
-          <p>
-            Lower operational costs by minimizing delivery errors, optimizing
-            routes, and reducing fuel expenses.
-          </p>
-        </div>
-      </div>
-      <div class="benefits-card group">
-        <div
-          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2 lg:order-2"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <Image
-            src={integration}
-            alt="Cost Savings"
-            loading="lazy"
-            class="w-full h-full"
-          />
-        </div>
-        <div
-          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 z-10 sm:py-10
-        md:px-20 md:w-[80%] lg:left-40 lg:h-80 lg:w-1/2 lg:order-1 flex flex-col justify-center"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <h1
-            class="text-7xl absolute left-0 -bottom-12 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping animate-once"
-          >
-            2
-          </h1>
-          <h5 class="text-xl md:text-3xl font-semibold">Integrate with Ease</h5>
-          <p>
-            Our platform integrates seamlessly with your existing systems,
-            including e-commerce platforms and payment gateways, for a smooth
-            workflow.
-          </p>
-        </div>
-      </div>
-      <div class="benefits-card group">
-        <div
-          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <Image
-            src={scalability}
-            alt="Cost Savings"
-            loading="lazy"
-            class="w-full h-full"
-          />
-        </div>
-        <div
-          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 sm:py-10 md:px-20 md:w-[80%] lg:right-40 lg:h-80 lg:w-1/2 flex flex-col justify-center"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <h1
-            class="text-7xl absolute right-0 -bottom-12 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping animate-once"
-          >
-            3
-          </h1>
-          <h5 class="text-xl md:text-3xl font-semibold">Grow Without Limits</h5>
-          <p>
-            Easily scale your operations to handle increased order volumes,
-            accommodating business growth without compromising efficiency.
-          </p>
-        </div>
-      </div>
-      <div class="benefits-card group">
-        <div
-          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2 lg:order-2"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <Image
-            src={experience}
-            alt="Cost Savings"
-            loading="lazy"
-            class="w-full h-full"
-          />
-        </div>
-        <div
-          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 z-10 sm:py-10 md:px-20 md:w-[80%] lg:left-40 lg:h-80 lg:w-1/2 lg:order-1 flex flex-col justify-center"
-          data-animation="animate-fade animate-duration-[1500ms]"
-        >
-          <h1
-            class="text-7xl absolute left-0 -bottom-12 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping animate-once"
-          >
-            4
-          </h1>
-          <h5 class="text-xl md:text-3xl font-semibold">
-            Deliver Faster, Delight Your Customers
-          </h5>
-          <p>
-            Enhance customer satisfaction with quicker delivery times and
-            real-time notifications, ensuring a seamless experience from order
-            to delivery.
-          </p>
-        </div>
-      </div>
-    </div>
+    <BenefitsMerchants />
   </section>
   <section class="bg-lightGray">
     <div

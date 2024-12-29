@@ -2,13 +2,10 @@
 import Layout from "../../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-import fleet from "../../../../public/images/bg/fleet-efficiency.webp";
-import fleet_cost from "../../../../public/images/bg/fleet-cost.webp";
-import data from "../../../../public/images/bg/data.webp";
-import client from "../../../../public/images/bg/client.webp";
 import portrait from "../../../../public/images/profile-pic/portrait.png";
 import logistic_bg from "../../../../public/images/bg/logistic_solution_mobile.webp";
 import ButtonOutline from "../../../components/ButtonOutline.astro";
+import BenefitsLogistics from "../../../components/BenefitsLogistics.astro";
 ---
 
 <link
@@ -268,132 +265,7 @@ import ButtonOutline from "../../../components/ButtonOutline.astro";
     </div>
   </section>
   <section class="bg-white">
-    <div
-      class="container section-container text-darkText space-y-28 overflow-hidden"
-    >
-      <div
-        class="fade flex flex-col items-center text-center gap-4"
-        data-animation="animate-fade animate-duration-[1000ms]"
-      >
-        <div>
-          <h2>Benefits for logistics companies</h2>
-        </div>
-      </div>
-      <div class="benefits-card group">
-        <div
-          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2"
-          data-animation="animate-fade animate-duration-[1000ms]"
-        >
-          <Image
-            src={fleet}
-            alt="fleet efficiency"
-            loading="eager"
-            class="w-full h-full"
-          />
-        </div>
-        <div
-          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 sm:py-10 md:px-20 md:w-[80%] lg:right-40 lg:h-80 lg:w-1/2"
-          data-animation="animate-fade animate-duration-[1000ms]"
-        >
-          <h1
-            class="text-7xl absolute right-0 -bottom-6 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping animate-once"
-          >
-            1
-          </h1>
-          <h4 class="text-xl md:text-3xl font-semibold">Optimize Your Fleet</h4>
-          <p>
-            Enhance your fleet management with real-time tracking and
-            intelligent routing, ensuring maximum efficiency and reduced
-            downtime.
-          </p>
-        </div>
-      </div>
-      <div class="benefits-card group">
-        <div
-          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2 lg:order-2"
-          data-animation="animate-fade animate-duration-[1000ms]"
-        >
-          <Image
-            src={fleet_cost}
-            alt="Cost Savings"
-            loading="eager"
-            class="w-full h-full"
-          />
-        </div>
-        <div
-          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 z-10 sm:py-10
-        md:px-20 md:w-[80%] lg:left-40 lg:h-80 lg:w-1/2 lg:order-1"
-          data-animation="animate-fade animate-duration-[1000ms]"
-        >
-          <h1
-            class="text-7xl absolute left-0 -bottom-12 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping duration-500"
-          >
-            2
-          </h1>
-          <h4 class="text-xl md:text-3xl font-semibold">
-            Save on Fuel and Time
-          </h4>
-          <p>
-            Optimize routes to reduce fuel consumption and delivery times,
-            leading to significant cost savings and improved profitability.
-          </p>
-        </div>
-      </div>
-      <div class="benefits-card group">
-        <div
-          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2"
-          data-animation="animate-fade animate-duration-[1000ms]"
-        >
-          <Image src={data} alt="data" loading="eager" class="w-full h-full" />
-        </div>
-        <div
-          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 sm:py-10 md:px-20 md:w-[80%] lg:right-40 lg:h-80 lg:w-1/2"
-          data-animation="animate-fade animate-duration-[1000ms]"
-        >
-          <h1
-            class="text-7xl absolute right-0 -bottom-12 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping duration-500"
-          >
-            3
-          </h1>
-          <h4 class="text-xl md:text-3xl font-semibold">
-            Leverage Data for Success
-          </h4>
-          <p>
-            Access detailed reports and analytics to monitor performance,
-            identify areas for improvement, and drive strategic growth.
-          </p>
-        </div>
-      </div>
-      <div class="benefits-card group">
-        <div
-          class="fade w-full md:h-[450px] md:w-[80%] relative lg:w-1/2 lg:order-2"
-          data-animation="animate-fade animate-duration-[1000ms]"
-        >
-          <Image
-            src={client}
-            alt="client experience"
-            loading="eager"
-            class="w-full h-full"
-          />
-        </div>
-        <div
-          class="fade relative h-full w-full p-5 py-3 bg-lightGray space-y-5 z-10 sm:py-10 md:px-20 md:w-[80%] lg:left-40 lg:h-80 lg:w-1/2 lg:order-1"
-          data-animation="animate-fade animate-duration-[1000ms]"
-        >
-          <h1
-            class="text-7xl absolute left-0 -bottom-12 md:-bottom-16 lg:-top-16 md:text-9xl group-hover:animate-ping duration-500"
-          >
-            4
-          </h1>
-          <h4 class="text-xl md:text-3xl font-semibold">Deliver Excellence</h4>
-          <p>
-            Provide superior service to your clients with accurate, on-time
-            deliveries and transparent communication throughout the delivery
-            process.
-          </p>
-        </div>
-      </div>
-    </div>
+    <BenefitsLogistics />
   </section>
   <section class="bg-lightGray">
     <div

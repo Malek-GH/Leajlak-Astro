@@ -3,18 +3,21 @@ import "../styles/chatbot.css";
 import { Image } from "astro:assets";
 import whatsapp from "../../public/images/icons/whatsapp.svg";
 import chatbot from "../../public/Chatbot.svg";
+import close from "../../public/images/icons/close.svg";
+import icon from "../../public/icon.webp";
+import online from "../../public/Online.png";
 ---
 
 <div
   id="Chatbot-content"
-  class="bg-white size-full xs:rounded-2xl xs:mx-3 xs:h-120 3xl:h-[650px] z-40 xs:w-96 fixed bottom-0 xs:bottom-18 right-0 hidden flex-col overflow-hidden will-change-transform drop-shadow-md"
+  class="bg-white size-full xs:rounded-xl xs:mx-3 xs:h-120 3xl:h-[650px] z-40 xs:w-96 fixed bottom-0 xs:bottom-18 right-0 hidden flex-col overflow-hidden will-change-transform drop-shadow-md"
 >
   <div
     class="bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% p-4 flex items-center justify-between relative"
   >
     <div class="flex flex-col w-full gap-4">
       <div class="flex items-center gap-2 w-full">
-        <img src="/Frame4.png" alt="" class="size-7" />
+        <Image src={online} alt="online-icon" class="size-8" loading="lazy" />
         <h6 class="text-white text-xl font-semibold font-Montserrat">
           FAQ Assistant
         </h6>
@@ -24,10 +27,11 @@ import chatbot from "../../public/Chatbot.svg";
       id="close"
       class="hover:scale-110 duration-300 absolute right-4 top-5"
     >
-      <img
-        src="/images/icons/close.svg"
+      <Image
+        src={close}
         alt="close"
         class="pointer-events-none"
+        loading="lazy"
       />
     </button>
   </div>
@@ -36,10 +40,11 @@ import chatbot from "../../public/Chatbot.svg";
       <div class="chat-container space-y-4 p-4" id="chat-container">
         <div class="flex flex-row gap-2 items-end w-full">
           <div>
-            <img
-              src="/icon.webp"
+            <Image
+              src={icon}
               alt="bot icon"
               class="max-h-7 max-w-5 shrink-0"
+              loading="lazy"
             />
           </div>
           <div
@@ -50,10 +55,11 @@ import chatbot from "../../public/Chatbot.svg";
         </div>
         <div class="flex flex-row gap-2 items-end w-full">
           <div>
-            <img
-              src="/icon.webp"
+            <Image
+              src={icon}
               alt="bot icon"
               class="max-h-7 max-w-5 shrink-0"
+              loading="lazy"
             />
           </div>
           <div
@@ -73,7 +79,7 @@ import chatbot from "../../public/Chatbot.svg";
       href="https://wa.me/966536767272"
       target="_blank"
     >
-      <Image src={whatsapp} alt="Chat on WhatsApp" />
+      <Image src={whatsapp} alt="Chat on WhatsApp" loading="lazy" />
     </a>
   </div>
 </div>

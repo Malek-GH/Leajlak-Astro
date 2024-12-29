@@ -39,7 +39,7 @@
     @apply text-xl font-bold text-darkText;
   }
   p {
-    @apply text-base font-normal leading-7 opacity-80;
+    @apply text-base font-light leading-7;
   }
   section {
     @apply relative;
@@ -274,18 +274,11 @@ header.scrolled .menu-burger {
   @apply space-y-2;
 }
 
-/* .card-solution:nth-child(2n) {
-  @apply md:pt-16;
-} */
-
 .card-solution h4 {
   @apply text-2xl ltr:text-left rtl:text-right;
 }
 .card-solution p {
   @apply ltr:text-left rtl:text-right;
-}
-.benefits-card {
-  @apply relative flex flex-col items-center justify-center lg:flex-row;
 }
 
 .socials {

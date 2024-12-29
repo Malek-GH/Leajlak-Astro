@@ -21,7 +21,7 @@ const handleRedirect = (lang: string) => {
   class="fixed top-0 z-50 w-full rounded-b-xl bg-transparent py-4 transition-colors duration-200 ease-in"
 >
   <div
-    class="fade relative flex flex-row justify-between items-center max-w-7xl mx-auto px-6 lg:px-14 3xl:px-0 h-12 lg:h-16 lg:justify-between"
+    class="fade relative flex flex-row justify-between items-center max-w-7xl mx-auto px-6 lg:px-10 3xl:px-0 h-12 lg:h-16 lg:justify-between"
     data-animation="animate-fade animate-duration-[2000ms]"
   >
     <a href=`/${lang}/`>
@@ -433,7 +433,8 @@ const handleRedirect = (lang: string) => {
                       loading="eager"
                       src={english}
                       class="size-6  rounded-full pointer-events-none"
-                      alt=""
+                      aria-label="English"
+                      alt="UK"
                     />
                     <span>English</span>
                   </>
@@ -445,7 +446,8 @@ const handleRedirect = (lang: string) => {
                       loading="eager"
                       src={arabic}
                       class="size-6  rounded-full pointer-events-none"
-                      alt=""
+                      alt="KSA"
+                      aria-label="العربية"
                     />
                     <span>العربية</span>
                   </>
@@ -476,7 +478,7 @@ const handleRedirect = (lang: string) => {
                           loading="lazy"
                           src={arabic}
                           class="size-6 rounded-full me-2 pointer-events-none"
-                          alt=""
+                          alt="KSA"
                         />
                         Arabic
                       </a>
@@ -494,12 +496,13 @@ const handleRedirect = (lang: string) => {
                         href={`${handleRedirect("ar")}`}
                         class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center"
                         role="menuitem"
+                        aria-label="english"
                       >
                         <Image
                           loading="lazy"
                           src={english}
                           class="size-6 rounded-full me-2 pointer-events-none"
-                          alt=""
+                          alt="UK"
                         />
                         English
                       </a>

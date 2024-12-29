@@ -1,0 +1,87 @@
+---
+import { Image } from "astro:assets";
+import cost from "../../public/images/bg/cost_saving.webp";
+import experience from "../../public/images/bg/customer experience.webp";
+import scalability from "../../public/images/bg/charts.webp";
+import integration from "../../public/images/bg/integration.webp";
+
+const benefits = [
+  {
+    image: cost,
+    alt: "Cost Savings",
+    title: "Cut Costs, Boost Profits",
+    description:
+      "Cut down on expenses by utilizing our platform's advanced route optimization and efficient logistics management. Streamlined operations lead to reduced fuel costs, fewer delays, and better resource utilization, helping you improve profitability without compromising on service quality.",
+  },
+  {
+    image: experience,
+    alt: "Customer Experience",
+    title: "Enhance Customer Experience",
+    description:
+      "Ensure timely deliveries and exceptional service quality with our platform. By streamlining logistics and providing real-time tracking, you can offer a reliable, consistent experience that enhances customer trust and satisfaction, leading to greater loyalty and repeat business.",
+  },
+  {
+    image: scalability,
+    alt: "Scalability",
+    title: "Scalable Solutions",
+    description:
+      "Our flexible platform grows with your business, allowing you to effortlessly scale operations to meet increasing demand. With seamless integration and adaptable features, you can expand without hassle, ensuring your logistics can handle more orders as your business evolves.",
+  },
+  {
+    image: integration,
+    alt: "Integration",
+    title: "Seamless Integration",
+    description:
+      "Easily integrate our platform with your existing systems and workflows, ensuring smooth, uninterrupted operations. Our solution is designed to work harmoniously with your current setup, allowing you to enhance efficiency without the need for complex adjustments or downtime.",
+  },
+];
+---
+
+<div
+  class="container section-container space-y-28 overflow-hidden text-darkText"
+>
+  <div
+    class="fade flex flex-col items-center text-center gap-2"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
+    <h2>Benefits for Merchants</h2>
+  </div>
+  <div class="flex flex-row justify-evenly gap-x-10 gap-y-28 flex-wrap">
+    {
+      benefits.map((benefit) => (
+        <div
+          class="benefits-card fade"
+          data-animation="animate-fade animate-duration-[1000ms]"
+        >
+          <div class="image-container">
+            <Image src={benefit.image} alt={benefit.alt} loading="lazy" />
+          </div>
+          <div class="text">
+            <h4 class="">{benefit.title}</h4>
+            <p>{benefit.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+<style>
+  .benefits-card {
+    @apply relative flex h-full flex-shrink-0 flex-grow-0 basis-full flex-col justify-end rounded-2xl bg-white p-6 drop-shadow-lg md:basis-full md:flex-row md:items-center md:justify-center md:gap-10;
+  }
+  .benefits-card .image-container {
+    @apply relative left-1/2 top-0 h-80 w-[calc(100%+16px)] -translate-x-1/2 -translate-y-10 overflow-hidden rounded-lg shadow-lg shadow-black/20 md:left-0 md:h-full md:w-full md:translate-x-0 md:translate-y-0;
+  }
+  .image-container img {
+    @apply size-full xs:object-cover;
+  }
+  .text {
+    @apply relative space-y-4 md:w-full;
+  }
+  .benefits-card:nth-child(2n) .image-container {
+    @apply order-1 md:order-2;
+  }
+  .benefits-card:nth-child(2n) .text {
+    @apply order-2 md:order-1;
+  }
+</style>
