@@ -38,47 +38,25 @@ export default {
         },
       },
       backgroundImage: {
-        logistic_solution_lg: "url('/images/bg/logistic_solution_lg.webp')",
-        logistic_solution_med: "url('/images/bg/logistic_solution_med.webp')",
-        logistic_solution_mobile:
-          "url('/images/bg/logistic_solution_mobile.webp')",
-        merchant_solution_lg: "url('/images/bg/merchant_solution_lg.webp')",
-        merchant_solution_med: "url('/images/bg/merchant_solution_md.webp')",
-        merchant_solution_mobile:
-          "url('/images/bg/merchant_solution_mobile.webp')",
-        contact_lg: "url('/images/bg/contact-lg.webp')",
-        contact_med: "url('/images/bg/contact-med.webp')",
-        contact_mobile: "url('/images/bg/contact-mobile.webp')",
-        digital_bg1: "url('/images/bg/digital-bg1.webp')",
-        digital_bg2: "url('/images/bg/digital-bg2.webp')",
-        digital_bg3: "url('/images/bg/digital-bg3.webp')",
-        joinUs: "url('/images/bg/joinus.webp')",
-        joinUs_mobile: "url('/images/bg/joinus-mobile.webp')",
-        register_logistic_med: "url('/images/bg/register_logistic_med.webp')",
-        register_logistic_lg: "url('/images/bg/register_logistic_lg.webp')",
-        register_merchants_med: "url('/images/bg/register_merchants_med.webp')",
-        register_merchants_lg: "url('/images/bg/register_merchants_lg.webp')",
-
-        drivers_registration_lg_en:
-          "url('/images/bg/drivers registration/drivers_registration_lg-en.webp)",
-        drivers_registration_md_en:
-          "url('/images/bg/drivers registration/drivers_registration_md-en.webp')",
-        drivers_registration_mobile_en:
-          "url('/images/bg/drivers registration/drivers_registration_mobile-en.webp')",
-
-        drivers_registration_lg_ar:
-          "url('/images/bg/drivers registration/drivers_registration_lg-ar.webp)",
-        drivers_registration_md_ar:
-          "url('/images/bg/drivers registration/drivers_registration_md-ar.webp')",
-        drivers_registration_mobile_ar:
-          "url('/images/bg/drivers registration/drivers_registration_mobile-ar.webp')",
-
-        about_lg: "url('/images/bg/about-lg.webp')",
-        about_med: "url('/images/bg/about-md.webp')",
-        about_mobile: "url('/images/bg/about-mobile.webp')",
+        blurredAboutBg: "url('/images/bg/about-blurred.webp')",
+        blurredContactBg: "url('/images/bg/contact-blurred.webp')",
+        blurredmerchant_solution:
+          "url('/images/bg/merchant_solution_blurred.webp')",
+        blurredlogistic_solution:
+          "url('/images/bg/logistic_solution_blurred.webp')",
+        blurredlogistic_register:
+          "url('/images/bg/register_logistic_blurred.webp')",
+        blurredmerchant_register:
+          "url('/images/bg/register_merchants_blurred.webp')",
+        blurredDriver_register:
+          "url('/images/bg/drivers_registration/drivers_registration_blurred-en.webp')",
 
         tick: "url('/images/icons/check-circle.svg')",
         caret: "url('/images/icons/caret.svg')",
+        digital_bg1: "url('/images/bg/digital-bg1.webp')",
+        digital_bg2: "url('/images/bg/digital-bg2.webp')",
+        digital_bg3: "url('/images/bg/digital-bg3.webp')",
+        blurredjoinUs: "url('/images/bg/joinusblurred.webp')",
       },
       colors: {
         primaryOrange: "#ED6132",
@@ -121,7 +99,6 @@ export default {
         120: "540px",
         hero_sm: "650px",
         hero_lg: "850px",
-        hero_mobile: "92vh",
       },
       transitionProperty: {
         "max-height": "max-height",

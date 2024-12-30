@@ -15,32 +15,22 @@ import Values from "../../components/values.astro";
 import ButtonOutline from "../../components/ButtonOutline.astro";
 ---
 
-<link
-  rel="preload"
-  href="/images/bg/about-lg.webp"
-  as="image"
-  media="(min-width: 1600px)"
-/>
-<link
-  rel="preload"
-  href="/images/bg/about-md.webp"
-  as="image"
-  media="(min-width: 450px)"
-/>
-
+<link rel="preload" href="/images/bg/about-blurred.webp" as="image" />
 <Layout title="About Us" lang="en">
   <section class="hero z-0" id="about-hero">
-    <picture>
-      <source media="(min-width: 1600px)" srcset="/images/bg/about-lg.webp" />
-      <source srcset="/images/bg/about-md.webp" media="(min-width: 450px) " />
-      <Image
-        src={about_mobile}
-        alt="About-bg"
-        class="fixed size-full z-0 bottom-0 object-cover"
-        loading="eager"
-        fetchpriority="high"
-      />
-    </picture>
+    <div class="bg-blurredAboutBg bg-fixed blurred-img">
+      <picture>
+        <source srcset="/images/bg/about-lg.webp" media="(min-width: 480px)" />
+        <Image
+          src={about_mobile}
+          alt="About-bg"
+          class="HeroBg fixed size-full z-0 bottom-0 object-cover object-center"
+          loading="eager"
+          decoding="sync"
+          fetchpriority="high"
+        />
+      </picture>
+    </div>
     <div
       id="hero-overlay"
       class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
@@ -83,7 +73,7 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
       >
         <div class="max-w-full flex-1 flex flex-col gap-y-4">
           <h2 class="">About Leajlak</h2>
-          <p class="lg:text-lg">
+          <p class="">
             Leajlak is an innovative tech company focused on revolutionizing the
             logistics and order management landscape. By offering a
             comprehensive, customizable solution, Leajlak connects merchants
@@ -178,7 +168,7 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
         Trusted by Leading Businesses
       </h2>
       <div
-        class="fade flex flex-wrap items-center justify-center gap-x-5 gap-y-28"
+        class="fade flex flex-wrap items-center justify-center gap-x-20 md:gap-x-5 gap-y-28"
         data-animation="animate-fade animate-duration-[1000ms]"
       >
         <TrustedIcons imgSrc={Mc} alt="Mcdonald" />
