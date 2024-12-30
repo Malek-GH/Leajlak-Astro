@@ -13,12 +13,11 @@ import BenefitsMerchants from "../../../components/BenefitsMerchants.astro";
   rel="preload"
   href="/images/bg/merchant_solution_blurred.webp"
   as="image"
-  media="(min-width: 480px)"
 />
 
 <Layout title="Solutions | Merchants" lang="en">
   <section class="hero z-0" id="merchants-hero">
-    <div class="blurred-img bg-blurredmerchant_solution">
+    <div class="blurred-img bg-blurredmerchant_solution bg-fixed">
       <picture>
         <source
           media="(min-width: 480px)"
@@ -428,3 +427,4 @@ import BenefitsMerchants from "../../../components/BenefitsMerchants.astro";
     </div>
   </section>
 </Layout>
+<script src="../../../Script/BlurredImage.js"></script>

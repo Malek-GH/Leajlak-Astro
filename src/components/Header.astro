@@ -319,6 +319,7 @@ const handleRedirect = (lang: string) => {
         <button
           type="button"
           class="inline-flex items-center justify-center rounded-md cursor-pointer gap-2 hover:text-primaryOrange"
+          aria-describedby="language button"
         >
           {
             () => {
@@ -329,7 +330,8 @@ const handleRedirect = (lang: string) => {
                       loading="eager"
                       src={english}
                       class="size-6  rounded-full pointer-events-none"
-                      alt=""
+                      aria-label="English Language icon"
+                      alt="IMAGE-UK"
                     />
                     <span>English</span>
                   </>
@@ -341,7 +343,8 @@ const handleRedirect = (lang: string) => {
                       loading="eager"
                       src={arabic}
                       class="size-6  rounded-full pointer-events-none"
-                      alt=""
+                      alt="IMAGE-KSA"
+                      aria-label="ايقونة اللغة العربية"
                     />
                     <span>العربية</span>
                   </>
@@ -357,6 +360,7 @@ const handleRedirect = (lang: string) => {
           <ul
             class="font-medium text-darkText py-5 lg:px-4 space-y-4"
             role="none"
+            aria-describedby="language choices"
           >
             {
               () => {
@@ -367,13 +371,13 @@ const handleRedirect = (lang: string) => {
                         href={`${handleRedirect("en")}`}
                         class="hover:text-primaryOrange inline-flex items-center  font-semibold"
                         role="menuitem"
-                        aria-label="arabic"
+                        aria-label="arabic Language choice"
                       >
                         <Image
                           loading="lazy"
                           src={arabic}
                           class="size-6 rounded-full me-2 pointer-events-none"
-                          alt=""
+                          alt="IMAGE-KSA"
                         />
                         Arabic
                       </a>
@@ -391,12 +395,13 @@ const handleRedirect = (lang: string) => {
                         href={`${handleRedirect("ar")}`}
                         class="hover:text-primaryOrange inline-flex items-center  font-semibold"
                         role="menuitem"
+                        aria-label="english Language choice"
                       >
                         <Image
                           loading="lazy"
                           src={english}
                           class="size-6 rounded-full me-2 pointer-events-none"
-                          alt=""
+                          alt="IMAGE-UK"
                         />
                         English
                       </a>
