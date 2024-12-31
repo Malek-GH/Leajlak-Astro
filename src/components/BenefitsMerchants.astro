@@ -37,9 +37,7 @@ const benefits = [
 ];
 ---
 
-<div
-  class="container section-container space-y-28 overflow-hidden text-secondaryBlueText"
->
+<div class="container section-container space-y-28 text-secondaryBlueText">
   <div
     class="fade flex flex-col items-center text-center gap-2"
     data-animation="animate-fade animate-duration-[1000ms]"
@@ -67,7 +65,7 @@ const benefits = [
 </div>
 <style>
   .benefits-card {
-    @apply relative flex h-full flex-shrink-0 flex-grow-0 basis-full flex-col justify-end rounded-2xl bg-white p-6 drop-shadow-lg md:basis-full md:flex-row md:items-center md:justify-center md:gap-10;
+    @apply relative flex h-full flex-shrink-0 flex-grow-0 basis-full flex-col justify-end rounded-2xl bg-white p-6 shadow-card_shadow shadow-secondaryBlueDark/20 md:basis-full md:flex-row md:items-center md:justify-center md:gap-10;
   }
   .benefits-card .image-container {
     @apply relative left-1/2 top-0 h-80 w-[calc(100%+16px)] -translate-x-1/2 -translate-y-10 overflow-hidden rounded-lg shadow-lg shadow-black/20 md:left-0 md:h-full md:w-full md:translate-x-0 md:translate-y-0;
