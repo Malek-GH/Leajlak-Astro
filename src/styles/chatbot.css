@@ -21,13 +21,13 @@
 }
 
 .option-btn-initial {
-  @apply text-secondaryBlueText rounded-md py-2 text-center font-semibold leading-normal ring-1 ring-darkGray duration-300 ease-in-out hover:bg-darkGray hover:text-white;
+  @apply rounded py-2 text-center font-semibold leading-normal text-secondaryBlueText ring-1 ring-darkGray duration-300 ease-in-out hover:bg-darkGray hover:text-white;
 }
 .option-btn {
-  @apply text-secondaryBlueText rounded-md px-2 text-left text-base font-semibold leading-normal ring-1 ring-darkGray duration-300 ease-in-out hover:bg-darkGray hover:text-white xs:text-sm;
+  @apply rounded px-2 text-left text-base font-semibold leading-normal text-secondaryBlueText ring-1 ring-darkGray duration-300 ease-in-out hover:bg-darkGray hover:text-white xs:text-sm;
 }
 .return-btn {
-  @apply w-full rounded-md px-3 py-2 text-center font-semibold text-primaryOrange ring-1 ring-primaryOrange duration-300 ease-in-out hover:bg-primaryOrange hover:text-white lg:w-auto;
+  @apply w-full rounded px-3 py-2 text-center font-semibold text-primaryOrange ring-1 ring-primaryOrange duration-300 ease-in-out hover:bg-primaryOrange hover:text-white lg:w-auto;
 }
 
 #Chatbot-content {
