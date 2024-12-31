@@ -236,8 +236,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const bubble = document.createElement("div");
     bubble.className = "flex flex-row-reverse gap-2 items-end w-full";
     bubble.innerHTML = `
-      <div class="bg-primaryOrange text-white rounded-t-lg rounded-bl-lg drop-shadow-md py-2 px-4">
-        <p class="chatText">${text}</p>
+      <div class="bg-primaryOrange  rounded-t-lg rounded-bl-lg drop-shadow-md py-2 px-4">
+        <p class="text-white chatText">${text}</p>
       </div>
     `;
     chatContainer.appendChild(bubble);
