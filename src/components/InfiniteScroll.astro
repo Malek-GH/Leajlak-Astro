@@ -27,7 +27,7 @@ const logos = await Astro.glob(
           <Image
             src={logo.default}
             alt={altText}
-            loading="eager"
+            loading="lazy"
             class="size-full"
           />
         </picture>
