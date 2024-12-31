@@ -21,11 +21,11 @@
   }
 
   h1 {
-    @apply text-secondaryBlueText text-3xl font-extrabold sm:text-4xl lg:text-5xl rtl:leading-tight;
+    @apply text-3xl font-extrabold text-secondaryBlueText sm:text-4xl lg:text-5xl rtl:leading-tight;
   }
 
   h2 {
-    @apply text-secondaryBlueText text-2xl font-bold leading-1.3 sm:text-3xl;
+    @apply text-2xl font-bold leading-1.3 text-secondaryBlueText sm:text-3xl;
   }
 
   h3 {
@@ -33,13 +33,13 @@
   }
 
   h4 {
-    @apply text-secondaryBlueText text-xl font-bold md:text-2xl;
+    @apply text-xl font-bold text-secondaryBlueText md:text-2xl;
   }
   h5 {
-    @apply text-secondaryBlueText text-xl font-bold;
+    @apply text-xl font-bold text-secondaryBlueText;
   }
   p {
-    @apply text-secondaryBlueText text-base font-light leading-7;
+    @apply text-base font-light leading-7 text-secondaryBlueText;
   }
   section {
     @apply relative;
@@ -75,7 +75,7 @@
 }
 
 .header-logo {
-  @apply w-24 lg:w-32;
+  @apply w-28 lg:w-36;
 }
 
 .header-logo.scrolled {
@@ -104,7 +104,7 @@ header.scrolled .nav-list {
 }
 
 .nav-list.open {
-  @apply text-secondaryBlueText h-full translate-x-0 bg-white opacity-100 transition-transform duration-300 ease-in lg:bg-transparent lg:text-white;
+  @apply h-full translate-x-0 bg-white text-secondaryBlueText opacity-100 transition-transform duration-300 ease-in lg:bg-transparent lg:text-white;
 }
 
 .nav_item {

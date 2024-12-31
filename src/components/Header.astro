@@ -356,20 +356,17 @@ const handleRedirect = (lang: string) => {
         <div
           class="language-dropdown-menu lg:absolute lg:top-16 lg:right-0 lg:bg-white lg:w-48 lg:rounded-lg lg:drop-shadow-lg"
           id="language-dropdown-menu"
+          aria-describedby="language choices"
         >
           <ul
             class="font-medium text-secondaryBlueText py-5 lg:px-4 space-y-4"
             role="none"
-            aria-describedby="language choices"
           >
             {
               () => {
                 if (lang === "en") {
                   return (
-                    <li
-                      class="lg:hover:text-primaryOrange"
-                      aria-describedby="language choice"
-                    >
+                    <li class="lg:hover:text-primaryOrange">
                       <a
                         href={`${handleRedirect("en")}`}
                         class="hover:text-primaryOrange inline-flex items-center  font-semibold"
@@ -470,17 +467,17 @@ const handleRedirect = (lang: string) => {
         </button>
         <div
           class="language-dropdown-menu lg:absolute lg:top-16 lg:right-0 lg:bg-white lg:w-48 lg:rounded-lg lg:drop-shadow-lg"
+          aria-describedby="language choices"
         >
           <ul
             class="font-semibold text-secondaryBlueText py-5 lg:px-4 space-y-4"
             role="none"
-            aria-describedby="language choices"
           >
             {
               () => {
                 if (lang === "en") {
                   return (
-                    <li aria-describedby="language choice">
+                    <li>
                       <a
                         href={`${handleRedirect("en")}`}
                         class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center  "
