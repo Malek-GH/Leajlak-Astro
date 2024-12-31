@@ -61,10 +61,12 @@ export default {
       colors: {
         primaryOrange: "#ED6132",
         darkerOrange: "#CD4213",
+        secondaryBlue: "#0E1F42",
+        secondaryBlueText: "#292F3D",
+        secondaryBlueDark: "#212631",
         lightGray: "#F6F6F6",
         customYellow: "#F7B614",
         darkGray: "#202020",
-        darkText: "#333333",
       },
       fontFamily: {
         Hanimation: ["Hanimation", "sans-serif"],

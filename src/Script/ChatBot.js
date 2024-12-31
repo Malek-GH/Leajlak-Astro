@@ -409,7 +409,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeButton = document.getElementById("close");
   const header = document.querySelector("header");
 
-  const isSmallScreen = () => window.innerWidth <= 450;
+  const isSmallScreen = () => window.innerWidth <= 768;
 
   openButton.addEventListener("click", () => {
     content.classList.add("active");
