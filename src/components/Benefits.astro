@@ -1,7 +1,5 @@
 ---
 import Button from "./Button.astro";
-import BentoGridMerchants from "./BentoGridMerchants.astro";
-import BentoGridLogistics from "./BentoGridLogistics.astro";
 ---
 
 <style>
@@ -15,10 +13,10 @@ import BentoGridLogistics from "./BentoGridLogistics.astro";
 
 <!-- Merchants -->
 <div
-  class="relative flex md:flex-row flex-col justify-between items-center h-full lg:gap-16 gap-x-1 gap-y-10"
+  class="relative flex lg:flex-row flex-col justify-between items-center h-full gap-20"
   data-animation="animate-fade animate-duration-[1000ms]"
 >
-  <div class="h-full flex flex-col justify-center gap-y-4 w-full lg:w-2/6">
+  <div class="h-full flex flex-col justify-center gap-y-4 w-full lg:w-1/2">
     <div>
       <h3>Solution</h3>
       <h2 class="text-secondaryBlueText">for Merchants</h2>
@@ -147,20 +145,30 @@ import BentoGridLogistics from "./BentoGridLogistics.astro";
       <Button link="registration/merchants" text="Register Now" />
     </div>
   </div>
-  <div class="w-full lg:w-4/6">
-    <BentoGridMerchants lang="en" />
+  <div class="w-full lg:w-1/2 flex justify-center drop-shadow-lg">
+    <img
+      src="/images/illustrations/merchant.png"
+      alt=""
+      class="w-full max-w-[640px] h-auto"
+    />
   </div>
 </div>
 <!-- 3PL -->
 <div
-  class="relative flex md:flex-row flex-col justify-between items-center h-full lg:gap-20 gap-x-5 gap-y-10"
+  class="relative flex lg:flex-row flex-col justify-between items-center h-full gap-20"
   data-animation="animate-fade animate-duration-[1000ms]"
 >
-  <div class="w-full lg:w-4/6 order-2 md:order-1 h-full">
-    <BentoGridLogistics lang="en" />
+  <div
+    class="w-full lg:w-1/2 flex justify-center order-2 lg:order-1 drop-shadow-lg"
+  >
+    <img
+      src="/images/illustrations/logistics.png"
+      alt=""
+      class="w-full max-w-[640px] h-auto"
+    />
   </div>
   <div
-    class="h-full flex flex-col justify-center gap-y-4 w-full lg:w-2/6 order-1 md:order-2"
+    class="h-full flex flex-col justify-center gap-y-4 w-full lg:w-1/2 order-1 lg:order-2"
   >
     <div class="space-y-4 z-10">
       <div>

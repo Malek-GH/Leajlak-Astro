@@ -13,6 +13,8 @@ import about_mobile from "../../../public/images/bg/about-mobile.webp";
 import TrustedIcons from "../../components/TrustedIcons.astro";
 import Values from "../../components/values.astro";
 import ButtonOutline from "../../components/ButtonOutline.astro";
+import Location from "../../components/Location.astro";
+import QuickSupport from "../../components/QuickSupport.astro";
 ---
 
 <link rel="preload" href="/images/bg/about-blurred.webp" as="image" />
@@ -193,6 +195,23 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
         <ButtonOutline href="registration/employees" text="Join Now" />
       </div>
     </div>
+  </section>
+  <section class="flex flex-col lg:flex-row bg-lightGray" id="contact">
+    <div
+      class="fade flex flex-col justify-center gap-20 w-full lg:w-1/2 px-6 py-10 lg:p-20"
+      data-animation="animate-fade-right animate-duration-[1000ms]"
+    >
+      <div class="text-left space-y-10">
+        <div class="xs:w-4/5 lg:w-full">
+          <h3>Quick support</h3>
+          <h2 class="">
+            Feel free to contact us by phone, email, or visit in person.
+          </h2>
+        </div>
+        <QuickSupport lang="en" />
+      </div>
+    </div>
+    <Location />
   </section>
 </Layout>
 <script src="/src/Script/typewriter.js"></script>

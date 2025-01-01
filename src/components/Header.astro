@@ -2,8 +2,8 @@
 const { lang = "en" } = Astro.props;
 
 import { Image } from "astro:assets";
-import logo_white from "../../public/images/logo-2-white-sm.webp";
-import logo_normal from "../../public/images/logo-2-sm.webp";
+import logo_white from "../../public/images/logo-2-white.webp";
+import logo_normal from "../../public/images/logo-2.webp";
 import english from "../../public/images/flag/uk.svg";
 import arabic from "../../public/images/flag/ksa.svg";
 const content = await import(`../data/${lang}.json`);
@@ -18,36 +18,28 @@ const handleRedirect = (lang: string) => {
 
 <header
   id="header"
-  class="fixed top-0 z-50 w-full rounded-b-xl bg-transparent py-4 transition-colors duration-200 ease-in"
+  class="fixed top-0 z-50 w-full rounded-b-xl bg-transparent py-2 transition-colors duration-200 ease-in"
 >
   <div
     class="fade relative flex flex-row justify-between items-center max-w-7xl mx-auto px-6 lg:px-10 3xl:px-0 h-12 lg:h-16 lg:justify-between"
     data-animation="animate-fade animate-duration-[2000ms]"
   >
     <a href=`/${lang}/`>
-      <picture>
-        <source
-          media="(min-width: 1024px)"
-          srcset="/images/logo-2-white.webp"
-        />
-        <Image
-          loading="eager"
-          id="logo-default"
-          class="header-logo"
-          src={logo_white}
-          alt="logo"
-        />
-      </picture>
-      <picture>
-        <source media="(min-width: 1024px)" srcset="/images/logo-2.webp" />
-        <Image
-          loading="lazy"
-          id="logo-scrolled"
-          class="header-logo scrolled"
-          src={logo_normal}
-          alt="logo"
-        />
-      </picture>
+      <Image
+        loading="eager"
+        id="logo-default"
+        class="header-logo"
+        src={logo_white}
+        alt="logo"
+      />
+
+      <Image
+        loading="lazy"
+        id="logo-scrolled"
+        class="header-logo scrolled"
+        src={logo_normal}
+        alt="logo"
+      />
     </a>
     <div class="nav-list">
       <div class="nav_item items">
@@ -59,9 +51,7 @@ const handleRedirect = (lang: string) => {
         >
       </div>
       <div class="nav_item items">
-        <a href={`/${lang}/contact`} data-route={`/${lang}/contact`}
-          >{content.contact}</a
-        >
+        <a href={`#`} data-route={`#`}>{content.Case}</a>
       </div>
       <!-- Dropdown menu -->
       <div
@@ -113,7 +103,7 @@ const handleRedirect = (lang: string) => {
         id="registerMenuButton"
       >
         <button class="flex items-center gap-2 lg:h-full" id="registerButton">
-          {content.register}
+          {content.contact}
           <svg
             class="transition-transform duration-300"
             width="10"
@@ -140,10 +130,10 @@ const handleRedirect = (lang: string) => {
                 class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md group"
               >
                 <a
-                  href={`/${lang}/registration/logistic-companies`}
-                  data-route={`/${lang}/registration/logistic-companies`}
+                  href={`/${lang}/contact/logistic-companies`}
+                  data-route={`/${lang}/contact/logistic-companies`}
                   class="flex flex-row items-start justify-between gap-2 register_item"
-                  aria-label="logistic-companie-registration"
+                  aria-label="logistic-companie-contact"
                 >
                   <div class="flex flex-col gap-1">
                     <h6
@@ -182,10 +172,10 @@ const handleRedirect = (lang: string) => {
                 class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group"
               >
                 <a
-                  href={`/${lang}/registration/merchants`}
-                  data-route={`/${lang}/registration/merchants`}
+                  href={`/${lang}/contact/merchants`}
+                  data-route={`/${lang}/contact/merchants`}
                   class="flex flex-row items-start justify-between gap-2 register_item"
-                  aria-label="merchants-registration"
+                  aria-label="merchants-contact"
                 >
                   <div class="flex flex-col gap-1">
                     <h6
@@ -224,10 +214,10 @@ const handleRedirect = (lang: string) => {
                 class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group"
               >
                 <a
-                  href={`/${lang}/registration/drivers`}
-                  data-route={`/${lang}/registration/drivers`}
+                  href={`/${lang}/contact/drivers`}
+                  data-route={`/${lang}/contact/drivers`}
                   class="flex flex-row items-start justify-between gap-2 register_item"
-                  aria-label="drivers-registration"
+                  aria-label="drivers-contact"
                 >
                   <div class="flex flex-col gap-1">
                     <h6
@@ -266,10 +256,10 @@ const handleRedirect = (lang: string) => {
                 class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group"
               >
                 <a
-                  href={`/${lang}/registration/employees`}
-                  data-route={`/${lang}/registration/employees`}
+                  href={`/${lang}/contact/employees`}
+                  data-route={`/${lang}/contact/employees`}
                   class="flex flex-row items-start justify-between gap-2 register_item"
-                  aria-label="employees-registration"
+                  aria-label="employees-contact"
                 >
                   <div class="flex flex-col gap-1">
                     <h6

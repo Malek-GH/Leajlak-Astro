@@ -1,7 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Location from "../../components/Location.astro";
-import QuickSupport from "../../components/QuickSupport.astro";
+
 import { Image } from "astro:assets";
 import contact_bg from "../../../public/images/bg/contact-mobile.webp";
 ---
@@ -47,111 +46,11 @@ import contact_bg from "../../../public/images/bg/contact-mobile.webp";
       </div>
     </div>
   </section>
-  <section class="flex flex-col lg:flex-row bg-white" id="contact">
-    <div
-      class="fade flex flex-col justify-center gap-20 w-full lg:w-1/2 px-6 py-10 lg:p-20"
-      data-animation="animate-fade-right animate-duration-[1000ms]"
-    >
-      <div>
-        <h3>Get in Touch</h3>
-        <h2 class="">any questions? we would be happy to help you!</h2>
-      </div>
-      <form class="space-y-6 md:space-y-16">
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="relative z-0 w-full group">
-            <input
-              type="text"
-              name="first_name"
-              id="first_name"
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
-              placeholder=" "
-              required
-            />
-            <label
-              for="first_name"
-              class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >First name</label
-            >
-          </div>
-          <div class="relative z-0 w-full group">
-            <input
-              type="text"
-              name="last_name"
-              id="last_name"
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
-              placeholder=" "
-              required
-            />
-            <label
-              for="last_name"
-              class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >Last name</label
-            >
-          </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="relative z-0 w-full group">
-            <input
-              type="number"
-              name="number"
-              id="number"
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
-              placeholder=""
-              required
-            />
-            <label
-              for="number"
-              class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >Phone number</label
-            >
-          </div>
-          <div class="relative z-0 w-full group">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
-              placeholder=" "
-              required
-            />
-            <label
-              for="email"
-              class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              >Email</label
-            >
-          </div>
-        </div>
-        <div class="relative z-0 w-full group">
-          <textarea
-            minlength="10"
-            maxlength="255"
-            name="message"
-            id="message"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black/20 appearance-none focus:outline-none focus:ring-0 focus:border-primaryOrange/80 peer"
-            placeholder=" "
-            required></textarea>
-          <label
-            for="message"
-            class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-primaryOrange/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >Message</label
-          >
-        </div>
-        <button type="submit" class="button-regular">Submit</button>
-      </form>
-    </div>
-    <Location />
-  </section>
+
   <section id="contact" class="bg-lightGray">
     <div
       class="container section-container flex flex-col justify-center items-center lg:items-start gap-20"
     >
-      <div class="text-center lg:text-left lg:w-1/2">
-        <h3>Quick support</h3>
-        <h2 class="">
-          Feel free to contact us by phone, email, or visit in person.
-        </h2>
-      </div>
-      <QuickSupport lang="en" />
     </div>
   </section>
 </Layout>

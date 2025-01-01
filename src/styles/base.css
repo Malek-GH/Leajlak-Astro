@@ -21,7 +21,7 @@
   }
 
   h1 {
-    @apply text-3xl font-extrabold text-secondaryBlueText sm:text-4xl lg:text-5xl rtl:leading-tight;
+    @apply text-3xl font-extrabold text-secondaryBlueText sm:text-4xl 3xl:text-5xl rtl:leading-tight;
   }
 
   h2 {
@@ -65,7 +65,7 @@
   @apply relative mx-auto max-w-7xl px-6 py-24 lg:px-10 3xl:px-0;
 }
 .hero {
-  @apply h-hero_sm lg:h-hero_lg;
+  @apply h-hero;
 }
 .cta {
   @apply flex h-[400px] flex-col items-center justify-evenly;
@@ -73,7 +73,9 @@
 .fade {
   @apply opacity-0;
 }
-
+.no-scroll {
+  @apply overflow-hidden;
+}
 .header-logo {
   @apply w-28 lg:w-36;
 }

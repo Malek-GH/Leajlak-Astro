@@ -40,9 +40,7 @@ const content = await import(`../data/${lang}.json`);
               >
             </li>
             <li>
-              <a href={`/${lang}/contant`} class="hover:text-gray-400"
-                >{content.contact}</a
-              >
+              <a href={`#`} class="hover:text-gray-400">{content.Case}</a>
             </li>
           </ul>
         </div>
@@ -59,7 +57,7 @@ const content = await import(`../data/${lang}.json`);
             </li>
             <li>
               <a
-                href={`/${lang}/solutions/3PL-solutions`}
+                href={`/${lang}/solutions/logistic-solutions`}
                 class="hover:text-gray-400">{content.For_3PL_Companies}</a
               >
             </li>
@@ -68,7 +66,7 @@ const content = await import(`../data/${lang}.json`);
         <!-- Contact Information -->
         <div>
           <h3 class="text-lg md:text-xl font-bold mb-4 text-primaryOrange">
-            {content.Registration}
+            {content.contact}
           </h3>
           <ul class="space-y-3">
             <li>

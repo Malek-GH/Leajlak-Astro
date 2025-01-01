@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
         logistic: `/${lang}/solutions/logistic-solutions`,
       },
       register: {
-        merchant: `/${lang}/registration/merchants`,
-        logistic: `/${lang}/registration/logistic-companies`,
-        drivers: `/${lang}/registration/drivers`,
-        employees: `/${lang}/registration/employees`,
+        merchant: `/${lang}/contact/merchants`,
+        logistic: `/${lang}/contact/logistic-companies`,
+        drivers: `/${lang}/contact/drivers`,
+        employees: `/${lang}/contact/employees`,
       },
     };
     const classes = "active";
