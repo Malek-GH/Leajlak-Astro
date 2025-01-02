@@ -12,6 +12,25 @@ import BenefitsMerchants from "../../../components/BenefitsMerchants.astro";
 import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 ---
 
+<style>
+  .card-solution {
+    @apply flex flex-col items-start justify-start gap-y-5;
+  }
+  .card-solution svg {
+    @apply size-10 fill-white stroke-white;
+  }
+
+  .card-solution > div {
+    @apply space-y-2;
+  }
+
+  .card-solution h4 {
+    @apply text-2xl ltr:text-left rtl:text-right;
+  }
+  .card-solution p {
+    @apply ltr:text-left rtl:text-right;
+  }
+</style>
 <Layout title="Solutions | Merchants" lang="en">
   <section class="hero z-0" id="merchants-hero">
     <div class="blurred-img bg-blurredmerchant_solution bg-fixed">
