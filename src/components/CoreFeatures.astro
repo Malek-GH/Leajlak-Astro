@@ -15,7 +15,7 @@ const content = await import(`../data/${lang}.json`);
     class="fade FeatureCard"
     data-animation="animate-fade animate-duration-[1000ms]"
   >
-    <Image src={api} alt="Api" loading="lazy" />
+    <Image src={api} alt="Api" loading="lazy" fetchpriority="low" />
     <div>
       <h4 class="font-medium">{content.API}</h4>
       <p class="">
@@ -27,7 +27,12 @@ const content = await import(`../data/${lang}.json`);
     class="fade FeatureCard"
     data-animation="animate-fade animate-duration-[1000ms]"
   >
-    <Image src={order_status} alt="order_status" loading="lazy" />
+    <Image
+      src={order_status}
+      alt="order_status"
+      loading="lazy"
+      fetchpriority="low"
+    />
     <div>
       <h4 class="font-medium">{content.Order}</h4>
       <p>
@@ -39,7 +44,12 @@ const content = await import(`../data/${lang}.json`);
     class="fade FeatureCard"
     data-animation="animate-fade animate-duration-[1000ms]"
   >
-    <Image src={LiveLocation} alt="LiveLocation" loading="lazy" />
+    <Image
+      src={LiveLocation}
+      alt="LiveLocation"
+      loading="lazy"
+      fetchpriority="low"
+    />
     <div>
       <h4 class="font-medium">{content.DLL}</h4>
       <p>
@@ -51,7 +61,12 @@ const content = await import(`../data/${lang}.json`);
     class="fade FeatureCard"
     data-animation="animate-fade animate-duration-[1000ms]"
   >
-    <Image src={Payment_methods} alt="Payment_methods" loading="lazy" />
+    <Image
+      src={Payment_methods}
+      alt="Payment_methods"
+      loading="lazy"
+      fetchpriority="low"
+    />
     <div>
       <h4 class="font-medium">{content.Paymentm}</h4>
       <p>
@@ -63,7 +78,7 @@ const content = await import(`../data/${lang}.json`);
     class="fade FeatureCard"
     data-animation="animate-fade animate-duration-[1000ms]"
   >
-    <Image src={chat} alt="chat" loading="lazy" />
+    <Image src={chat} alt="chat" loading="lazy" fetchpriority="low" />
     <div>
       <h4 class="font-medium">{content.Customerchat}</h4>
       <p>
@@ -75,7 +90,12 @@ const content = await import(`../data/${lang}.json`);
     class="fade FeatureCard"
     data-animation="animate-fade animate-duration-[1000ms]"
   >
-    <Image src={order_return} alt="order_return" loading="lazy" />
+    <Image
+      src={order_return}
+      alt="order_return"
+      loading="lazy"
+      fetchpriority="low"
+    />
     <div>
       <h4 class="font-medium">{content.ORM}</h4>
       <p>

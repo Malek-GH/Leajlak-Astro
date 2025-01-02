@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer base {
   @font-face {
     font-family: "Hanimation";
@@ -264,23 +260,6 @@ header.scrolled .menu-burger {
   #nav-items a.active::after {
     display: none;
   }
-}
-.card-solution {
-  @apply flex flex-col items-start justify-start gap-y-5;
-}
-.card-solution svg {
-  @apply size-10 fill-white stroke-white;
-}
-
-.card-solution > div {
-  @apply space-y-2;
-}
-
-.card-solution h4 {
-  @apply text-2xl ltr:text-left rtl:text-right;
-}
-.card-solution p {
-  @apply ltr:text-left rtl:text-right;
 }
 
 .socials {
