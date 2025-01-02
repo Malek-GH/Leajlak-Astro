@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const registerButton = document.getElementById("registerMenuButton");
   const registerMenu = document.getElementById("registerMenu");
   const registerItems = document.querySelectorAll(".register_item");
-
+  const contactButton = document.querySelector("#contact-us");
+  const isSmallScreen = () => window.innerWidth <= 1024;
   function handleScroll() {
     if (window.scrollY > 0) {
       header.classList.add("scrolled");
@@ -141,6 +142,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   registerButton.addEventListener("mouseleave", function (event) {
     registerMenu.classList.remove("active");
+  });
+
+  contactButton.addEventListener("click", function (event) {
+    if (isSmallScreen()) {
+      document.body.classList.toggle(
+        "no-scroll",
+        navList.classList.toggle("open"),
+      );
+      burger1.classList.toggle("burger-active");
+      burger2.classList.toggle("burger-active");
+      burger3.classList.toggle("burger-active");
+      setTimeout(() => registerMenu.classList.toggle("active"), 400);
+    } else {
+      registerMenu.classList.toggle("active");
+    }
   });
 
   handleScroll();

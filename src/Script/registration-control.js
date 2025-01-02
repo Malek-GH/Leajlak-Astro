@@ -30,7 +30,6 @@ formSteppers.forEach((formStepper) => {
       e.preventDefault();
     } else {
       alert("Form submitted successfully!");
-      // Handle form submission here
     }
   });
 
@@ -60,66 +59,36 @@ formSteppers.forEach((formStepper) => {
     const stepContent = formSteps[idx];
     let isValid = true;
 
-    // Validate text inputs
-    const inputs = stepContent.querySelectorAll(".input-text");
-    inputs.forEach((input) => {
-      const errorMessage = input.parentElement.nextElementSibling;
-      if (input.value.trim() === "") {
-        isValid = false;
-        input.classList.add("error");
-        errorMessage.style.display = "block";
-      } else {
-        input.classList.remove("error");
-        input.classList.add("correct");
-        errorMessage.style.display = "none";
-      }
-    });
+    const validateInputs = (selector, regex) => {
+      const inputs = stepContent.querySelectorAll(selector);
+      inputs.forEach((input) => {
+        const valid = regex.test(input.value);
+        input.classList.toggle("error", !valid);
+        input.classList.toggle("correct", valid);
 
-    // Validate email inputs
-    const emails = stepContent.querySelectorAll(".input-email");
+        const errorMessage = input.parentElement.nextElementSibling;
+        if (errorMessage) {
+          errorMessage.classList.toggle("hidden", valid);
+        }
+
+        if (!valid) {
+          isValid = false;
+        }
+      });
+    };
+
+    const textRegex = /^[a-zA-Z0-9,#.\-]+$/;
+    validateInputs(".input-text", textRegex);
     const emailRegex = /^\S+@\S+\.\S+$/;
-    emails.forEach((email) => {
-      const errorMessage = email.parentElement.nextElementSibling;
-      if (!email.value.match(emailRegex)) {
-        isValid = false;
-        email.classList.add("error");
-        errorMessage.style.display = "block";
-      } else {
-        email.classList.remove("error");
-        email.classList.add("correct");
-        errorMessage.style.display = "none";
-      }
-    });
-
-    // Validate number inputs
-    const numbers = stepContent.querySelectorAll(".input-number");
+    validateInputs(".input-email", emailRegex);
     const numberRegex = /^(0|[1-9]\d*)$/;
-    numbers.forEach((number) => {
-      const errorMessage = number.parentElement.nextElementSibling;
-      if (!number.value.match(numberRegex)) {
-        isValid = false;
-        number.classList.add("error");
-        errorMessage.style.display = "block";
-      } else {
-        number.classList.remove("error");
-        number.classList.add("correct");
-        errorMessage.style.display = "none";
-      }
-    });
+    validateInputs(".input-number", numberRegex);
 
     // Validate checkboxes
     const requiredCheckboxes =
       stepContent.querySelectorAll(".required-checkbox");
     if (requiredCheckboxes.length > 0) {
-      let isChecked = false;
-
-      for (let i = 0; i < requiredCheckboxes.length; i++) {
-        if (requiredCheckboxes[i].checked) {
-          isChecked = true;
-          break;
-        }
-      }
-
+      const isChecked = Array.from(requiredCheckboxes).some((cb) => cb.checked);
       const errorMessage = stepContent.querySelector(".error-message-checkbox");
 
       if (!isChecked) {

@@ -37,6 +37,7 @@ export default {
           },
         },
       },
+      transitionTimingFunction: { carousel: "cubic-bezier(0.25, 0.8, 0.5, 1)" },
       backgroundImage: {
         blurredAboutBg: "url('/images/bg/about-blurred.webp')",
         blurredContactBg: "url('/images/bg/contact-blurred.webp')",
