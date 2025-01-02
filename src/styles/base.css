@@ -261,7 +261,6 @@ header.scrolled .menu-burger {
     display: none;
   }
 }
-
 .socials {
   @apply size-6 fill-white hover:fill-white/80;
 }

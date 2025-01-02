@@ -2,10 +2,12 @@
 import Layout from "../../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-import portrait from "../../../../public/images/profile-pic/portrait.png";
-import logistic_bg from "../../../../public/images/bg/logistic_solution_mobile.webp";
+import portrait from "../../../images/profile-pic/portrait.png";
+import logistic_bg from "../../../images/bg/logistic_solution_mobile.webp";
+import logistic_bg_lg from "../../../images/bg/logistic_solution_lg.webp";
 import ButtonOutline from "../../../components/ButtonOutline.astro";
 import BenefitsLogistics from "../../../components/BenefitsLogistics.astro";
+import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 ---
 
 <style>
@@ -27,24 +29,19 @@ import BenefitsLogistics from "../../../components/BenefitsLogistics.astro";
     @apply ltr:text-left rtl:text-right;
   }
 </style>
+<<<<<<< HEAD
 
+=======
+>>>>>>> bd8f806c8362fc4e5616053863c8f31efe01d9d7
 <Layout title="Solutions | 3PL" lang="en">
   <section class="hero z-0" id="PL-hero">
     <div class="blurred-img bg-fixed bg-blurredlogistic_solution">
-      <picture>
-        <source
-          media="(min-width: 480px)"
-          srcset="/images/bg/logistic_solution_lg.webp"
-        />
-        <Image
-          src={logistic_bg}
-          alt="logisitc_solution_bg"
-          class="HeroBg fixed size-full z-0 bottom-0 object-cover object-center"
-          loading="eager"
-          decoding="sync"
-          fetchpriority="high"
-        />
-      </picture>
+      <SourceImageTwo
+        mobileImgUrl={logistic_bg}
+        desktopImgUrl={logistic_bg_lg}
+        alt="logistic_solution_bg"
+        position="fixed"
+      />
     </div>
     <div
       id="hero-overlay"

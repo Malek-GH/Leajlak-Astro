@@ -1,9 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-const logos = await Astro.glob(
-  "../../public/images/companies logo/clients/*.webp"
-);
+const logos = await Astro.glob("../images/companies logo/clients/*.webp");
 ---
 
 <script is:inline>

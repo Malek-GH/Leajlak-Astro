@@ -7,7 +7,9 @@ import InputCompNumber from "../../../components/InputCompNumber.astro";
 import InputCompText from "../../../components/InputCompText.astro";
 import LogisticBenfits from "../../../components/LogisticBenfits.astro";
 
-import logistic_bg from "../../../../public/images/bg/register_logistic_mobile.webp";
+import logistic_bg from "../../../images/bg/register_logistic_mobile.webp";
+import logistic_bg_lg from "../../../images/bg/register_logistic_lg.webp";
+import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 ---
 
 <link
@@ -19,20 +21,12 @@ import logistic_bg from "../../../../public/images/bg/register_logistic_mobile.w
 <Layout title="Registartion | Logistic-Companies" lang="en">
   <section class="hero flex items-center">
     <div class="blurred-img bg-blurredlogistic_register">
-      <picture>
-        <source
-          media="(min-width: 480px)"
-          srcset="/images/bg/register_logistic_lg.webp"
-        />
-        <Image
-          src={logistic_bg}
-          alt="logisitc_solution_bg"
-          class="HeroBg absolute size-full z-0 bottom-0 object-cover object-center"
-          loading="eager"
-          fetchpriority="high"
-          decoding="sync"
-        />
-      </picture>
+      <SourceImageTwo
+        mobileImgUrl={logistic_bg}
+        desktopImgUrl={logistic_bg_lg}
+        position="absolute"
+        alt="logisitc_solution_bg"
+      />
     </div>
     <div
       class="container section-container z-10 fade"
