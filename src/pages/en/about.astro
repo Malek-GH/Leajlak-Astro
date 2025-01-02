@@ -1,37 +1,35 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import about from "../../../public/images/bg/about.webp";
-import Mc from "../../../public/images/companies logo/clients/Mcdonald.webp";
-import lorenzo from "../../../public/images/companies logo/clients/Lorenzo.webp";
-import alliwan from "../../../public/images/companies logo/clients/Alliwan.webp";
-import bk from "../../../public/images/companies logo/clients/Burgerking.webp";
-import hzbr from "../../../public/images/companies logo/clients/Hazbr.webp";
-import farawalah from "../../../public/images/companies logo/clients/Farawlah.webp";
-import casapasta from "../../../public/images/companies logo/clients/Casapasta.webp";
-import about_mobile from "../../../public/images/bg/about-mobile.webp";
+
+import about from "../../images/bg/about.webp";
+import about_lg from "../../images/bg/about-lg.webp";
+import Mc from "../../images/companies logo/clients/Mcdonald.webp";
+import lorenzo from "../../images/companies logo/clients/Lorenzo.webp";
+import alliwan from "../../images/companies logo/clients/Alliwan.webp";
+import bk from "../../images/companies logo/clients/Burgerking.webp";
+import hzbr from "../../images/companies logo/clients/Hazbr.webp";
+import farawalah from "../../images/companies logo/clients/Farawlah.webp";
+import casapasta from "../../images/companies logo/clients/Casapasta.webp";
+import about_mobile from "../../images/bg/about-mobile.webp";
+
 import TrustedIcons from "../../components/TrustedIcons.astro";
 import Values from "../../components/values.astro";
 import ButtonOutline from "../../components/ButtonOutline.astro";
 import Location from "../../components/Location.astro";
 import QuickSupport from "../../components/QuickSupport.astro";
+import SourceImageTwo from "../../components/SourceImageTwo.astro";
 ---
 
-<link rel="preload" href="/images/bg/about-blurred.webp" as="image" />
 <Layout title="About Us" lang="en">
   <section class="hero z-0" id="about-hero">
     <div class="bg-blurredAboutBg bg-fixed blurred-img">
-      <picture>
-        <source srcset="/images/bg/about-lg.webp" media="(min-width: 480px)" />
-        <Image
-          src={about_mobile}
-          alt="About-bg"
-          class="HeroBg fixed size-full z-0 bottom-0 object-cover object-center"
-          loading="eager"
-          decoding="sync"
-          fetchpriority="high"
-        />
-      </picture>
+      <SourceImageTwo
+        mobileImgUrl={about_mobile}
+        desktopImgUrl={about_lg}
+        position="fixed"
+        alt="About-bg"
+      />
     </div>
     <div
       id="hero-overlay"

@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image, Picture } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 /* Components */
 import Testimonial from "../../components/TestimonialEn.astro";
@@ -10,11 +10,14 @@ import InfiniteScroll from "../../components/InfiniteScroll.astro";
 import CoreFeatures from "../../components/CoreFeatures.astro";
 import Benefits from "../../components/Benefits.astro";
 /* Images */
-import mockup_sm from "../../../public/images/mockup/mockup_sm.webp";
-import app from "../../../public/images/Appmockup.webp";
-import videoPlaceHolder from "../../../public/delivery_firstframe.webp";
-import google from "../../../public/images/icons/google play.png";
-import apple from "../../../public/images/icons/apple store.png";
+import mockup_sm from "../../images/mockup/mockup_sm.webp";
+import mockup_md from "../../images/mockup/mockup_md.webp";
+import mockup_lg from "../../images/mockup/mockup_lg.webp";
+import app from "../../images/mockup/Appmockup.webp";
+import videoPlaceHolder from "../../images/delivery_firstframe.webp";
+import google from "../../images/icons/google play.png";
+import apple from "../../images/icons/apple store.png";
+import SourceImage from "../../components/SourceImageThree.astro";
 ---
 
 <Layout title="Home" lang="en">
@@ -42,12 +45,12 @@ import apple from "../../../public/images/icons/apple store.png";
       class="size-full object-cover -z-10 fixed"
       id="video"
     >
-      <source src="/delivery.mp4" type="video/mp4" media="(min-width: 480px)" />
       <source
-        src="/delivery_mobile.mp4"
+        src="/video/delivery.mp4"
         type="video/mp4"
-        media="(max-width: 479px)"
+        media="(min-width: 480px)"
       />
+      <source src="/video/delivery_mobile.mp4" type="video/mp4" />
     </video>
     <div
       class="fade container section-container flex flex-col justify-end items-start h-full gap-y-10"
@@ -115,13 +118,13 @@ import apple from "../../../public/images/icons/apple store.png";
       <div
         class="hidden sm:block relative lg:translate-x-20 lg:-right-5 sm:w-[600px] lg:w-[700px] 3xl:w-[900px]"
       >
-        <picture>
+        <!--  <picture>
           <source
-            srcset="/images/mockup/mockup_lg.webp"
+            srcset="../../../src/images/mockup/mockup_lg.webp"
             media="(min-width: 1600px)"
           />
           <source
-            srcset="/images/mockup/mockup_md.webp"
+            srcset="../../images/mockup/mockup_md.webp"
             media="(min-width: 1024px)"
           />
           <Image
@@ -129,8 +132,15 @@ import apple from "../../../public/images/icons/apple store.png";
             alt="mockup"
             class="w-full h-auto object-cover self-start"
             loading="lazy"
+            fetchpriority="low"
           />
-        </picture>
+        </picture> -->
+        <SourceImage
+          mobileImgUrl={mockup_sm}
+          MidImgUrl={mockup_md}
+          desktopImgUrl={mockup_lg}
+          alt="mockup"
+        />
       </div>
     </div>
   </section>
@@ -147,7 +157,7 @@ import apple from "../../../public/images/icons/apple store.png";
             autoplay
             muted
             loop
-            src="/leajlak workflow.mp4"
+            src="/video/leajlak workflow.mp4"
             class="w-full h-auto top-0"
           >
           </video>
@@ -267,6 +277,7 @@ import apple from "../../../public/images/icons/apple store.png";
           alt="app"
           class="max-w-[476px] h-auto pointer-events-none -translate-y-12"
           loading="lazy"
+          fetchpriority="low"
         />
       </div>
     </div>

@@ -1,8 +1,8 @@
 ---
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
-import merchant from "../../public/images/illustrations/merchant.webp";
-import logistic from "../../public/images/illustrations/logistics.webp";
+import merchant from "../images/illustrations/merchant.webp";
+import logistic from "../images/illustrations/logistics.webp";
 ---
 
 <style>
@@ -154,6 +154,7 @@ import logistic from "../../public/images/illustrations/logistics.webp";
       alt="merchant-illustration"
       class="w-full max-w-[600px] lg:max-w-none h-auto"
       loading="lazy"
+      fetchpriority="low"
     />
   </div>
 </div>
@@ -170,6 +171,7 @@ import logistic from "../../public/images/illustrations/logistics.webp";
       alt="logistic-illustration"
       class="w-full max-w-[600px] lg:max-w-none h-auto"
       loading="lazy"
+      fetchpriority="low"
     />
   </div>
   <div

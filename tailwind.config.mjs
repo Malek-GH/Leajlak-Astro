@@ -39,25 +39,25 @@ export default {
       },
       transitionTimingFunction: { carousel: "cubic-bezier(0.25, 0.8, 0.5, 1)" },
       backgroundImage: {
-        blurredAboutBg: "url('/images/bg/about-blurred.webp')",
-        blurredContactBg: "url('/images/bg/contact-blurred.webp')",
+        blurredAboutBg: "url('/src/images/bg/about-blurred.webp')",
+        blurredContactBg: "url('/src/images/bg/contact-blurred.webp')",
         blurredmerchant_solution:
-          "url('/images/bg/merchant_solution_blurred.webp')",
+          "url('/src/images/bg/merchant_solution_blurred.webp')",
         blurredlogistic_solution:
-          "url('/images/bg/logistic_solution_blurred.webp')",
+          "url('/src/images/bg/logistic_solution_blurred.webp')",
         blurredlogistic_register:
-          "url('/images/bg/register_logistic_blurred.webp')",
+          "url('/src/images/bg/register_logistic_blurred.webp')",
         blurredmerchant_register:
-          "url('/images/bg/register_merchants_blurred.webp')",
+          "url('/src/images/bg/register_merchants_blurred.webp')",
         blurredDriver_register:
-          "url('/images/bg/drivers_registration/drivers_registration_blurred-en.webp')",
+          "url('/src/images/bg/drivers_registration/drivers_registration_blurred-en.webp')",
 
-        tick: "url('/images/icons/check-circle.svg')",
-        caret: "url('/images/icons/caret.svg')",
-        digital_bg1: "url('/images/bg/digital-bg1.webp')",
-        digital_bg2: "url('/images/bg/digital-bg2.webp')",
-        digital_bg3: "url('/images/bg/digital-bg3.webp')",
-        blurredjoinUs: "url('/images/bg/joinusblurred.webp')",
+        tick: "url('/src/images/icons/check-circle.svg')",
+        caret: "url('/src/images/icons/caret.svg')",
+        digital_bg1: "url('/src/images/bg/digital-bg1.webp')",
+        digital_bg2: "url('/src/images/bg/digital-bg2.webp')",
+        digital_bg3: "url('/src/images/bg/digital-bg3.webp')",
+        blurredjoinUs: "url('/src/images/bg/joinusblurred.webp')",
       },
       colors: {
         primaryOrange: "#ED6132",

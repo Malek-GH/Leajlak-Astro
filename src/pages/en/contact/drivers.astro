@@ -1,34 +1,21 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
-import app from "../../../../public/images/bg/joinnow.webp";
+import app from "../../../images/bg/joinnow.webp";
 import { Image } from "astro:assets";
-import logistic_bg from "../../../../public/images/bg/drivers_registration/drivers_registration_mobile-en.webp";
+import driver_bg from "../../../images/bg/drivers_registration/drivers_registration_mobile-en.webp";
+import driver_bg_lg from "../../../images/bg/drivers_registration/drivers_registration_lg-en.webp";
+import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 ---
-
-<link
-  rel="preload"
-  href="/images/bg/drivers_registration/drivers_registration_blurred-en.webp"
-  as="image"
-/>
 
 <Layout title="Registration | Drivers" lang="en">
   <section class="hero flex items-center">
     <div class="blurred-img bg-blurredDriver_register">
-      <picture>
-        <source
-          media="(min-width: 480px)"
-          srcset="/images/bg/drivers_registration/drivers_registration_lg-en.webp"
-        />
-
-        <Image
-          src={logistic_bg}
-          alt="logisitc_solution_bg"
-          class="HeroBg absolute size-full z-0 bottom-0 object-cover object-center"
-          loading="eager"
-          decoding="sync"
-          fetchpriority="high"
-        />
-      </picture>
+      <SourceImageTwo
+        mobileImgUrl={driver_bg}
+        desktopImgUrl={driver_bg_lg}
+        position="absolute"
+        alt="logisitc_solution_bg"
+      />
     </div>
     <div class="container section-container z-10">
       <div

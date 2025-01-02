@@ -144,20 +144,5 @@ document.addEventListener("DOMContentLoaded", function () {
     registerMenu.classList.remove("active");
   });
 
-  contactButton.addEventListener("click", function (event) {
-    if (isSmallScreen()) {
-      document.body.classList.toggle(
-        "no-scroll",
-        navList.classList.toggle("open"),
-      );
-      burger1.classList.toggle("burger-active");
-      burger2.classList.toggle("burger-active");
-      burger3.classList.toggle("burger-active");
-      setTimeout(() => registerMenu.classList.toggle("active"), 400);
-    } else {
-      registerMenu.classList.toggle("active");
-    }
-  });
-
   handleScroll();
 });
