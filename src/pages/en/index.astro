@@ -18,9 +18,11 @@ import videoPlaceHolder from "../../images/delivery_firstframe.webp";
 import google from "../../images/icons/google play.png";
 import apple from "../../images/icons/apple store.png";
 import SourceImage from "../../components/SourceImageThree.astro";
+import ContactPopUp from "../../components/ContactPopUp.astro";
 ---
 
 <Layout title="Home" lang="en">
+  <ContactPopUp lang="en" />
   <section class="hero">
     <picture id="videoplaceholder">
       <Image
@@ -53,7 +55,7 @@ import SourceImage from "../../components/SourceImageThree.astro";
       <source src="/video/delivery_mobile.mp4" type="video/mp4" />
     </video>
     <div
-      class="fade container section-container flex flex-col justify-end items-start h-full gap-y-10"
+      class="fade container section-container flex flex-col justify-end items-start h-full gap-y-10 z-10"
       data-animation="animate-fade-up animate-duration-[2000ms]"
     >
       <div class="space-y-5">
@@ -71,7 +73,7 @@ import SourceImage from "../../components/SourceImageThree.astro";
       </div>
       <div class="flex items-center gap-5 xs:gap-10 w-full">
         <button
-          id="contact-us"
+          id="popupButton"
           class="text-white relative text-base font-Montserrat font-bold bg-darkerOrange hover:bg-primaryOrange duration-300 ease-in-out px-8 py-4 rounded-xl whitespace-nowrap"
           >Contact Us</button
         >
