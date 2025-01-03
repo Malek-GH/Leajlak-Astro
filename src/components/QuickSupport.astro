@@ -3,7 +3,7 @@ const { lang } = Astro.props;
 const content = await import(`../data/${lang}.json`);
 ---
 
-<div class="flex flex-col justify-between gap-14 w-full text-secondaryBlueText">
+<div class="flex flex-col justify-between gap-16 w-full text-secondaryBlueText">
   <div class="card">
     <div class="rounded-xl p-2 w-fit bg-primaryOrange/20">
       <svg
@@ -85,13 +85,16 @@ const content = await import(`../data/${lang}.json`);
 
 <style>
   .card {
-    @apply flex w-full flex-row items-center justify-start gap-5 ltr:md:text-left rtl:md:text-right;
+    @apply flex w-full flex-col items-center justify-start gap-5 sm:flex-row;
   }
 
   .card h4 {
-    @apply text-xl;
+    @apply text-center text-xl ltr:sm:text-left rtl:sm:text-right;
   }
 
+  .card p {
+    @apply text-center ltr:sm:text-left rtl:sm:text-right;
+  }
   .card svg {
     @apply size-9;
   }
