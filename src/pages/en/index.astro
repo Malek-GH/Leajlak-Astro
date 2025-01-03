@@ -1,5 +1,5 @@
 ---
-import { Image, Picture } from "astro:assets";
+import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 /* Components */
 import Testimonial from "../../components/TestimonialEn.astro";
@@ -15,25 +15,25 @@ import mockup_md from "../../images/mockup/mockup_md.webp";
 import mockup_lg from "../../images/mockup/mockup_lg.webp";
 import app from "../../images/mockup/Appmockup.webp";
 import videoPlaceHolder from "../../images/delivery_firstframe.webp";
+import videoPlaceHolderMobile from "../../images/delivery_firstframe_mobile.webp";
 import google from "../../images/icons/google play.png";
 import apple from "../../images/icons/apple store.png";
 import SourceImage from "../../components/SourceImageThree.astro";
 import ContactPopUp from "../../components/ContactPopUp.astro";
+import Preload from "../../components/Preload.astro";
+
+import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
 ---
 
 <Layout title="Home" lang="en">
   <ContactPopUp lang="en" />
   <section class="hero">
-    <picture id="videoplaceholder">
-      <Image
-        src={videoPlaceHolder}
-        alt="videoplaceholder"
-        class="absolute size-full z-0 bottom-0 object-cover"
-        loading="eager"
-        decoding="sync"
-        fetchpriority="high"
-      />
-    </picture>
+    <VideoPlaceHolder
+      desktopImgUrl={videoPlaceHolder}
+      mobileImgUrl={videoPlaceHolderMobile}
+      alt="videoplaceholder"
+    />
+
     <div
       id="hero-overlay"
       class="absolute top-0 left-0 size-full bg-black/65 z-0"

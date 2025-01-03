@@ -8,7 +8,7 @@ export default {
     extend: {
       screens: {
         "3xl": "1600px",
-        xs: "450px",
+        xs: "480px",
       },
       animation: {
         "loop-scroll": "loop-scroll 20s linear infinite",
@@ -40,6 +40,7 @@ export default {
       transitionTimingFunction: { carousel: "cubic-bezier(0.25, 0.8, 0.5, 1)" },
       backgroundImage: {
         blurredAboutBg: "url('/src/images/bg/about-blurred.webp')",
+        blurredAboutBgMobile: "url('/src/images/bg/about-mobile-blurred.webp')",
         blurredContactBg: "url('/src/images/bg/contact-blurred.webp')",
         blurredmerchant_solution:
           "url('/src/images/bg/merchant_solution_blurred.webp')",

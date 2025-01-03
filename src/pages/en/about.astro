@@ -23,7 +23,9 @@ import SourceImageTwo from "../../components/SourceImageTwo.astro";
 
 <Layout title="About Us" lang="en">
   <section class="hero z-0" id="about-hero">
-    <div class="bg-blurredAboutBg bg-fixed blurred-img">
+    <div
+      class="bg-blurredAboutBgMobile xs:bg-blurredAboutBg bg-fixed blurred-img"
+    >
       <SourceImageTwo
         mobileImgUrl={about_mobile}
         desktopImgUrl={about_lg}
