@@ -49,14 +49,14 @@
   .button {
     @apply relative w-full whitespace-nowrap rounded-lg px-8 py-3 text-center font-bold text-primaryOrange antialiased ring-1 ring-primaryOrange transition-colors duration-300 ease-out hover:bg-primaryOrange hover:text-white hover:duration-300 hover:ease-in lg:w-fit;
   }
-  header.scrolled .button {
-    @apply text-darkerOrange ring-darkerOrange hover:bg-darkerOrange hover:text-white;
-  }
+
   .button-return {
     @apply w-full whitespace-nowrap rounded-lg py-4 text-base font-bold text-darkerOrange antialiased ring-2 ring-darkerOrange duration-200 ease-linear active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
   }
 }
-
+header.scrolled .button {
+  @apply text-darkerOrange ring-darkerOrange hover:bg-darkerOrange hover:text-white;
+}
 .section-container {
   @apply relative mx-auto max-w-7xl px-6 py-24 lg:px-10 3xl:px-0;
 }
@@ -252,15 +252,7 @@ header.scrolled .menu-burger {
 .burger-3.burger-active {
   @apply top-[10px] -rotate-45;
 }
-@media (max-width: 1024px) {
-  #nav-items a.active {
-    @apply bg-primaryOrange text-white;
-  }
 
-  #nav-items a.active::after {
-    display: none;
-  }
-}
 .socials {
   @apply size-6 fill-white hover:fill-white/80;
 }
