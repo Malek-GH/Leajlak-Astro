@@ -15,6 +15,6 @@ export default defineConfig({
     css: {
       postcss: "./postcss.config.cjs",
     },
-    inlineStylesheets: "never",
+    inlineStylesheets: "auto",
   },
 });

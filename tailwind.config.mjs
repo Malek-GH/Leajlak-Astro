@@ -3,7 +3,7 @@ import tailwindcssAnimated from "tailwindcss-animated";
 
 export default {
   plugins: [tailwindcssAnimated],
-  content: ["./src/**/*.{astro,html,js}"],
+  content: ["./src/**/*.html", "./src/**/*.astro", "./src/**/*.js"],
   theme: {
     extend: {
       screens: {
