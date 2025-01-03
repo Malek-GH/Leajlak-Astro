@@ -143,18 +143,5 @@ document.addEventListener("DOMContentLoaded", function () {
     registerMenu.classList.remove("active");
   });
 
-  const popUp = document.getElementById("popupview");
-  const popupButton = document.getElementById("popupButton");
-  const closePopUp = document.getElementById("closepopup");
-
-  popupButton.addEventListener("click", function () {
-    popUp.classList.add("active");
-    document.body.classList.add("no-scroll");
-  });
-  closePopUp.addEventListener("click", function () {
-    popUp.classList.remove("active");
-    document.body.classList.remove("no-scroll");
-  });
-
   handleScroll();
 });

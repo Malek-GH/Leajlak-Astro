@@ -3,9 +3,9 @@ const { lang = "en" } = Astro.props;
 const content = await import(`../data/${lang}.json`);
 ---
 
-<div class="absolute size-full top-0 left-0" id="popupview">
+<div class="absolute invisible size-full top-0 left-0" id="popupview">
   <div
-    class="bg-white rounded-xl h-auto w-full sm:w-[450px] fixed top-0 left-1/2 opacity-0 -translate-x-1/2 -translate-y-0 z-40 flex flex-col pointer-events-none transition-all duration-500 ease-in-out"
+    class="bg-white rounded-xl h-auto w-full max-w-md fixed top-1/2 left-1/2 opacity-0 will-change-transform transform -translate-x-1/2 -translate-y-0 z-40 flex flex-col pointer-events-none transition-all duration-500 ease-in-out"
     id="popup"
   >
     <div class="p-5 flex items-center justify-between border-b">
@@ -33,7 +33,7 @@ const content = await import(`../data/${lang}.json`);
       <h5 class="px-5 pt-5">Select an option:</h5>
       <ul class="flex flex-col justify-center gap-3 it p-2">
         <li>
-          <div class="cursor-pointer lg:hover:bg-gray-100 rounded-md group p-3">
+          <div class="cursor-pointer hover:bg-gray-100 rounded-md group p-3">
             <a
               href={`/${lang}/contact/logistic-companies`}
               data-route={`/${lang}/contact/logistic-companies`}
@@ -72,7 +72,7 @@ const content = await import(`../data/${lang}.json`);
         </li>
         <li>
           <div
-            class="cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group p-3"
+            class="cursor-pointer hover:bg-gray-100 rounded-md duration-200 group p-3"
           >
             <a
               href={`/${lang}/contact/merchants`}
@@ -112,7 +112,7 @@ const content = await import(`../data/${lang}.json`);
         </li>
         <li>
           <div
-            class="cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group p-3"
+            class="cursor-pointer hover:bg-gray-100 rounded-md duration-200 group p-3"
           >
             <a
               href={`/${lang}/contact/drivers`}
@@ -152,7 +152,7 @@ const content = await import(`../data/${lang}.json`);
         </li>
         <li>
           <div
-            class="cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group p-3"
+            class="cursor-pointer hover:bg-gray-100 rounded-md duration-200 group p-3"
           >
             <a
               href={`/${lang}/contact/employees`}
@@ -196,10 +196,10 @@ const content = await import(`../data/${lang}.json`);
 </div>
 <style>
   #popupview.active {
-    @apply z-50 bg-black/70;
+    @apply visible z-50 bg-black/70;
   }
   #popupview.active #popup {
-    @apply pointer-events-auto translate-y-1/2 opacity-100 xl:translate-y-[30%] 3xl:translate-y-1/2;
+    @apply pointer-events-auto -translate-y-1/2 opacity-100;
   }
   h6 {
     @apply text-base font-medium text-secondaryBlueText;
@@ -207,3 +207,17 @@ const content = await import(`../data/${lang}.json`);
   span {
   }
 </style>
+<script>
+  const popUp = document.getElementById("popupview");
+  const popupButton = document.getElementById("popupButton");
+  const closePopUp = document.getElementById("closepopup");
+
+  popupButton?.addEventListener("click", function () {
+    popUp.classList.add("active");
+    document.body.classList.add("no-scroll");
+  });
+  closePopUp?.addEventListener("click", function () {
+    popUp.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+  });
+</script>
