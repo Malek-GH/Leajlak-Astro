@@ -3,7 +3,9 @@ import tailwind from "@astrojs/tailwind";
 import playformCompress from "@playform/compress";
 
 export default defineConfig({
+  /* output: "server", */
   prefetch: {
+    defaultStrategy: "hover",
     prefetchAll: true,
   },
   integrations: [
@@ -18,6 +20,6 @@ export default defineConfig({
     css: {
       postcss: "./postcss.config.js",
     },
-    inlineStylesheets: "never",
+    inlineStylesheets: "auto",
   },
 });
