@@ -45,19 +45,17 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
     >
     </div>
     <div
-      class="fade container section-container z-0"
+      class="fade container section-container flex flex-col z-0 justify-center h-full gap-5"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
-      <div class="text-white lg:w-2/5">
-        <div class="fixed w-inherit top-2/5 3xl:top-1/2 space-y-7">
-          <h1 class="text-3xl md:text-5xl text-white">Logistic Companies</h1>
-          <h6 class="text-base font-medium md:text-lg opacity-80">
-            Addressing the logistical challenges faced by companies, Leajlak’s
-            Delivery Management System offers a comprehensive solution to
-            enhance operational efficiency and streamline delivery processes.
-          </h6>
-        </div>
-      </div>
+      <h1 class="text-3xl md:text-5xl text-white mt-10">Logistic Companies</h1>
+      <h6
+        class="text-base font-medium md:text-lg opacity-80 text-white lg:w-1/2"
+      >
+        Addressing the logistical challenges faced by companies, Leajlak’s
+        Delivery Management System offers a comprehensive solution to enhance
+        operational efficiency and streamline delivery processes.
+      </h6>
     </div>
   </section>
   <section class="bg-lightGray">
@@ -266,6 +264,19 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
   <section class="bg-white">
     <BenefitsLogistics />
   </section>
+  <section class="bg-black/70">
+    <div
+      class="relative bg-gradient-to-r flex flex-col items-center justify-center gap-14 w-full px-10 sm:px-24 py-24 md:min-h-[450px] overflow-hidden z-10"
+    >
+      <h1 class="text-white text-center text-2xl sm:text-3xl lg:text-4xl">
+        Simplify your logistics, amplify your success.
+      </h1>
+      <ButtonOutline
+        href="/en/registration/logistic-companies"
+        text="Start Now"
+      />
+    </div>
+  </section>
   <section class="bg-lightGray">
     <div
       class="container section-container flex flex-col justify-center gap-24"
@@ -427,18 +438,6 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
             </figcaption>
           </figure>
         </div>
-      </div>
-      <div
-        class="fade relative bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% flex flex-col items-center justify-center gap-14 w-full rounded-lg px-10 shadow-black/30 shadow-lg sm:px-24 py-24 md:min-h-[450px] overflow-hidden z-10 after:content-[''] after:absolute after:h-full after:w-full after:bg-digital_bg3 after:bg-cover after:opacity-90 after:bg-no-repeat after:bg-center after:-z-10"
-        data-animation="animate-fade-up animate-duration-[1000ms]"
-      >
-        <h1 class="text-white text-center text-2xl sm:text-4xl">
-          Simplify your logistics, amplify your success.
-        </h1>
-        <ButtonOutline
-          href="/en/registration/logistic-companies"
-          text="Start Now"
-        />
       </div>
     </div>
   </section>

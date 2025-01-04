@@ -48,19 +48,17 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
     >
     </div>
     <div
-      class="fade container section-container"
+      class="fade container section-container flex flex-col z-0 justify-center h-full gap-5"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
-      <div class="text-white lg:w-2/5">
-        <div class="fixed w-inherit top-2/5 3xl:top-1/2 space-y-7">
-          <h1 class="text-3xl md:text-5xl text-white">Merchants</h1>
-          <h6 class="text-base font-medium md:text-lg opacity-80">
-            Leajlak's solution revolutionizes order management, addressing the
-            critical challenges faced by merchants and unlocking the potential
-            for a seamless, efficient delivery ecosystem.
-          </h6>
-        </div>
-      </div>
+      <h1 class="text-3xl md:text-5xl text-white">Merchants</h1>
+      <h6
+        class="text-base font-medium md:text-lg opacity-80 text-white lg:w-1/2"
+      >
+        Leajlak's solution revolutionizes order management, addressing the
+        critical challenges faced by merchants and unlocking the potential for a
+        seamless, efficient delivery ecosystem.
+      </h6>
     </div>
   </section>
   <section class="bg-lightGray">
@@ -261,6 +259,16 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
   <section id="merchant-benefits" class="bg-white">
     <BenefitsMerchants />
   </section>
+  <section class="bg-black/70">
+    <div
+      class="relative flex flex-col items-center justify-center gap-14 w-full px-10 sm:px-24 py-24 md:min-h-[450px] overflow-hidden z-10"
+    >
+      <h1 class="text-white text-center text-2xl sm:text-3xl lg:text-4xl">
+        Boost Customer Loyalty with Reliable Deliveries.
+      </h1>
+      <ButtonOutline href="/en/registration/merchants" text="Start Now" />
+    </div>
+  </section>
   <section class="bg-lightGray">
     <div
       class="container section-container flex flex-col justify-center gap-24"
@@ -422,15 +430,6 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
             </figcaption>
           </figure>
         </div>
-      </div>
-      <div
-        class="fade relative bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% flex flex-col items-center justify-center gap-14 w-full rounded-lg px-10 shadow-black/30 shadow-lg sm:px-24 py-24 md:min-h-[450px] overflow-hidden z-10 after:content-[''] after:absolute after:h-full after:w-full after:bg-digital_bg2 after:opacity-90 after:bg-cover after:bg-no-repeat after:bg-center after:-z-10"
-        data-animation="animate-fade-up animate-duration-[1500ms]"
-      >
-        <h1 class="text-white text-center text-2xl sm:text-4xl">
-          Boost Customer Loyalty with Reliable Deliveries.
-        </h1>
-        <ButtonOutline href="/en/registration/merchants" text="Start Now" />
       </div>
     </div>
   </section>

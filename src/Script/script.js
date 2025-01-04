@@ -18,12 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleScroll() {
     if (window.scrollY > 0) {
       header.classList.add("scrolled");
-      logoDefault.style.display = "none";
-      logoScrolled.style.display = "block";
+      logoDefault.classList.add("hidden");
+      logoScrolled.classList.remove("hidden");
     } else {
       header.classList.remove("scrolled");
-      logoDefault.style.display = "block";
-      logoScrolled.style.display = "none";
+      logoDefault.classList.remove("hidden");
+      logoScrolled.classList.add("hidden");
+      headerChange();
     }
   }
   function setActiveItem() {
@@ -87,7 +88,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  setActiveItem();
+  function headerChange() {
+    const currentRoute = window.location.pathname.replace(/\/$/, "");
+    const pathSegments = currentRoute.split("/");
+    const lang = pathSegments[1] || "";
+
+    const caseStudiesRoute = `/${lang}/case-studiess`;
+
+    if (currentRoute === caseStudiesRoute) {
+      navList.classList.remove("text-white");
+      navList.classList.add("text-secondaryBlueText");
+      logoDefault.classList.add("hidden");
+      logoScrolled.classList.remove("hidden");
+      buttonDrop.forEach((drop) => {
+        drop.classList.add("text-black");
+      });
+    } else {
+      navList.classList.remove("text-secondaryBlueText");
+      navList.classList.add("text-white");
+      buttonDrop.forEach((drop) => {
+        drop.classList.add("text-white");
+      });
+    }
+  }
 
   navItems.forEach((item) => {
     item.addEventListener("click", function () {
@@ -143,5 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
     registerMenu.classList.remove("active");
   });
 
+  setActiveItem();
   handleScroll();
+  headerChange();
 });

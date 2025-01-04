@@ -76,9 +76,6 @@ header.scrolled .button {
   @apply w-28 lg:w-36;
 }
 
-.header-logo.scrolled {
-  @apply hidden;
-}
 header.scrolled {
   @apply bg-white shadow-md duration-500 ease-out;
 }
@@ -88,7 +85,7 @@ header.scrolled .nav-list {
 }
 
 .nav-list {
-  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col items-start justify-center space-y-7 px-12 py-16 text-base font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-8 lg:space-y-0 lg:p-0;
+  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col justify-center space-y-7 px-12 py-16 text-base font-semibold duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-8 lg:space-y-0 lg:p-0;
 }
 
 .nav-list > div,
@@ -102,7 +99,7 @@ header.scrolled .nav-list {
 }
 
 .nav-list.open {
-  @apply h-full translate-x-0 bg-white text-secondaryBlueText opacity-100 transition-transform duration-300 ease-in lg:bg-transparent lg:text-white;
+  @apply h-full translate-x-0 bg-white text-secondaryBlueText opacity-100 transition-transform duration-300 ease-in;
 }
 
 .nav_item {
@@ -157,7 +154,7 @@ header.scrolled .nav-list > .nav_item > a.active::after {
   @apply max-h-52 opacity-100 duration-500 ease-out lg:pointer-events-auto lg:scale-100;
 }
 
-header.scrolled .button-dropdown-menu button {
+header.scrolled .button-dropdown-menu {
   @apply text-secondaryBlueText;
 }
 

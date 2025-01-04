@@ -28,7 +28,7 @@ const content = await import(`../data/${lang}.json`);
       </div>
       <!-- Navigation Links -->
       <div
-        class="flex flex-col items-start sm:flex-row sm:justify-end gap-y-10 sm:gap-x-36 w-full"
+        class="flex flex-col items-start sm:flex-row sm:justify-center lg:justify-end gap-y-10 sm:gap-x-36 w-full"
       >
         <div>
           <h3 class="text-lg md:text-xl font-bold mb-4 text-primaryOrange">
@@ -45,7 +45,9 @@ const content = await import(`../data/${lang}.json`);
               >
             </li>
             <li>
-              <a href={`#`} class="hover:text-gray-400">{content.Case}</a>
+              <a href={`/${lang}/case-studies`} class="hover:text-gray-400"
+                >{content.Case}</a
+              >
             </li>
           </ul>
         </div>

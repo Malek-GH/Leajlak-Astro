@@ -2,14 +2,25 @@
 import type { ImageMetadata } from "astro";
 import { getImage } from "astro:assets";
 interface Props {
-  link: string | ImageMetadata;
+  mobile: string | ImageMetadata;
+  screen: string | ImageMetadata;
 }
-const { link } = Astro.props;
+const { mobile, screen } = Astro.props;
 
-const Img = await getImage({
-  src: link,
+const Img_mobile = await getImage({
+  src: mobile,
+  format: "webp",
+});
+const Img_screen = await getImage({
+  src: screen,
   format: "webp",
 });
 ---
 
-<link rel="preload" href={Img.src} as="image" />
+<link
+  rel="preload"
+  href={Img_screen.src}
+  as="image"
+  media="(min-width: 480px)"
+/>
+<link rel="preload" href={Img_mobile.src} as="image" />

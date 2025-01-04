@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+
+import caseone from "../images/bg/case studies/restaurant.webp";
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+  <a href="#" class="case-card">
+    <div class="w-full">
+      <Image
+        src={caseone}
+        alt=""
+        class="size-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div class="case-text">
+      <h4>First case</h4>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        tempore blanditiis dolores beatae delectus assumenda,
+      </p>
+    </div>
+  </a>
+  <a href="#" class="case-card">
+    <div class="w-full">
+      <Image
+        src={caseone}
+        alt=""
+        class="size-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div class="case-text">
+      <h4>First case</h4>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        tempore blanditiis dolores beatae delectus assumenda,
+      </p>
+    </div>
+  </a>
+  <a href="#" class="case-card">
+    <div class="w-full">
+      <Image
+        src={caseone}
+        alt=""
+        class="size-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div class="case-text">
+      <h4>First case</h4>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        tempore blanditiis dolores beatae delectus assumenda,
+      </p>
+    </div>
+  </a>
+</div>
+
+<style>
+  .case-card {
+    @apply flex flex-col overflow-hidden rounded-2xl bg-lightGray drop-shadow-md;
+  }
+  .case-text {
+    @apply space-y-4 px-5 py-7;
+  }
+</style>

@@ -2,9 +2,10 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import playformCompress from "@playform/compress";
 
-import playformInline from "@playform/inline";
-
 export default defineConfig({
+  prefetch: {
+    prefetchAll: true,
+  },
   integrations: [
     playformCompress(),
     tailwind({

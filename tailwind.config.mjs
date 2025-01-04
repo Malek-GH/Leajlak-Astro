@@ -41,6 +41,9 @@ export default {
       backgroundImage: {
         blurredAboutBg: "url('/src/images/bg/about-blurred.webp')",
         blurredAboutBgMobile: "url('/src/images/bg/about-mobile-blurred.webp')",
+        blurredCaseBg: "url('/src/images/bg/case_studies_lg_blurred.webp')",
+        blurredCaseBgMobile:
+          "url('/src/images/bg/case_studies_mobile_blurred.webp')",
         blurredContactBg: "url('/src/images/bg/contact-blurred.webp')",
         blurredmerchant_solution:
           "url('/src/images/bg/merchant_solution_blurred.webp')",
@@ -55,9 +58,6 @@ export default {
 
         tick: "url('/src/images/icons/check-circle.svg')",
         caret: "url('/src/images/icons/caret.svg')",
-        digital_bg1: "url('/src/images/bg/digital-bg1.webp')",
-        digital_bg2: "url('/src/images/bg/digital-bg2.webp')",
-        digital_bg3: "url('/src/images/bg/digital-bg3.webp')",
         blurredjoinUs: "url('/src/images/bg/joinusblurred.webp')",
       },
       colors: {
@@ -67,7 +67,6 @@ export default {
         secondaryBlueText: "#292F3D",
         secondaryBlueDark: "#212631",
         lightGray: "#F6F6F6",
-        customYellow: "#F7B614",
         darkGray: "#202020",
       },
       fontFamily: {

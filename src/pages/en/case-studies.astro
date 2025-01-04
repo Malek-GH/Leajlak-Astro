@@ -1,3 +1,72 @@
 ---
-
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import SourceImageTwo from "../../components/SourceImageTwo.astro";
+import case_studies_bg from "../../images/bg/case_studies_lg.webp";
+import case_studies_bg_mobile from "../../images/bg/case_studies_mobile.webp";
+import CaseGird from "../../components/CaseGird.astro";
+import ContactPopUp from "../../components/ContactPopUp.astro";
 ---
+
+<Layout title="Case Studies" lang="en">
+  <ContactPopUp lang="en" />
+  <section class="hero z-0">
+    <div
+      class="bg-blurredCaseBgMobile xs:bg-blurredCaseBg bg-fixed blurred-img"
+    >
+      <SourceImageTwo
+        mobileImgUrl={case_studies_bg_mobile}
+        desktopImgUrl={case_studies_bg}
+        position="fixed"
+        alt="case-bg"
+      />
+    </div>
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/80 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
+    >
+    </div>
+    <div
+      class="container section-container h-full flex flex-col justify-center gap-5"
+    >
+      <div>
+        <h3
+          class="text-primaryOrange text-2xl md:text-4xl font-normal tracking-wider mt-10"
+        >
+          Case Studies
+        </h3>
+        <h1 class="leading-snug text-white">Transforming Operations,</h1>
+        <h1 class="text-white">Delivering Success.</h1>
+      </div>
+      <p
+        class="text-base xs:text-lg 3xl:text-xl font-medium opacity-80 lg:w-1/2 text-white"
+      >
+        See how our platform has empowered businesses to achieve exceptional
+        results.
+      </p>
+    </div>
+  </section>
+  <section class="bg-white">
+    <div class="container section-container space-y-24">
+      <div class="flex items-center justify-center">
+        <h2>Explore case studies</h2>
+      </div>
+      <CaseGird />
+    </div>
+  </section>
+  <section class="bg-lightGray">
+    <div class="container section-container">
+      <div class="w-full flex flex-col justify-center gap-10">
+        <div class="space-y-4">
+          <h1 class="w-1/4 text-6xl">Got a problem to solve?</h1>
+          <p class="w-1/2">
+            Let’s discuss the obstacles you’re encountering and collaborate on
+            crafting a plan to overcome them.
+          </p>
+        </div>
+        <button class="button-regular popupButton">Let's talk</button>
+      </div>
+    </div>
+  </section>
+</Layout>
+<script src="/src/Script/BlurredImage.js"></script>

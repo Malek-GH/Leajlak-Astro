@@ -35,33 +35,29 @@ import SourceImageTwo from "../../components/SourceImageTwo.astro";
     </div>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
+      class="absolute top-0 left-0 size-full bg-black/80 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
     >
     </div>
     <div
       id="title-container"
-      class="fade container section-container text-white"
+      class="fade container section-container text-white flex flex-col justify-center h-full"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
-      <div class="text-left lg:w-3/5">
-        <div class="fixed w-inherit top-2/5 3xl:top-1/2">
-          <h3
-            class="text-primaryOrange text-2xl md:text-4xl font-normal tracking-wider"
-          >
-            About us
-          </h3>
-          <h1 class="text-white">
-            Connecting Merchants and Logistics Providers
-            <span
-              class="typewrite text-primaryOrange"
-              data-period="1000"
-              data-type='[ "Seamlessly.", "smoothly.", "efficiently.", "like never before!" ]'
-            >
-            </span>
-            <span class="border-r-2 animate-ping animate-duration-1000"></span>
-          </h1>
-        </div>
-      </div>
+      <h3
+        class="text-primaryOrange text-2xl md:text-4xl font-normal tracking-wider mt-10"
+      >
+        About us
+      </h3>
+      <h1 class="text-white lg:w-3/4 leading-snug">
+        Connecting Merchants and Logistics Providers
+        <span
+          class="typewrite text-primaryOrange"
+          data-period="1000"
+          data-type='[ "Seamlessly.", "smoothly.", "efficiently.", "like never before!" ]'
+        >
+        </span>
+        <span class="border-r-2 animate-ping animate-duration-1000"></span>
+      </h1>
     </div>
   </section>
   <section class="bg-white z-10" id="about">
@@ -165,6 +161,16 @@ import SourceImageTwo from "../../components/SourceImageTwo.astro";
       <Values lang="en" />
     </div>
   </section>
+  <section class="bg-black/80">
+    <div
+      class="relative bg-gradient-to-r flex flex-col items-center justify-center gap-14 w-full px-10 sm:px-24 py-24 md:min-h-[450px] z-10"
+    >
+      <h1 class="text-white text-center text-2xl sm:text-3xl lg:text-4xl">
+        Be a part of our talented team.
+      </h1>
+      <ButtonOutline href="contact/employees" text="Join Now" />
+    </div>
+  </section>
   <section class="bg-white">
     <div class="container section-container space-y-24">
       <h2
@@ -185,17 +191,9 @@ import SourceImageTwo from "../../components/SourceImageTwo.astro";
         <TrustedIcons imgSrc={hzbr} alt="hzbr" />
         <TrustedIcons imgSrc={casapasta} alt="Casapasta" />
       </div>
-      <div
-        class="fade relative bg-gradient-to-r from-primaryOrange from-0% to-customYellow to-100% flex flex-col items-center justify-center gap-14 w-full rounded-lg px-10 shadow-black/30 shadow-lg sm:px-24 py-24 md:min-h-[450px] overflow-hidden z-10 after:content-[''] after:absolute after:h-full after:w-full after:bg-digital_bg1 after:opacity-90 after:bg-cover after:bg-no-repeat after:bg-center after:-z-10"
-        data-animation="animate-fade-up animate-duration-[1000ms]"
-      >
-        <h1 class="text-white text-center text-2xl sm:text-4xl">
-          Be a part of our talented team.
-        </h1>
-        <ButtonOutline href="registration/employees" text="Join Now" />
-      </div>
     </div>
   </section>
+
   <section class="flex flex-col lg:flex-row bg-lightGray" id="contact">
     <div
       class="fade flex flex-col justify-center gap-20 w-full lg:w-1/2 px-6 py-10 lg:p-20"
