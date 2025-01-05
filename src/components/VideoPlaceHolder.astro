@@ -16,9 +16,10 @@ const desktopImg = await getImage({
 });
 ---
 
-<picture id="videoplaceholder">
+<picture>
   <source media="(min-width: 480px)" srcset={desktopImg.src} />
   <Image
+    id="videoplaceholder"
     src={mobileImgUrl}
     alt={alt}
     class="absolute size-full z-0 top-0 left-0 object-cover object-center"
