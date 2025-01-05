@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.remove("scrolled");
       logoDefault.classList.remove("hidden");
       logoScrolled.classList.add("hidden");
-      headerChange();
+      /*  headerChange(); */
     }
   }
   function setActiveItem() {
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function headerChange() {
+  /* function headerChange() {
     const currentRoute = window.location.pathname.replace(/\/$/, "");
     const pathSegments = currentRoute.split("/");
     const lang = pathSegments[1] || "";
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
-
+ */
   navItems.forEach((item) => {
     item.addEventListener("click", function () {
       navItems.forEach((el) => el.classList.remove("active"));
@@ -168,5 +168,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setActiveItem();
   handleScroll();
-  headerChange();
+  /*   headerChange(); */
 });

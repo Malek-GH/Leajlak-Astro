@@ -1,6 +1,6 @@
 ---
 import type { ImageMetadata } from "astro";
-import { getImage } from "astro:assets";
+import { getImage, Image } from "astro:assets";
 
 interface Props {
   mobileImgUrl: string | ImageMetadata;
@@ -10,11 +10,6 @@ interface Props {
 }
 
 const { mobileImgUrl, MidImgUrl, desktopImgUrl, alt } = Astro.props;
-
-const mobileImg = await getImage({
-  src: mobileImgUrl,
-  format: "webp",
-});
 
 const MidImg = await getImage({
   src: MidImgUrl,
@@ -30,5 +25,11 @@ const desktopImg = await getImage({
 <picture>
   <source media="(min-width: 1600px)" srcset={desktopImg.src} />
   <source media="(min-width: 1024px)" srcset={MidImg.src} />
-  <img src={mobileImg.src} alt={alt} />
+  <Image
+    src={mobileImgUrl}
+    alt="mockup"
+    class="w-full h-auto object-cover self-start"
+    loading="lazy"
+    fetchpriority="low"
+  />
 </picture>

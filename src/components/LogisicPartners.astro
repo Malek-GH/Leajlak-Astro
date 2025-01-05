@@ -8,10 +8,7 @@ const logos = await Astro.glob(
 {
   logos.map((logo) => {
     return (
-      <div
-        class="fade will-change-transform flex items-center justify-center h-40  flex-auto  lg:flex-card_full  group"
-        data-animation="animate-fade-up animate-duration-[1000ms]"
-      >
+      <div class=" will-change-transform flex items-center justify-center h-40  flex-auto  lg:flex-card_full  group">
         <Image
           src={logo.default}
           alt=""

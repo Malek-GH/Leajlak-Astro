@@ -24,7 +24,7 @@ const handleRedirect = (lang: string) => {
     class="fade relative flex flex-row justify-between items-center max-w-7xl mx-auto px-6 lg:px-10 3xl:px-0 h-12 lg:h-16 lg:justify-between"
     data-animation="animate-fade animate-duration-[2000ms]"
   >
-    <a data-astro-prefetch href=`/${lang}/`>
+    <a href=`/${lang}/`>
       <Image
         loading="eager"
         id="logo-default"
@@ -43,26 +43,16 @@ const handleRedirect = (lang: string) => {
     </a>
     <div class="nav-list">
       <div class="nav_item items">
-        <a
-          data-astro-prefetch
-          href={`/${lang}/`}
-          data-route={`/${lang}`}
-          data-astro-prefetch>{content.home}</a
+        <a href={`/${lang}/`} data-route={`/${lang}`}>{content.home}</a>
+      </div>
+      <div class="nav_item items">
+        <a href={`/${lang}/about`} data-route={`/${lang}/about`}
+          >{content.about}</a
         >
       </div>
       <div class="nav_item items">
-        <a
-          data-astro-prefetch
-          href={`/${lang}/about`}
-          data-route={`/${lang}/about`}
-          data-astro-prefetch>{content.about}</a
-        >
-      </div>
-      <div class="nav_item items">
-        <a
-          data-astro-prefetch
-          href={`/${lang}/case-studies`}
-          data-route={`/${lang}/case-studies`}>{content.Case}</a
+        <a href={`/${lang}/case-studies`} data-route={`/${lang}/case-studies`}
+          >{content.Case}</a
         >
       </div>
       <!-- Dropdown menu -->
@@ -97,13 +87,11 @@ const handleRedirect = (lang: string) => {
         >
           <div class="flex flex-col gap-3 text-secondaryBlueText">
             <a
-              data-astro-prefetch
               href={`/${lang}/solutions/merchant-solutions`}
               data-route={`/${lang}/solutions/merchant-solutions`}
               aria-label="merchants">{content.for_merchants}</a
             >
             <a
-              data-astro-prefetch
               href={`/${lang}/solutions/logistic-solutions`}
               data-route={`/${lang}/solutions/logistic-solutions`}
               aria-label="logistics">{content.For_3PL_Companies}</a
@@ -144,7 +132,6 @@ const handleRedirect = (lang: string) => {
                 class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md group"
               >
                 <a
-                  data-astro-prefetch
                   href={`/${lang}/contact/logistic-companies`}
                   data-route={`/${lang}/contact/logistic-companies`}
                   class="flex flex-row items-start justify-between gap-2 register_item"
@@ -187,7 +174,6 @@ const handleRedirect = (lang: string) => {
                 class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group"
               >
                 <a
-                  data-astro-prefetch
                   href={`/${lang}/contact/merchants`}
                   data-route={`/${lang}/contact/merchants`}
                   class="flex flex-row items-start justify-between gap-2 register_item"
@@ -230,7 +216,6 @@ const handleRedirect = (lang: string) => {
                 class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group"
               >
                 <a
-                  data-astro-prefetch
                   href={`/${lang}/contact/drivers`}
                   data-route={`/${lang}/contact/drivers`}
                   class="flex flex-row items-start justify-between gap-2 register_item"
@@ -273,7 +258,6 @@ const handleRedirect = (lang: string) => {
                 class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group"
               >
                 <a
-                  data-astro-prefetch
                   href={`/${lang}/contact/employees`}
                   data-route={`/${lang}/contact/employees`}
                   class="flex flex-row items-start justify-between gap-2 register_item"
@@ -316,7 +300,6 @@ const handleRedirect = (lang: string) => {
       </div>
 
       <a
-        data-astro-prefetch
         href="https://app.4ulogistic.com/login"
         target="”_blank”"
         class="button lg:hidden">{content.log_in}</a
@@ -377,7 +360,6 @@ const handleRedirect = (lang: string) => {
                   return (
                     <li class="lg:hover:text-primaryOrange">
                       <a
-                        data-astro-prefetch
                         href={`${handleRedirect("en")}`}
                         class="hover:text-primaryOrange inline-flex items-center  font-semibold"
                         role="menuitem"
@@ -405,7 +387,6 @@ const handleRedirect = (lang: string) => {
                       aria-describedby="language choice"
                     >
                       <a
-                        data-astro-prefetch
                         href={`${handleRedirect("ar")}`}
                         class="hover:text-primaryOrange inline-flex items-center  font-semibold"
                         role="menuitem"
@@ -431,7 +412,6 @@ const handleRedirect = (lang: string) => {
 
     <div class="hidden lg:flex lg:items-center lg:gap-8 lg:h-full">
       <a
-        data-astro-prefetch
         href="https://app.4ulogistic.com/login"
         target="”_blank”"
         class="button">{content.log_in}</a
@@ -442,7 +422,7 @@ const handleRedirect = (lang: string) => {
       >
         <button
           type="button"
-          class="inline-flex items-center justify-center rounded-md cursor-pointer gap-2 hover:text-primaryOrange duration-300 ease-in font-semibold"
+          class="inline-flex items-center justify-center rounded-md cursor-pointer gap-2 text-white hover:text-primaryOrange duration-300 ease-in font-semibold"
           aria-describedby="language button"
         >
           {
@@ -491,7 +471,6 @@ const handleRedirect = (lang: string) => {
                   return (
                     <li>
                       <a
-                        data-astro-prefetch
                         href={`${handleRedirect("en")}`}
                         class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center  "
                         role="menuitem"
@@ -516,7 +495,6 @@ const handleRedirect = (lang: string) => {
                   return (
                     <li aria-describedby="language choice">
                       <a
-                        data-astro-prefetch
                         href={`${handleRedirect("ar")}`}
                         class="hover:text-darkerOrange duration-300 ease-in inline-flex items-center"
                         role="menuitem"

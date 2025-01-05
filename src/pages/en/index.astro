@@ -20,7 +20,6 @@ import google from "../../images/icons/google play.png";
 import apple from "../../images/icons/apple store.png";
 import SourceImage from "../../components/SourceImageThree.astro";
 import ContactPopUp from "../../components/ContactPopUp.astro";
-import Preload from "../../components/Preload.astro";
 
 import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
 ---
@@ -33,7 +32,6 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
       mobileImgUrl={videoPlaceHolderMobile}
       alt="videoplaceholder"
     />
-
     <div
       id="hero-overlay"
       class="absolute top-0 left-0 size-full bg-black/65 z-0"
@@ -41,21 +39,14 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
     </div>
     <video
       autoplay
-      playsinline
       muted
       loop
-      class="size-full object-cover -z-10 absolute"
+      class="absolute h-full w-full object-cover -z-10 top-0 left-0"
       id="video"
     >
-      <source
-        src="/video/delivery.mp4"
-        type="video/mp4"
-        media="(min-width: 480px)"
-      />
-      <source src="/video/delivery_mobile.mp4" type="video/mp4" />
     </video>
     <div
-      class="fade container section-container flex flex-col justify-end items-start h-full gap-y-10 z-10"
+      class="fade relative section-container flex flex-col justify-end items-start h-full gap-y-10 z-10"
       data-animation="animate-fade-up animate-duration-[2000ms]"
     >
       <div class="space-y-5">
@@ -76,7 +67,7 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
       </div>
     </div>
   </section>
-  <div class="bg-white overflow-hidden" id="InfiniteScroll">
+  <section class="overflow-hidden" id="InfiniteScroll">
     <div
       class="fade space-y-14 w-full py-10"
       data-animation="animate-fade animate-duration-[1000ms]"
@@ -86,7 +77,7 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
       </h2>
       <InfiniteScroll />
     </div>
-  </div>
+  </section>
   <section class="overflow-hidden bg-lightGray">
     <div
       class="fade section-container grid justify-items-center lg:grid-cols-2 items-center sm:gap-y-20 gap-x-5 relative"
@@ -116,23 +107,6 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
       <div
         class="hidden sm:block relative lg:translate-x-20 lg:-right-5 sm:w-[600px] lg:w-[700px] 3xl:w-[900px]"
       >
-        <!--  <picture>
-          <source
-            srcset="../../../src/images/mockup/mockup_lg.webp"
-            media="(min-width: 1600px)"
-          />
-          <source
-            srcset="../../images/mockup/mockup_md.webp"
-            media="(min-width: 1024px)"
-          />
-          <Image
-            src={mockup_sm}
-            alt="mockup"
-            class="w-full h-auto object-cover self-start"
-            loading="lazy"
-            fetchpriority="low"
-          />
-        </picture> -->
         <SourceImage
           mobileImgUrl={mockup_sm}
           MidImgUrl={mockup_md}
@@ -181,7 +155,10 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
     </div>
   </section>
   <section id="Integration" class="bg-darkGray">
-    <div class="section-container space-y-20">
+    <div
+      class="fade section-container space-y-20"
+      data-animation="animate-fade animate-duration-[1000ms]"
+    >
       <h2 class="md:text-center text-white">Core features</h2>
       <CoreFeatures lang="en" />
     </div>
@@ -213,7 +190,8 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
           Integrated Partners
         </h4>
         <div
-          class="flex flex-row flex-wrap items-center justify-evenly lg:justify-center w-full gap-y-10 gap-x-5 pb-10 border-b-2"
+          class="fade flex flex-row flex-wrap items-center justify-evenly lg:justify-center w-full gap-y-10 gap-x-5 pb-10 border-b-2"
+          data-animation="animate-fade-up animate-duration-[1000ms]"
         >
           <Partners />
         </div>
@@ -227,7 +205,8 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
           Logisitc Partners
         </h4>
         <div
-          class="flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-5 w-full"
+          class="fade flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-5 w-full"
+          data-animation="animate-fade-up animate-duration-[1000ms]"
         >
           <LogisicPartners />
         </div>

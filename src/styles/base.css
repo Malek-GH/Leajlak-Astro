@@ -43,6 +43,9 @@
 }
 
 @layer components {
+}
+
+@layer utilities {
   .button-regular {
     @apply w-full whitespace-nowrap rounded-xl bg-darkerOrange py-4 text-base font-bold text-white antialiased shadow-Button_shadow shadow-darkerOrange/30 duration-200 ease-linear hover:bg-primaryOrange active:scale-95 active:duration-100 active:ease-in-out sm:w-fit sm:px-8;
   }
@@ -85,7 +88,7 @@ header.scrolled .nav-list {
 }
 
 .nav-list {
-  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col justify-center space-y-7 px-12 py-16 text-base font-semibold duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-8 lg:space-y-0 lg:p-0;
+  @apply fixed right-0 top-0 flex h-full w-full -translate-x-full flex-col justify-center space-y-7 px-12 py-16 text-base font-semibold text-white duration-300 ease-out sm:px-20 lg:visible lg:relative lg:top-0 lg:h-full lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-x-8 lg:space-y-0 lg:p-0;
 }
 
 .nav-list > div,
@@ -161,7 +164,7 @@ header.scrolled .button-dropdown-menu {
 /* solution-dropdown-menu */
 
 #dropdownHover {
-  @apply max-h-0 transform overflow-hidden transition-max-height ease-in will-change-auto lg:pointer-events-none lg:max-h-max lg:origin-top-right lg:scale-90 lg:opacity-0 lg:transition-[opacity,transform] lg:duration-200;
+  @apply max-h-0 transform overflow-hidden transition-max-height ease-in lg:pointer-events-none lg:max-h-max lg:origin-top-right lg:scale-90 lg:opacity-0 lg:transition-[opacity,transform] lg:duration-200;
 }
 
 #dropdownHoverButton.active #dropdownHover {
@@ -172,7 +175,7 @@ header.scrolled .button-dropdown-menu {
   @apply rotate-180 transition-transform duration-500 ease-in-out;
 }
 
-#dropdownHoverButton #dropdownHover a.active {
+#dropdownHover a.active {
   @apply text-darkerOrange;
 }
 
@@ -187,7 +190,7 @@ header.scrolled #dropdown-button.active {
 /* register-menu */
 
 #registerMenu {
-  @apply right-0 z-50 max-h-0 w-full origin-top-right overflow-hidden transition-max-height ease-in will-change-auto lg:pointer-events-none lg:absolute lg:top-16 lg:flex lg:max-h-max lg:w-72 lg:scale-90 lg:rounded-lg lg:bg-white lg:opacity-0 lg:drop-shadow-lg lg:transition-[opacity,transform] lg:duration-200;
+  @apply right-0 z-50 max-h-0 w-full origin-top-right overflow-hidden transition-max-height ease-in lg:pointer-events-none lg:absolute lg:top-16 lg:flex lg:max-h-max lg:w-72 lg:scale-90 lg:rounded-lg lg:bg-white lg:opacity-0 lg:drop-shadow-lg lg:transition-[opacity,transform] lg:duration-200;
 }
 
 #registerMenu.active {
