@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import playformCompress from "@playform/compress";
-/* import playformInline from "@playform/inline"; */
 
 export default defineConfig({
   integrations: [
@@ -9,7 +8,7 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    /* playformInline() */
+
     ,
   ],
   trailingSlash: "ignore",
@@ -17,6 +16,6 @@ export default defineConfig({
     css: {
       postcss: "./postcss.config.js",
     },
-    inlineStylesheets: "auto",
+    inlineStylesheets: "always",
   },
 });
