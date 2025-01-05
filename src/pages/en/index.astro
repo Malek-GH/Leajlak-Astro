@@ -22,6 +22,7 @@ import SourceImage from "../../components/SourceImageThree.astro";
 import ContactPopUp from "../../components/ContactPopUp.astro";
 
 import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
+import Workflow from "../../components/Workflow.astro";
 ---
 
 <Layout title="Home" lang="en">
@@ -41,7 +42,7 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
       autoplay
       muted
       loop
-      class="absolute h-full w-full object-cover object-center -z-10 top-0 left-0"
+      class="absolute size-full object-cover object-center -z-10 top-0 left-0"
       id="video"
     >
     </video>
@@ -125,14 +126,7 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
         <div
           class="w-full absolute sm:relative bottom-3 sm:bottom-0 md:w-2/3 order-2 md:order-1"
         >
-          <video
-            autoplay
-            muted
-            loop
-            src="/video/leajlak workflow.mp4"
-            class="w-full h-auto top-0"
-          >
-          </video>
+          <Workflow />
         </div><div
           class="md:w-2/6 mb-40 xs:mb-72 sm:mb-0 space-y-5 order-1 md:order-2"
         >
