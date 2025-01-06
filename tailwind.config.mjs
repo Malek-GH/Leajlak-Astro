@@ -100,9 +100,10 @@ export default {
         74: "300px",
         15: "3.75rem",
         120: "540px",
-        hero: "92vh",
+        hero_standard: "90vh",
         chatbot: "75vh",
       },
+
       transitionProperty: {
         "max-height": "max-height",
       },
