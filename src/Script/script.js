@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.remove("scrolled");
       logoDefault.classList.remove("hidden");
       logoScrolled.classList.add("hidden");
-      /*  headerChange(); */
     }
   }
   function setActiveItem() {
@@ -88,30 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  /* function headerChange() {
-    const currentRoute = window.location.pathname.replace(/\/$/, "");
-    const pathSegments = currentRoute.split("/");
-    const lang = pathSegments[1] || "";
-
-    const caseStudiesRoute = `/${lang}/case-studiess`;
-
-    if (currentRoute === caseStudiesRoute) {
-      navList.classList.remove("text-white");
-      navList.classList.add("text-secondaryBlueText");
-      logoDefault.classList.add("hidden");
-      logoScrolled.classList.remove("hidden");
-      buttonDrop.forEach((drop) => {
-        drop.classList.add("text-black");
-      });
-    } else {
-      navList.classList.remove("text-secondaryBlueText");
-      navList.classList.add("text-white");
-      buttonDrop.forEach((drop) => {
-        drop.classList.add("text-white");
-      });
-    }
-  }
- */
   navItems.forEach((item) => {
     item.addEventListener("click", function () {
       navItems.forEach((el) => el.classList.remove("active"));
@@ -168,5 +143,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setActiveItem();
   handleScroll();
-  /*   headerChange(); */
 });

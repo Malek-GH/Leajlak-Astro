@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
 
-import caseone from "../images/bg/case studies/restaurant.webp";
+import caseone from "../images/bg/case_studies/general.webp";
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-  <a href="#" class="case-card">
-    <div class="w-full">
+  <a href="/en/case-studies/general-case" class="case-card">
+    <div class="w-full relative">
       <Image
         src={caseone}
         alt=""
@@ -15,44 +15,11 @@ import caseone from "../images/bg/case studies/restaurant.webp";
       />
     </div>
     <div class="case-text">
-      <h4>First case</h4>
+      <h4>Transforming Last-Mile Delivery with Leajlak</h4>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-        tempore blanditiis dolores beatae delectus assumenda,
-      </p>
-    </div>
-  </a>
-  <a href="#" class="case-card">
-    <div class="w-full">
-      <Image
-        src={caseone}
-        alt=""
-        class="size-full object-cover"
-        loading="lazy"
-      />
-    </div>
-    <div class="case-text">
-      <h4>First case</h4>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-        tempore blanditiis dolores beatae delectus assumenda,
-      </p>
-    </div>
-  </a>
-  <a href="#" class="case-card">
-    <div class="w-full">
-      <Image
-        src={caseone}
-        alt=""
-        class="size-full object-cover"
-        loading="lazy"
-      />
-    </div>
-    <div class="case-text">
-      <h4>First case</h4>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-        tempore blanditiis dolores beatae delectus assumenda,
+        Leajlak, an innovative delivery management solution, has redefined the
+        logistics game by bridging the gap between merchants and third-party
+        logistics (3PL) companies.
       </p>
     </div>
   </a>
@@ -60,8 +27,9 @@ import caseone from "../images/bg/case studies/restaurant.webp";
 
 <style>
   .case-card {
-    @apply flex flex-col overflow-hidden rounded-2xl bg-lightGray drop-shadow-md;
+    @apply relative flex flex-col overflow-hidden rounded-2xl bg-lightGray drop-shadow;
   }
+
   .case-text {
     @apply space-y-4 px-5 py-7;
   }

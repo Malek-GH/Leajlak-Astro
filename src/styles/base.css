@@ -21,7 +21,7 @@
   }
 
   h2 {
-    @apply text-2xl font-bold leading-1.3 text-secondaryBlueText sm:text-3xl;
+    @apply text-2xl font-bold leading-1.3 text-secondaryBlueText sm:text-3xl 3xl:text-4xl;
   }
 
   h3 {
@@ -157,7 +157,7 @@ header.scrolled .nav-list > .nav_item > a.active::after {
   @apply max-h-52 opacity-100 duration-500 ease-out lg:pointer-events-auto lg:scale-100;
 }
 
-header.scrolled .button-dropdown-menu {
+header.scrolled .button-dropdown-menu button {
   @apply text-secondaryBlueText;
 }
 

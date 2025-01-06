@@ -6,10 +6,9 @@ interface Props {
   mobileImgUrl: string | ImageMetadata;
   desktopImgUrl: string | ImageMetadata;
   alt: string;
-  position: string;
 }
 
-const { mobileImgUrl, desktopImgUrl, alt, position } = Astro.props;
+const { mobileImgUrl, desktopImgUrl, alt } = Astro.props;
 
 const desktopImg = await getImage({
   src: desktopImgUrl,
@@ -23,7 +22,7 @@ const desktopImg = await getImage({
   <Image
     src={mobileImgUrl}
     alt={alt}
-    class=`HeroBg ${position}`
+    class=`HeroBg `
     loading="eager"
     fetchpriority="high"
     decoding="sync"
@@ -31,6 +30,6 @@ const desktopImg = await getImage({
 </picture>
 <style>
   .HeroBg {
-    @apply bottom-0 left-0 z-0 size-full object-cover object-center;
+    @apply absolute bottom-0 left-0 z-0 size-full object-cover object-center;
   }
 </style>

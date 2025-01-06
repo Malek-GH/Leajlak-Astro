@@ -34,12 +34,11 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 
 <Layout title="Solutions | Merchants" lang="en">
   <section class="hero z-0" id="merchants-hero">
-    <div class="blurred-img bg-blurredmerchant_solution bg-fixed">
+    <div class="blurred-img bg-blurredmerchant_solution bg-cover bg-center">
       <SourceImageTwo
         mobileImgUrl={merchant_bg}
         desktopImgUrl={merchant_bg_lg}
         alt="merchant_solution_bg"
-        position="fixed"
       />
     </div>
     <div
@@ -259,7 +258,7 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
   <section id="merchant-benefits" class="bg-white">
     <BenefitsMerchants />
   </section>
-  <section class="bg-black/70">
+  <section class="bg-secondaryBlueDark">
     <div
       class="relative flex flex-col items-center justify-center gap-14 w-full px-10 sm:px-24 py-24 md:min-h-[450px] overflow-hidden z-10"
     >
