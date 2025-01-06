@@ -141,6 +141,20 @@ document.addEventListener("DOMContentLoaded", function () {
     registerMenu.classList.remove("active");
   });
 
+  const hero = document.querySelector(".hero");
+
+  const adjustHeroHeight = () => {
+    if (window.innerWidth <= 480) {
+      hero.style.height = `${window.innerHeight * 0.9}px`;
+    } else {
+      hero.style.height = "";
+    }
+  };
+
+  window.addEventListener("resize", adjustHeroHeight);
+
+  adjustHeroHeight();
+
   setActiveItem();
   handleScroll();
 });
