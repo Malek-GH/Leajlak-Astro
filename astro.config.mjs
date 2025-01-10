@@ -7,7 +7,7 @@ import playformInline from "@playform/inline";
 import node from "@astrojs/node";
 
 export default defineConfig({
-  output: "server",
+  output: "static",
 
   integrations: [
     playformCompress(),
