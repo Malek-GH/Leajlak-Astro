@@ -4,7 +4,7 @@ import playformCompress from "@playform/compress";
 
 import playformInline from "@playform/inline";
 
-import node from "@astrojs/node";
+/* import node from "@astrojs/node"; */
 
 export default defineConfig({
   output: "static",
@@ -26,7 +26,7 @@ export default defineConfig({
     inlineStylesheets: "always",
   },
 
-  adapter: node({
+  /* adapter: node({
     mode: "standalone",
-  }),
+  }), */
 });
