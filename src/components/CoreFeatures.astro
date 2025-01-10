@@ -11,7 +11,10 @@ const content = await import(`../data/${lang}.json`);
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-  <div class="FeatureCard">
+  <div
+    class="FeatureCard fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <Image src={api} alt="Api" loading="lazy" fetchpriority="low" />
     <div>
       <h4 class="font-medium">{content.API}</h4>
@@ -20,7 +23,10 @@ const content = await import(`../data/${lang}.json`);
       </p>
     </div>
   </div>
-  <div class="FeatureCard">
+  <div
+    class="FeatureCard fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <Image
       src={order_status}
       alt="order_status"
@@ -34,7 +40,10 @@ const content = await import(`../data/${lang}.json`);
       </p>
     </div>
   </div>
-  <div class="FeatureCard">
+  <div
+    class="FeatureCard fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <Image
       src={LiveLocation}
       alt="LiveLocation"
@@ -48,7 +57,10 @@ const content = await import(`../data/${lang}.json`);
       </p>
     </div>
   </div>
-  <div class="FeatureCard">
+  <div
+    class="FeatureCard fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <Image
       src={Payment_methods}
       alt="Payment_methods"
@@ -62,7 +74,10 @@ const content = await import(`../data/${lang}.json`);
       </p>
     </div>
   </div>
-  <div class="FeatureCard">
+  <div
+    class="FeatureCard fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <Image src={chat} alt="chat" loading="lazy" fetchpriority="low" />
     <div>
       <h4 class="font-medium">{content.Customerchat}</h4>
@@ -71,7 +86,10 @@ const content = await import(`../data/${lang}.json`);
       </p>
     </div>
   </div>
-  <div class="FeatureCard">
+  <div
+    class="FeatureCard fade"
+    data-animation="animate-fade animate-duration-[1000ms]"
+  >
     <Image
       src={order_return}
       alt="order_return"
