@@ -84,9 +84,9 @@ formSteppers.forEach((formStepper) => {
     const numberRegex = /^(0|[1-9]\d*)$/;
     validateInputs(".input-number", numberRegex);
 
-    // Validate checkboxes
     const requiredCheckboxes =
       stepContent.querySelectorAll(".required-checkbox");
+
     if (requiredCheckboxes.length > 0) {
       const isChecked = Array.from(requiredCheckboxes).some((cb) => cb.checked);
       const errorMessage = stepContent.querySelector(".error-message-checkbox");
@@ -107,6 +107,24 @@ formSteppers.forEach((formStepper) => {
         }
       }
     }
+
+    const inputsSelect = stepContent.querySelectorAll(".required-select");
+    inputsSelect.forEach((select) => {
+      const errorMessage = select.parentElement.querySelector(
+        ".error-message-select",
+      );
+
+      if (select.value !== "") {
+        select.classList.remove("error");
+        select.classList.add("correct");
+        errorMessage.classList.add("hidden");
+      } else {
+        select.classList.remove("correct");
+        select.classList.add("error");
+        errorMessage.classList.remove("hidden");
+        isValid = false;
+      }
+    });
 
     return isValid;
   }

@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import cost from "..//images/bg/cost_saving.webp";
-import experience from "../images/bg/customer experience.webp";
-import scalability from "../images/bg/charts.webp";
-import integration from "../images/bg/integration.webp";
+import cost from "../images/illustrations/cost_saving.webp";
+import experience from "../images/illustrations/customer_experience.webp";
+import scalability from "../images/illustrations/charts.webp";
+import integration from "../images/illustrations/integration.webp";
 
 const benefits = [
   {
@@ -65,16 +65,16 @@ const benefits = [
 </div>
 <style>
   .benefits-card {
-    @apply relative flex h-full flex-shrink-0 flex-grow-0 basis-full flex-col justify-end rounded-2xl bg-white p-6 shadow-card_shadow shadow-secondaryBlueDark/20 md:basis-full md:flex-row md:items-center md:justify-center md:gap-10;
+    @apply relative flex h-full flex-shrink-0 flex-grow-0 basis-full flex-col justify-end gap-16 rounded-2xl p-6 md:basis-full md:flex-row md:items-center md:justify-between;
   }
   .benefits-card .image-container {
-    @apply relative left-1/2 top-0 h-80 w-[calc(100%+16px)] -translate-x-1/2 -translate-y-10 overflow-hidden rounded-lg shadow-lg shadow-black/20 md:left-0 md:h-full md:w-full md:translate-x-0 md:translate-y-0;
+    @apply relative md:w-2/3 lg:w-1/2;
   }
   .image-container img {
     @apply size-full xs:object-cover;
   }
   .text {
-    @apply relative space-y-4 md:w-full;
+    @apply relative space-y-4 md:w-1/2;
   }
   .benefits-card:nth-child(2n) .image-container {
     @apply order-1 md:order-2;

@@ -61,7 +61,7 @@ header.scrolled .button {
   @apply text-darkerOrange ring-darkerOrange hover:bg-darkerOrange hover:text-white;
 }
 .section-container {
-  @apply relative mx-auto max-w-7xl px-6 py-24 lg:px-10 3xl:px-0;
+  @apply relative mx-auto max-w-7xl px-6 py-24 lg:px-10 2xl:px-0;
 }
 .hero {
   @apply h-hero_standard;
@@ -76,7 +76,7 @@ header.scrolled .button {
   @apply overflow-hidden;
 }
 .header-logo {
-  @apply w-28 lg:w-36;
+  @apply w-28 lg:w-32;
 }
 
 header.scrolled {

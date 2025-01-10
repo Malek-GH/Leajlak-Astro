@@ -21,7 +21,7 @@ const handleRedirect = (lang: string) => {
   class="fixed top-0 z-50 w-full rounded-b-xl py-2 transition-colors duration-200 ease-in"
 >
   <div
-    class="fade relative flex flex-row justify-between items-center max-w-7xl mx-auto px-6 lg:px-10 3xl:px-0 h-12 lg:h-16 lg:justify-between"
+    class="fade relative flex flex-row justify-between items-center max-w-7xl mx-auto px-6 lg:px-10 2xl:px-0 h-12 lg:h-16 lg:justify-between"
     data-animation="animate-fade animate-duration-[2000ms]"
   >
     <a href=`/${lang}/`>
@@ -129,24 +129,24 @@ const handleRedirect = (lang: string) => {
           >
             <li>
               <div
-                class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md group"
+                class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group"
               >
                 <a
-                  href={`/${lang}/contact/logistic-companies`}
-                  data-route={`/${lang}/contact/logistic-companies`}
+                  href={`/${lang}/contact/merchants`}
+                  data-route={`/${lang}/contact/merchants`}
                   class="flex flex-row items-start justify-between gap-2 register_item"
-                  aria-label="logistic-companie-contact"
+                  aria-label="merchants-contact"
                 >
                   <div class="flex flex-col gap-1">
                     <h6
                       class="text-sm group-hover:text-darkerOrange duration-200"
                     >
-                      {content.LC}
+                      {content.Merchants}
                     </h6>
                     <span
                       class="text-secondaryBlueText/50 text-xsm group-hover:text-secondaryBlueText/80 duration-200"
                     >
-                      {content.LCD}
+                      {content.MD}
                     </span>
                   </div>
                   <div
@@ -171,24 +171,24 @@ const handleRedirect = (lang: string) => {
             </li>
             <li>
               <div
-                class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md duration-200 group"
+                class="lg:p-3 cursor-pointer lg:hover:bg-gray-100 rounded-md group"
               >
                 <a
-                  href={`/${lang}/contact/merchants`}
-                  data-route={`/${lang}/contact/merchants`}
+                  href={`/${lang}/contact/logistic-companies`}
+                  data-route={`/${lang}/contact/logistic-companies`}
                   class="flex flex-row items-start justify-between gap-2 register_item"
-                  aria-label="merchants-contact"
+                  aria-label="logistic-companie-contact"
                 >
                   <div class="flex flex-col gap-1">
                     <h6
                       class="text-sm group-hover:text-darkerOrange duration-200"
                     >
-                      {content.Merchants}
+                      {content.LC}
                     </h6>
                     <span
                       class="text-secondaryBlueText/50 text-xsm group-hover:text-secondaryBlueText/80 duration-200"
                     >
-                      {content.MD}
+                      {content.LCD}
                     </span>
                   </div>
                   <div

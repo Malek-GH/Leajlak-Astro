@@ -4,7 +4,7 @@ import playformCompress from "@playform/compress";
 
 import playformInline from "@playform/inline";
 
-import netlify from "@astrojs/netlify";
+import node from "@astrojs/node";
 
 export default defineConfig({
   output: "server",
@@ -26,5 +26,7 @@ export default defineConfig({
     inlineStylesheets: "always",
   },
 
-  adapter: netlify(),
+  adapter: node({
+    mode: "standalone",
+  }),
 });

@@ -1,18 +1,15 @@
 .error {
-  @apply border-2 border-red-700 duration-300;
+  @apply border-red-700;
 }
 .correct {
-  @apply border-2 border-green-600 duration-300;
-}
-.no-scroll {
-  @apply h-screen overflow-hidden;
+  @apply border-green-600;
 }
 
 .form-elements {
   @apply hidden;
 }
 .form-elements.active {
-  display: block;
+  @apply block;
 }
 .stepper.active > div {
   @apply ring-2 ring-darkerOrange;
