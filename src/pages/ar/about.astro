@@ -1,87 +1,87 @@
-<!-- ---
+---
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import about from "../../../public/images/bg/about.webp";
-import Mc from "../../../public/images/companies logo/clients/Mcdonald.webp";
-import lorenzo from "../../../public/images/companies logo/clients/Lorenzo.webp";
-import alliwan from "../../../public/images/companies logo/clients/Alliwan.webp";
-import bk from "../../../public/images/companies logo/clients/Burgerking.webp";
-import hzbr from "../../../public/images/companies logo/clients/Hazbr.webp";
-import farawalah from "../../../public/images/companies logo/clients/Farawlah.webp";
-import casapasta from "../../../public/images/companies logo/clients/Casapasta.webp";
+
+import about from "../../images/bg/about.webp";
+import about_lg from "../../images/bg/about-lg.webp";
+import Mc from "../../images/companies logo/clients/Mcdonald.webp";
+import lorenzo from "../../images/companies logo/clients/Lorenzo.webp";
+import alliwan from "../../images/companies logo/clients/Alliwan.webp";
+import bk from "../../images/companies logo/clients/Burgerking.webp";
+import hzbr from "../../images/companies logo/clients/Hazbr.webp";
+import farawalah from "../../images/companies logo/clients/Farawlah.webp";
+import casapasta from "../../images/companies logo/clients/Casapasta.webp";
+import about_mobile from "../../images/bg/about-mobile.webp";
 
 import TrustedIcons from "../../components/TrustedIcons.astro";
 import Values from "../../components/values.astro";
 import ButtonOutline from "../../components/ButtonOutline.astro";
+import Location from "../../components/Location.astro";
+import QuickSupport from "../../components/QuickSupport.astro";
+import SourceImageTwo from "../../components/SourceImageTwo.astro";
 ---
 
-<link
-  rel="preload"
-  href="/images/bg/about-mobile.webp"
-  as="image"
-  media="(max-width: 479px)"
-/>
-<link
-  rel="preload"
-  href="/images/bg/about-md.webp"
-  as="image"
-  media="(min-width: 480px) "
-/>
-<link
-  rel="preload"
-  href="/images/bg/about-lg.webp"
-  as="image"
-  media="(min-width: 1600px)"
-/>
-
 <Layout title="معلومات عنا" lang="ar">
-  <section
-    class="bg-about_mobile xs:bg-about_med 3xl:bg-about_lg bg-cover bg-center lg:bg-right bg-no-repeat bg-fixed hero flex items-center relative"
-    id="about-hero"
-  >
+  <section class="hero" id="about-hero">
     <div
-      class="fade container section-container text-white z-10"
-      data-animation="animate-fade animate-duration-[1500ms]"
+      class="bg-blurredAboutBgMobile xs:bg-blurredAboutBg bg-cover bg-center blurred-img"
     >
-      <div class="text-right space-y-5 lg:w-3/4">
-        <h3 class="text-primaryOrange text-2xl md:text-4xl font-normal">
-          من نحن
-        </h3>
-        <h1 class="text-3xl md:text-5xl text-white">
-          ربط التجار بمزودي الخدمات اللوجستية
-          <span
-            class="typewrite text-primaryOrange leading-normal"
-            data-period="1000"
-            data-type='[ "بسهولة.", "بسلاسة.", "بكفاءة.", "كما لم يحدث من قبل!" ]'
-          >
-          </span>
-          <span class="border-r-2 animate-ping animate-duration-1000"></span>
-        </h1>
-      </div>
+      <SourceImageTwo
+        mobileImgUrl={about_mobile}
+        desktopImgUrl={about_lg}
+        alt="About-bg"
+      />
     </div>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-r from-black/50 to-black/70 z-0"
+      class="absolute top-0 left-0 size-full bg-black/80 xs:bg-transparent xs:bg-gradient-to-r from-black/50 from-0% to-black/85 to-80% z-0"
     >
     </div>
+    <div
+      id="title-container"
+      class="fade container section-container text-white flex flex-col justify-center h-full"
+      data-animation="animate-fade animate-duration-[1500ms]"
+    >
+      <h3
+        class="text-primaryOrange text-2xl md:text-3xl font-normal tracking-wider mt-10"
+      >
+        من نحن
+      </h3>
+      <h1 class="text-white lg:w-3/4 leading-snug">
+        ربط التجار ومقدمي الخدمات اللوجستية
+        <span
+          class="typewrite text-primaryOrange"
+          data-period="1000"
+          data-type='[ "بسهولة.", "بسلاسة.", "بكفاءة.", "كما لم يحدث من قبل!" ]'
+        >
+        </span>
+        <span class="border-r-2 animate-ping animate-duration-1000"></span>
+      </h1>
+    </div>
   </section>
-  <section class="bg-white" id="about">
-    <div class="container section-container space-y-20 lg:space-y-32">
+  <section class="bg-white z-10" id="about">
+    <div
+      class="fade container section-container space-y-20 lg:space-y-32"
+      data-animation="animate-fade animate-duration-[1000ms]"
+    >
       <div
-        class="fade flex flex-col items-center lg:flex-row gap-16"
+        class="flex flex-col items-center justify-center lg:flex-row gap-16 lg:gap-0"
         data-animation="animate-fade animate-duration-[1000ms]"
       >
-        <div class="max-w-full flex-1 flex flex-col gap-y-4">
+        <div class="flex flex-col gap-y-4 lg:w-1/2">
           <h2>عن لأجلك</h2>
-          <p class="lg:text-lg">
-            لأجلك هي شركة تكنولوجية مبتكرة تهدف إلى إحداث ثورة في مجال إدارة
-            الطلبات والخدمات اللوجستية. من خلال تقديم حل شامل وقابل للتخصيص،
-            تربط لأجلك التجار بشركات الخدمات اللوجستية الخارجية، مما يتيح نظام
-            توصيل سلس وفعال.
+          <p class="lg:w-3/4">
+            لأجلك هي شركة سعودية وطنية تهدف إلى تقديم خدمات لوجستية مبتكرة
+            ومتكاملة لشركائها، مع ضمان الاستدامة وفقًا لأفضل الممارسات العالمية
+            لتحقيق النمو والاستمرارية.
+          </p>
+          <p class="lg:w-3/4">
+            كما تسعى الشركة إلى تطوير خطة تدريب وتوظيف لتمكين قوتها العاملة،
+            وضمان سلامة وأمن المشاريع وتحقيق الأهداف المرجوة لعملائها.
           </p>
         </div>
-        <div class="max-w-full flex-1 overflow-hidden">
-          <Image src={about} alt="عن لأجلك" class="w-full" />
+        <div class="lg:w-1/2 h-full overflow-hidden rounded-2xl">
+          <Image src={about} alt="about" class="size-full object-cover" />
         </div>
       </div>
     </div>
@@ -96,12 +96,12 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
           data-animation="animate-fade-up animate-duration-[1000ms]"
         >
           <h2 class="bg-primaryOrange text-white text-center py-2">رؤيتنا</h2>
-          <p>
-            يكمن نظام إدارة الطلبات المبتكر من لأجلك في قدرته على إحداث ثورة في
-            نظام التوصيل من خلال ربط التجار وشركات الخدمات اللوجستية الخارجية
-            بسلاسة. من خلال تقديم حل شامل لسد الفجوة بين هذه الأطراف، تمكّن
-            لأجلك الشركات من تحقيق خدمات توصيل سريعة وفعالة، مما يعزز الكفاءة
-            التشغيلية والتعاون ورضا العملاء.
+          <p class="text-white">
+            يتمتع نظام إدارة الطلبات المبتكر من لأجلك بالقدرة على تحويل نظام
+            التوصيل من خلال ربط التجار بشركات الخدمات اللوجستية من الطرف الثالث
+            بفعالية. من خلال تقديم حل شامل يسد الفجوة بين هذه الأطراف، تمكّن
+            لأجلك الشركات من تقديم خدمات توصيل سريعة عند الطلب، مما يعزز كفاءة
+            العمليات ويحسن التعاون ويزيد رضا العملاء.
           </p>
         </div>
         <div
@@ -111,29 +111,29 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
           <h2 class="bg-primaryOrange text-white text-center py-2">مهمتنا</h2>
           <ul>
             <li
-              class="before:bg-tick relative before:absolute before:right-0 before:top-0 before:size-6 before:content-['']"
+              class="before:bg-tick relative before:absolute before:right-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
             >
-              <p class="ms-7">تعزيز الكفاءة التشغيلية للشركات.</p>
+              <p class="ms-7 text-white">تعزيز الكفاءة التشغيلية للشركات.</p>
             </li>
             <li
-              class="before:bg-tick relative before:absolute before:right-0 before:top-0 before:size-6 before:content-['']"
+              class="before:bg-tick relative before:absolute before:right-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
             >
-              <p class="ms-7">
-                توفير اتصال سلس بين التجار ومزودي الخدمات اللوجستية.
+              <p class="ms-7 text-white">
+                توفير اتصال سلس بين التجار ومقدمي الخدمات اللوجستية.
               </p>
             </li>
             <li
-              class="before:bg-tick relative before:absolute before:right-0 before:top-0 before:size-6 before:content-['']"
+              class="before:bg-tick relative before:absolute before:right-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
             >
-              <p class="ms-7">
-                تحسين رضا العملاء من خلال خدمات التوصيل الدقيقة والموثوقة.
+              <p class="ms-7 text-white">
+                تحسين رضا العملاء من خلال خدمات توصيل دقيقة وموثوقة.
               </p>
             </li>
             <li
-              class="before:bg-tick relative before:absolute before:right-0 before:top-0 before:size-6 before:content-['']"
+              class="before:bg-tick relative before:absolute before:right-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
             >
-              <p class="ms-7">
-                تسهيل التعاون داخل صناعة الخدمات اللوجستية لإنشاء شبكة توصيل
+              <p class="ms-7 text-white">
+                تعزيز التعاون داخل صناعة الخدمات اللوجستية لإنشاء شبكة توصيل
                 قوية وفعالة.
               </p>
             </li>
@@ -142,10 +142,20 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
       </div>
     </div>
   </section>
-  <section id="values">
-    <div class="container section-container space-y-20">
+  <section id="values" class="bg-lightGray">
+    <div class="container section-container space-y-20 z-10">
       <h2 class="text-center">قيمنا</h2>
       <Values lang="ar" />
+    </div>
+  </section>
+  <section class="bg-secondaryBlueDark">
+    <div
+      class="relative bg-gradient-to-r flex flex-col items-center justify-center gap-14 w-full px-10 sm:px-24 py-24 md:min-h-[450px] z-10"
+    >
+      <h1 class="text-white text-center text-2xl sm:text-3xl lg:text-4xl">
+        كن جزءًا من فريقنا الموهوب.
+      </h1>
+      <ButtonOutline href="contact/employees" text="انضم الآن" />
     </div>
   </section>
   <section class="bg-white">
@@ -157,27 +167,37 @@ import ButtonOutline from "../../components/ButtonOutline.astro";
         موثوق به من قبل الشركات الرائدة
       </h2>
       <div
-        class="fade flex flex-wrap items-center justify-center gap-x-5 gap-y-28"
+        class="fade flex flex-wrap items-center justify-center gap-x-20 md:gap-x-5 gap-y-28"
         data-animation="animate-fade animate-duration-[1000ms]"
       >
         <TrustedIcons imgSrc={Mc} alt="ماكدونالدز" />
         <TrustedIcons imgSrc={farawalah} alt="فراولة" />
         <TrustedIcons imgSrc={lorenzo} alt="لورينزو" />
-        <TrustedIcons imgSrc={alliwan} alt="اللوان" />
-        <TrustedIcons imgSrc={bk} alt="برجر كنج" />
-        <TrustedIcons imgSrc={hzbr} alt="hzbr" />
+        <TrustedIcons imgSrc={alliwan} alt="الليوان" />
+        <TrustedIcons imgSrc={bk} alt="برجر كينج" />
+        <TrustedIcons imgSrc={hzbr} alt="هازبر" />
         <TrustedIcons imgSrc={casapasta} alt="كاسا باستا" />
-      </div>
-      <div
-        class="fade relative bg-gradient-to-br from-primaryOrange from-0% to-customYellow to-100% flex flex-col items-center justify-center gap-14 w-full rounded-lg px-10 shadow-black/30 shadow-lg sm:px-24 py-24 md:min-h-[450px] overflow-hidden z-10 after:content-[''] after:absolute after:h-full after:w-full after:bg-digital_bg1 after:opacity-90 after:bg-cover after:bg-no-repeat after:bg-center after:-z-10"
-        data-animation="animate-fade-up animate-duration-[1000ms]"
-      >
-        <h1 class="text-white text-center text-2xl sm:text-4xl">
-          كن جزءًا من فريقنا الموهوب.
-        </h1>
-        <ButtonOutline href="registration/employees" text="انضم الآن" />
       </div>
     </div>
   </section>
+  <section class="flex flex-col lg:flex-row bg-lightGray" id="contact">
+    <div
+      class="fade flex flex-col justify-center gap-20 w-full lg:w-1/2 px-6 py-10 lg:p-20"
+      data-animation="animate-fade-right animate-duration-[1000ms]"
+    >
+      <div class="text-right space-y-20 lg:space-y-12">
+        <div class="xs:w-4/5 lg:w-full">
+          <h3>دعم سريع</h3>
+          <h2>
+            لا تتردد في الاتصال بنا عبر الهاتف أو البريد الإلكتروني أو الزيارة
+            شخصيًا.
+          </h2>
+        </div>
+        <QuickSupport lang="ar" />
+      </div>
+    </div>
+    <Location />
+  </section>
 </Layout>
- -->
+<script src="/src/Script/typewriter.js"></script>
+<script src="/src/Script/BlurredImage.js"></script>

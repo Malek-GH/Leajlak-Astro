@@ -9,7 +9,7 @@ import CaseGird from "../../components/CaseGird.astro";
 import ContactPopUp from "../../components/ContactPopUp.astro";
 ---
 
-<Layout title="Case Studies" lang="en">
+<Layout title="دراسات الحالة" lang="ar">
   <ContactPopUp lang="en" />
   <section class="hero">
     <div
@@ -18,12 +18,12 @@ import ContactPopUp from "../../components/ContactPopUp.astro";
       <SourceImageTwo
         mobileImgUrl={case_studies_bg_mobile}
         desktopImgUrl={case_studies_bg}
-        alt="case-bg"
+        alt="خلفية-دراسات-الحالة"
       />
     </div>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/80 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
+      class="absolute top-0 left-0 size-full bg-black/80 xs:bg-transparent xs:bg-gradient-to-r from-black/50 from-0% to-black/85 to-80% z-0"
     >
     </div>
     <div
@@ -31,19 +31,15 @@ import ContactPopUp from "../../components/ContactPopUp.astro";
       data-animation="animate-fade animate-duration-[1500ms]"
     >
       <div>
-        <h3
-          class="text-primaryOrange text-2xl md:text-3xl font-normal tracking-wider mt-10"
-        >
-          Case Studies
+        <h3 class="text-primaryOrange text-2xl md:text-3xl font-normal mt-10">
+          دراسات الحالة
         </h3>
-        <h1 class="leading-snug text-white">Transforming Operations and</h1>
-        <h1 class="text-white">Delivering Success.</h1>
+        <h1 class="leading-snug text-white">تحويل العمليات و تحقيق النجاح.</h1>
       </div>
       <p
         class="text-base xs:text-lg 3xl:text-xl font-medium opacity-80 lg:w-1/2 text-white"
       >
-        Discover how our solution empowers businesses to achieve exceptional
-        results.
+        اكتشف كيف تمكّن حلولنا الشركات من تحقيق نتائج استثنائية.
       </p>
     </div>
   </section>
@@ -53,9 +49,9 @@ import ContactPopUp from "../../components/ContactPopUp.astro";
       data-animation="animate-fade animate-duration-[1000ms]"
     >
       <div class="flex items-center justify-center">
-        <h2>Explore case studies</h2>
+        <h2>استكشف دراسات الحالة</h2>
       </div>
-      <CaseGird />
+      <CaseGird lang="ar" />
     </div>
   </section>
   <section>
@@ -66,19 +62,19 @@ import ContactPopUp from "../../components/ContactPopUp.astro";
       >
         <div class="w-full flex flex-col justify-center gap-10 lg:w-1/2">
           <div class="space-y-4">
-            <h1 class="w-1/2 text-6xl">Got a problem to solve?</h1>
+            <h1 class="w-1/2 text-6xl">هل لديك مشكلة تحتاج إلى حل؟</h1>
             <p class="lg:w-4/5">
-              Let’s discuss the obstacles you’re encountering and collaborate on
-              crafting a plan to overcome them.
+              دعنا نناقش العقبات التي تواجهها ونتعاون على وضع خطة لتجاوزها.
             </p>
           </div>
-          <button class="button-regular popupButton">Let's talk</button>
+          <button class="button-regular popupButton">دعنا نتحدث</button>
         </div>
         <div class="lg:w-1/2">
-          <Image src={support} alt="Support" class="size-full" />
+          <Image src={support} alt="الدعم" class="size-full" />
         </div>
       </div>
     </div>
   </section>
+
   <script src="/src/Script/BlurredImage.js"></script>
 </Layout>

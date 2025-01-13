@@ -1,69 +1,257 @@
-<!-- ---
+---
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 /* Components */
-import Testimonial from "../../components/TestimonialEn.astro";
+import Testimonial from "../../components/TestimonialAr.astro";
 import Partners from "../../components/Partners.astro";
 import LogisicPartners from "../../components/LogisicPartners.astro";
-
-import Button from "../../components/Button.astro";
-
 import InfiniteScroll from "../../components/InfiniteScroll.astro";
-/* Images */
-import videoPlaceHolder from "../../../public/delivery_firstframe.webp";
-import fleet from "../../../public/images/bg/fleet.webp";
-import Restaurant from "../../../public/images/bg/restaurent.webp";
-import app from "../../../public/images/Appmockup.webp";
-import mockup_sm from "../../../public/images/mockup/mockup_sm.webp";
-import google from "../../../public/images/icons/google play.png";
-import apple from "../../../public/images/icons/apple store.png";
 
 import CoreFeatures from "../../components/CoreFeatures.astro";
+import Benefits from "../../components/Benefits.astro";
+/* Images */
+import mockup_sm from "../../images/mockup/mockup_sm.webp";
+import mockup_md from "../../images/mockup/mockup_md.webp";
+import mockup_lg from "../../images/mockup/mockup_lg.webp";
+import app from "../../images/mockup/Appmockup.webp";
+import videoPlaceHolder from "../../images/delivery_firstframe.webp";
+import videoPlaceHolderMobile from "../../images/delivery_firstframe_mobile.webp";
+import google from "../../images/icons/google play.png";
+import apple from "../../images/icons/apple store.png";
+import SourceImage from "../../components/SourceImageThree.astro";
+import ContactPopUp from "../../components/ContactPopUp.astro";
+
+import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
+import Workflow from "../../components/Workflow.astro";
 ---
 
 <script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="الصفحة الرئيسية" lang="ar">
-  <section class="relative h-screen">
-    <picture id="videoplaceholder">
-      <Image
-        src={videoPlaceHolder}
-        alt="videoplaceholder"
-        class="absolute size-full z-0 bottom-0 object-cover"
-        loading="eager"
-        decoding="sync"
-        fetchpriority="high"
-      />
-    </picture>
+  <ContactPopUp lang="ar" />
+  <section class="hero">
+    <VideoPlaceHolder
+      desktopImgUrl={videoPlaceHolder}
+      mobileImgUrl={videoPlaceHolderMobile}
+      alt="videoplaceholder"
+    />
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 z-0"
+      class="absolute top-0 left-0 size-full bg-black/65 z-0"
     >
     </div>
     <video
       autoplay
-      playsinline
       muted
       loop
-      class="absolute size-full object-cover -z-10"
+      class="absolute size-full object-cover object-center -z-10 top-0 left-0"
       id="video"
     >
-      <source src="/delivery.mp4" type="video/mp4" />
     </video>
     <div
-      class="fade container section-container flex flex-col justify-center xs:justify-end items-start h-full gap-y-4"
+      class="fade relative section-container flex flex-col justify-end items-start h-full gap-y-10 z-10"
       data-animation="animate-fade-up animate-duration-[2000ms]"
     >
-      <div class="text-white space-y-3">
+      <div class="space-y-5">
         <div>
-          <h1>قم بتبسيط عمليات التوصيل،</h1>
-          <h1>وارتقِ بأعمالك.</h1>
+          <h1 class="text-white leading-snug lg:w-2/3">
+            هل تواجه صعوبة في انخفاض معدلات نجاح توصيل الطلبات؟
+          </h1>
         </div>
-        <p class="md:w-3/4">
-          نحن شريك تكنولوجي رائد مكرس لتحسين تجربة التوصيل في الميل الأخير
-          لأجلك، مما يعزز رضا العملاء للشركات.
+        <p
+          class="text-base xs:text-lg 3xl:text-xl font-medium opacity-80 lg:w-2/3 text-white"
+        >
+          مع تقنيتنا المتقدمة وشبكتنا المدربة تدريبًا عاليًا من المندوبين، نحن
+          هنا لتجاوز تحديات التوصيل الخاصة بك!
         </p>
+      </div>
+      <div class="flex items-center gap-5 xs:gap-10 w-full">
+        <button class="popupButton button-regular">اتصل بنا</button>
       </div>
     </div>
   </section>
+  <section class="overflow-hidden" id="InfiniteScroll">
+    <div
+      class="fade space-y-14 w-full py-10"
+      data-animation="animate-fade animate-duration-[1000ms]"
+    >
+      <h2 class="text-center px-5 text-xl xs:text-2xl">
+        العلامات التجارية المدعومة من لأجلك
+      </h2>
+      <InfiniteScroll />
+    </div>
+  </section>
+  <section class="overflow-hidden bg-lightGray">
+    <div
+      class="fade section-container grid justify-items-center lg:grid-cols-2 items-center sm:gap-y-20 gap-x-5 relative"
+      data-animation="animate-fade animate-duration-[1000ms]"
+    >
+      <div class="space-y-5">
+        <div>
+          <h3>من نحن؟</h3>
+          <h2 class="md:w-3/5 lg:w-11/12">
+            نظام إدارة التوصيل، لجميع احتياجاتك.
+          </h2>
+        </div>
+        <div class="md:w-3/4 space-y-3">
+          <p class="text-secondaryBlueText">
+            نظام إدارة الطلبات المبتكر من لأجلك يربط التجار وشركات اللوجستيات
+            الخارجية لتقديم خدمات التوصيل السريعة والجدولة حسب الطلب بسلاسة.
+          </p>
+          <p>
+            حلولنا تجسر الفجوة بين التجار وشركات اللوجستيات ويمكن أن تعزز
+            الكفاءة بشكل كبير، وتقلل التكاليف، وتحسن رضا العملاء.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="hidden sm:block relative lg:-translate-x-20 lg:-left-5 sm:w-[600px] lg:w-[700px] 3xl:w-[900px]"
+      >
+        <SourceImage
+          mobileImgUrl={mockup_sm}
+          MidImgUrl={mockup_md}
+          desktopImgUrl={mockup_lg}
+          alt="mockup"
+        />
+      </div>
+    </div>
+  </section>
+  <section id="WhoWeServe" class="bg-white">
+    <div class="section-container overflow-hidden">
+      <div
+        class="fade flex flex-col items-center justify-center gap-20 md:flex-row pb-5 sm:pb-0"
+        data-animation="animate-fade animate-duration-[1000ms]"
+      >
+        <div
+          class="w-full absolute sm:relative bottom-3 sm:bottom-0 md:w-2/3 order-2 md:order-1"
+        >
+          <Workflow />
+        </div>
+        <div
+          class="md:w-2/6 mb-40 xs:mb-72 sm:mb-0 space-y-5 order-1 md:order-2"
+        >
+          <div>
+            <h3>كيف يعمل؟</h3>
+            <h2>نظام خدماتنا البيئي.</h2>
+          </div>
+          <p>
+            اكتشف كيف تعمل منصتنا على ربط هؤلاء اللاعبين الرئيسيين، وتعزيز كل
+            خطوة من رحلة التسليم ودفع النجاح عبر سلسلة التوريد باستخدام
+            التكاملات الدقيقة والآلية.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="Benfits" class="bg-lightGray">
+    <div class="section-container space-y-28">
+      <Benefits lang="ar" />
+    </div>
+  </section>
+  <section id="Integration" class="bg-darkGray">
+    <div class="section-container space-y-20">
+      <h2
+        class="fade md:text-center text-white"
+        data-animation="animate-fade animate-duration-[1000ms]"
+      >
+        الميزات الأساسية
+      </h2>
+      <CoreFeatures lang="ar" />
+    </div>
+  </section>
+  <section class="bg-lightGray">
+    <div
+      class="fade section-container space-y-10 overflow-hidden h-full"
+      data-animation="animate-fade animate-duration-[1000ms]"
+    >
+      <div class="text-center">
+        <h3>آراء العملاء</h3>
+        <h2>استمع إلى عملائنا السعداء.</h2>
+      </div>
+      <Testimonial />
+    </div>
+  </section>
+  <section id="Partners" class="bg-white">
+    <div class="section-container space-y-20 text-center">
+      <div class="fade" data-animation="animate-fade animate-duration-[1000ms]">
+        <h3>شركاؤنا</h3>
+        <h2>تمكين النجاح مع شركائنا الموثوق بهم.</h2>
+      </div>
+      <!-- Integrated Partners -->
+      <div class="space-y-10">
+        <h4
+          class="fade"
+          data-animation="animate-fade animate-duration-[1000ms]"
+        >
+          الشركاء المتكاملون
+        </h4>
+        <div
+          class="fade flex flex-row flex-wrap items-center justify-evenly lg:justify-center w-full gap-y-10 gap-x-5 pb-10 border-b-2"
+          data-animation="animate-fade-up animate-duration-[1000ms]"
+        >
+          <Partners />
+        </div>
+      </div>
+      <!-- Logistic Partners -->
+      <div class="space-y-10 w-full flex flex-col items-center">
+        <h4
+          class="fade"
+          data-animation="animate-fade animate-duration-[1000ms]"
+        >
+          الشركاء اللوجستيون
+        </h4>
+        <div
+          class="fade flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-5 w-full"
+          data-animation="animate-fade-up animate-duration-[1000ms]"
+        >
+          <LogisicPartners />
+        </div>
+      </div>
+      <!-- Clients -->
+    </div>
+  </section>
+  <section class="bg-lightGray">
+    <div
+      class="mx-auto max-w-7xl px-6 lg:px-10 3xl:px-0 flex items-center justify-between"
+    >
+      <div
+        class="fade md:w-1/2 space-y-12 py-24 md:py-0"
+        data-animation="animate-fade-left animate-duration-[1000ms]"
+      >
+        <div class="space-y-3">
+          <h2 class="text-3xl lg:text-5xl">
+            حمل تطبيق <span class="text-primaryOrange">لأجلك</span> وانضم إلينا كسائق
+          </h2>
+          <p>
+            هل تبحث عن دخل إضافي مع جدول عمل مرن؟ انضم إلينا في لأجلك كسائق وكن
+            جزءًا من فريق ديناميكي مخصص لتقديم خدمات توصيل فعالة.
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.leajlak.captainapp&hl=en_US"
+            target="”_blank”"
+            ><Image src={google} alt="google" class="w-40" /></a
+          >
+          <a
+            href="https://apps.apple.com/tr/app/leajlak/id6444185447"
+            target="”_blank”"><Image src={apple} alt="apple" class="w-40" /></a
+          >
+        </div>
+      </div>
+      <div
+        class="fade hidden md:block"
+        data-animation="animate-fade-right animate-duration-[1000ms]"
+      >
+        <Image
+          src={app}
+          alt="app"
+          class="max-w-[476px] h-auto pointer-events-none -translate-y-12"
+          loading="lazy"
+          fetchpriority="low"
+        />
+      </div>
+    </div>
+  </section>
+  <script src="/src/Script/videoLoadHundler.js"></script>
 </Layout>
- -->

@@ -9,9 +9,21 @@ import MerchantBenefits from "../../../components/MerchantBenefits.astro";
 import merchant_bg from "../../../images/bg/register_merchants_mobile.webp";
 import merchant_bg_lg from "../../../images/bg/register_merchants_lg.webp";
 import SourceImageTwo from "../../../components/SourceImageTwo.astro";
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("contactName");
+    console.log(name);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
 ---
 
-<Layout title="Contact | Merchants" lang="en">
+<Layout title="اتصل بنا | التجار" lang="ar">
   <section class="flex items-center hero" id="hero">
     <div class="blurred-img bg-blurredmerchant_register">
       <SourceImageTwo
@@ -24,19 +36,19 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
       class="section-container w-full z-10 fade"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
-      <div class="flex flex-col gap-4 text-white text-left lg:w-1/2">
+      <div class="flex flex-col gap-4 text-white text-right lg:w-1/2">
         <h1 class="text-3xl md:text-4xl md:leading-tight text-white">
-          Join Leajlak and grow your sales fast!
+          انضم إلى لأجلك وزِد مبيعاتك بسرعة!
         </h1>
         <h6 class="text-base font-medium md:text-lg opacity-80">
-          With Leajlak merchants enjoy more orders, higher sales, and greater
-          visibility. join today and thrive!
+          مع لأجلك، يستمتع التجار بالمزيد من الطلبات، وزيادة المبيعات، وظهور
+          أكبر. انضم اليوم وحقق النجاح!
         </h6>
       </div>
       <div
-        class="absolute z-40 right-0 top-2 3xl:top-10 lg:w-1/2 hidden lg:block"
+        class="absolute z-40 left-0 top-2 3xl:top-10 lg:w-1/2 hidden lg:block"
       >
-        <div class="absolute z-50 right-0">
+        <div class="absolute z-50 left-0">
           <div
             class="bg-white rounded-2xl shadow-xl px-10 min-w-[500px] 3xl:min-h-[600px]"
           >
@@ -59,7 +71,7 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                       fill="white"></path>
                   </svg>
                 </div>
-                <p class="mt-2">Contact Info</p>
+                <p class="mt-2">معلومات الاتصال</p>
               </div>
               <!-- General Info -->
               <div class="stepper relative flex flex-col items-center">
@@ -77,7 +89,7 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                       fill="white"></path>
                   </svg>
                 </div>
-                <p class="mt-2">General Info</p>
+                <p class="mt-2">معلومات عامة</p>
               </div>
               <!-- Branch Info -->
               <div class="stepper relative flex flex-col items-center">
@@ -95,7 +107,7 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                       fill="white"></path>
                   </svg>
                 </div>
-                <p class="mt-2">Branch Info</p>
+                <p class="mt-2">معلومات الفروع</p>
               </div>
             </div>
             <form method="POST" action="" class="py-8 formStepper">
@@ -104,19 +116,19 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                 <InputCompText
                   type="text"
                   id="contactName"
-                  label_text="Point Of Contact Name"
+                  label_text="اسم جهة الاتصال"
                   data_needed={true}
                 />
                 <InputCompEmail
                   type="email"
                   id="contactEmail"
-                  label_text="Contact Email"
+                  label_text="البريد الإلكتروني"
                   data_needed={true}
                 />
                 <InputCompNumber
                   type="number"
                   id="contactNumber"
-                  label_text="Contact Number"
+                  label_text="رقم الهاتف"
                   data_needed={true}
                 />
                 <div
@@ -124,16 +136,14 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                 >
                   <div>
                     <p class="text-sm font-thin">
-                      please note that: (<span class="text-red-700">*</span>)
-                      fields are mandatory,
+                      يُرجى ملاحظة أن الحقول (<span class="text-red-700">*</span
+                      >) إلزامية،
                     </p>
-                    <p class="text-sm font-thin">
-                      regular fields are optional.
-                    </p>
+                    <p class="text-sm font-thin">والحقول العادية اختيارية.</p>
                   </div>
-                  <button type="button" class="next-btn button-regular"
-                    >Next</button
-                  >
+                  <button type="button" class="next-btn button-regular">
+                    التالي
+                  </button>
                 </div>
               </div>
               <!-- general info -->
@@ -141,41 +151,43 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                 <InputCompText
                   type="text"
                   id="companyName"
-                  label_text="Company Name"
+                  label_text="اسم الشركة"
                   data_needed={true}
                 />
                 <InputCompText
                   type="text"
                   id="company_website"
-                  label_text="company website"
+                  label_text="موقع الشركة"
                 />
                 <div class="relative space-y-2">
-                  <p>Industry type <span class="text-red-700">*</span></p>
-                  <CheckBox id="food1" label_text="type 1" />
-                  <CheckBox id="food2" label_text="type 2" />
-                  <CheckBox id="food n" label_text="type n" />
+                  <p>نوع الصناعة <span class="text-red-700">*</span></p>
+                  <CheckBox id="food1" label_text="نوع 1" />
+                  <CheckBox id="food2" label_text="نوع 2" />
+                  <CheckBox id="food n" label_text="نوع ن" />
                   <span
                     class="error-message-checkbox text-red-700 font-normal mt-1 hidden"
                   >
-                    Please select at least one industry type.
+                    يُرجى اختيار نوع صناعة واحد على الأقل.
                   </span>
                 </div>
                 <InputCompText
                   type="text"
                   id="location_link"
-                  label_text="Head office location (link)"
+                  label_text="موقع المكتب الرئيسي (رابط)"
                 />
                 <div class="flex flex-col gap-5 sm:flex-row justify-between">
                   <button
                     type="button"
                     class="prev-btn button-return order-2 sm:order-1"
                   >
-                    Return
+                    عودة
                   </button>
                   <button
                     type="button"
-                    class="next-btn button-regular sm:order-2">Next</button
+                    class="next-btn button-regular sm:order-2"
                   >
+                    التالي
+                  </button>
                 </div>
               </div>
               <!-- branch info -->
@@ -183,27 +195,26 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                 <InputCompNumber
                   type="number"
                   id="branch_numbers"
-                  label_text="Number of branches"
+                  label_text="عدد الفروع"
                   data_needed={true}
                 />
                 <div class="space-y-2 relative">
                   <span class="text-secondaryBlueText">
-                    Service Providing Regions <span class="text-red-700">*</span
-                    >
+                    مناطق تقديم الخدمة <span class="text-red-700">*</span>
                   </span>
-                  <CheckBox id="region 1" label_text="region 1" />
-                  <CheckBox id="region 2" label_text="region 2" />
-                  <CheckBox id="region 3" label_text="region 3" />
+                  <CheckBox id="region 1" label_text="المنطقة 1" />
+                  <CheckBox id="region 2" label_text="المنطقة 2" />
+                  <CheckBox id="region 3" label_text="المنطقة 3" />
                   <span
                     class="error-message-checkbox font-normal text-red-700 mt-1 hidden"
                   >
-                    Please select at least one region.
+                    يُرجى اختيار منطقة واحدة على الأقل.
                   </span>
                 </div>
                 <div class="space-y-2">
                   <span class="text-secondaryBlueText">
-                    Average Daily Order Volume/ Branch <span
-                      class="text-red-700">*</span
+                    حجم الطلبات اليومية/ الفرع <span class="text-red-700"
+                      >*</span
                     >
                   </span>
                   <select
@@ -212,20 +223,22 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                     class="required-select block py-4 px-1 w-full bg-white focus:border-primaryOrange/40 border-gray-400 border-b-2 focus:bg-transparent text-black duration-300 outline-0"
                     required
                   >
-                    <option value="" disabled selected>Pick a choice</option>
-                    <option value="1">type 1</option>
-                    <option value="2">type 2</option>
-                    <option value="3">type 3</option>
+                    <option value="" disabled selected>اختر خيارًا</option>
+                    <option value="1">نوع 1</option>
+                    <option value="2">نوع 2</option>
+                    <option value="3">نوع 3</option>
                   </select>
                   <span
                     class="error-message-select font-normal text-red-700 mt-1 hidden"
                   >
-                    Please select an option.
+                    يُرجى اختيار خيار.
                   </span>
                 </div>
                 <div class="space-y-2">
                   <span class="text-secondaryBlueText">
-                    Select your POS System <span class="text-red-700">*</span>
+                    اختر نظام نقاط البيع الخاص بك <span class="text-red-700"
+                      >*</span
+                    >
                   </span>
                   <select
                     name="POS"
@@ -233,15 +246,15 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                     class="required-select block py-4 px-1 w-full bg-white focus:border-primaryOrange/40 border-gray-400 border-b-2 focus:bg-transparent text-black duration-300 outline-0"
                     required
                   >
-                    <option value="" disabled selected>Pick a choice</option>
-                    <option value="1">type 1</option>
-                    <option value="2">type 2</option>
-                    <option value="3">type 3</option>
+                    <option value="" disabled selected>اختر خيارًا</option>
+                    <option value="1">نوع 1</option>
+                    <option value="2">نوع 2</option>
+                    <option value="3">نوع 3</option>
                   </select>
                   <span
                     class="error-message-select font-normal text-red-700 mt-1 hidden"
                   >
-                    Please select an option.
+                    يُرجى اختيار خيار.
                   </span>
                 </div>
                 <div class="flex justify-between">
@@ -249,12 +262,14 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                     type="button"
                     class="prev-btn button-return order-2 sm:order-1"
                   >
-                    Return
+                    عودة
                   </button>
                   <button
                     type="submit"
-                    class="next-btn button-regular sm:order-2">Submit</button
+                    class="next-btn button-regular sm:order-2"
                   >
+                    إرسال
+                  </button>
                 </div>
               </div>
             </form>
@@ -264,7 +279,7 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
     </div>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-r from-black/50 from-0% to-black/85 to-80% z-0"
     >
     </div>
   </section>
@@ -281,42 +296,42 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
           <div
             class="size-12 rounded-full ring-1 ring-black/10 bg-white flex items-center justify-center"
           >
-            <div class="icon text-2xl font-semibold">1</div>
+            <div class="icon text-2xl font-semibold">١</div>
             <svg class="tick w-7 h-7 hidden" viewBox="0 0 34 25" fill="none">
               <path
                 d="M33.375 3.25021L10.875 24.2502L0.5625 14.6252L3.20625 12.1577L10.875 19.2977L30.7313 0.782715L33.375 3.25021Z"
                 fill="white"></path>
             </svg>
           </div>
-          <p class="mt-2 text-center leading-none">Contact Info</p>
+          <p class="mt-2 text-center leading-none">معلومات الاتصال</p>
         </div>
         <!-- General Info -->
         <div class="stepper relative flex flex-col items-center">
           <div
             class="w-12 h-12 rounded-full ring-1 ring-black/10 bg-white flex items-center justify-center"
           >
-            <div class="icon text-2xl font-semibold">2</div>
+            <div class="icon text-2xl font-semibold">٢</div>
             <svg class="tick w-7 h-7 hidden" viewBox="0 0 34 25" fill="none">
               <path
                 d="M33.375 3.25021L10.875 24.2502L0.5625 14.6252L3.20625 12.1577L10.875 19.2977L30.7313 0.782715L33.375 3.25021Z"
                 fill="white"></path>
             </svg>
           </div>
-          <p class="mt-2 text-center leading-none">General Info</p>
+          <p class="mt-2 text-center leading-none">معلومات عامة</p>
         </div>
         <!-- Branch Info -->
         <div class="stepper relative flex flex-col items-center">
           <div
             class="w-12 h-12 rounded-full ring-1 ring-black/10 bg-white flex items-center justify-center"
           >
-            <div class="icon text-2xl font-semibold">3</div>
+            <div class="icon text-2xl font-semibold">٣</div>
             <svg class="tick w-7 h-7 hidden" viewBox="0 0 34 25" fill="none">
               <path
                 d="M33.375 3.25021L10.875 24.2502L0.5625 14.6252L3.20625 12.1577L10.875 19.2977L30.7313 0.782715L33.375 3.25021Z"
                 fill="white"></path>
             </svg>
           </div>
-          <p class="mt-2 text-center leading-none">Branch Info</p>
+          <p class="mt-2 text-center leading-none">معلومات الفروع</p>
         </div>
       </div>
       <form method="post" action="" class="py-8 formStepper w-full">
@@ -325,19 +340,19 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
           <InputCompText
             type="text"
             id="contactName"
-            label_text="Point Of Contact Name"
+            label_text="اسم جهة الاتصال"
             data_needed={true}
           />
           <InputCompEmail
             type="email"
             id="contactEmail"
-            label_text="Contact Email"
+            label_text="البريد الإلكتروني"
             data_needed={true}
           />
           <InputCompNumber
             type="number"
             id="contactNumber"
-            label_text="Contact Number"
+            label_text="رقم الهاتف"
             data_needed={true}
           />
           <div
@@ -345,12 +360,13 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
           >
             <div class="w-full">
               <p class="text-sm font-thin">
-                please note that: (<span class="text-red-700">*</span>) fields
-                are mandatory,
+                يُرجى ملاحظة أن: (<span class="text-red-700">*</span>) الحقول
+                إلزامية،
               </p>
-              <p class="text-sm font-thin">regular fields are optional.</p>
+              <p class="text-sm font-thin">والحقول العادية اختيارية.</p>
             </div>
-            <button type="button" class="next-btn button-regular">Next</button>
+            <button type="button" class="next-btn button-regular">التالي</button
+            >
           </div>
         </div>
         <!-- general info -->
@@ -358,40 +374,40 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
           <InputCompText
             type="text"
             id="companyName"
-            label_text="Company Name"
+            label_text="اسم الشركة"
             data_needed={true}
           />
           <InputCompText
             type="text"
             id="company_website"
-            label_text="company website"
+            label_text="موقع الشركة"
           />
           <div class="relative space-y-2">
-            <p>Industry type <span class="text-red-700">*</span></p>
-            <CheckBox id="food1" label_text="type 1" />
-            <CheckBox id="food2" label_text="type 2" />
-            <CheckBox id="food n" label_text="type n" />
+            <p>نوع الصناعة <span class="text-red-700">*</span></p>
+            <CheckBox id="food1" label_text="نوع ١" />
+            <CheckBox id="food2" label_text="نوع ٢" />
+            <CheckBox id="food n" label_text="نوع ن" />
             <span
               class="error-message-checkbox text-red-700 font-normal mt-1 hidden"
             >
-              Please select at least one industry type.
+              يُرجى اختيار نوع صناعة واحد على الأقل.
             </span>
           </div>
           <InputCompText
             type="text"
             id="location_link"
-            label_text="Head office location (link)"
+            label_text="رابط موقع المكتب الرئيسي"
           />
           <div class="flex flex-col gap-5 sm:flex-row justify-between">
             <button
               type="button"
               class="prev-btn button-return order-2 sm:order-1"
             >
-              Return
+              العودة
             </button>
-            <button type="button" class="next-btn button-regular sm:order-2"
-              >Next</button
-            >
+            <button type="button" class="next-btn button-regular sm:order-2">
+              التالي
+            </button>
           </div>
         </div>
         <!-- branch info -->
@@ -399,26 +415,25 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
           <InputCompNumber
             type="number"
             id="branch_numbers"
-            label_text="Number of branches"
+            label_text="عدد الفروع"
             data_needed={true}
           />
           <div class="space-y-2 relative">
             <span class="text-secondaryBlueText">
-              Service Providing Regions <span class="text-red-700">*</span>
+              مناطق تقديم الخدمة <span class="text-red-700">*</span>
             </span>
-            <CheckBox id="region 1" label_text="region 1" />
-            <CheckBox id="region 2" label_text="region 2" />
-            <CheckBox id="region 3" label_text="region 3" />
+            <CheckBox id="region 1" label_text="المنطقة ١" />
+            <CheckBox id="region 2" label_text="المنطقة ٢" />
+            <CheckBox id="region 3" label_text="المنطقة ٣" />
             <span
               class="error-message-checkbox font-normal text-red-700 mt-1 hidden"
             >
-              Please select at least one region.
+              يُرجى اختيار منطقة واحدة على الأقل.
             </span>
           </div>
           <div class="space-y-2">
             <span class="text-secondaryBlueText">
-              Average Daily Order Volume/ Branch <span class="text-red-700"
-                >*</span
+              متوسط حجم الطلبات اليومية/الفرع <span class="text-red-700">*</span
               >
             </span>
             <select
@@ -427,20 +442,20 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
               class="required-select block py-4 px-1 w-full bg-white focus:border-primaryOrange/40 border-gray-400 border-b-2 focus:bg-transparent text-black duration-300 outline-0"
               required
             >
-              <option value="" disabled selected>Pick a choice</option>
-              <option value="1">type 1</option>
-              <option value="2">type 2</option>
-              <option value="3">type 3</option>
+              <option value="" disabled selected>اختر خيارًا</option>
+              <option value="1">نوع ١</option>
+              <option value="2">نوع ٢</option>
+              <option value="3">نوع ٣</option>
             </select>
             <span
               class="error-message-select font-normal text-red-700 mt-1 hidden"
             >
-              Please select an option.
+              يُرجى اختيار خيار.
             </span>
           </div>
           <div class="space-y-2">
             <span class="text-secondaryBlueText">
-              Select your POS System <span class="text-red-700">*</span>
+              اختر نظام نقاط البيع الخاص بك <span class="text-red-700">*</span>
             </span>
             <select
               name="POS"
@@ -448,15 +463,15 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
               class="required-select block py-4 px-1 w-full bg-white focus:border-primaryOrange/40 border-gray-400 border-b-2 focus:bg-transparent text-black duration-300 outline-0"
               required
             >
-              <option value="" disabled selected>Pick a choice</option>
-              <option value="1">type 1</option>
-              <option value="2">type 2</option>
-              <option value="3">type 3</option>
+              <option value="" disabled selected>اختر خيارًا</option>
+              <option value="1">نوع ١</option>
+              <option value="2">نوع ٢</option>
+              <option value="3">نوع ٣</option>
             </select>
             <span
               class="error-message-select font-normal text-red-700 mt-1 hidden"
             >
-              Please select an option.
+              يُرجى اختيار خيار.
             </span>
           </div>
           <div class="flex flex-col gap-5 sm:flex-row justify-between">
@@ -464,11 +479,11 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
               type="button"
               class="prev-btn button-return order-2 sm:order-1"
             >
-              Return
+              العودة
             </button>
-            <button type="submit" class="next-btn button-regular sm:order-2"
-              >Submit</button
-            >
+            <button type="submit" class="next-btn button-regular sm:order-2">
+              إرسال
+            </button>
           </div>
         </div>
       </form>
@@ -477,18 +492,17 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
   <section>
     <div class="container section-container flex flex-col gap-28">
       <div
-        class="text-left space-y-4 fade"
+        class="text-right space-y-4 fade"
         data-animation="animate-fade animate-duration-[1000ms]"
       >
-        <h2>Why work with us?</h2>
+        <h2>لماذا تعمل معنا؟</h2>
         <p class="lg:w-1/2">
-          join our platform today and unlock seamless delivery management,
-          increased efficiency, and unparalleled customer satisfaction become a
-          part of the future of logistics.
+          انضم إلى منصتنا اليوم واستمتع بإدارة تسليم سلسة، وكفاءة متزايدة، ورضا
+          عملاء لا مثيل له. كن جزءًا من مستقبل الخدمات اللوجستية.
         </p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 py-5">
-        <MerchantBenefits />
+        <MerchantBenefits lang="ar" />
       </div>
     </div>
   </section>

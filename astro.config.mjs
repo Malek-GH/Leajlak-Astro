@@ -26,7 +26,7 @@ export default defineConfig({
     inlineStylesheets: "always",
   },
 
-  /* adapter: node({
+  /*   adapter: node({
     mode: "standalone",
   }), */
 });

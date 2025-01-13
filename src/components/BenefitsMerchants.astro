@@ -5,34 +5,33 @@ import experience from "../images/illustrations/customer_experience.webp";
 import scalability from "../images/illustrations/charts.webp";
 import integration from "../images/illustrations/integration.webp";
 
+const { lang = "en" } = Astro.props;
+const content = await import(`../data/${lang}.json`);
+
 const benefits = [
   {
     image: cost,
-    alt: "Cost Savings",
-    title: "Cut Costs, Boost Profits",
-    description:
-      "Cut down on expenses by utilizing our platform's advanced route optimization and efficient logistics management. Streamlined operations lead to reduced fuel costs, fewer delays, and better resource utilization, helping you improve profitability without compromising on service quality.",
+    alt: content.merchants.benefit_1_alt,
+    title: content.merchants.benefit_1_title,
+    description: content.merchants.benefit_1_description,
   },
   {
     image: experience,
-    alt: "Customer Experience",
-    title: "Enhance Customer Experience",
-    description:
-      "Ensure timely deliveries and exceptional service quality with our platform. By streamlining logistics and providing real-time tracking, you can offer a reliable, consistent experience that enhances customer trust and satisfaction, leading to greater loyalty and repeat business.",
+    alt: content.merchants.benefit_2_alt,
+    title: content.merchants.benefit_2_title,
+    description: content.merchants.benefit_2_description,
   },
   {
     image: scalability,
-    alt: "Scalability",
-    title: "Scalable Solutions",
-    description:
-      "Our flexible platform grows with your business, allowing you to effortlessly scale operations to meet increasing demand. With seamless integration and adaptable features, you can expand without hassle, ensuring your logistics can handle more orders as your business evolves.",
+    alt: content.merchants.benefit_3_alt,
+    title: content.merchants.benefit_3_title,
+    description: content.merchants.benefit_3_description,
   },
   {
     image: integration,
-    alt: "Integration",
-    title: "Seamless Integration",
-    description:
-      "Easily integrate our platform with your existing systems and workflows, ensuring smooth, uninterrupted operations. Our solution is designed to work harmoniously with your current setup, allowing you to enhance efficiency without the need for complex adjustments or downtime.",
+    alt: content.merchants.benefit_4_alt,
+    title: content.merchants.benefit_4_title,
+    description: content.merchants.benefit_4_description,
   },
 ];
 ---

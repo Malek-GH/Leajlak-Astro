@@ -1,32 +1,43 @@
-<!-- ---
+---
 import Layout from "../../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import joinus from "../../../images/bg/joinus-mobile.webp";
+import joinus_lg from "../../../images/bg/joinus.webp";
+import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 ---
 
-<Layout title="التسجيل | موظفين" lang="ar">
-  <section
-    class="bg-joinUs_mobile lg:bg-joinUs bg-no-repeat bg-cover bg-center pt-20"
-  >
-    <div
-      class="container section-container flex items-center justify-center fade"
-      data-animation="animate-fade animate-duration-[1500ms]"
-    >
+<style>
+  input[type="file"]::file-selector-button {
+    @apply cursor-pointer border-0 bg-primaryOrange py-2 text-white;
+  }
+</style>
+<Layout title="اتصل بنا | الموظفين" lang="ar">
+  <section class="pt-20">
+    <div class="blurred-img bg-blurredjoinUs">
+      <SourceImageTwo
+        mobileImgUrl={joinus}
+        desktopImgUrl={joinus_lg}
+        alt="Employees_contact"
+      />
+    </div>
+    <div class="container section-container flex items-center justify-center">
       <div
-        class="flex flex-col items-center justify-center gap-14 lg:gap-24 py-8 px-5 lg:flex-row backdrop-blur-sm outline outline-1 outline-white lg:px-10 rounded-2xl"
+        class="flex flex-col items-center justify-center gap-14 lg:gap-24 py-8 px-5 lg:flex-row outline outline-1 outline-white lg:px-10 rounded-2xl backdrop-blur-sm"
       >
         <div
-          class="flex flex-col gap-y-4 w-full sm:w-[500px] lg:w-1/2 text-right"
-          data-animation="animate-fade-left animate-duration-[2000ms]"
+          class="flex flex-col gap-y-4 w-full sm:w-[500px] lg:w-1/2"
+          data-animation="animate-fade-right animate-duration-[2000ms]"
         >
           <div class="space-y-1">
             <h3>نحن نوظف</h3>
-            <h2 class="text-white text-3xl lg:text-4xl">انضم إلى فريقنا</h2>
+            <h2 class="text-white text-3xl lg:text-4xl">انضم إلى فريقنا.</h2>
           </div>
           <p class="text-white">
-            انضم إلى فريقنا الديناميكي وساهم في تشكيل مستقبل إدارة التوصيل.
-            مهاراتك وشغفك يمكن أن تحدث فرقًا معنا!
+            انضم إلى فريقنا الديناميكي وساهم في تشكيل مستقبل إدارة التوصيل. يمكن
+            لخبرتك وشغفك أن يصنعا الفرق معنا!
           </p>
           <div class="space-y-2 visible" id="availability-div">
-            <label for="availability" class="text-white">الوظائف المتاحة:</label
+            <label for="availability" class="text-white">المناصب المتاحة:</label
             >
             <select
               name="availability"
@@ -34,17 +45,16 @@ import Layout from "../../../layouts/Layout.astro";
               class="bg-white text-gray-900 text-sm rounded-lg border-0 outline-0 block w-full p-2.5"
               required
             >
-              <option value="exist" disabled selected
-                >اختر الوظيفة المتاحة</option
+              <option value="exist" disabled selected>اختر المنصب المتاح</option
               >
-              <option value="1">الوظيفة 1</option>
-              <option value="2">الوظيفة 2</option>
+              <option value="1">المنصب 1</option>
+              <option value="2">المنصب 2</option>
             </select>
           </div>
         </div>
         <div class="w-full sm:w-[500px] lg:w-1/2 overflow-hidden">
           <form action="" id="form">
-            <div class="text-white space-y-6 text-right">
+            <div class="text-white space-y-6">
               <div class="space-y-2">
                 <label for="fullName">الاسم الكامل:</label>
                 <input
@@ -80,10 +90,8 @@ import Layout from "../../../layouts/Layout.astro";
               <div>
                 <label
                   class="block mb-2 text-sm font-medium text-white"
-                  for="file_input"
+                  for="file_input">قم بتحميل سيرتك الذاتية (PDF)</label
                 >
-                  تحميل سيرتك الذاتية (PDF)
-                </label>
                 <input
                   class="block w-full text-sm text-gray-500 border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"
                   id="file_input"
@@ -92,9 +100,9 @@ import Layout from "../../../layouts/Layout.astro";
                 />
               </div>
               <div class="pt-5">
-                <button type="submit" value="Submit" class="button-regular">
-                  إرسال
-                </button>
+                <button type="submit" value="Submit" class="button-regular"
+                  >إرسال</button
+                >
               </div>
             </div>
           </form>
@@ -102,10 +110,6 @@ import Layout from "../../../layouts/Layout.astro";
       </div>
     </div>
   </section>
+
+  <script src="../../../Script/BlurredImage.js"></script>
 </Layout>
-<style>
-  input[type="file"]::file-selector-button {
-    @apply cursor-pointer border-0 bg-primaryOrange py-2 text-white;
-  }
-</style>
- -->

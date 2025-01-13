@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
-
 import caseone from "../images/bg/case_studies/general.webp";
+
+const { lang = "en" } = Astro.props;
+const content = await import(`../data/${lang}.json`);
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
@@ -15,12 +17,8 @@ import caseone from "../images/bg/case_studies/general.webp";
       />
     </div>
     <div class="case-text">
-      <h4>Transforming Last-Mile Delivery with Leajlak</h4>
-      <p>
-        Leajlak, an innovative delivery management solution, has redefined the
-        logistics game by bridging the gap between merchants and third-party
-        logistics (3PL) companies.
-      </p>
+      <h4>{content.case_card_title}</h4>
+      <p>{content.case_card_description}</p>
     </div>
   </a>
 </div>

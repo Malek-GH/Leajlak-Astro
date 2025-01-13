@@ -85,5 +85,66 @@
   "real_time_tracking_text2": "Real-time order tracking and status updates.",
 
   "customer_support_title2": "24/7 Customer Support",
-  "customer_support_text2": "Quick and short response times, around the clock."
+  "customer_support_text2": "Quick and short response times, around the clock.",
+
+  "contact_us": "Contact Us",
+  "select_option": "Select An Option:",
+
+  "solution": "Solution",
+  "solution_description": "Leajlak's solution revolutionizes order management, addressing merchant's critical challenges and unlocking the potential for a seamless, efficient delivery ecosystem.",
+  "benefit_tailored_dms": "Tailored DMS",
+  "benefit_realtime_tracking": "Real-Time Tracking",
+  "benefit_rider_management": "Rider Management",
+  "benefit_logistics_partnerships": "Logistics Partnerships",
+  "benefit_integration_capabilities": "Integration Capabilities",
+  "read_more": "Read more",
+  "register_now": "Register Now",
+
+  "logistic_illustration_alt": "Illustration of logistics services",
+  "benefit_1": "Enhanced Delivery Management",
+  "benefit_2": "Rider Tracking and Allocation",
+  "benefit_3": "Streamlined Reconciliation",
+  "benefit_4": "Fleet Management Optimization",
+  "benefit_5": "Automated Order Assignments",
+  "benefit_6": "Centralized dashboard and app",
+  "logistical_challenges_text": "Addressing companies' logistical challenges, Leajlak's Order Management System offers a comprehensive solution to enhance operational efficiency and streamline delivery processes.",
+
+  "case_card_title": "Transforming Last-Mile Delivery with Leajlak",
+  "case_card_description": "Leajlak, an innovative delivery management solution, has redefined the logistics game by bridging the gap between merchants and third-party logistics (3PL) companies.",
+  "merchants": {
+    "benefits_section_title": "Benefits for Merchants",
+    "benefit_1_alt": "Cost Savings",
+    "benefit_1_title": "Cut Costs, Boost Profits",
+    "benefit_1_description": "Cut down on expenses by utilizing our platform's advanced route optimization and efficient logistics management. Streamlined operations lead to reduced fuel costs, fewer delays, and better resource utilization, helping you improve profitability without compromising on service quality.",
+
+    "benefit_2_alt": "Customer Experience",
+    "benefit_2_title": "Enhance Customer Experience",
+    "benefit_2_description": "Ensure timely deliveries and exceptional service quality with our platform. By streamlining logistics and providing real-time tracking, you can offer a reliable, consistent experience that enhances customer trust and satisfaction, leading to greater loyalty and repeat business.",
+
+    "benefit_3_alt": "Scalability",
+    "benefit_3_title": "Scalable Solutions",
+    "benefit_3_description": "Our flexible platform grows with your business, allowing you to effortlessly scale operations to meet increasing demand. With seamless integration and adaptable features, you can expand without hassle, ensuring your logistics can handle more orders as your business evolves.",
+
+    "benefit_4_alt": "Integration",
+    "benefit_4_title": "Seamless Integration",
+    "benefit_4_description": "Easily integrate our platform with your existing systems and workflows, ensuring smooth, uninterrupted operations. Our solution is designed to work harmoniously with your current setup, allowing you to enhance efficiency without the need for complex adjustments or downtime."
+  },
+  "logistic": {
+    "benefits_section_logistics_title": "Benefits for Logistics Companies",
+    "benefit_1_alt": "Fleet Efficiency",
+    "benefit_1_title": "Optimize Fleet Efficiency",
+    "benefit_1_description": "Enhance the performance of your fleet with our advanced management tools. Monitor vehicle health, streamline maintenance schedules, and ensure optimal routing to maximize uptime and reduce operational disruptions.",
+
+    "benefit_2_alt": "Fleet Cost Management",
+    "benefit_2_title": "Effective Fleet Cost Management",
+    "benefit_2_description": "Control and reduce fleet-related expenses through comprehensive cost tracking and analysis. Our platform provides insights into fuel consumption, maintenance costs, and overall expenditure, enabling informed decision-making for cost savings.",
+
+    "benefit_3_alt": "Data Analytics",
+    "benefit_3_title": "Advanced Data Analytics",
+    "benefit_3_description": "Leverage powerful data analytics to gain actionable insights into your logistics operations. Analyze trends, identify inefficiencies, and make data-driven decisions to enhance productivity and drive business growth.",
+
+    "benefit_4_alt": "Client Management",
+    "benefit_4_title": "Seamless Client Management",
+    "benefit_4_description": "Manage client relationships effortlessly with our integrated client management system. Track orders, communicate effectively, and ensure customer satisfaction through streamlined processes and real-time updates."
+  }
 }

@@ -4,35 +4,33 @@ import fleet from "../images/illustrations/fleet-efficiency.webp";
 import fleet_cost from "../images/illustrations/fleet-cost.webp";
 import data from "../images/illustrations/data.webp";
 import client from "../images/illustrations/client.webp";
+const { lang = "en" } = Astro.props;
+const content = await import(`../data/${lang}.json`);
 
 const benefits = [
   {
     image: fleet,
-    alt: "Fleet Efficiency",
-    title: "Optimize Fleet Efficiency",
-    description:
-      "Enhance the performance of your fleet with our advanced management tools. Monitor vehicle health, streamline maintenance schedules, and ensure optimal routing to maximize uptime and reduce operational disruptions.",
+    alt: content.logistic.benefit_1_alt,
+    title: content.logistic.benefit_1_title,
+    description: content.logistic.benefit_1_description,
   },
   {
     image: fleet_cost,
-    alt: "Fleet Cost Management",
-    title: "Effective Fleet Cost Management",
-    description:
-      "Control and reduce fleet-related expenses through comprehensive cost tracking and analysis. Our platform provides insights into fuel consumption, maintenance costs, and overall expenditure, enabling informed decision-making for cost savings.",
+    alt: content.logistic.benefit_2_alt,
+    title: content.logistic.benefit_2_title,
+    description: content.logistic.benefit_2_description,
   },
   {
     image: data,
-    alt: "Data Analytics",
-    title: "Advanced Data Analytics",
-    description:
-      "Leverage powerful data analytics to gain actionable insights into your logistics operations. Analyze trends, identify inefficiencies, and make data-driven decisions to enhance productivity and drive business growth.",
+    alt: content.logistic.benefit_3_alt,
+    title: content.logistic.benefit_3_title,
+    description: content.logistic.benefit_3_description,
   },
   {
     image: client,
-    alt: "Client Management",
-    title: "Seamless Client Management",
-    description:
-      "Manage client relationships effortlessly with our integrated client management system. Track orders, communicate effectively, and ensure customer satisfaction through streamlined processes and real-time updates.",
+    alt: content.logistic.benefit_4_alt,
+    title: content.logistic.benefit_4_title,
+    description: content.logistic.benefit_4_description,
   },
 ];
 ---
@@ -42,7 +40,7 @@ const benefits = [
     class="fade flex flex-col items-center text-center gap-2"
     data-animation="animate-fade animate-duration-[1500ms]"
   >
-    <h2>Benefits for logistics companies</h2>
+    <h2>{content.logistic.benefits_section_logistics_title}</h2>
   </div>
   <div class="flex flex-row justify-evenly gap-x-10 gap-y-28 flex-wrap">
     {
