@@ -213,13 +213,14 @@ const content = await import(`../data/${lang}.json`);
   const popUp = document.getElementById("popupview");
   const popupButton = document.querySelector(".popupButton");
   const closePopUp = document.getElementById("closepopup");
-
-  popupButton?.addEventListener("click", function () {
-    popUp.classList.add("active");
-    document.body.classList.add("no-scroll");
-  });
-  closePopUp?.addEventListener("click", function () {
-    popUp.classList.remove("active");
-    document.body.classList.remove("no-scroll");
+  document.addEventListener("DOMContentLoaded", () => {
+    popupButton?.addEventListener("click", function () {
+      popUp.classList.add("active");
+      document.body.classList.add("no-scroll");
+    });
+    closePopUp?.addEventListener("click", function () {
+      popUp.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    });
   });
 </script>

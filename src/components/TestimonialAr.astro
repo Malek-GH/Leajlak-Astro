@@ -1,177 +1,235 @@
 ---
+import { Image } from "astro:assets";
+
+import mc from "../images/companies_logo/clients/Mcdonald.webp";
+import casa from "../images/companies_logo/clients/Casapasta.webp";
+import hlayel from "../images/companies_logo/logos/shawarmahlayel.webp";
+import jan from "../images/companies_logo/logos/Janburger.webp";
+import dominos from "../images/companies_logo/clients/Dominos-logo.webp";
+
 const testimonials = [
   {
-    quote: "This is the first testimonial.",
-    name: "Alice",
-    position: "Developer",
+    quote:
+      "شراكتنا مع لأجلك ممتده لاكثر من ٣ سنوات ولدينا خطه توسعات معهم لتشمل مناطق كثيره بالمملكه.",
+    name: "محمد لحليمي",
+    position: "مدير أول في ماكدونالدز",
+    imgSrc: mc,
+    imgAlt: "Mcdonald",
   },
   {
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-    name: "Bob",
-    position: "Dev",
+    quote:
+      "شركه لاجلك من الشركات سريعه النمو وسعيدين بشراكتنا الاستراتيجيه معهم.",
+    name: "ايمن",
+    position: "لاكازا باستا",
+    imgSrc: casa,
+    imgAlt: "Casapasta",
   },
   {
-    quote: "This is the second testimonial.",
-    name: "james",
-    position: "Designer",
+    quote:
+      "شركه لاجلك من الشركات المميزه في تطوير اعملها معنا والتواصل من اهم مميزاتهم.",
+    name: "محمد",
+    position: "شاورما هليل",
+    imgSrc: hlayel,
+    imgAlt: "Shawarma Hlayel",
   },
   {
-    quote: "This is the second testimonial.",
-    name: "dan",
-    position: "Designer",
+    quote: "بنينا ثقه مع شركه لاجلك علي مدار سنيتين وتوسعوتنا مستمره.",
+    name: "جميل النائب",
+    position: "مدير العمليات",
+    imgSrc: jan,
+    imgAlt: "Jan Burger",
   },
   {
-    quote: "This is the second testimonial.",
-    name: "weeel",
-    position: "Designer",
+    quote:
+      "توصالنا مع شركه لاجلك بناء عن سمعتهم بالسوق واختبرنا تجربه مميزه معهم وبدائنا توسعاتنا علي الفور.",
+    name: "مروان ",
+    position: "دومينوزبيتزا",
+    imgSrc: dominos,
+    imgAlt: "Domino's Pizza",
   },
 ];
 ---
 
 <div class="carousel">
+  <svg
+    class="size-8 lg:size-10 mx-auto fill-primaryOrange/20"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 18 14"
+  >
+    <path
+      d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
+    ></path>
+  </svg>
   <div class="carousel-inner">
     {
       testimonials.map((testimonial) => (
-        <div class="carousel-item ">
-          <div class="flex flex-col items-center gap-1">
-            <h6 class="text-secondaryBlueText font-bold text-xl lg:text-2xl">
-              {testimonial.name}
-            </h6>
-
-            <p class=" text-base lg:text-lg font-light">
-              {testimonial.position}
-            </p>
-          </div>
-          <div class="space-y-5">
-            <p class="text-base italic opacity-90">"{testimonial.quote}"</p>
-            <svg
-              class="size-8 lg:size-10 mx-auto  "
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 18 14"
-            >
-              <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-            </svg>
+        <div class="carousel-item">
+          <p class="lg:text-2xl sm:text-xl font-normal">
+            "{testimonial.quote}"
+          </p>
+          <div class="flex gap-5 items-center justify-center">
+            <Image
+              src={testimonial.imgSrc}
+              alt={testimonial.imgAlt}
+              class="w-12"
+            />
+            <div class="space-y-1.5 text-center">
+              <h6 class="text-secondaryBlueText font-bold text-sm sm:text-base leading-none ">
+                {testimonial.name}
+              </h6>
+              <p class="text-sm sm:text-base font-light leading-none">
+                {testimonial.position}
+              </p>
+            </div>
           </div>
         </div>
       ))
     }
   </div>
-
-  <div class="carousel-controls">
-    <button class="carousel-control-prev" aria-label="Previous slide">❮</button>
-    <button class="carousel-control-next" aria-label="Next slide">❯</button>
+  <div class="carousel-indicators">
+    {
+      testimonials.map((_, index) => (
+        <button
+          class={index === 0 ? "active" : ""}
+          aria-label={`Slide ${index + 1}`}
+          data-slide-to={index}
+        />
+      ))
+    }
   </div>
+  <button class="carousel-control-prev" aria-label="Previous slide">
+    <svg
+      class="size-8 rotate-180"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      xml:space="preserve"
+      stroke="#000"
+      stroke-width=".005"
+      ><path
+        d="M388.418 240.915 153.752 6.248c-8.331-8.331-21.839-8.331-30.17 0-8.331 8.331-8.331 21.839 0 30.17L343.163 256 123.582 475.582c-8.331 8.331-8.331 21.839 0 30.17 8.331 8.331 21.839 8.331 30.17 0l234.667-234.667c8.33-8.331 8.33-21.839-.001-30.17z"
+      ></path></svg
+    >
+  </button>
+  <button class="carousel-control-next" aria-label="Next slide"
+    ><svg
+      class="size-8"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      xml:space="preserve"
+      stroke="#000"
+      stroke-width=".005"
+      ><path
+        d="M388.418 240.915 153.752 6.248c-8.331-8.331-21.839-8.331-30.17 0-8.331 8.331-8.331 21.839 0 30.17L343.163 256 123.582 475.582c-8.331 8.331-8.331 21.839 0 30.17 8.331 8.331 21.839 8.331 30.17 0l234.667-234.667c8.33-8.331 8.33-21.839-.001-30.17z"
+      ></path></svg
+    ></button
+  >
 </div>
 
 <style>
   .carousel {
-    @apply relative w-full;
+    @apply relative flex min-h-96 w-full flex-col items-center justify-center overflow-hidden;
   }
 
   .carousel-inner {
-    @apply relative flex h-120 flex-row items-center justify-evenly transition-transform duration-500 ease-in-out;
+    @apply flex h-full w-full snap-x flex-row items-center transition-all duration-500 ease-carousel;
   }
   .carousel-item {
-    @apply absolute flex min-h-[400px] w-full flex-shrink-0 flex-grow-0 transform flex-col items-center justify-center space-y-7 rounded-xl bg-white fill-primaryOrange/20 p-5 text-center drop-shadow-lg transition-transform ease-carousel will-change-transform md:w-[500px] md:transition-all md:duration-700;
+    @apply flex w-full flex-shrink-0 flex-grow-0 flex-col items-center gap-y-10 p-5 text-center sm:py-6 lg:px-40;
   }
 
   .carousel-item.active {
-    @apply visible z-10 translate-x-0 scale-100 bg-secondaryBlueDark fill-white/20 opacity-100 lg:scale-105;
-  }
-
-  .carousel-item p {
-    @apply text-secondaryBlueText;
-  }
-  .carousel-item.active p,
-  .carousel-item.active h6 {
-    @apply text-white;
-  }
-  .carousel-item.left {
-    @apply visible opacity-50 md:right-1/4 md:translate-x-1/2 md:scale-90 lg:translate-x-2/3 lg:scale-95;
-  }
-
-  .carousel-item.right {
-    @apply visible opacity-50 md:left-1/4 md:-translate-x-1/2 md:scale-90 lg:-translate-x-2/3 lg:scale-95;
-  }
-
-  .carousel-item.behind {
-    @apply invisible opacity-0;
+    @apply block;
   }
 
   .carousel-controls {
-    @apply absolute flex w-full items-center justify-center gap-20;
+    @apply absolute flex w-full justify-between;
   }
 
   .carousel-control-prev,
   .carousel-control-next {
-    @apply cursor-pointer text-3xl text-secondaryBlueDark;
+    @apply absolute top-1/2 hidden cursor-pointer sm:flex;
+  }
+
+  .carousel-control-prev {
+    @apply left-0;
+  }
+
+  .carousel-control-next {
+    @apply right-0;
+  }
+
+  .carousel-indicators {
+    @apply absolute bottom-0 left-1/2 flex -translate-x-1/2 gap-x-1.5 text-center;
+  }
+
+  .carousel-indicators button {
+    @apply size-2 cursor-pointer rounded-full border-none bg-black/15;
+  }
+
+  .carousel-indicators button.active {
+    @apply bg-black/80;
   }
 </style>
-<script defer>
-  document.addEventListener("DOMContentLoaded", () => {
-    const items = Array.from(document.querySelectorAll(".carousel-item"));
-    const prevButton = document.querySelector(".carousel-control-prev");
-    const nextButton = document.querySelector(".carousel-control-next");
-    let currentIndex = 0;
-    const intervalDuration = 5000;
-    let intervalId;
 
-    if (items.length === 0) {
-      console.warn("No items found.");
-      return;
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carouselInner =
+      document.querySelector<HTMLElement>(".carousel-inner");
+    const items = document.querySelectorAll(".carousel-item");
+    const indicators = document.querySelectorAll(".carousel-indicators button");
+    const nextBtn = document.querySelector(".carousel-control-next");
+    const prevBtn = document.querySelector(".carousel-control-prev");
+    let currentIndex = 0;
+    let carouselInterval;
+
+    function updateCarousel() {
+      carouselInner.style.transform = `translateX(${currentIndex * 100}%)`;
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle("active", index === currentIndex);
+      });
     }
 
-    const updateClasses = () => {
-      items.forEach((item, index) => {
-        item.className = "carousel-item";
-      });
+    function showItem(index) {
+      currentIndex = index;
+      if (currentIndex >= items.length) {
+        currentIndex = 0;
+      } else if (currentIndex < 0) {
+        currentIndex = items.length - 1;
+      }
+      updateCarousel();
+    }
 
-      const prevIndex = (currentIndex - 1 + items.length) % items.length;
-      const nextIndex = (currentIndex + 1) % items.length;
+    function showNextItem() {
+      showItem(currentIndex + 1);
+    }
 
-      items[prevIndex].classList.add("left");
-      items[nextIndex].classList.add("right");
-      items[currentIndex].classList.add("active");
-      items.forEach((item, index) => {
-        if (
-          index !== currentIndex &&
-          index !== prevIndex &&
-          index !== nextIndex
-        ) {
-          item.classList.add("behind");
-        }
-      });
-    };
+    function showPrevItem() {
+      showItem(currentIndex - 1);
+    }
 
-    const nextSlide = () => {
-      currentIndex = (currentIndex + 1) % items.length;
-      updateClasses();
-    };
+    function resetInterval() {
+      clearInterval(carouselInterval);
+      carouselInterval = setInterval(showNextItem, 5000);
+    }
 
-    const prevSlide = () => {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      updateClasses();
-    };
-
-    const resetInterval = () => {
-      clearInterval(intervalId);
-      intervalId = setTimeout(() => {
-        intervalId = setInterval(nextSlide, intervalDuration);
-      }, 500);
-    };
-
-    nextButton.addEventListener("click", () => {
-      nextSlide();
+    nextBtn.addEventListener("click", () => {
+      showPrevItem();
       resetInterval();
     });
 
-    prevButton.addEventListener("click", () => {
-      prevSlide();
+    prevBtn.addEventListener("click", () => {
+      showNextItem();
       resetInterval();
     });
 
-    updateClasses();
-    intervalId = setInterval(nextSlide, intervalDuration);
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener("click", () => {
+        showItem(index);
+        resetInterval();
+      });
+    });
+    carouselInterval = setInterval(showNextItem, 5000);
+    updateCarousel();
   });
 </script>
