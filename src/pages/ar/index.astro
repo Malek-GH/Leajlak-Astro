@@ -27,7 +27,6 @@ import Workflow from "../../components/Workflow.astro";
 
 <script src="/src/Script/videoLoadHundler.js"></script>
 <Layout title="الصفحة الرئيسية" lang="ar">
-  <ContactPopUp lang="ar" />
   <section class="hero">
     <VideoPlaceHolder
       desktopImgUrl={videoPlaceHolder}
@@ -53,19 +52,19 @@ import Workflow from "../../components/Workflow.astro";
     >
       <div class="space-y-5">
         <div>
-          <h1 class="text-white leading-snug lg:w-2/3">
-            هل تواجه صعوبة في انخفاض معدلات نجاح توصيل الطلبات؟
+          <h1 class="text-white leading-snug">
+            تعاني من عبء ارتفاع رسوم التوصيل؟
           </h1>
         </div>
         <p
           class="text-base xs:text-lg 3xl:text-xl font-medium opacity-80 lg:w-2/3 text-white"
         >
-          مع تقنيتنا المتقدمة وشبكتنا المدربة تدريبًا عاليًا من المندوبين، نحن
-          هنا لتجاوز تحديات التوصيل الخاصة بك!
+          استفد بعمولة 0% ومعدلات توصيل استثنائية لزيادة مبيعاتك وأرباحك إلى
+          أقصى حد!
         </p>
       </div>
       <div class="flex items-center gap-5 xs:gap-10 w-full">
-        <button class="popupButton button-regular">اتصل بنا</button>
+        <button class="popupButton button-regular">تواصل معنا</button>
       </div>
     </div>
   </section>
@@ -75,7 +74,7 @@ import Workflow from "../../components/Workflow.astro";
       data-animation="animate-fade animate-duration-[1000ms]"
     >
       <h2 class="text-center px-5 text-xl xs:text-2xl">
-        العلامات التجارية المدعومة من لأجلك
+        علامات تجارية تثق وتعتمد على لأجلك
       </h2>
       <InfiniteScroll />
     </div>
@@ -94,11 +93,12 @@ import Workflow from "../../components/Workflow.astro";
         </div>
         <div class="md:w-3/4 space-y-3">
           <p class="text-secondaryBlueText">
-            نظام إدارة الطلبات المبتكر من لأجلك يربط التجار وشركات اللوجستيات
-            الخارجية لتقديم خدمات التوصيل السريعة والجدولة حسب الطلب بسلاسة.
+            نظام إدارة الطلبات المبتكر من لأجلك يربط التجار و الشركات اللوجستيات
+            ذات الطرف الثالث لتقديم خدمات التوصيل السريعة وامكانية الجدولة حسب
+            الطلب بسلاسة.
           </p>
           <p>
-            حلولنا تجسر الفجوة بين التجار وشركات اللوجستيات ويمكن أن تعزز
+            حلولنا تعمل على سد الفجوة بين التجار والشركات اللوجستيات وتعزز
             الكفاءة بشكل كبير، وتقلل التكاليف، وتحسن رضا العملاء.
           </p>
         </div>
@@ -132,12 +132,12 @@ import Workflow from "../../components/Workflow.astro";
         >
           <div>
             <h3>كيف يعمل؟</h3>
-            <h2>نظام خدماتنا البيئي.</h2>
+            <h2>نظام خدماتنا المتكامل نظام خدماتنا المتكامل.</h2>
           </div>
           <p>
-            اكتشف كيف تعمل منصتنا على ربط هؤلاء اللاعبين الرئيسيين، وتعزيز كل
-            خطوة من رحلة التسليم ودفع النجاح عبر سلسلة التوريد باستخدام
-            التكاملات الدقيقة والآلية.
+            اكتشف كيف تعمل منصتنا على ربط كل اللاعبين الرئيسيين، وتعزيز كل خطوة
+            من رحلة التسليم وزيادة معدلات نجاح التسليم عبر سلسلة التوريد
+            باستخدام انظمتنا المؤتمتة والمتكاملة.
           </p>
         </div>
       </div>
@@ -173,27 +173,23 @@ import Workflow from "../../components/Workflow.astro";
   </section>
   <section id="Partners" class="bg-white">
     <div class="section-container space-y-20 text-center">
-      <div class="fade" data-animation="animate-fade animate-duration-[1000ms]">
-        <h3>شركاؤنا</h3>
-        <h2>تمكين النجاح مع شركائنا الموثوق بهم.</h2>
-      </div>
       <!-- Integrated Partners -->
-      <div class="space-y-10">
-        <h4
+      <div class="space-y-20">
+        <h2
           class="fade"
           data-animation="animate-fade animate-duration-[1000ms]"
         >
-          الشركاء المتكاملون
-        </h4>
+          شركات نوفر الربط المباشر معهم
+        </h2>
         <div
-          class="fade flex flex-row flex-wrap items-center justify-evenly lg:justify-center w-full gap-y-10 gap-x-5 pb-10 border-b-2"
+          class="fade flex flex-row flex-wrap items-center justify-evenly lg:justify-center w-full gap-y-10 gap-x-5 pb-10"
           data-animation="animate-fade-up animate-duration-[1000ms]"
         >
           <Partners />
         </div>
       </div>
       <!-- Logistic Partners -->
-      <div class="space-y-10 w-full flex flex-col items-center">
+      <!--    <div class="space-y-10 w-full flex flex-col items-center">
         <h4
           class="fade"
           data-animation="animate-fade animate-duration-[1000ms]"
@@ -206,8 +202,7 @@ import Workflow from "../../components/Workflow.astro";
         >
           <LogisicPartners />
         </div>
-      </div>
-      <!-- Clients -->
+      </div> -->
     </div>
   </section>
   <section class="bg-lightGray">
@@ -253,5 +248,6 @@ import Workflow from "../../components/Workflow.astro";
       </div>
     </div>
   </section>
+  <ContactPopUp lang="ar" />
   <script src="/src/Script/videoLoadHundler.js"></script>
 </Layout>

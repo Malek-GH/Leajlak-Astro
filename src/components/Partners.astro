@@ -6,7 +6,7 @@ const logos = await Astro.glob("../images/companies_logo/*.webp");
 {
   logos.map((logo) => {
     return (
-      <div class=" flex items-center will-change-transform justify-center h-40 flex-test flex-auto lg:flex-card_full group">
+      <div class="flex items-center will-change-transform justify-center h-40 flex-test flex-auto lg:flex-card_full group">
         <Image
           src={logo.default}
           alt=""
