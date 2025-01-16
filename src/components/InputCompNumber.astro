@@ -21,7 +21,7 @@ const { lang } = Astro.props;
       id={id}
       placeholder=""
       {required}
-      min="1"
+      min="8"
       step="1"
       onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57"
       class:list=`${required_input} block py-4 px-1 w-full bg-white focus:border-primaryOrange/40 border-gray-400 border-b-2 focus:bg-transparent text-black duration-300 outline-0 appearance-none peer`
@@ -46,3 +46,13 @@ const { lang } = Astro.props;
     }
   </span>
 </div>
+<style>
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+</style>

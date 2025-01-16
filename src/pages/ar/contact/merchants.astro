@@ -9,18 +9,6 @@ import MerchantBenefits from "../../../components/MerchantBenefits.astro";
 import merchant_bg from "../../../images/bg/register_merchants_mobile.webp";
 import merchant_bg_lg from "../../../images/bg/register_merchants_lg.webp";
 import SourceImageTwo from "../../../components/SourceImageTwo.astro";
-
-if (Astro.request.method === "POST") {
-  try {
-    const data = await Astro.request.formData();
-    const name = data.get("contactName");
-    console.log(name);
-  } catch (error) {
-    if (error instanceof Error) {
-      console.error(error.message);
-    }
-  }
-}
 ---
 
 <Layout title="اتصل بنا | التجار" lang="ar">
@@ -110,7 +98,8 @@ if (Astro.request.method === "POST") {
                 <p class="mt-2">معلومات الفروع</p>
               </div>
             </div>
-            <form method="POST" action="" class="py-8 formStepper">
+            <form method="POST" action="/api/merchant" class="py-8 formStepper">
+              <input type="hidden" name="lang" value="ar" />
               <!-- Contact info -->
               <div class="form-elements space-y-7 active">
                 <InputCompText
@@ -334,7 +323,12 @@ if (Astro.request.method === "POST") {
           <p class="mt-2 text-center leading-none">معلومات الفروع</p>
         </div>
       </div>
-      <form method="post" action="" class="py-8 formStepper w-full">
+      <form
+        method="post"
+        action="/api/merchant"
+        class="py-8 formStepper w-full"
+      >
+        <input type="hidden" name="lang" value="ar" />
         <!-- Contact info -->
         <div class="form-elements space-y-7 active">
           <InputCompText
