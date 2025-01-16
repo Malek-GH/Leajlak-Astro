@@ -1,13 +1,12 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import playformCompress from "@playform/compress";
-
 import playformInline from "@playform/inline";
-/* 
-import node from "@astrojs/node"; */
+
+import netlify from "@astrojs/netlify";
 
 export default defineConfig({
-  output: "static",
+  output: "server",
 
   integrations: [
     playformCompress(),
@@ -26,7 +25,5 @@ export default defineConfig({
     inlineStylesheets: "always",
   },
 
-  /*  adapter: node({
-    mode: "standalone",
-  }), */
+  adapter: netlify(),
 });

@@ -10,7 +10,7 @@ import merchant_bg from "../../../images/bg/register_merchants_mobile.webp";
 import merchant_bg_lg from "../../../images/bg/register_merchants_lg.webp";
 import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 
-/* if (Astro.request.method === "POST") {
+if (Astro.request.method === "POST") {
   try {
     const data = await Astro.request.formData();
     const name = data.get("contactName");
@@ -20,7 +20,7 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
       console.error(error.message);
     }
   }
-} */
+}
 ---
 
 <Layout title="Contact | Merchants" lang="en">
