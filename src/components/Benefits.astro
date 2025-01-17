@@ -146,11 +146,11 @@ const content = await import(`../data/${lang}.json`);
       <Button link="registration/merchants" text={content.register_now} />
     </div>
   </div>
-  <div class="w-full lg:w-3/5 flex justify-center drop-shadow-lg">
+  <div class="w-full lg:w-3/5 flex justify-center">
     <Image
       src={merchant}
       alt="merchant-illustration"
-      class="w-full max-w-[600px] lg:max-w-none h-auto"
+      class="size-full pointer-events-none"
       loading="lazy"
       fetchpriority="low"
     />
@@ -161,13 +161,11 @@ const content = await import(`../data/${lang}.json`);
   class="fade relative flex lg:flex-row flex-col justify-between items-center h-full gap-20"
   data-animation="animate-fade animate-duration-[1000ms]"
 >
-  <div
-    class="w-full lg:w-3/5 flex justify-center order-2 lg:order-1 drop-shadow-lg"
-  >
+  <div class="w-full lg:w-3/5 flex justify-center order-2 lg:order-1">
     <Image
       src={logistic}
       alt={content.logistic_illustration_alt}
-      class="w-full max-w-[600px] lg:max-w-none h-auto"
+      class="size-full pointer-events-none"
       loading="lazy"
       fetchpriority="low"
     />
