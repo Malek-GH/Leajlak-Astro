@@ -1,9 +1,11 @@
 const formSteppers = document.querySelectorAll(".formStepper");
+const submit = document.querySelector(".submit");
 formSteppers.forEach((formStepper) => {
   const nextBtns = formStepper.querySelectorAll(".next-btn");
   const prevBtns = formStepper.querySelectorAll(".prev-btn");
   const formSteps = formStepper.querySelectorAll(".form-elements");
   const progressSteps = formStepper.parentElement.querySelectorAll(".stepper");
+  const spinner = document.getElementById("spinner");
 
   let formStepNum = 0;
 
@@ -25,11 +27,14 @@ formSteppers.forEach((formStepper) => {
     });
   });
 
-  formStepper.addEventListener("submit", (e) => {
+  submit.addEventListener("click", (e) => {
     if (!validateForm(formStepNum)) {
       e.preventDefault();
+      return;
     } else {
-      alert("Form submitted successfully!");
+      formStepper.classList.add("hidden");
+      spinner.classList.replace("hidden", "flex");
+      formStepper.submit();
     }
   });
 

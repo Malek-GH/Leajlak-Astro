@@ -102,10 +102,19 @@ export default {
         74: "300px",
         15: "3.75rem",
         120: "540px",
-        hero_standard: "90vh",
         chatbot: "75vh",
       },
-
+      maxHeight: {
+        hero_mobile: "90vh",
+        hero_tablet: "38rem",
+        hero_standard: "50rem",
+      },
+      minHeight: {
+        hero_mobile: "90vh",
+        hero_tablet: "38rem",
+        hero_standard: "48rem",
+        inherit: "inherit",
+      },
       transitionProperty: {
         "max-height": "max-height",
       },

@@ -12,44 +12,50 @@ import logistic_bg_lg from "../../../images/bg/register_logistic_lg.webp";
 import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 ---
 
-<Layout title="Contact | Logistic-Companies" lang="en">
-  <section class="hero flex items-center">
-    <div class="blurred-img bg-blurredlogistic_register">
+<Layout title="اتصل بنا | شركات الخدمات اللوجستية" lang="ar">
+  <section
+    class="hero flex items-center bg-blurredlogistic_register bg-center bg-cover bg-no-repeat"
+  >
+    <div class="blurred-img">
       <SourceImageTwo
         mobileImgUrl={logistic_bg}
         desktopImgUrl={logistic_bg_lg}
-        alt="logisitc_solution_bg"
+        alt="logistic_solution_bg"
       />
     </div>
     <div
-      class="container section-container z-10 fade"
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/85 to-black/50"
+    >
+    </div>
+    <div
+      class="container section-container fade"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
-      <div class="flex flex-col gap-4 text-white text-left lg:w-2/4">
+      <div class="flex flex-col gap-4 text-white text-right lg:w-2/4">
         <h1 class="text-3xl md:text-4xl md:leading-tight text-white">
-          Transform your fleet business with Leajlak.
+          طور أعمال أسطولك مع لأجلك.
         </h1>
         <h6 class="text-base font-medium md:text-lg opacity-80">
-          Manage your fleet with ease and watch your business thrive with our
-          powerful platform.
+          قم بإدارة أسطولك بسهولة وشاهد أعمالك تزدهر من خلال منصتنا القوية.
         </h6>
       </div>
       <div
-        class="absolute z-40 right-0 top-2 3xl:top-10 lg:w-1/2 hidden lg:block"
+        class="absolute z-40 left-0 top-2 3xl:top-10 lg:w-1/2 hidden lg:block"
       >
-        <div class="absolute z-50 right-0">
+        <div class="absolute z-50 left-0">
           <div
             class="bg-white rounded-2xl shadow-xl px-10 min-w-[500px] 3xl:min-h-[600px]"
           >
             <div
               class="flex items-center justify-evenly gap-x-5 border-b-2 border-gray-100 py-8"
             >
-              <!-- contact info -->
+              <!-- معلومات الاتصال -->
               <div class="stepper active relative flex flex-col items-center">
                 <div
                   class="size-12 rounded-full ring-1 ring-black/10 bg-white flex items-center justify-center"
                 >
-                  <div class="icon">1</div>
+                  <div class="icon">١</div>
                   <svg
                     class="tick size-7 hidden"
                     viewBox="0 0 34 25"
@@ -61,16 +67,14 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                       fill="white"></path>
                   </svg>
                 </div>
-
-                <p class="mt-2">Contact info</p>
+                <p class="mt-2">معلومات الاتصال</p>
               </div>
-              <!-- general info -->
+              <!-- معلومات عامة -->
               <div class="stepper relative flex flex-col items-center">
                 <div
                   class="size-12 rounded-full ring-1 ring-black/10 bg-white flex items-center justify-center"
                 >
-                  <div class="icon">2</div>
-
+                  <div class="icon">٢</div>
                   <svg
                     class="tick size-7 hidden"
                     viewBox="0 0 34 25"
@@ -82,14 +86,14 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                       fill="white"></path>
                   </svg>
                 </div>
-                <p class="mt-2">General info</p>
+                <p class="mt-2">معلومات عامة</p>
               </div>
-              <!-- branch info -->
+              <!-- معلومات الموارد -->
               <div class="stepper relative flex flex-col items-center">
                 <div
                   class="size-12 rounded-full ring-1 ring-black/10 bg-white flex items-center justify-center"
                 >
-                  <div class="icon">3</div>
+                  <div class="icon">٣</div>
                   <svg
                     class="tick size-7 hidden"
                     viewBox="0 0 34 25"
@@ -101,28 +105,28 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                       fill="white"></path>
                   </svg>
                 </div>
-                <p class="mt-2">Resources info</p>
+                <p class="mt-2">معلومات الموارد</p>
               </div>
             </div>
             <form method="POST" action="" class="py-8 formStepper">
-              <!-- Contact info -->
+              <!-- معلومات الاتصال -->
               <div class="form-elements active space-y-7">
                 <InputCompText
                   type="text"
                   id="contactName"
-                  label_text="Point Of Contact Name"
+                  label_text="اسم جهة الاتصال"
                   data_needed={true}
                 />
                 <InputCompEmail
                   type="email"
                   id="contactEmail"
-                  label_text="Contact Email"
+                  label_text="البريد الإلكتروني لجهة الاتصال"
                   data_needed={true}
                 />
                 <InputCompNumber
                   type="number"
                   id="contactNumber"
-                  label_text="Contact Number"
+                  label_text="رقم الهاتف"
                   data_needed={true}
                 />
                 <div
@@ -130,94 +134,88 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                 >
                   <div>
                     <p class="text-sm font-thin">
-                      please note that: (<span class="text-red-700">*</span>)
-                      fields are mandatory,
+                      يرجى ملاحظة: (<span class="text-red-700">*</span>) الحقول
+                      المطلوبة إلزامية،
                     </p>
-                    <p class="text-sm font-thin">
-                      regular fields are optional.
-                    </p>
+                    <p class="text-sm font-thin">الحقول العادية اختيارية.</p>
                   </div>
-                  <button type="button" class="next-btn button-regular"
-                    >Next</button
-                  >
+                  <button type="button" class="next-btn button-regular">
+                    التالي
+                  </button>
                 </div>
               </div>
-              <!-- general info -->
+              <!-- معلومات عامة -->
               <div class="form-elements space-y-7">
                 <InputCompText
                   type="text"
                   id="companyName"
-                  label_text="Company Name"
+                  label_text="اسم الشركة"
                   data_needed={true}
                 />
                 <InputCompNumber
                   type="number"
                   id="crNumber"
-                  label_text="Cr Number"
+                  label_text="رقم السجل التجاري"
                   data_needed={true}
                 />
                 <InputCompText
                   type="text"
                   id="company_website"
-                  label_text="company website"
+                  label_text="الموقع الإلكتروني للشركة"
                 />
-
                 <InputCompText
                   type="text"
                   id="location_link"
-                  label_text="Head office location (link)"
+                  label_text="رابط موقع المكتب الرئيسي"
                 />
-
                 <div class="flex flex-col gap-5 sm:flex-row justify-between">
                   <button
                     type="button"
                     class="prev-btn button-return order-2 sm:order-1"
                   >
-                    Return
+                    العودة
                   </button>
                   <button
                     type="button"
-                    class="next-btn button-regular sm:order-2">Next</button
+                    class="next-btn button-regular sm:order-2"
                   >
+                    التالي
+                  </button>
                 </div>
               </div>
-              <!-- branch info -->
+              <!-- معلومات الموارد -->
               <div class="form-elements space-y-7">
                 <InputCompNumber
                   type="number"
                   id="captain_numbers"
-                  label_text="Number of captains"
+                  label_text="عدد السائقين"
                   data_needed={true}
                 />
                 <InputCompNumber
                   type="number"
                   id="Coverage_area"
-                  label_text="Coverage area"
+                  label_text="مساحة التغطية"
                   data_needed={true}
                 />
-
                 <div class="flex justify-between">
                   <button
                     type="button"
                     class="prev-btn button-return order-2 sm:order-1"
                   >
-                    Return
+                    العودة
                   </button>
                   <button
                     type="submit"
-                    class="next-btn button-regular sm:order-2">Submit</button
+                    class="next-btn button-regular sm:order-2"
                   >
+                    إرسال
+                  </button>
                 </div>
               </div>
             </form>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80% z-0"
-    >
     </div>
   </section>
   <div
@@ -228,12 +226,12 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
       <div
         class="flex items-center justify-between gap-x-5 border-b-2 border-gray-100 py-8 w-full"
       >
-        <!-- contact info -->
+        <!-- معلومات الاتصال -->
         <div class="stepper active relative flex flex-col items-center">
           <div
             class="size-12 rounded-full ring-1 ring-black/10 bg-white flex items-center justify-center"
           >
-            <div class="icon">1</div>
+            <div class="icon">١</div>
             <svg
               class="tick size-7 hidden"
               viewBox="0 0 34 25"
@@ -245,16 +243,14 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                 fill="white"></path>
             </svg>
           </div>
-
-          <p class="mt-2 text-center leading-none">Contact info</p>
+          <p class="mt-2 text-center leading-none">معلومات الاتصال</p>
         </div>
-        <!-- general info -->
+        <!-- معلومات عامة -->
         <div class="stepper relative flex flex-col items-center">
           <div
             class="size-12 rounded-full ring-1 ring-black/10 bg-white flex items-center justify-center"
           >
-            <div class="icon">2</div>
-
+            <div class="icon">٢</div>
             <svg
               class="tick size-7 hidden"
               viewBox="0 0 34 25"
@@ -266,14 +262,14 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                 fill="white"></path>
             </svg>
           </div>
-          <p class="mt-2 text-center leading-none">General info</p>
+          <p class="mt-2 text-center leading-none">معلومات عامة</p>
         </div>
-        <!-- branch info -->
+        <!-- معلومات الموارد -->
         <div class="stepper relative flex flex-col items-center">
           <div
             class="size-12 rounded-full ring-1 ring-black/10 bg-white flex items-center justify-center"
           >
-            <div class="icon">3</div>
+            <div class="icon">٣</div>
             <svg
               class="tick size-7 hidden"
               viewBox="0 0 34 25"
@@ -285,28 +281,28 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
                 fill="white"></path>
             </svg>
           </div>
-          <p class="mt-2 text-center leading-none">Resources info</p>
+          <p class="mt-2 text-center leading-none">معلومات الموارد</p>
         </div>
       </div>
       <form method="POST" action="" class="py-8 formStepper w-full">
-        <!-- Contact info -->
+        <!-- معلومات الاتصال -->
         <div class="form-elements active space-y-7">
           <InputCompText
             type="text"
             id="contactName"
-            label_text="Point Of Contact Name"
+            label_text="اسم جهة الاتصال"
             data_needed={true}
           />
           <InputCompEmail
             type="email"
             id="contactEmail"
-            label_text="Contact Email"
+            label_text="البريد الإلكتروني لجهة الاتصال"
             data_needed={true}
           />
           <InputCompNumber
             type="number"
             id="contactNumber"
-            label_text="Contact Number"
+            label_text="رقم الهاتف"
             data_needed={true}
           />
           <div
@@ -314,77 +310,75 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
           >
             <div class="w-full">
               <p class="text-sm font-thin">
-                please note that: (<span class="text-red-700">*</span>) fields
-                are mandatory,
+                يرجى ملاحظة: (<span class="text-red-700">*</span>) الحقول
+                المطلوبة إلزامية،
               </p>
-              <p class="text-sm font-thin">regular fields are optional.</p>
+              <p class="text-sm font-thin">الحقول العادية اختيارية.</p>
             </div>
-            <button type="button" class="next-btn button-regular">Next</button>
+            <button type="button" class="next-btn button-regular">التالي</button
+            >
           </div>
         </div>
-        <!-- general info -->
+        <!-- معلومات عامة -->
         <div class="form-elements space-y-7">
           <InputCompText
             type="text"
             id="companyName"
-            label_text="Company Name"
+            label_text="اسم الشركة"
             data_needed={true}
           />
           <InputCompNumber
             type="number"
             id="crNumber"
-            label_text="Cr Number"
+            label_text="رقم السجل التجاري"
             data_needed={true}
           />
           <InputCompText
             type="text"
             id="company_website"
-            label_text="company website"
+            label_text="الموقع الإلكتروني للشركة"
           />
-
           <InputCompText
             type="text"
             id="location_link"
-            label_text="Head office location (link)"
+            label_text="رابط موقع المكتب الرئيسي"
           />
-
           <div class="flex flex-col gap-5 sm:flex-row justify-between">
             <button
               type="button"
               class="prev-btn button-return order-2 sm:order-1"
             >
-              Return
+              العودة
             </button>
-            <button type="button" class="next-btn button-regular sm:order-2"
-              >Next</button
-            >
+            <button type="button" class="next-btn button-regular sm:order-2">
+              التالي
+            </button>
           </div>
         </div>
-        <!-- branch info -->
+        <!-- معلومات الموارد -->
         <div class="form-elements space-y-7">
           <InputCompNumber
             type="number"
             id="captain_numbers"
-            label_text="Number of captains"
+            label_text="عدد السائقين"
             data_needed={true}
           />
           <InputCompNumber
             type="number"
             id="Coverage_area"
-            label_text="Coverage area"
+            label_text="مساحة التغطية"
             data_needed={true}
           />
-
           <div class="flex flex-col gap-5 sm:flex-row justify-between">
             <button
               type="button"
               class="prev-btn button-return order-2 sm:order-1"
             >
-              Return
+              العودة
             </button>
-            <button type="submit" class="next-btn button-regular sm:order-2"
-              >Submit</button
-            >
+            <button type="submit" class="next-btn button-regular sm:order-2">
+              إرسال
+            </button>
           </div>
         </div>
       </form>
@@ -393,21 +387,22 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
   <section class="bg-lightGray">
     <div class="container section-container flex flex-col gap-32">
       <div
-        class="fade text-left space-y-4"
+        class="fade text-right space-y-4"
         data-animation="animate-fade animate-duration-[1000ms]"
       >
-        <h2>Why Choose Us?</h2>
+        <h2>لماذا تختارنا؟</h2>
         <p class="lg:w-1/2">
-          Leajlak's Order Management System empowers logistics companies to
-          overcome operational hurdles, enhance efficiency, and deliver
-          exceptional service to their clients and customers.
+          نظام إدارة الطلبات من Leajlak يمكّن شركات الخدمات اللوجستية من التغلب
+          على التحديات التشغيلية، وتعزيز الكفاءة، وتقديم خدمة استثنائية لعملائها
+          وزبائنها.
         </p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-7">
-        <LogisticBenfits />
+        <LogisticBenfits lang="ar" />
       </div>
     </div>
   </section>
+
   <script src="../../../Script/BlurredImage.js"></script>
   <script src="../../../Script/registration-control.js"></script>
 </Layout>

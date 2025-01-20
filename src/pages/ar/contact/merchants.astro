@@ -12,8 +12,11 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 ---
 
 <Layout title="اتصل بنا | التجار" lang="ar">
-  <section class="flex items-center hero" id="hero">
-    <div class="blurred-img bg-blurredmerchant_register">
+  <section
+    class="flex items-center bg-blurredmerchant_register bg-cover bg-center bg-no-repeat hero"
+    id="hero"
+  >
+    <div class="blurred-img">
       <SourceImageTwo
         mobileImgUrl={merchant_bg}
         desktopImgUrl={merchant_bg_lg}
@@ -21,7 +24,12 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
       />
     </div>
     <div
-      class="section-container w-full z-10 fade"
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-r from-black/50 from-0% to-black/85 to-80%"
+    >
+    </div>
+    <div
+      class="section-container w-full fade"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
       <div class="flex flex-col gap-4 text-white text-right lg:w-1/2">
@@ -265,11 +273,6 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
           </div>
         </div>
       </div>
-    </div>
-    <div
-      id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-r from-black/50 from-0% to-black/85 to-80% z-0"
-    >
     </div>
   </section>
   <div

@@ -9,31 +9,26 @@ export const POST: APIRoute = async ({ request }) => {
     const number = formData.get("contactNumber");
     const company_name = formData.get("companyName");
     const company_website = formData.get("company_website");
-    const industry_type = formData.get("food");
+    const crNumber = formData.get("crNumber");
     const location_link = formData.get("location_link");
-    const branch_numbers = formData.get("branch_numbers");
-    const region = formData.get("region");
-    const volume = formData.get("volume");
-    const POS = formData.get("POS");
-
+    const captain_numbers = formData.get("captain_numbers");
+    const Coverage_area = formData.get("Coverage_area");
     console.log({
       name,
       email,
       number,
       company_name,
       company_website,
-      industry_type,
+      crNumber,
       location_link,
-      branch_numbers,
-      region,
-      volume,
-      POS,
+      captain_numbers,
+      Coverage_area,
     });
 
     return new Response(null, {
       status: 302,
       headers: {
-        Location: `/${lang}/contact/merchants`,
+        Location: `/${lang}/contact/logistic-companies`,
       },
     });
   } catch (err) {

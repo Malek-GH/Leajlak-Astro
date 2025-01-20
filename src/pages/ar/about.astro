@@ -22,10 +22,11 @@ import SourceImageTwo from "../../components/SourceImageTwo.astro";
 ---
 
 <Layout title="معلومات عنا" lang="ar">
-  <section class="hero" id="about-hero">
-    <div
-      class="bg-blurredAboutBgMobile xs:bg-blurredAboutBg bg-cover bg-center blurred-img"
-    >
+  <section
+    class="hero bg-blurredAboutBgMobile xs:bg-blurredAboutBg bg-cover bg-center bg-no-repeat"
+    id="about-hero"
+  >
+    <div class="blurred-img">
       <SourceImageTwo
         mobileImgUrl={about_mobile}
         desktopImgUrl={about_lg}
@@ -39,7 +40,7 @@ import SourceImageTwo from "../../components/SourceImageTwo.astro";
     </div>
     <div
       id="title-container"
-      class="fade container section-container text-white flex flex-col justify-center h-full"
+      class="fade min-h-inherit section-container text-white flex flex-col justify-center"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
       <h3
@@ -91,55 +92,31 @@ import SourceImageTwo from "../../components/SourceImageTwo.astro";
           class="fade lg:w-1/2 flex flex-col gap-4"
           data-animation="animate-fade-up animate-duration-[1000ms]"
         >
-          <h2 class="bg-primaryOrange text-white text-center py-2 rounded-2xl">
+          <h4 class="bg-primaryOrange text-white text-center py-2 rounded-2xl">
             رؤيتنا
-          </h2>
+          </h4>
           <p>
-            أن نصبح المزود الرائد للحلول التقنية المتطورة والخدمات المبتكرة في
-            قطاع الخدمات اللوجستية، محليًا وعالميًا.
+            إحداث ثورة في قطاع الخدمات اللوجستية من خلال تقديم حلول تقنية مبتكرة
+            تسد الفجوة بين التجار وشركات الخدمات اللوجستية، مما يعزز التميز
+            المحلي والعالمي في خدمات التوصيل حسب الطلب.
           </p>
         </div>
         <div
           class="fade w-full lg:w-1/2 flex flex-col gap-4"
           data-animation="animate-fade-up animate-duration-[1000ms]"
         >
-          <h2 class="bg-primaryOrange text-white text-center py-2 rounded-2xl">
+          <h4 class="bg-primaryOrange text-white text-center py-2 rounded-2xl">
             مهمتنا
-          </h2>
-          <ul>
-            <li
-              class="before:bg-tick relative before:absolute before:right-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
-            >
-              <p class="ms-7">تعزيز الكفاءة التشغيلية للشركات.</p>
-            </li>
-            <li
-              class="before:bg-tick relative before:absolute before:right-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
-            >
-              <p class="ms-7">
-                توفير اتصال سلس بين التجار ومقدمي الخدمات اللوجستية.
-              </p>
-            </li>
-            <li
-              class="before:bg-tick relative before:absolute before:right-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
-            >
-              <p class="ms-7">
-                تحسين رضا العملاء من خلال خدمات توصيل دقيقة وموثوقة.
-              </p>
-            </li>
-            <li
-              class="before:bg-tick relative before:absolute before:right-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
-            >
-              <p class="ms-7">
-                تعزيز التعاون داخل صناعة الخدمات اللوجستية لإنشاء شبكة توصيل
-                قوية وفعالة.
-              </p>
-            </li>
-          </ul>
+          </h4>
+          <p>
+            تقديم أدوات مبتكرة للشركات تعزز الكفاءة، وتقوي الشراكات بين التجار
+            ومقدمي الخدمات اللوجستية، وتوفر رضا استثنائياً للعملاء من خلال شبكة
+            توصيل موثوقة.
+          </p>
         </div>
       </div>
     </div>
   </section>
-
   <section id="values" class="bg-lightGray">
     <div class="container section-container space-y-20 z-10">
       <h2 class="text-center">قيمنا</h2>

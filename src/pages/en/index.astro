@@ -4,7 +4,6 @@ import Layout from "../../layouts/Layout.astro";
 /* Components */
 import Testimonial from "../../components/TestimonialEn.astro";
 import Partners from "../../components/Partners.astro";
-import LogisicPartners from "../../components/LogisicPartners.astro";
 import InfiniteScroll from "../../components/InfiniteScroll.astro";
 
 import CoreFeatures from "../../components/CoreFeatures.astro";
@@ -31,21 +30,18 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
       mobileImgUrl={videoPlaceHolderMobile}
       alt="videoplaceholder"
     />
-    <div
-      id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/65 z-0"
-    >
-    </div>
     <video
       autoplay
       muted
       loop
-      class="absolute size-full object-cover object-center -z-10 top-0 left-0"
+      class="absolute size-full object-cover object-center top-0 left-0"
       id="video"
     >
     </video>
+    <div id="hero-overlay" class="absolute top-0 left-0 size-full bg-black/65">
+    </div>
     <div
-      class="fade relative section-container flex flex-col justify-end items-start h-full gap-y-10 z-10"
+      class="fade section-container flex flex-col justify-end items-start gap-y-10 min-h-inherit"
       data-animation="animate-fade-up animate-duration-[2000ms]"
     >
       <div class="space-y-5">
@@ -96,7 +92,7 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
             scheduled delivery services.
           </p>
           <p>
-            Our solution bridges the gap between merchants and logistic
+            Our solution bridges the gap between merchants and logistics
             companies and can significantly enhance efficiency, reduce costs,
             and improve customer satisfaction.
           </p>

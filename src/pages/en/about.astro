@@ -22,10 +22,11 @@ import SourceImageTwo from "../../components/SourceImageTwo.astro";
 ---
 
 <Layout title="About Us" lang="en">
-  <section class="hero" id="about-hero">
-    <div
-      class="bg-blurredAboutBgMobile xs:bg-blurredAboutBg bg-cover bg-center blurred-img"
-    >
+  <section
+    class="hero bg-blurredAboutBgMobile xs:bg-blurredAboutBg bg-cover bg-center bg-no-repeat"
+    id="about-hero"
+  >
+    <div class="blurred-img">
       <SourceImageTwo
         mobileImgUrl={about_mobile}
         desktopImgUrl={about_lg}
@@ -39,7 +40,7 @@ import SourceImageTwo from "../../components/SourceImageTwo.astro";
     </div>
     <div
       id="title-container"
-      class="fade container section-container text-white flex flex-col justify-center h-full"
+      class="fade min-h-inherit section-container text-white flex flex-col justify-center"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
       <h3
@@ -93,60 +94,32 @@ import SourceImageTwo from "../../components/SourceImageTwo.astro";
           class="fade lg:w-1/2 flex flex-col gap-4"
           data-animation="animate-fade-up animate-duration-[1000ms]"
         >
-          <h2 class="bg-primaryOrange text-white text-center py-2 rounded-2xl">
+          <h4 class="bg-primaryOrange text-white text-center py-2 rounded-2xl">
             Our vision
-          </h2>
+          </h4>
           <p>
-            To become the leading provider of cutting-edge technical solutions
-            and innovative services in the logistics sector, both locally and
-            globally.
+            To revolutionize logistics by providing groundbreaking technological
+            solutions that bridge the gap between merchants and logistics
+            companies, driving local and global excellence in on-demand delivery
+            services.
           </p>
         </div>
         <div
           class="fade w-full lg:w-1/2 flex flex-col gap-4"
           data-animation="animate-fade-up animate-duration-[1000ms]"
         >
-          <h2 class="bg-primaryOrange text-white text-center rounded-2xl py-2">
+          <h4 class="bg-primaryOrange text-white text-center rounded-2xl py-2">
             Our mission
-          </h2>
-          <ul>
-            <li
-              class="before:bg-tick relative before:absolute before:left-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
-            >
-              <p class="ms-7">
-                Enhance the operational efficiency of businesses.
-              </p>
-            </li>
-            <li
-              class="before:bg-tick relative before:absolute before:left-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
-            >
-              <p class="ms-7">
-                Provide seamless connectivity between merchants and logistics
-                providers.
-              </p>
-            </li>
-            <li
-              class="before:bg-tick relative before:absolute before:left-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
-            >
-              <p class="ms-7">
-                Improve customer satisfaction through precise and reliable
-                delivery services.
-              </p>
-            </li>
-            <li
-              class="before:bg-tick relative before:absolute before:left-0 before:mt-0.5 before:top-0 before:size-6 before:content-['']"
-            >
-              <p class="ms-7">
-                Foster collaboration within the logistics industry to create a
-                robust and efficient delivery network.
-              </p>
-            </li>
-          </ul>
+          </h4>
+          <p>
+            To provide businesses with innovative tools that enhance efficiency,
+            strengthen merchant-logistics partnerships, and deliver exceptional
+            customer satisfaction through a trusted delivery network
+          </p>
         </div>
       </div>
     </div>
   </section>
-
   <section id="values" class="bg-lightGray">
     <div class="container section-container space-y-20 z-10">
       <h2 class="text-center">Our values</h2>

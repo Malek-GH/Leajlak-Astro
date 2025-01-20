@@ -8,15 +8,22 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 ---
 
 <Layout title="Contact | Drivers" lang="en">
-  <section class="hero flex items-center">
-    <div class="blurred-img bg-blurredDriver_register">
+  <section
+    class="hero flex items-center bg-blurredDriver_register bg-cover bg-center bg-no-repeat"
+  >
+    <div class="blurred-img">
       <SourceImageTwo
         mobileImgUrl={driver_bg}
         desktopImgUrl={driver_bg_lg}
         alt="logisitc_solution_bg"
       />
     </div>
-    <div class="container section-container z-10">
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/20 from-0% to-black/85 to-80% z-0"
+    >
+    </div>
+    <div class="container section-container">
       <div
         class="fade flex flex-col gap-7 text-white text-left lg:w-1/2"
         data-animation="animate-fade animate-duration-[1500ms]"
@@ -27,11 +34,6 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
           to providing efficient delivery services.
         </h6>
       </div>
-    </div>
-    <div
-      id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/20 from-0% to-black/85 to-80% z-0"
-    >
     </div>
   </section>
   <section class="bg-white">

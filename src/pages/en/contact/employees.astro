@@ -1,116 +1,220 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
-import { Image } from "astro:assets";
 import joinus from "../../../images/bg/joinus-mobile.webp";
 import joinus_lg from "../../../images/bg/joinus.webp";
 import SourceImageTwo from "../../../components/SourceImageTwo.astro";
 ---
 
+<style>
+  input[type="file"]::file-selector-button {
+    @apply cursor-pointer border-0 bg-primaryOrange py-2 text-white;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  .error {
+    @apply border-red-700;
+  }
+  .correct {
+    @apply border-green-600;
+  }
+</style>
+
 <Layout title="Contact | Employees" lang="en">
-  <section class="pt-20">
-    <div class="blurred-img bg-blurredjoinUs">
+  <section
+    class="hero flex items-center bg-blurredjoinUs bg-cover bg-center bg-no-repeat"
+  >
+    <div class="blurred-img">
       <SourceImageTwo
         mobileImgUrl={joinus}
         desktopImgUrl={joinus_lg}
         alt="Employees_contact"
       />
     </div>
-    <div class="container section-container flex items-center justify-center">
-      <div
-        class="flex flex-col items-center justify-center gap-14 lg:gap-24 py-8 px-5 lg:flex-row outline outline-1 outline-white lg:px-10 rounded-2xl backdrop-blur-sm"
-      >
-        <div
-          class="flex flex-col gap-y-4 w-full sm:w-[500px] lg:w-1/2"
-          data-animation="animate-fade-right animate-duration-[2000ms]"
-        >
-          <div class="space-y-1">
-            <h3>we are hiring</h3>
-            <h2 class="text-white text-3xl lg:text-4xl">Join our team.</h2>
-          </div>
-          <p class="text-white">
-            Join our dynamic team and help shape the future of delivery
-            management your expertise and passion can make a difference with us!
-          </p>
-          <div class="space-y-2 visible" id="availability-div">
-            <label for="availability" class="text-white"
-              >available Positions:</label
-            >
-            <select
-              name="availability"
-              id="availability"
-              class="bg-white text-gray-900 text-sm rounded-lg border-0 outline-0 block w-full p-2.5"
-              required
-            >
-              <option value="exist" disabled selected
-                >Chose available position</option
-              >
-              <option value="1">position 1</option>
-              <option value="2">position 2</option>
-            </select>
-          </div>
-        </div>
-        <div class="w-full sm:w-[500px] lg:w-1/2 overflow-hidden">
-          <form action="" id="form">
-            <div class="text-white space-y-6">
-              <div class="space-y-2">
-                <label for="fullName">Full name:</label>
-                <input
-                  type="text"
-                  name="fullName"
-                  id="fullName"
-                  class="rounded-lg p-2.5 w-full border border-white text-black outline-0"
-                  placeholder="Your Full Name"
-                  required
-                />
-              </div>
-              <div class="space-y-2">
-                <label for="email">Email:</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="rounded-lg p-2.5 w-full border border-white text-black outline-0"
-                  required
-                  placeholder="Your Email"
-                />
-              </div>
-              <div class="space-y-2">
-                <label for="message">Your message:</label>
-                <textarea
-                  id="message"
-                  rows="4"
-                  minlength="10"
-                  maxlength="255"
-                  class="block p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg border border-white outline-0"
-                  placeholder="Tell us more about yourself..."></textarea>
-              </div>
-              <div>
-                <label
-                  class="block mb-2 text-sm font-medium text-white"
-                  for="file_input">Upload your resume (PDF)</label
-                >
-                <input
-                  class="block w-full text-sm text-gray-500 border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"
-                  id="file_input"
-                  type="file"
-                  accept="application/pdf"
-                />
-              </div>
-              <div class="pt-5">
-                <button type="submit" value="Submit" class="button-regular"
-                  >Submit</button
-                >
-              </div>
-            </div>
-          </form>
-        </div>
+    <div
+      id="hero-overlay"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-l from-black/50 from-0% to-black/85 to-80%"
+    >
+    </div>
+    <div
+      class="container section-container fade"
+      data-animation="animate-fade animate-duration-[1500ms]"
+    >
+      <div class="flex flex-col gap-4 text-white text-left lg:w-2/4">
+        <h1 class="text-3xl md:text-4xl md:leading-tight text-white">
+          Join Our Team
+        </h1>
+        <h6 class="text-base font-medium md:text-lg opacity-80">
+          Join our dynamic team and help shape the future of delivery
+          management. Your expertise and passion can make a difference with us!
+        </h6>
       </div>
     </div>
   </section>
+  <section>
+    <div class="section-container overflow-hidden flex flex-row">
+      <div
+        id="positions-container"
+        class="flex flex-col justify-center items-center gap-20 w-full"
+      >
+        <div class="text-center space-y-2 mb-4">
+          <h2>Available Positions</h2>
+          <h6 class="text-lg">Here's the latest jobs listed.</h6>
+        </div>
+        <div class="w-full lg:w-2/3">
+          <div
+            class="position-item flex justify-between border-t border-b border-black/5 p-5 hover:shadow-card_shadow hover:shadow-black/20 duration-200 transition-shadow ease-in-out cursor-pointer"
+            data-position="Position 1"
+          >
+            <h5>Position 1</h5>
+            <div class="space-y-1">
+              <p>4000SAR - 5000SAR</p>
+              <div class="bg-green-500">
+                <p class="text-center text-white">Full Time</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="position-item flex justify-between border-b border-black/5 p-5 hover:shadow-card_shadow hover:shadow-black/20 duration-200 transition-shadow ease-in-out cursor-pointer"
+            data-position="Position 2"
+          >
+            <h5>Position 2</h5>
+            <div class="space-y-1">
+              <p>4000SAR - 5000SAR</p>
+              <div class="bg-orange-700">
+                <p class="text-center text-white">Part Time</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="form-container"
+        class="w-full overflow-hidden hidden justify-center"
+      >
+        <form
+          method="POST"
+          action="/api/employees"
+          novalidate
+          id="employeesForm"
+          class="h-full w-full lg:w-2/3 bg-lightGray p-10 rounded-2xl"
+        >
+          <h4 class="mb-4" id="application-title"></h4>
+          <input type="hidden" name="lang" value="en" />
+          <input type="hidden" id="positionApplied" name="position" />
+          <div class="mb-4">
+            <label class="block mb-1" for="name">Name</label>
+            <input
+              required
+              class="w-full border p-2 outline-0 rounded-lg"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="ex. Mohamed Ahmed"
+            />
+            <p class="font-normal text-red-700 mt-1"></p>
+          </div>
+          <div class="mb-4">
+            <label class="block mb-1" for="email">Email</label>
+            <input
+              required
+              class="w-full border p-2 outline-0 rounded-lg"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ex. Mohamed@email.com"
+            />
+            <p class="font-normal text-red-700 mt-1"></p>
+          </div>
+          <div class="mb-4">
+            <label for="message">Message</label>
+            <textarea
+              required
+              name="message"
+              id="message"
+              rows="4"
+              minlength="10"
+              maxlength="1000"
+              class="block p-2.5 w-full bg-white rounded-lg border outline-0 resize-none"
+              placeholder="Tell us more about yourself"></textarea>
+            <p class="font-normal text-red-700 mt-1"></p>
+          </div>
+          <div class="mb-4">
+            <label class="block mb-1" for="number">Phone Number</label>
+            <input
+              required
+              class="w-full border p-2 outline-0 rounded-lg"
+              type="number"
+              id="number"
+              name="number"
+              onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57"
+              placeholder="ex. +966"
+            />
+            <p class="font-normal text-red-700 mt-1"></p>
+          </div>
+          <div class="mb-6">
+            <label class="block mb-1" for="file_input"
+              >Upload your resume (PDF)</label
+            >
+            <input
+              required
+              class="block w-full text-sm border rounded-lg cursor-pointer bg-white focus:outline-none"
+              name="file_input"
+              id="file_input"
+              type="file"
+              accept="application/pdf"
+            />
+            <p class="font-normal text-red-700 mt-1"></p>
+          </div>
+          <div class="flex justify-between">
+            <button
+              type="button"
+              id="back-btn"
+              value="Submit"
+              class="button-return">Return</button
+            >
+            <button type="submit" value="Submit" class="button-regular"
+              >Apply</button
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="../../../Script/employee-control.js"></script>
+  <script src="../../../Script/BlurredImage.js"></script>
+  <script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+      const positionItems = document.querySelectorAll(".position-item");
+      const positionsContainer = document.getElementById("positions-container");
+      const formContainer = document.getElementById("form-container");
+      const application_title = document.getElementById("application-title");
+      const positionAppliedField = document.getElementById("positionApplied");
+      const backBtn = document.getElementById("back-btn");
+
+      positionItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const positionName = item.getAttribute("data-position");
+          if (positionAppliedField) {
+            positionAppliedField.value = positionName;
+          }
+
+          positionsContainer.classList.replace("flex", "hidden");
+          application_title.innerText = `Applied for ${positionName}`;
+          formContainer.classList.replace("hidden", "flex");
+        });
+      });
+
+      backBtn?.addEventListener("click", () => {
+        positionsContainer.classList.replace("hidden", "flex");
+
+        formContainer.classList.replace("flex", "hidden");
+      });
+    });
+  </script>
 </Layout>
-<style>
-  input[type="file"]::file-selector-button {
-    @apply cursor-pointer border-0 bg-primaryOrange py-2 text-white;
-  }
-</style>
-<script src="../../../Script/BlurredImage.js"></script>

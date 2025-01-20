@@ -31,21 +31,18 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
       mobileImgUrl={videoPlaceHolderMobile}
       alt="videoplaceholder"
     />
-    <div
-      id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/65 z-0"
-    >
-    </div>
     <video
       autoplay
       muted
       loop
-      class="absolute size-full object-cover object-center -z-10 top-0 left-0"
+      class="absolute size-full object-cover object-center top-0 left-0"
       id="video"
     >
     </video>
+    <div id="hero-overlay" class="absolute top-0 left-0 size-full bg-black/65">
+    </div>
     <div
-      class="fade relative section-container flex flex-col justify-end items-start h-full gap-y-10 z-10"
+      class="fade min-h-inherit section-container flex flex-col justify-end items-start gap-y-10"
       data-animation="animate-fade-up animate-duration-[2000ms]"
     >
       <div class="space-y-5">
@@ -72,7 +69,7 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
       data-animation="animate-fade animate-duration-[1000ms]"
     >
       <h2 class="text-center px-5 text-xl xs:text-2xl">
-        علامات تجارية تثق وتعتمد على لأجلك
+        علامات تجارية ترتكز على خدمات لأجلك المبتكرة
       </h2>
       <InfiniteScroll />
     </div>
@@ -223,7 +220,8 @@ import VideoPlaceHolder from "../../components/VideoPlaceHolder.astro";
       >
         <div class="space-y-3">
           <h2 class="text-3xl lg:text-5xl">
-            حمل تطبيق <span class="text-primaryOrange">لأجلك</span> وانضم إلينا كسائق
+            حمل تطبيق <span class="text-primaryOrange">لأجلك</span> وانضم إلينا كمندوب
+            توصيل
           </h2>
           <p>
             هل تبحث عن دخل إضافي مع جدول عمل مرن؟ انضم إلينا في لأجلك كسائق وكن

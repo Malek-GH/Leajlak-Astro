@@ -30,8 +30,11 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
   }
 </style>
 <Layout title="Solutions | 3PL" lang="en">
-  <section class="hero z-0" id="PL-hero">
-    <div class="blurred-img bg-cover bg-center bg-blurredlogistic_solution">
+  <section
+    class="hero bg-cover bg-center bg-blurredlogistic_solution bg-no-repeat"
+    id="PL-hero"
+  >
+    <div class="blurred-img">
       <SourceImageTwo
         mobileImgUrl={logistic_bg}
         desktopImgUrl={logistic_bg_lg}
@@ -44,10 +47,10 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
     >
     </div>
     <div
-      class="fade container section-container flex flex-col z-0 justify-center h-full gap-5"
+      class="fade min-h-inherit section-container flex flex-col justify-center gap-5"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
-      <h1 class="text-3xl md:text-5xl text-white mt-10">Logistic Companies</h1>
+      <h1 class="text-3xl md:text-5xl text-white mt-10">Logistics Companies</h1>
       <h6
         class="text-base font-medium md:text-lg opacity-80 text-white lg:w-1/2"
       >

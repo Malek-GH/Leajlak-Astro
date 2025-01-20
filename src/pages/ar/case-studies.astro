@@ -11,10 +11,10 @@ import ContactPopUp from "../../components/ContactPopUp.astro";
 
 <Layout title="دراسات الحالة" lang="ar">
   <ContactPopUp lang="ar" />
-  <section class="hero">
-    <div
-      class="bg-blurredCaseBgMobile xs:bg-blurredCaseBg bg-center bg-cover blurred-img"
-    >
+  <section
+    class="hero bg-blurredCaseBgMobile xs:bg-blurredCaseBg bg-center bg-cover bg-no-repeat"
+  >
+    <div class="blurred-img">
       <SourceImageTwo
         mobileImgUrl={case_studies_bg_mobile}
         desktopImgUrl={case_studies_bg}
@@ -27,7 +27,7 @@ import ContactPopUp from "../../components/ContactPopUp.astro";
     >
     </div>
     <div
-      class="fade container section-container h-full flex flex-col justify-center gap-5"
+      class="fade min-h-inherit section-container flex flex-col justify-center gap-5"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
       <div>

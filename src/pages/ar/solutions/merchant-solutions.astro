@@ -31,8 +31,11 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
   }
 </style>
 <Layout title="الحلول | التجار" lang="ar">
-  <section class="hero z-0" id="merchants-hero">
-    <div class="blurred-img bg-blurredmerchant_solution bg-cover bg-center">
+  <section
+    class="hero bg-blurredmerchant_solution bg-cover bg-center bg-no-repeat"
+    id="merchants-hero"
+  >
+    <div class="blurred-img">
       <SourceImageTwo
         mobileImgUrl={merchant_bg}
         desktopImgUrl={merchant_bg_lg}
@@ -41,11 +44,11 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
     </div>
     <div
       id="hero-overlay"
-      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-r from-black/50 from-0% to-black/85 to-80% z-0"
+      class="absolute top-0 left-0 size-full bg-black/70 xs:bg-transparent xs:bg-gradient-to-r from-black/50 from-0% to-black/85 to-80%"
     >
     </div>
     <div
-      class="fade container section-container flex flex-col z-0 justify-center h-full gap-5"
+      class="fade min-h-inherit section-container flex flex-col justify-center gap-5"
       data-animation="animate-fade animate-duration-[1500ms]"
     >
       <h1 class="text-3xl md:text-5xl text-white">التجار</h1>
