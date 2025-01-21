@@ -1,5 +1,7 @@
 ---
 const { id, label_text, data_needed } = Astro.props;
+let lang = Astro.url.pathname.split("/")[1];
+console.log(lang);
 let required = false;
 let required_input = "";
 {
@@ -10,7 +12,6 @@ let required_input = "";
     (required_input = "") && (required = false);
   }
 }
-const { lang } = Astro.props;
 ---
 
 <div>
