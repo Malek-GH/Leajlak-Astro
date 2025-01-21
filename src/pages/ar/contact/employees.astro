@@ -157,15 +157,17 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
             />
             <p class="font-normal text-red-700 mt-1"></p>
           </div>
-          <div class="flex justify-between">
+          <div class="flex flex-col sm:flex-row gap-5 justify-between">
             <button
               type="button"
               id="back-btn"
               value="Submit"
-              class="button-return">رجوع</button
+              class="button-return order-2 sm:order-1">رجوع</button
             >
-            <button type="submit" value="Submit" class="button-regular"
-              >تقديم</button
+            <button
+              type="submit"
+              value="Submit"
+              class="button-regular order-1 sm:order-2">تقديم</button
             >
           </div>
         </form>

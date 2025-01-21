@@ -1,8 +1,8 @@
 const employeesForm = document.querySelector("#employeesForm");
 const messages = {
   name: {
-    en: "Name must be at least 2 characters.",
-    ar: "يجب ألا يقل الاسم عن حرفين.",
+    en: "Name must be at least 8 characters.",
+    ar: "يجب أن يتكون الإسم من 8 أحرف على الأقل.",
   },
   email: {
     en: "Please enter a valid email address.",
@@ -43,7 +43,7 @@ function validateForm() {
 
   const name = document.getElementById("name");
   const nameError = name.nextElementSibling;
-  if (name.value.trim().length < 2) {
+  if (name.value.trim().length < 8) {
     nameError.textContent = messages.name[lang];
 
     name.classList.add("error");
