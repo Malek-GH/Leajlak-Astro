@@ -2,7 +2,9 @@
 import { Image } from "astro:assets";
 import Layout from "../../../layouts/Layout.astro";
 
-import portrait from "../../../images/profile-pic/portrait.png";
+import mc from "../../../images/companies_logo/clients/Mcdonald.webp";
+import dominos from "../../../images/companies_logo/clients/Dominos-logo.webp";
+import casa from "../../../images/companies_logo/clients/Casapasta.webp";
 import merchant_bg from "../../../images/bg/merchant_solution_mobile.webp";
 import merchant_bg_lg from "../../../images/bg/merchant_solution_lg.webp";
 
@@ -276,11 +278,11 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
       </h2>
       <div class="flex flex-wrap items-center justify-between gap-5">
         <div
-          class="fade relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
+          class="fade relative flex flex-col items-center justify-center gap-y-6 flex-card_xl group md:flex-card_testimonial_xl"
           data-animation="animate-fade animate-duration-[1500ms]"
         >
           <div
-            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-[250px] ease-out
+            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl gap-5 shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-64 ease-out
             after:content-[''] after:absolute after:bg-caret after:bg-no-repeat after:w-5 after:-bottom-5 after:h-5 after:invisible after:opacity-0 group-hover:after:opacity-100 group-hover:after:visible after:duration-200"
           >
             <svg
@@ -306,31 +308,33 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
               </g>
             </svg>
             <blockquote>
-              "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت.
-              إكسيرسيتاسيونيم، كويزكوام!"
+              "شراكتنا مع لأجلك ممتده لاكثر من ٣ سنوات ولدينا خطه توسعات معهم
+              لتشمل مناطق كثيره بالمملكه."
             </blockquote>
           </div>
-          <figure>
-            <figcaption class="flex flex-col items-center">
+          <figure class="w-full">
+            <figcaption
+              class="flex flex-col items-center justify-center w-full gap-2"
+            >
               <Image
-                src={portrait}
-                alt="صورة"
-                loading="eager"
-                class="h-20 w-20 rounded-full"
+                src={mc}
+                alt="portrait"
+                loading="lazy"
+                class="ml-3.5 size-20"
               />
               <div class="text-center">
-                <h5 class="text-2xl font-semibold">الاسم</h5>
-                <p>المدينة</p>
+                <h5 class="text-2xl font-semibold leading-none">محمد لحليمي</h5>
+                <p>مدير الخدمات اللوجستية</p>
               </div>
             </figcaption>
           </figure>
         </div>
         <div
-          class="fade relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
+          class="fade relative flex flex-col items-center justify-center gap-y-6 flex-card_xl group md:flex-card_testimonial_xl"
           data-animation="animate-fade animate-duration-[1500ms]"
         >
           <div
-            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-[250px] ease-out
+            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl gap-5 shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-64 ease-out
           after:content-[''] after:absolute after:bg-caret after:bg-no-repeat after:w-5 after:-bottom-5 after:h-5 after:invisible after:opacity-0 group-hover:after:opacity-100 group-hover:after:visible after:duration-200"
           >
             <svg
@@ -356,32 +360,34 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
               </g>
             </svg>
             <blockquote>
-              "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت.
-              إكسيرسيتاسيونيم، كويزكوام!"
+              "توصالنا مع شركه لاجلك بناء عن سمعتهم بالسوق واختبرنا تجربه مميزه
+              معهم وبدائنا توسعاتنا علي الفور."
             </blockquote>
           </div>
-          <figure>
-            <figcaption class="flex flex-col items-center">
+          <figure class="w-full">
+            <figcaption
+              class="flex flex-col items-center gap-2 justify-center w-full"
+            >
               <Image
-                src={portrait}
-                alt="صورة"
-                loading="eager"
-                class="h-20 w-20 rounded-full"
+                src={dominos}
+                alt="portrait"
+                loading="lazy"
+                class="size-20"
               />
               <div class="text-center">
-                <h5 class="text-2xl font-semibold">الاسم</h5>
-                <p>المدينة</p>
+                <h5 class="text-2xl font-semibold leading-none">مروان</h5>
+                <p>مدير لوجستي</p>
               </div>
             </figcaption>
           </figure>
         </div>
         <div
-          class="fade relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
+          class="fade relative flex flex-col items-center justify-center gap-y-6 flex-card_xl group md:flex-card_testimonial_xl"
           data-animation="animate-fade animate-duration-[1500ms]"
         >
           <div
-            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-[250px] ease-out
-        after:content-[''] after:absolute after:bg-caret after:bg-no-repeat after:w-5 after:-bottom-5 after:h-5 after:invisible after:opacity-0 group-hover:after:opacity-100 group-hover:after:visible after:duration-200"
+            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl gap-5 shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-64 ease-out
+          after:content-[''] after:absolute after:bg-caret after:bg-no-repeat after:w-5 after:-bottom-5 after:h-5 after:invisible after:opacity-0 group-hover:after:opacity-100 group-hover:after:visible after:duration-200"
           >
             <svg
               class="h-10 fill-black/70 group-hover:fill-white duration-200"
@@ -406,21 +412,18 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
               </g>
             </svg>
             <blockquote>
-              "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت.
-              إكسيرسيتاسيونيم، كويزكوام!"
+              "شركه لاجلك من الشركات سريعه النمو وسعيدين بشراكتنا الاستراتيجيه
+              معهم."
             </blockquote>
           </div>
-          <figure>
-            <figcaption class="flex flex-col items-center">
-              <Image
-                src={portrait}
-                alt="صورة"
-                loading="eager"
-                class="h-20 w-20 rounded-full"
-              />
+          <figure class="w-full">
+            <figcaption
+              class="flex flex-col items-center gap-2 justify-center w-full"
+            >
+              <Image src={casa} alt="portrait" loading="lazy" class="size-20" />
               <div class="text-center">
-                <h5 class="text-2xl font-semibold">الاسم</h5>
-                <p>المدينة</p>
+                <h5 class="text-2xl font-semibold leading-none">ايمن</h5>
+                <p>مدير الخدمات اللوجستية</p>
               </div>
             </figcaption>
           </figure>

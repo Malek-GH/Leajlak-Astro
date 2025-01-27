@@ -2,10 +2,11 @@
 import { Image } from "astro:assets";
 import Layout from "../../../layouts/Layout.astro";
 
-import portrait from "../../../images/profile-pic/portrait.png";
 import merchant_bg from "../../../images/bg/merchant_solution_mobile.webp";
 import merchant_bg_lg from "../../../images/bg/merchant_solution_lg.webp";
-
+import mc from "../../../images/companies_logo/clients/Mcdonald.webp";
+import dominos from "../../../images/companies_logo/clients/Dominos-logo.webp";
+import casa from "../../../images/companies_logo/clients/Casapasta.webp";
 import ButtonOutline from "../../../components/ButtonOutline.astro";
 import BenefitsMerchants from "../../../components/BenefitsMerchants.astro";
 import SourceImageTwo from "../../../components/SourceImageTwo.astro";
@@ -282,11 +283,11 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
       </h2>
       <div class="flex flex-wrap items-center justify-between gap-5">
         <div
-          class="fade relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
+          class="fade relative flex flex-col items-center justify-center gap-y-6 flex-card_xl group md:flex-card_testimonial_xl"
           data-animation="animate-fade animate-duration-[1500ms]"
         >
           <div
-            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-[250px] ease-out
+            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl gap-5 shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-64 ease-out
             after:content-[''] after:absolute after:bg-caret after:bg-no-repeat after:w-5 after:-bottom-5 after:h-5 after:invisible after:opacity-0 group-hover:after:opacity-100 group-hover:after:visible after:duration-200"
           >
             <svg
@@ -312,31 +313,36 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
               </g>
             </svg>
             <blockquote>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, quisquam!"
+              "Our partnership with Leajlak extends for more than 3 years and we
+              have an expansion plan with them to include many regions in the
+              Kingdom."
             </blockquote>
           </div>
-          <figure>
-            <figcaption class="flex flex-col items-center">
+          <figure class="w-full">
+            <figcaption
+              class="flex flex-col items-center justify-center w-full gap-2"
+            >
               <Image
-                src={portrait}
+                src={mc}
                 alt="portrait"
-                loading="eager"
-                class="h-20 w-20 rounded-full"
+                loading="lazy"
+                class="ml-3.5 size-20"
               />
               <div class="text-center">
-                <h5 class="text-2xl font-semibold">Name</h5>
-                <p>City</p>
+                <h5 class="text-2xl font-semibold leading-none">
+                  Mohamed Lahlimi
+                </h5>
+                <p>Director of logistics</p>
               </div>
             </figcaption>
           </figure>
         </div>
         <div
-          class="fade relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
+          class="fade relative flex flex-col items-center justify-center gap-y-6 flex-card_xl group md:flex-card_testimonial_xl"
           data-animation="animate-fade animate-duration-[1500ms]"
         >
           <div
-            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-[250px] ease-out
+            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl gap-5 shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-64 ease-out
           after:content-[''] after:absolute after:bg-caret after:bg-no-repeat after:w-5 after:-bottom-5 after:h-5 after:invisible after:opacity-0 group-hover:after:opacity-100 group-hover:after:visible after:duration-200"
           >
             <svg
@@ -362,32 +368,35 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
               </g>
             </svg>
             <blockquote>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, quisquam!"
+              "We contacted Leajlak Company based on their reputation in the
+              market and had a great experience with them and started our
+              expansion immediately."
             </blockquote>
           </div>
-          <figure>
-            <figcaption class="flex flex-col items-center">
+          <figure class="w-full">
+            <figcaption
+              class="flex flex-col items-center gap-2 justify-center w-full"
+            >
               <Image
-                src={portrait}
+                src={dominos}
                 alt="portrait"
-                loading="eager"
-                class="h-20 w-20 rounded-full"
+                loading="lazy"
+                class="size-20"
               />
               <div class="text-center">
-                <h5 class="text-2xl font-semibold">Name</h5>
-                <p>City</p>
+                <h5 class="text-2xl font-semibold leading-none">Marwan</h5>
+                <p>Logistic manager</p>
               </div>
             </figcaption>
           </figure>
         </div>
         <div
-          class="fade relative flex flex-col items-center space-y-6 flex-card_xl group md:flex-card_testimonial_xl"
+          class="fade relative flex flex-col items-center justify-center gap-y-6 flex-card_xl group md:flex-card_testimonial_xl"
           data-animation="animate-fade animate-duration-[1500ms]"
         >
           <div
-            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-[250px] ease-out
-        after:content-[''] after:absolute after:bg-caret after:bg-no-repeat after:w-5 after:-bottom-5 after:h-5 after:invisible after:opacity-0 group-hover:after:opacity-100 group-hover:after:visible after:duration-200"
+            class="relative flex flex-col items-center justify-center text-center p-5 rounded-xl gap-5 shadow-md bg-white group-hover:bg-primaryOrange group-hover:text-white duration-300 h-64 ease-out
+          after:content-[''] after:absolute after:bg-caret after:bg-no-repeat after:w-5 after:-bottom-5 after:h-5 after:invisible after:opacity-0 group-hover:after:opacity-100 group-hover:after:visible after:duration-200"
           >
             <svg
               class="h-10 fill-black/70 group-hover:fill-white duration-200"
@@ -412,21 +421,18 @@ import SourceImageTwo from "../../../components/SourceImageTwo.astro";
               </g>
             </svg>
             <blockquote>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, quisquam!"
+              "Leajlak Company is one of the fast growing companies and we are
+              happy with our strategic partnership with them."
             </blockquote>
           </div>
-          <figure>
-            <figcaption class="flex flex-col items-center">
-              <Image
-                src={portrait}
-                alt="portrait"
-                loading="eager"
-                class="h-20 w-20 rounded-full"
-              />
+          <figure class="w-full">
+            <figcaption
+              class="flex flex-col items-center gap-2 justify-center w-full"
+            >
+              <Image src={casa} alt="portrait" loading="lazy" class="size-20" />
               <div class="text-center">
-                <h5 class="text-2xl font-semibold">Name</h5>
-                <p>City</p>
+                <h5 class="text-2xl font-semibold leading-none">Ayman</h5>
+                <p>Director of logistics</p>
               </div>
             </figcaption>
           </figure>
