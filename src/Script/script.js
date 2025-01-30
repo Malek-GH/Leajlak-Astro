@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const routes = {
       solutions: {
         merchant: `/${lang}/solutions/merchant-solutions`,
-        logistic: `/${lang}/solutions/logistic-solutions`,
+        logistic: `/${lang}/solutions/logistics-companies`,
       },
       register: {
         merchant: `/${lang}/contact/merchants`,
-        logistic: `/${lang}/contact/logistic-companies`,
+        logistic: `/${lang}/contact/logistics-companies`,
         drivers: `/${lang}/contact/drivers`,
         employees: `/${lang}/contact/employees`,
       },
